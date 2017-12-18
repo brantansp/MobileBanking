@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5490" started-at="2017-12-15T10:32:34Z" finished-at="2017-12-15T10:32:40Z">
+  <suite name="Default suite" duration-ms="6738" started-at="2017-12-18T07:09:59Z" finished-at="2017-12-18T07:10:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5490" started-at="2017-12-15T10:32:34Z" finished-at="2017-12-15T10:32:40Z">
+    <test name="Default test" duration-ms="6738" started-at="2017-12-18T07:09:59Z" finished-at="2017-12-18T07:10:06Z">
       <class name="mBankingControlCenter.MobileBanking">
-        <test-method status="PASS" signature="BalanceEnquiry()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="BalanceEnquiry" duration-ms="4024" started-at="2017-12-15T16:02:34Z" finished-at="2017-12-15T16:02:39Z">
+        <test-method status="PASS" signature="BalanceEnquiry()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="BalanceEnquiry" duration-ms="4640" started-at="2017-12-18T12:39:59Z" finished-at="2017-12-18T12:40:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BalanceEnquiry -->
-        <test-method status="PASS" signature="MiniStatement()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="MiniStatement" duration-ms="1440" started-at="2017-12-15T16:02:39Z" finished-at="2017-12-15T16:02:40Z">
+        <test-method status="PASS" signature="MiniStatement()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="MiniStatement" duration-ms="2079" started-at="2017-12-18T12:40:04Z" finished-at="2017-12-18T12:40:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MiniStatement -->
