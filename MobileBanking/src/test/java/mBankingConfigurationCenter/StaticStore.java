@@ -12,7 +12,8 @@ public class StaticStore {
 	//9865928748
 	public static String menuDesc[][] = new String[][] {
 		{"Balance Enquiry",Configuration.RemMobileno+"APBE",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},    //0
-		{"Mini Statement",Configuration.RemMobileno+"APMS",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},      //1                                                    
+		{"Mini Statement",Configuration.RemMobileno+"APMS",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},      //1
+		{"IMPS P2P",Configuration.RemMobileno+"APQI",Configuration.mPINRequired, Configuration.mPIN,"9047637908","9240946","10","gsg",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //2
 		{"Add Beneficiary","APRM;Y",Configuration.mPIN,Configuration.bankCode,"Mobile No.",
          "Nickname","0001","4-4-N-Y-Y","","10-10-N-N-N","1-20-ANW-N-N","","5","true","true","Y"},//0
         {"Add Beneficiary","APRA;Y",Configuration.mPIN,Configuration.bankCode,"A/C No.","001",

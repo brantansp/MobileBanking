@@ -11,7 +11,7 @@ public class Configuration {
 	public static String mobileScreenSize=null;
 	public static String mobileDetails=null;
 	public static boolean isForgotPassword= false;
-    public static String GprsURL="http://mobileprd.fssnet.co.in:80";
+    public static String GprsURL="http://10.44.120.60:7020";
     public static String servlet = "/txnmpayportal/servlet/MQSender?request=";
     public static String mPINRequired = "Y";
     public static String mPIN = "41781320402139635621401969632506560255";
