@@ -17,7 +17,7 @@ public class dbTransactionlog {
 	private static String transactionID="734910241217";
 	private static String result= "";
 	private static ResultSet resultSet;
-	
+	//check
 	public static void main(String[] argv) {
 		try {
 			fetchRecord(transactionID);
