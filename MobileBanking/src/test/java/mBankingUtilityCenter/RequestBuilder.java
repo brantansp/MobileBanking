@@ -18,7 +18,7 @@ import mBankingControlCenter.MobileBanking;
 public class RequestBuilder {
 static HttpConnect obj=new HttpConnect();
 public static String response="";
-private static String dbResult;
+private static String dbResult[];
 public static String transactionID = "";
 private static Log log = LogFactory.getLog(RequestBuilder.class);
 
@@ -66,7 +66,9 @@ public static String buildRequest(int index)
 		if(Configuration.dbReport=="Y")
 		{
 			dbResult = dbTransactionlog.fetchRecord(transactionID);
-			System.out.println("dbResult : "+dbResult);
+			System.out.println(StaticStore.menuDesc[index][0]);
+			log.info("DB Result : "+dbResult);
+			writeToFile.reportGeneration(StaticStore.menuDesc[index][0], dbResult);
 		}		
 	} catch (IOException e) {
 		e.printStackTrace();
@@ -79,7 +81,7 @@ public static String buildRequest(int index)
   }
 
 public static void main(String[] args) {
-buildRequest(0);
+buildRequest(2);
 }
 }
 

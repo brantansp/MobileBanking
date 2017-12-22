@@ -14,8 +14,8 @@ public class dbTransactionlog {
 	private static final String DB_PASSWORD = "tmb_p2test321#";
 	private static Connection dbConnection = null;
 	private static Statement statement = null;
-	private static String transactionID="734910241217";
-	private static String result= "";
+	private static String transactionID="735418241323";
+	private static String result[]= new String [8];//= "";
 	private static ResultSet resultSet;
 	//check2
 	public static void main(String[] argv) {
@@ -26,7 +26,7 @@ public class dbTransactionlog {
 		}
 	}
 
-	public static String fetchRecord( String transactionID) throws SQLException {
+	public static String [] fetchRecord( String transactionID) throws SQLException {
 
 		String selectTableSQL = "select txnauthid, txntype , txnstatus , Error_Type, Errorcode, Error_Msg, Responsecode, Response_Description from Transactionlog WHERE TXNAUTHID ='"+transactionID+"'";
 
@@ -37,7 +37,8 @@ public class dbTransactionlog {
 			resultSet = statement.executeQuery(selectTableSQL);
 			//ResultSetMetaData rsmd = resultSet.getMetaData();
 			resultSet.next();
-			 result = resultSet.getString("txnauthid") +"|"+
+			/*
+			 result[20] = resultSet.getString("txnauthid") +"|"+
 					 resultSet.getString("txntype") +"|"+
 	                       resultSet.getString("txnstatus") +"|"+
 	                       resultSet.getString("Error_Type")+"|"+
@@ -45,6 +46,16 @@ public class dbTransactionlog {
 			  resultSet.getString("Responsecode")+"|"+
 			  resultSet.getString("Response_Description")+"|"+
 			  resultSet.getString("Errorcode");
+			*/
+			result[0] = resultSet.getString("txnauthid") ;
+			result[1] = resultSet.getString("txntype") ;
+			result[2] = resultSet.getString("txnstatus");
+			result[3] = resultSet.getString("Error_Type");
+			result[4] = resultSet.getString("Errorcode");
+			result[5] = resultSet.getString("Error_Msg");
+			result[6] = resultSet.getString("Responsecode");
+			result[7] = resultSet.getString("Response_Description");
+			result[8] = resultSet.getString("Errorcode");
 			
 		}catch (SQLException e) {
 			System.out.println(e.getMessage());
