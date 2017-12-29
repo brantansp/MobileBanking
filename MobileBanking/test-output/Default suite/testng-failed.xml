@@ -5,7 +5,7 @@
     <classes>
       <class name="mBankingControlCenter.MobileBanking">
         <methods>
-          <include name="MiniStatement"/>
+          <include name="CancelMMIDSingle"/>
         </methods>
       </class> <!-- mBankingControlCenter.MobileBanking -->
     </classes>

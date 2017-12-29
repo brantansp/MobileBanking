@@ -15,7 +15,7 @@ public class dbTransactionlog {
 	private static Connection dbConnection = null;
 	private static Statement statement = null;
 	private static String transactionID="735418241323";
-	private static String result[]= new String [8];//= "";
+	private static String result[]= new String [10];//= "";
 	private static ResultSet resultSet;
 	//check2
 	public static void main(String[] argv) {
@@ -28,7 +28,7 @@ public class dbTransactionlog {
 
 	public static String [] fetchRecord( String transactionID) throws SQLException {
 
-		String selectTableSQL = "select txnauthid, txntype , txnstatus , Error_Type, Errorcode, Error_Msg, Responsecode, Response_Description from Transactionlog WHERE TXNAUTHID ='"+transactionID+"'";
+		String selectTableSQL = "select txnauthid, txndatetime, txntype ,  txnstatus , Error_Type, Errorcode, Error_Msg, Responsecode, Response_Description from Transactionlog WHERE TXNAUTHID ='"+transactionID+"'";
 
 		try {
 			dbConnection = getDBConnection();
@@ -48,14 +48,14 @@ public class dbTransactionlog {
 			  resultSet.getString("Errorcode");
 			*/
 			result[0] = resultSet.getString("txnauthid") ;
-			result[1] = resultSet.getString("txntype") ;
-			result[2] = resultSet.getString("txnstatus");
-			result[3] = resultSet.getString("Error_Type");
-			result[4] = resultSet.getString("Errorcode");
-			result[5] = resultSet.getString("Error_Msg");
-			result[6] = resultSet.getString("Responsecode");
-			result[7] = resultSet.getString("Response_Description");
-			result[8] = resultSet.getString("Errorcode");
+			result[1] = resultSet.getString("txndatetime") ;
+			result[2] = resultSet.getString("txntype") ;
+			result[3] = resultSet.getString("txnstatus");
+			result[4] = resultSet.getString("Error_Type");
+			result[5] = resultSet.getString("Errorcode");
+			result[6] = resultSet.getString("Error_Msg");
+			result[7] = resultSet.getString("Responsecode");
+			result[8] = resultSet.getString("Response_Description");
 			
 		}catch (SQLException e) {
 			System.out.println(e.getMessage());

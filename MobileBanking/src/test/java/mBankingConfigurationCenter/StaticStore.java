@@ -11,8 +11,22 @@ public class StaticStore {
 	}
 	//9865928748
 	public static String menuDesc[][] = new String[][] {
-		{"Balance Enquiry",Configuration.RemMobileno+"APBE",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},    //0
-		{"Mini Statement",Configuration.RemMobileno+"APMS",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},      //1
+		//Non Financial Transactions
+		{"App Login",Configuration.RemMobileno+"APCG;BVD",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion},   //0
+		{"Account Sync",Configuration.RemMobileno+"APSY","2",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,"0"}, //1
+		{"Balance Enquiry",Configuration.RemMobileno+"APBE",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},    //2
+		{"Mini Statement",Configuration.RemMobileno+"APMS",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},      //3
+		{"Transaction history",Configuration.RemMobileno+"APTH",Configuration.mPINRequired,Configuration.mPIN,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //4
+		{"Generate MMID",Configuration.RemMobileno+"APIM",Configuration.mPINRequired,Configuration.mPIN,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //5		
+		{"Retrieve MMID",Configuration.RemMobileno+"APS6",Configuration.mPINRequired,Configuration.mPIN,Configuration.RemAccountno,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //6
+		{"Cancel MMID All",Configuration.RemMobileno+"APRC",Configuration.mPINRequired,Configuration.mPIN,"ALL",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //7
+		{"Cancel MMID Single",Configuration.RemMobileno+"APRC",Configuration.mPINRequired,Configuration.mPIN,Configuration.RemAccountno,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //8
+		{"Email ID Fetch",Configuration.RemMobileno+"APZ6",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //9		
+		{"Update Email ID",Configuration.RemMobileno+"APZ3",Configuration.mPINRequired,Configuration.mPIN,"aboutsatham@gmail.com",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //10
+		{"Cheque Status",Configuration.RemMobileno+"APLW",Configuration.mPINRequired,Configuration.mPIN, Configuration.chequenum, Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //11
+		{"Stop Cheque", Configuration.RemMobileno+"APL4",Configuration.mPINRequired,Configuration.mPIN, Configuration.chequenum, Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //12
+		//Financial Transactions
+		
 		{"IMPS P2P",Configuration.RemMobileno+"APQI",Configuration.mPINRequired, Configuration.mPIN,"9047637908","9240946","10","gsg",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //2
 		{"Add Beneficiary","APRM;Y",Configuration.mPIN,Configuration.bankCode,"Mobile No.",
          "Nickname","0001","4-4-N-Y-Y","","10-10-N-N-N","1-20-ANW-N-N","","5","true","true","Y"},//0

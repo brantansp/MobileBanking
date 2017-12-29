@@ -59,6 +59,7 @@ public static String buildRequest(int index)
 		log.info(StaticStore.menuDesc[index][0]+" Request");
 	}
 	try {
+		//System.out.println("Request : "+Request);
 		response = obj.Post(Request);
 		log.info("Response received from Server : "+response);
 		transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
@@ -66,8 +67,8 @@ public static String buildRequest(int index)
 		if(Configuration.dbReport=="Y")
 		{
 			dbResult = dbTransactionlog.fetchRecord(transactionID);
-			System.out.println(StaticStore.menuDesc[index][0]);
-			log.info("DB Result : "+dbResult);
+			//System.out.println(StaticStore.menuDesc[index][0]);
+			//log.info("DB Result : "+dbResult);
 			writeToFile.reportGeneration(StaticStore.menuDesc[index][0], dbResult);
 		}		
 	} catch (IOException e) {
@@ -81,7 +82,8 @@ public static String buildRequest(int index)
   }
 
 public static void main(String[] args) {
-buildRequest(2);
+buildRequest(10);
+
 }
 }
 
