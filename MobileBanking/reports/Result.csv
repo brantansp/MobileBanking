@@ -1,0 +1,25 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Account Sync,PASS,736316241669,2017-12-29 16:25:38.0,APSY,C,-,null,null,00,-
+Balance Enquiry,PASS,736316241670,2017-12-29 16:25:43.0,APBE,C,-,null,null,00,-
+Cancel MMID All,PASS,736316241671,2017-12-29 16:25:45.0,APRC,C,-,null,null,00,null
+Cancel MMID Single,FAIL,736316241672,2017-12-29 16:25:46.0,APRC,F,C,null,null,09,Kindly register for IMPS to proceed with the transaction
+Cheque Status,PASS,736316241673,2017-12-29 16:25:48.0,APLW,C,-,null,null,00,-
+Email ID Fetch,PASS,736316241674,2017-12-29 16:25:49.0,APZ6,C,-,null,null,00,null
+Update Email ID,PASS,736316241675,2017-12-29 16:25:51.0,APZ3,C,-,null,null,00,null
+Generate MMID,PASS,736316241676,2017-12-29 16:25:52.0,APIM,C,-,null,null,00,null
+Mini Statement,PASS,736316241677,2017-12-29 16:25:55.0,APMS,C,-,null,null,00,-
+Retrieve MMID,PASS,736316241678,2017-12-29 16:25:56.0,APS6,C,-,null,null,00,null
+Stop Cheque,PASS,736316241679,2017-12-29 16:25:58.0,APL4,C,-,null,null,00,-
+Transaction history,PASS,736316241680,2017-12-29 16:25:59.0,APTH,C,-,null,null,00,null
+Account Sync,PASS,736316241681,2017-12-29 16:45:13.0,APSY,C,-,null,null,00,-
+Balance Enquiry,PASS,736316241682,2017-12-29 16:45:17.0,APBE,C,-,null,null,00,-
+Cancel MMID All,PASS,736316241683,2017-12-29 16:45:19.0,APRC,C,-,null,null,00,null
+Cancel MMID Single,FAIL,736316241684,2017-12-29 16:45:20.0,APRC,F,C,null,null,09,Kindly register for IMPS to proceed with the transaction
+Cheque Status,PASS,736316241685,2017-12-29 16:45:22.0,APLW,C,-,null,null,00,-
+Email ID Fetch,PASS,736316241686,2017-12-29 16:45:25.0,APZ6,C,-,null,null,00,null
+Update Email ID,PASS,736316241687,2017-12-29 16:45:26.0,APZ3,C,-,null,null,00,null
+Generate MMID,PASS,736316241688,2017-12-29 16:45:27.0,APIM,C,-,null,null,00,null
+Mini Statement,PASS,736316241689,2017-12-29 16:45:29.0,APMS,C,-,null,null,00,-
+Retrieve MMID,PASS,736316241690,2017-12-29 16:45:30.0,APS6,C,-,null,null,00,null
+Stop Cheque,PASS,736316241691,2017-12-29 16:45:32.0,APL4,C,-,null,null,00,-
+Transaction history,PASS,736316241692,2017-12-29 16:45:34.0,APTH,C,-,null,null,00,null

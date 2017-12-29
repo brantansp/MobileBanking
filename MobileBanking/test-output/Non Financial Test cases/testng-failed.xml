@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Non Financial Test cases]">
+  <test name="TMB Bank(failed)">
+    <classes>
+      <class name="mBankingControlCenter.MobileBanking">
+        <methods>
+          <include name="CancelMMIDSingle"/>
+        </methods>
+      </class> <!-- mBankingControlCenter.MobileBanking -->
+    </classes>
+  </test> <!-- TMB Bank(failed) -->
+</suite> <!-- Failed suite [Non Financial Test cases] -->
