@@ -18,6 +18,7 @@ public class MobileBanking {
     //public static FileHandler fh;  
 	static HttpConnect obj=new HttpConnect();
 	
+	
 	public static void main(String[] args) {
           /**
            * For checking Single transactions
@@ -25,7 +26,7 @@ public class MobileBanking {
 		index=2; //APBE
 		response =RequestBuilder.buildRequest(index);
 	}
-	
+
 	@Test
 	public void AccountSync() throws IOException, SQLException {
 		index=1; 
@@ -51,7 +52,7 @@ public class MobileBanking {
 		response =RequestBuilder.buildRequest(index);
 		assertTrue(response.contains("TH00"));
 	}
-	@Test
+	@Test(priority = 0)
 	public void GenerateMMID() throws IOException, SQLException {
 		index=5; 
 		response =RequestBuilder.buildRequest(index);
@@ -66,12 +67,14 @@ public class MobileBanking {
 	@Test
 	public void CancelMMIDAll() throws IOException, SQLException {
 		index=7; 
+		RequestBuilder.buildRequest(5); // calling generate MMID
 		response =RequestBuilder.buildRequest(index);
 		assertTrue(response.contains("RC00"));
 	}
 	@Test
 	public void CancelMMIDSingle() throws IOException, SQLException {
 		index=8;
+		RequestBuilder.buildRequest(5); // calling generate MMID
 		response =RequestBuilder.buildRequest(index);
 		assertTrue(response.contains("RC00"));
 	}

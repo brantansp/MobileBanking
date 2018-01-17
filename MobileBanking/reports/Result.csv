@@ -23,3 +23,61 @@ Mini Statement,PASS,736316241689,2017-12-29 16:45:29.0,APMS,C,-,null,null,00,-
 Retrieve MMID,PASS,736316241690,2017-12-29 16:45:30.0,APS6,C,-,null,null,00,null
 Stop Cheque,PASS,736316241691,2017-12-29 16:45:32.0,APL4,C,-,null,null,00,-
 Transaction history,PASS,736316241692,2017-12-29 16:45:34.0,APTH,C,-,null,null,00,null
+Account Sync,PASS,800209241693,2018-01-02 09:18:07.0,APSY,C,-,null,null,00,-
+Balance Enquiry,PASS,800209241694,2018-01-02 09:18:13.0,APBE,C,-,null,null,00,-
+Cancel MMID All,PASS,800209241695,2018-01-02 09:18:15.0,APRC,C,-,null,null,00,null
+Cancel MMID Single,FAIL,800209241696,2018-01-02 09:18:16.0,APRC,F,C,null,null,09,Kindly register for IMPS to proceed with the transaction
+Cheque Status,PASS,800209241697,2018-01-02 09:18:18.0,APLW,C,-,null,null,00,-
+Email ID Fetch,PASS,800209241698,2018-01-02 09:18:21.0,APZ6,C,-,null,null,00,null
+Update Email ID,PASS,800209241699,2018-01-02 09:18:22.0,APZ3,C,-,null,null,00,null
+Generate MMID,PASS,800209241700,2018-01-02 09:18:23.0,APIM,C,-,null,null,00,null
+Mini Statement,PASS,800209241701,2018-01-02 09:18:26.0,APMS,C,-,null,null,00,-
+Retrieve MMID,PASS,800209241702,2018-01-02 09:18:28.0,APS6,C,-,null,null,00,null
+Stop Cheque,PASS,800209241703,2018-01-02 09:18:30.0,APL4,C,-,null,null,00,-
+Transaction history,PASS,800209241704,2018-01-02 09:18:32.0,APTH,C,-,null,null,00,null
+Transaction history,PASS,800209241705,2018-01-02 09:21:01.0,APTH,C,-,null,null,00,null
+Transaction history,PASS,800209241707,2018-01-02 09:21:59.0,APTH,C,-,null,null,00,null
+Account Sync,PASS,800209241708,2018-01-02 09:31:20.0,APSY,C,-,null,null,00,-
+Balance Enquiry,PASS,800209241709,2018-01-02 09:31:25.0,APBE,C,-,null,null,00,-
+Generate MMID,PASS,800209241710,2018-01-02 09:31:27.0,APIM,C,-,null,null,00,null
+Cancel MMID All,PASS,800209241711,2018-01-02 09:31:28.0,APRC,C,-,null,null,00,null
+Generate MMID,PASS,800209241712,2018-01-02 09:31:29.0,APIM,C,-,null,null,00,null
+Cancel MMID Single,PASS,800209241713,2018-01-02 09:31:31.0,APRC,C,-,null,null,00,null
+Cheque Status,PASS,800209241714,2018-01-02 09:31:33.0,APLW,C,-,null,null,00,-
+Email ID Fetch,PASS,800209241715,2018-01-02 09:31:35.0,APZ6,C,-,null,null,00,null
+Update Email ID,PASS,800209241716,2018-01-02 09:31:36.0,APZ3,C,-,null,null,00,null
+Generate MMID,PASS,800209241717,2018-01-02 09:31:37.0,APIM,C,-,null,null,00,null
+Mini Statement,PASS,800209241718,2018-01-02 09:31:38.0,APMS,C,-,null,null,00,-
+Retrieve MMID,PASS,800209241719,2018-01-02 09:31:40.0,APS6,C,-,null,null,00,null
+Stop Cheque,PASS,800209241720,2018-01-02 09:31:41.0,APL4,C,-,null,null,00,-
+Transaction history,PASS,800209241721,2018-01-02 09:31:43.0,APTH,C,-,null,null,00,null
+Account Sync,PASS,800518241738,2018-01-05 18:14:12.0,APSY,C,-,null,null,00,-
+Balance Enquiry,PASS,800518241739,2018-01-05 18:14:20.0,APBE,C,-,null,null,00,-
+Generate MMID,PASS,800518241740,2018-01-05 18:14:23.0,APIM,C,-,null,null,00,null
+Cancel MMID All,PASS,800518241741,2018-01-05 18:14:24.0,APRC,C,-,null,null,00,null
+Generate MMID,PASS,800518241742,2018-01-05 18:14:26.0,APIM,C,-,null,null,00,null
+Cancel MMID Single,PASS,800518241743,2018-01-05 18:14:29.0,APRC,C,-,null,null,00,null
+Cheque Status,PASS,800518241744,2018-01-05 18:14:30.0,APLW,C,-,null,null,00,-
+Email ID Fetch,PASS,800518241745,2018-01-05 18:14:32.0,APZ6,C,-,null,null,00,null
+Update Email ID,PASS,800518241746,2018-01-05 18:14:34.0,APZ3,C,-,null,null,00,null
+Generate MMID,PASS,800518241747,2018-01-05 18:14:35.0,APIM,C,-,null,null,00,null
+Mini Statement,PASS,800518241748,2018-01-05 18:14:37.0,APMS,C,-,null,null,00,-
+Retrieve MMID,PASS,800518241749,2018-01-05 18:14:43.0,APS6,C,-,null,null,00,null
+Stop Cheque,PASS,800518241750,2018-01-05 18:14:44.0,APL4,C,-,null,null,00,-
+Transaction history,PASS,800518241751,2018-01-05 18:14:46.0,APTH,C,-,null,null,00,null
+Balance Enquiry,PASS,800818241754,2018-01-08 18:18:42.0,APBE,C,-,null,null,00,-
+Balance Enquiry,PASS,800818241755,2018-01-08 18:32:13.0,APBE,C,-,null,null,00,-
+Account Sync,PASS,800818241756,2018-01-08 18:35:08.0,APSY,C,-,null,null,00,-
+Balance Enquiry,PASS,800818241757,2018-01-08 18:35:13.0,APBE,C,-,null,null,00,-
+Generate MMID,PASS,800818241758,2018-01-08 18:35:15.0,APIM,C,-,null,null,00,null
+Cancel MMID All,PASS,800818241759,2018-01-08 18:35:17.0,APRC,C,-,null,null,00,null
+Generate MMID,PASS,800818241760,2018-01-08 18:35:18.0,APIM,C,-,null,null,00,null
+Cancel MMID Single,PASS,800818241761,2018-01-08 18:35:21.0,APRC,C,-,null,null,00,null
+Cheque Status,PASS,800818241762,2018-01-08 18:35:22.0,APLW,C,-,null,null,00,-
+Email ID Fetch,PASS,800818241763,2018-01-08 18:35:24.0,APZ6,C,-,null,null,00,null
+Update Email ID,PASS,800818241764,2018-01-08 18:35:25.0,APZ3,C,-,null,null,00,null
+Generate MMID,PASS,800818241765,2018-01-08 18:35:26.0,APIM,C,-,null,null,00,null
+Mini Statement,PASS,800818241766,2018-01-08 18:35:28.0,APMS,C,-,null,null,00,-
+Retrieve MMID,PASS,800818241767,2018-01-08 18:35:30.0,APS6,C,-,null,null,00,null
+Stop Cheque,PASS,800818241768,2018-01-08 18:35:31.0,APL4,C,-,null,null,00,-
+Transaction history,PASS,800818241769,2018-01-08 18:35:33.0,APTH,C,-,null,null,00,null

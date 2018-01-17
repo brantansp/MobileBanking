@@ -1,100 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="12" passed="11">
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Non Financial Test cases" duration-ms="58218" started-at="2017-12-29T11:15:12Z" finished-at="2017-12-29T11:16:11Z">
+  <suite name="Default suite" duration-ms="62935" started-at="2018-01-08T13:05:07Z" finished-at="2018-01-08T13:06:10Z">
     <groups>
     </groups>
-    <test name="TMB Bank" duration-ms="58218" started-at="2017-12-29T11:15:12Z" finished-at="2017-12-29T11:16:11Z">
+    <test name="Default test" duration-ms="62935" started-at="2018-01-08T13:05:07Z" finished-at="2018-01-08T13:06:10Z">
       <class name="mBankingControlCenter.MobileBanking">
-        <test-method status="PASS" signature="AccountSync()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="AccountSync" duration-ms="4508" started-at="2017-12-29T16:45:13Z" finished-at="2017-12-29T16:45:17Z">
+        <test-method status="PASS" signature="AccountSync()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="AccountSync" duration-ms="5577" started-at="2018-01-08T18:35:07Z" finished-at="2018-01-08T18:35:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AccountSync -->
-        <test-method status="PASS" signature="BalanceEnquiry()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="BalanceEnquiry" duration-ms="1810" started-at="2017-12-29T16:45:17Z" finished-at="2017-12-29T16:45:19Z">
+        <test-method status="PASS" signature="BalanceEnquiry()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="BalanceEnquiry" duration-ms="2094" started-at="2018-01-08T18:35:13Z" finished-at="2018-01-08T18:35:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BalanceEnquiry -->
-        <test-method status="PASS" signature="CancelMMIDAll()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="CancelMMIDAll" duration-ms="1281" started-at="2017-12-29T16:45:19Z" finished-at="2017-12-29T16:45:20Z">
+        <test-method status="PASS" signature="CancelMMIDAll()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="CancelMMIDAll" duration-ms="2949" started-at="2018-01-08T18:35:15Z" finished-at="2018-01-08T18:35:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CancelMMIDAll -->
-        <test-method status="FAIL" signature="CancelMMIDSingle()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="CancelMMIDSingle" duration-ms="1484" started-at="2017-12-29T16:45:20Z" finished-at="2017-12-29T16:45:22Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertTrue(Assert.java:41)
-	at org.testng.Assert.assertTrue(Assert.java:51)
-	at mBankingControlCenter.MobileBanking.CancelMMIDSingle(MobileBanking.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:776)
-	at org.testng.TestRunner.run(TestRunner.java:634)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
-	at org.testng.TestNG.runSuites(TestNG.java:1161)
-	at org.testng.TestNG.run(TestNG.java:1129)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="CancelMMIDSingle()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="CancelMMIDSingle" duration-ms="3672" started-at="2018-01-08T18:35:18Z" finished-at="2018-01-08T18:35:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CancelMMIDSingle -->
-        <test-method status="PASS" signature="ChequeStatus()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="ChequeStatus" duration-ms="3353" started-at="2017-12-29T16:45:22Z" finished-at="2017-12-29T16:45:25Z">
+        <test-method status="PASS" signature="ChequeStatus()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="ChequeStatus" duration-ms="2127" started-at="2018-01-08T18:35:22Z" finished-at="2018-01-08T18:35:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChequeStatus -->
-        <test-method status="PASS" signature="EmailIDFetch()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="EmailIDFetch" duration-ms="967" started-at="2017-12-29T16:45:25Z" finished-at="2017-12-29T16:45:26Z">
+        <test-method status="PASS" signature="EmailIDFetch()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="EmailIDFetch" duration-ms="1082" started-at="2018-01-08T18:35:24Z" finished-at="2018-01-08T18:35:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmailIDFetch -->
-        <test-method status="PASS" signature="EmailIDUpdate()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="EmailIDUpdate" duration-ms="973" started-at="2017-12-29T16:45:26Z" finished-at="2017-12-29T16:45:27Z">
+        <test-method status="PASS" signature="EmailIDUpdate()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="EmailIDUpdate" duration-ms="1068" started-at="2018-01-08T18:35:25Z" finished-at="2018-01-08T18:35:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmailIDUpdate -->
-        <test-method status="PASS" signature="GenerateMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="GenerateMMID" duration-ms="1677" started-at="2017-12-29T16:45:27Z" finished-at="2017-12-29T16:45:29Z">
+        <test-method status="PASS" signature="GenerateMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="GenerateMMID" duration-ms="1381" started-at="2018-01-08T18:35:26Z" finished-at="2018-01-08T18:35:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GenerateMMID -->
-        <test-method status="PASS" signature="MiniStatement()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="MiniStatement" duration-ms="1567" started-at="2017-12-29T16:45:29Z" finished-at="2017-12-29T16:45:30Z">
+        <test-method status="PASS" signature="MiniStatement()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="MiniStatement" duration-ms="1970" started-at="2018-01-08T18:35:27Z" finished-at="2018-01-08T18:35:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MiniStatement -->
-        <test-method status="PASS" signature="RetrieveMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="RetrieveMMID" duration-ms="1174" started-at="2017-12-29T16:45:30Z" finished-at="2017-12-29T16:45:31Z">
+        <test-method status="PASS" signature="RetrieveMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="RetrieveMMID" duration-ms="1096" started-at="2018-01-08T18:35:29Z" finished-at="2018-01-08T18:35:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RetrieveMMID -->
-        <test-method status="PASS" signature="StopCheque()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="StopCheque" duration-ms="2596" started-at="2017-12-29T16:45:31Z" finished-at="2017-12-29T16:45:34Z">
+        <test-method status="PASS" signature="StopCheque()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="StopCheque" duration-ms="1891" started-at="2018-01-08T18:35:30Z" finished-at="2018-01-08T18:35:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StopCheque -->
-        <test-method status="PASS" signature="TransactionHistory()[pri:0, instance:mBankingControlCenter.MobileBanking@183967b]" name="TransactionHistory" duration-ms="36783" started-at="2017-12-29T16:45:34Z" finished-at="2017-12-29T16:46:11Z">
+        <test-method status="PASS" signature="TransactionHistory()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="TransactionHistory" duration-ms="37979" started-at="2018-01-08T18:35:32Z" finished-at="2018-01-08T18:36:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TransactionHistory -->
       </class> <!-- mBankingControlCenter.MobileBanking -->
-    </test> <!-- TMB Bank -->
-  </suite> <!-- Non Financial Test cases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -82,7 +82,7 @@ public static String buildRequest(int index)
   }
 
 public static void main(String[] args) {
-buildRequest(10);
+buildRequest(4);
 
 }
 }
