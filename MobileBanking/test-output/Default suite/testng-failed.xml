@@ -5,7 +5,10 @@
     <classes>
       <class name="mBankingControlCenter.MobileBanking">
         <methods>
-          <include name="CancelMMIDSingle"/>
+          <include name="getResult"/>
+          <include name="TransactionHistory"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
         </methods>
       </class> <!-- mBankingControlCenter.MobileBanking -->
     </classes>

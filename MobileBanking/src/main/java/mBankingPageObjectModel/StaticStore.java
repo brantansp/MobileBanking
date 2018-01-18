@@ -1,4 +1,4 @@
-package mBankingConfigurationCenter;
+package mBankingPageObjectModel;
 
 import mBankingUtilityCenter.RandomNumGenerator;
 
@@ -16,7 +16,7 @@ public class StaticStore {
 		{"Account Sync",Configuration.RemMobileno+"APSY","2",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,"0"}, //1
 		{"Balance Enquiry",Configuration.RemMobileno+"APBE",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},    //2
 		{"Mini Statement",Configuration.RemMobileno+"APMS",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},      //3
-		{"Transaction history",Configuration.RemMobileno+"APTH",Configuration.mPINRequired,Configuration.mPIN,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //4
+		{"Transaction history",Configuration.RemMobileno+"APT1",Configuration.mPINRequired,Configuration.mPIN,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //4
 		{"Generate MMID",Configuration.RemMobileno+"APIM",Configuration.mPINRequired,Configuration.mPIN,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //5		
 		{"Retrieve MMID",Configuration.RemMobileno+"APS6",Configuration.mPINRequired,Configuration.mPIN,Configuration.RemAccountno,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //6
 		{"Cancel MMID All",Configuration.RemMobileno+"APRC",Configuration.mPINRequired,Configuration.mPIN,"ALL",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //7

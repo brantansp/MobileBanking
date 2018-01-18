@@ -1,60 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
+<testng-results skipped="0" failed="1" ignored="0" total="12" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="62935" started-at="2018-01-08T13:05:07Z" finished-at="2018-01-08T13:06:10Z">
+  <suite name="Default suite" duration-ms="29951" started-at="2018-01-18T14:14:28Z" finished-at="2018-01-18T14:14:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="62935" started-at="2018-01-08T13:05:07Z" finished-at="2018-01-08T13:06:10Z">
+    <test name="Default test" duration-ms="29951" started-at="2018-01-18T14:14:28Z" finished-at="2018-01-18T14:14:58Z">
       <class name="mBankingControlCenter.MobileBanking">
-        <test-method status="PASS" signature="AccountSync()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="AccountSync" duration-ms="5577" started-at="2018-01-08T18:35:07Z" finished-at="2018-01-08T18:35:13Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="startReport" is-config="true" duration-ms="460" started-at="2018-01-18T19:44:28Z" finished-at="2018-01-18T19:44:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="AccountSync()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="AccountSync" duration-ms="7965" started-at="2018-01-18T19:44:28Z" finished-at="2018-01-18T19:44:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AccountSync -->
-        <test-method status="PASS" signature="BalanceEnquiry()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="BalanceEnquiry" duration-ms="2094" started-at="2018-01-08T18:35:13Z" finished-at="2018-01-08T18:35:15Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="5" started-at="2018-01-18T19:44:36Z" finished-at="2018-01-18T19:44:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AccountSync status=SUCCESS method=MobileBanking.AccountSync()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="BalanceEnquiry()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="BalanceEnquiry" duration-ms="2299" started-at="2018-01-18T19:44:36Z" finished-at="2018-01-18T19:44:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BalanceEnquiry -->
-        <test-method status="PASS" signature="CancelMMIDAll()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="CancelMMIDAll" duration-ms="2949" started-at="2018-01-08T18:35:15Z" finished-at="2018-01-08T18:35:18Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-18T19:44:38Z" finished-at="2018-01-18T19:44:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BalanceEnquiry status=SUCCESS method=MobileBanking.BalanceEnquiry()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="CancelMMIDAll()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="CancelMMIDAll" duration-ms="3157" started-at="2018-01-18T19:44:38Z" finished-at="2018-01-18T19:44:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CancelMMIDAll -->
-        <test-method status="PASS" signature="CancelMMIDSingle()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="CancelMMIDSingle" duration-ms="3672" started-at="2018-01-08T18:35:18Z" finished-at="2018-01-08T18:35:22Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-18T19:44:42Z" finished-at="2018-01-18T19:44:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CancelMMIDAll status=SUCCESS method=MobileBanking.CancelMMIDAll()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="CancelMMIDSingle()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="CancelMMIDSingle" duration-ms="3205" started-at="2018-01-18T19:44:42Z" finished-at="2018-01-18T19:44:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CancelMMIDSingle -->
-        <test-method status="PASS" signature="ChequeStatus()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="ChequeStatus" duration-ms="2127" started-at="2018-01-08T18:35:22Z" finished-at="2018-01-08T18:35:24Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-18T19:44:45Z" finished-at="2018-01-18T19:44:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CancelMMIDSingle status=SUCCESS method=MobileBanking.CancelMMIDSingle()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="ChequeStatus()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="ChequeStatus" duration-ms="2429" started-at="2018-01-18T19:44:45Z" finished-at="2018-01-18T19:44:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChequeStatus -->
-        <test-method status="PASS" signature="EmailIDFetch()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="EmailIDFetch" duration-ms="1082" started-at="2018-01-08T18:35:24Z" finished-at="2018-01-08T18:35:25Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-18T19:44:47Z" finished-at="2018-01-18T19:44:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ChequeStatus status=SUCCESS method=MobileBanking.ChequeStatus()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="EmailIDFetch()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="EmailIDFetch" duration-ms="1187" started-at="2018-01-18T19:44:47Z" finished-at="2018-01-18T19:44:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmailIDFetch -->
-        <test-method status="PASS" signature="EmailIDUpdate()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="EmailIDUpdate" duration-ms="1068" started-at="2018-01-08T18:35:25Z" finished-at="2018-01-08T18:35:26Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-18T19:44:48Z" finished-at="2018-01-18T19:44:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EmailIDFetch status=SUCCESS method=MobileBanking.EmailIDFetch()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="EmailIDUpdate()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="EmailIDUpdate" duration-ms="1075" started-at="2018-01-18T19:44:48Z" finished-at="2018-01-18T19:44:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmailIDUpdate -->
-        <test-method status="PASS" signature="GenerateMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="GenerateMMID" duration-ms="1381" started-at="2018-01-08T18:35:26Z" finished-at="2018-01-08T18:35:27Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-18T19:44:49Z" finished-at="2018-01-18T19:44:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EmailIDUpdate status=SUCCESS method=MobileBanking.EmailIDUpdate()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="GenerateMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="GenerateMMID" duration-ms="1565" started-at="2018-01-18T19:44:49Z" finished-at="2018-01-18T19:44:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GenerateMMID -->
-        <test-method status="PASS" signature="MiniStatement()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="MiniStatement" duration-ms="1970" started-at="2018-01-08T18:35:27Z" finished-at="2018-01-08T18:35:29Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-18T19:44:51Z" finished-at="2018-01-18T19:44:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=GenerateMMID status=SUCCESS method=MobileBanking.GenerateMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="MiniStatement()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="MiniStatement" duration-ms="1982" started-at="2018-01-18T19:44:51Z" finished-at="2018-01-18T19:44:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MiniStatement -->
-        <test-method status="PASS" signature="RetrieveMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="RetrieveMMID" duration-ms="1096" started-at="2018-01-08T18:35:29Z" finished-at="2018-01-08T18:35:30Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-18T19:44:53Z" finished-at="2018-01-18T19:44:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MiniStatement status=SUCCESS method=MobileBanking.MiniStatement()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="RetrieveMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="RetrieveMMID" duration-ms="1252" started-at="2018-01-18T19:44:53Z" finished-at="2018-01-18T19:44:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RetrieveMMID -->
-        <test-method status="PASS" signature="StopCheque()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="StopCheque" duration-ms="1891" started-at="2018-01-08T18:35:30Z" finished-at="2018-01-08T18:35:32Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-18T19:44:54Z" finished-at="2018-01-18T19:44:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RetrieveMMID status=SUCCESS method=MobileBanking.RetrieveMMID()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="StopCheque()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="StopCheque" duration-ms="2326" started-at="2018-01-18T19:44:54Z" finished-at="2018-01-18T19:44:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StopCheque -->
-        <test-method status="PASS" signature="TransactionHistory()[pri:0, instance:mBankingControlCenter.MobileBanking@c273d3]" name="TransactionHistory" duration-ms="37979" started-at="2018-01-08T18:35:32Z" finished-at="2018-01-08T18:36:10Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-18T19:44:57Z" finished-at="2018-01-18T19:44:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=StopCheque status=SUCCESS method=MobileBanking.StopCheque()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="TransactionHistory()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="TransactionHistory" duration-ms="378" started-at="2018-01-18T19:44:57Z" finished-at="2018-01-18T19:44:57Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at mBankingControlCenter.MobileBanking.TransactionHistory(MobileBanking.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TransactionHistory -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-18T19:44:57Z" finished-at="2018-01-18T19:44:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TransactionHistory status=FAILURE method=MobileBanking.TransactionHistory()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:mBankingControlCenter.MobileBanking@a3426]" name="endReport" is-config="true" duration-ms="580" started-at="2018-01-18T19:44:57Z" finished-at="2018-01-18T19:44:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
       </class> <!-- mBankingControlCenter.MobileBanking -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

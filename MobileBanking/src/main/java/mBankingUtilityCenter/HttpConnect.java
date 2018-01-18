@@ -8,7 +8,7 @@ import java.net.URL;
 
 import org.testng.reporters.jq.Main;
 
-import mBankingConfigurationCenter.Configuration;
+import mBankingPageObjectModel.Configuration;
 
 public class HttpConnect {
 

@@ -1,4 +1,4 @@
-package mBankingConfigurationCenter;
+package mBankingPageObjectModel;
 
 public class Configuration {
 	
