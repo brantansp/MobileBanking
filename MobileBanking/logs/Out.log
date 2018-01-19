@@ -1098,3 +1098,332 @@
 2018-01-18 19:44:57 INFO  RequestBuilder:71 - Transaction ID : 417813204021
 2018-01-18 19:44:57 INFO  RequestBuilder:85 - ******************************END********************************
 
+2018-01-19 14:45:26 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:45:26 INFO  RequestBuilder:33 - Request : Account Sync
+2018-01-19 14:45:26 INFO  RequestBuilder:56 - Hmaced Request : d6070bc81c654f2354f5f26e4741813efb22b07267306a4f9ab414061d503ffd*!9865928748APSY;2;463795;123457;4.0;0;151813450054346733157119044504454041417
+2018-01-19 14:45:32 INFO  RequestBuilder:69 - Response received from Server : SY00;N;K K legend;2;6;5012432470000000*10#5012432476849862*10#5012432476849800*10#5012432476849822*10#5012433476349826*10#5012432472349283*10;Y;TXNID:801914241859;BID:C463795
+2018-01-19 14:45:32 INFO  RequestBuilder:71 - Transaction ID : 801914241859
+2018-01-19 14:45:33 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:49:05 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:49:05 INFO  RequestBuilder:33 - Request : Account Sync
+2018-01-19 14:49:05 INFO  RequestBuilder:56 - Hmaced Request : 83c9cb649fe1dd89bb0f14d58b8f1030a9d1464c21031125cde7c8dbe633e140*!9865928748APSY;2;463795;123457;4.0;0;89050870169518205040025163711227461466
+2018-01-19 14:49:11 INFO  RequestBuilder:69 - Response received from Server : SY00;N;K K legend;2;6;5012432470000000*10#5012432476849862*10#5012432476849800*10#5012432476849822*10#5012433476349826*10#5012432472349283*10;Y;TXNID:801914241860;BID:C463795
+2018-01-19 14:49:11 INFO  RequestBuilder:71 - Transaction ID : 801914241860
+2018-01-19 14:49:12 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:21 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:21 INFO  RequestBuilder:33 - Request : Account Sync
+2018-01-19 14:51:21 INFO  RequestBuilder:56 - Hmaced Request : a9c83e4bd391cda11171e812a16c628a1ee5f3b03e1f547bb8092a9e69db7e96*!9865928748APSY;2;463795;123457;4.0;0;152055582914412378330626261372704672259
+2018-01-19 14:51:25 INFO  RequestBuilder:69 - Response received from Server : SY00;N;K K legend;2;6;5012432470000000*10#5012432476849862*10#5012432476849800*10#5012432476849822*10#5012433476349826*10#5012432472349283*10;Y;TXNID:801914241861;BID:C463795
+2018-01-19 14:51:25 INFO  RequestBuilder:71 - Transaction ID : 801914241861
+2018-01-19 14:51:25 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:25 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:25 INFO  RequestBuilder:33 - Request : Balance Enquiry
+2018-01-19 14:51:25 INFO  RequestBuilder:56 - Hmaced Request : b71de7a1d8bc61d1c9c14cd263c4fe6dbf3ad19378b456bd0058a564336c449c*!9865928748APBE;Y;41781320402139635621401969632506560255;463795;123457;4.0;161100350300067;174762581467767979914243063579892051647
+2018-01-19 14:51:28 INFO  RequestBuilder:69 - Response received from Server : BE00;63,320.82;63,305.07; ;19/01/2018 14:52;TXNID:801914241862;BID:C463795
+2018-01-19 14:51:28 INFO  RequestBuilder:71 - Transaction ID : 801914241862
+2018-01-19 14:51:28 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:28 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:28 INFO  RequestBuilder:33 - Request : Generate MMID
+2018-01-19 14:51:28 INFO  RequestBuilder:56 - Hmaced Request : bb662f569a2daf1e8cb4a9409032393b549769a98fc6ea185f1151e60c9651ed*!9865928748APIM;Y;41781320402139635621401969632506560255;001;463795;123457;4.0;161100350300067;182079707014115232028437014322058247710
+2018-01-19 14:51:30 INFO  RequestBuilder:69 - Response received from Server : IM00;5012XXXXXX849860*9060087#5012XXXXXX000000*9060168#5012XXXXXX849862*9060277#5012XXXXXX849800*9060605#5012XXXXXX849822*9060646#5012XXXXXX349826*9060709#5012XXXXXX349283*9060722#2011XXXXX800005*9060764#2011XXXXX800065*9060866#1611XXXXX300067*9060921;1;N;19/01/2018 14:52;TXNID:801914241863;BID:C463795
+2018-01-19 14:51:30 INFO  RequestBuilder:71 - Transaction ID : 801914241863
+2018-01-19 14:51:30 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:30 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:30 INFO  RequestBuilder:33 - Request : Cancel MMID All
+2018-01-19 14:51:30 INFO  RequestBuilder:56 - Hmaced Request : 239a3850df4e149e53813382b4acc3ac07de6d3903b84a3cf034192fdf135278*!9865928748APRC;Y;41781320402139635621401969632506560255;ALL;463795;123457;4.0;161100350300067;20912877364238622000876439222882073425
+2018-01-19 14:51:31 INFO  RequestBuilder:69 - Response received from Server : RC00;IMPS Cancelled successfully;19/01/2018 14:52;TXNID:801914241864;BID:C463795
+2018-01-19 14:51:31 INFO  RequestBuilder:71 - Transaction ID : 801914241864
+2018-01-19 14:51:32 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:32 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:32 INFO  RequestBuilder:33 - Request : Generate MMID
+2018-01-19 14:51:32 INFO  RequestBuilder:56 - Hmaced Request : 48f41a36cafe9b44dcdd4056f24806730d26e718fb100a47b41a13f9e261af13*!9865928748APIM;Y;41781320402139635621401969632506560255;001;463795;123457;4.0;161100350300067;36055103287919641349285168717758868588
+2018-01-19 14:51:34 INFO  RequestBuilder:69 - Response received from Server : IM00;1611XXXXX300067*9060474#5012XXXXXX000000*9060775#5012XXXXXX349283*9060231#5012XXXXXX349826*9060192#2011XXXXX800005*9060697#5012XXXXXX849862*9060607#2011XXXXX800065*9060241#5012XXXXXX849800*9060184#5012XXXXXX849822*9060522#5012XXXXXX849860*9060976;1;N;19/01/2018 14:52;TXNID:801914241865;BID:C463795
+2018-01-19 14:51:34 INFO  RequestBuilder:71 - Transaction ID : 801914241865
+2018-01-19 14:51:34 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:34 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:34 INFO  RequestBuilder:33 - Request : Cancel MMID Single
+2018-01-19 14:51:34 INFO  RequestBuilder:56 - Hmaced Request : 9ece3957cecbcbcb96cdbccecef0b3c50a6ceec7f9410bd9a3fd3245850f5279*!9865928748APRC;Y;41781320402139635621401969632506560255;161100350300067;463795;123457;4.0;161100350300067;12172641331168257377285765838857817409
+2018-01-19 14:51:36 INFO  RequestBuilder:69 - Response received from Server : RC00;Your MMID 9060474 allotted for the A/C No. XXXXXXXX0067 is cancelled.;19/01/2018 14:52;TXNID:801914241866;BID:C463795
+2018-01-19 14:51:36 INFO  RequestBuilder:71 - Transaction ID : 801914241866
+2018-01-19 14:51:36 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:36 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:36 INFO  RequestBuilder:33 - Request : Cheque Status
+2018-01-19 14:51:36 INFO  RequestBuilder:56 - Hmaced Request : 783f9cb866bd617cdf55215708399c667c8350616e1d09aad31f6d408966855e*!9865928748APLW;Y;41781320402139635621401969632506560255;1234567;463795;123457;4.0;161100350300067;11810960564915558942409828787990827687
+2018-01-19 14:51:40 INFO  RequestBuilder:69 - Response received from Server : LW00;Your cheque (1234567) has been ;19/01/2018 14:52;TXNID:801914241867;BID:C463795
+2018-01-19 14:51:40 INFO  RequestBuilder:71 - Transaction ID : 801914241867
+2018-01-19 14:51:40 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:40 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:40 INFO  RequestBuilder:33 - Request : Email ID Fetch
+2018-01-19 14:51:40 INFO  RequestBuilder:56 - Hmaced Request : 67a878a75123fd25b4e72959ffb1be420a7ba3cc25ae08dac8dd878602642dd9*!9865928748APZ6;Y;41781320402139635621401969632506560255;463795;123457;4.0;161100350300067;135938314875811175265561041650990656278
+2018-01-19 14:51:41 INFO  RequestBuilder:69 - Response received from Server : Z600;aboutsatham@gmail.com;19/01/2018 14:52;TXNID:801914241868;BID:C463795
+2018-01-19 14:51:41 INFO  RequestBuilder:71 - Transaction ID : 801914241868
+2018-01-19 14:51:41 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:41 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:41 INFO  RequestBuilder:33 - Request : Update Email ID
+2018-01-19 14:51:41 INFO  RequestBuilder:56 - Hmaced Request : 17a07d93166979113dc85268b2dbb50676ffc2fca79aa5e639b7343569282ed4*!9865928748APZ3;Y;41781320402139635621401969632506560255;aboutsatham@gmail.com;463795;123457;4.0;161100350300067;196119630459292553408712870111491810927
+2018-01-19 14:51:43 INFO  RequestBuilder:69 - Response received from Server : Z300;Your E-mail ID configured successfully;19/01/2018 14:52;TXNID:801914241869;BID:C463795
+2018-01-19 14:51:43 INFO  RequestBuilder:71 - Transaction ID : 801914241869
+2018-01-19 14:51:43 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:43 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:43 INFO  RequestBuilder:33 - Request : Generate MMID
+2018-01-19 14:51:43 INFO  RequestBuilder:56 - Hmaced Request : fefc28a08f2bceaf955b75a50a6b9bcef91051a65ff317726b45e0e75eb044dc*!9865928748APIM;Y;41781320402139635621401969632506560255;001;463795;123457;4.0;161100350300067;97971599898306191286862460279049356918
+2018-01-19 14:51:45 INFO  RequestBuilder:69 - Response received from Server : IM00;5012XXXXXX849800*9060184#5012XXXXXX349826*9060192#5012XXXXXX349283*9060231#2011XXXXX800065*9060241#5012XXXXXX849822*9060522#5012XXXXXX849862*9060607#2011XXXXX800005*9060697#5012XXXXXX000000*9060775#5012XXXXXX849860*9060976#1611XXXXX300067*9060535;1;N;19/01/2018 14:52;TXNID:801914241870;BID:C463795
+2018-01-19 14:51:45 INFO  RequestBuilder:71 - Transaction ID : 801914241870
+2018-01-19 14:51:45 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:45 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:45 INFO  RequestBuilder:33 - Request : Mini Statement
+2018-01-19 14:51:45 INFO  RequestBuilder:56 - Hmaced Request : 5c262305b9fe9571ec6b4877a11dda23c127fe22ccd74ba457ce8f6d2f2a38b6*!9865928748APMS;Y;41781320402139635621401969632506560255;463795;123457;4.0;161100350300067;44264562746551910599654883242278516400
+2018-01-19 14:51:47 INFO  RequestBuilder:69 - Response received from Server : MS00;08/11/17 D NEFT/SUBRAMANIAN-VELRAJAN 103.00#08/11/17 D NEFT/VGN-Facility-Mgmt-Se 107.00#08/11/17 D eBank/Tr-To-S.ANISH-KUMAR 201.00#08/11/17 D RTGS/TATA-CARD/TMBLH17312 216000.00#08/11/17 D eBank/Tr-To-SAROJINI.C 204.00#08/11/17 D NEFT/testaudit/TMBLH17312 108.00#08/11/17 D NEFT/Shanmugavel/TMBLH173 102.00#08/11/17 D NEFT/ing-vysys-test3/TMBL 109.00#08/11/17 D NEFT/ANNA-NAGAR-OWNER/TMB 100.00;63,320.82;TXNID:801914241871;BID:C463795
+2018-01-19 14:51:47 INFO  RequestBuilder:71 - Transaction ID : 801914241871
+2018-01-19 14:51:47 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:47 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:47 INFO  RequestBuilder:33 - Request : Retrieve MMID
+2018-01-19 14:51:47 INFO  RequestBuilder:56 - Hmaced Request : c8512bc335a37396650d3ccc451063c08a54b253daf1583f0ddbc69a8590d5cd*!9865928748APS6;Y;41781320402139635621401969632506560255;161100350300067;463795;123457;4.0;161100350300067;79739524256943183074768706024620941667
+2018-01-19 14:51:48 INFO  RequestBuilder:69 - Response received from Server : S600;Your MMID allotted for the A/C No. XXXXXXXX0067 is 9060535.You can Send and Receive Money through IMPS option in Mobile Banking.;19/01/2018 14:52;TXNID:801914241872;BID:C463795
+2018-01-19 14:51:48 INFO  RequestBuilder:71 - Transaction ID : 801914241872
+2018-01-19 14:51:48 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:48 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:48 INFO  RequestBuilder:33 - Request : Stop Cheque
+2018-01-19 14:51:48 INFO  RequestBuilder:56 - Hmaced Request : d5cb2dd06b26f49fade0744621099a35fad81b609827f590f13d99795c51c43b*!9865928748APL4;Y;41781320402139635621401969632506560255;1234567;463795;123457;4.0;161100350300067;85145441515265085472479733256566704493
+2018-01-19 14:51:50 INFO  RequestBuilder:69 - Response received from Server : L400;Stop Payment request issued for Cheque no. 1234567 (a/c no. XXXXXXXX0067) has been executed successfully.;19/01/2018 14:52;TXNID:801914241873;BID:C463795
+2018-01-19 14:51:50 INFO  RequestBuilder:71 - Transaction ID : 801914241873
+2018-01-19 14:51:50 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 14:51:50 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 14:51:50 INFO  RequestBuilder:33 - Request : Transaction history
+2018-01-19 14:51:50 INFO  RequestBuilder:56 - Hmaced Request : 96d528bb914fd4fd8ccef7089178747c92d1447794d44e34af2ee9fa0fb88d64*!9865928748APT1;Y;41781320402139635621401969632506560255;001;463795;123457;4.0;161100350300067;135506307949097875668353466609669451679
+2018-01-19 14:51:51 INFO  RequestBuilder:69 - Response received from Server : T1;Y;41781320402139635621401969632506560255;001;463795;123457;4.0;161100350300067;9865928748
+2018-01-19 14:51:51 INFO  RequestBuilder:71 - Transaction ID : 417813204021
+2018-01-19 14:51:51 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:45:59 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:45:59 INFO  RequestBuilder:33 - Request : Account Sync
+2018-01-19 19:46:02 INFO  RequestBuilder:56 - Hmaced Request : a5de63927d2bb70bb156d11e4926410e929c6d332ec9494d9177a7d29ed866fb*!9865928748APSY;2;463795;123457;4.0;0;30939644913695933455087840678753528085
+2018-01-19 19:46:07 INFO  RequestBuilder:69 - Response received from Server : SY00;N;K K legend;2;6;5012433476349826*10#5012432472349283*10#201150050800065*10#5012432476849822*10#161100350300067*20#5012432476849862*10;Y;TXNID:801919241897;BID:C463795
+2018-01-19 19:46:07 INFO  RequestBuilder:71 - Transaction ID : 801919241897
+2018-01-19 19:46:10 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:10 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:10 INFO  RequestBuilder:33 - Request : Balance Enquiry
+2018-01-19 19:46:10 INFO  RequestBuilder:56 - Hmaced Request : 512af10d85d0a76e3aa947348085e570fa29a70c5837a39cc271253614aab3a9*!9865928748APBE;Y;41781320402139635621401969632506560255;463795;123457;4.0;161100350300067;54741985136246574787230137286282735311
+2018-01-19 19:46:13 INFO  RequestBuilder:69 - Response received from Server : BE00;63,320.82;63,305.07; ;19/01/2018 19:47;TXNID:801919241898;BID:C463795
+2018-01-19 19:46:13 INFO  RequestBuilder:71 - Transaction ID : 801919241898
+2018-01-19 19:46:13 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:13 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:13 INFO  RequestBuilder:33 - Request : Generate MMID
+2018-01-19 19:46:13 INFO  RequestBuilder:56 - Hmaced Request : 4bf6d676f24486b414ad562c4d46c6bd6e5e2e97fe987088a53242c68c5b2513*!9865928748APIM;Y;41781320402139635621401969632506560255;001;463795;123457;4.0;161100350300067;38060527012279800008921069014342794862
+2018-01-19 19:46:14 INFO  RequestBuilder:69 - Response received from Server : IM00;5012XXXXXX849800*9060184#5012XXXXXX349826*9060192#5012XXXXXX349283*9060231#2011XXXXX800065*9060241#5012XXXXXX849822*9060522#1611XXXXX300067*9060535#5012XXXXXX849862*9060607#2011XXXXX800005*9060697#5012XXXXXX000000*9060775#5012XXXXXX849860*9060976;1;N;19/01/2018 19:47;TXNID:801919241899;BID:C463795
+2018-01-19 19:46:14 INFO  RequestBuilder:71 - Transaction ID : 801919241899
+2018-01-19 19:46:15 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:15 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:15 INFO  RequestBuilder:33 - Request : Cancel MMID All
+2018-01-19 19:46:15 INFO  RequestBuilder:56 - Hmaced Request : 04a4d1dd5fdda223c8f43349e612f2385926dca5171b5d039a6c3aa9423bb4a5*!9865928748APRC;Y;41781320402139635621401969632506560255;ALL;463795;123457;4.0;161100350300067;18006029284124311249283000193149454584
+2018-01-19 19:46:16 INFO  RequestBuilder:69 - Response received from Server : RC00;IMPS Cancelled successfully;19/01/2018 19:47;TXNID:801919241900;BID:C463795
+2018-01-19 19:46:16 INFO  RequestBuilder:71 - Transaction ID : 801919241900
+2018-01-19 19:46:16 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:16 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:16 INFO  RequestBuilder:33 - Request : Generate MMID
+2018-01-19 19:46:16 INFO  RequestBuilder:56 - Hmaced Request : 917d040b1d88969b6cde8dc447d5e7da4d23c2159821f6df5e4aa0622bd1124e*!9865928748APIM;Y;41781320402139635621401969632506560255;001;463795;123457;4.0;161100350300067;25249434116602363003910286728016339514
+2018-01-19 19:46:18 INFO  RequestBuilder:69 - Response received from Server : IM00;1611XXXXX300067*9060212#5012XXXXXX000000*9060948#5012XXXXXX349283*9060005#5012XXXXXX349826*9060506#2011XXXXX800005*9060385#5012XXXXXX849862*9060205#2011XXXXX800065*9060456#5012XXXXXX849800*9060615#5012XXXXXX849822*9060550#5012XXXXXX849860*9060040;1;N;19/01/2018 19:47;TXNID:801919241901;BID:C463795
+2018-01-19 19:46:18 INFO  RequestBuilder:71 - Transaction ID : 801919241901
+2018-01-19 19:46:18 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:18 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:18 INFO  RequestBuilder:33 - Request : Cancel MMID Single
+2018-01-19 19:46:18 INFO  RequestBuilder:56 - Hmaced Request : b520a1278f4479676b296fa790b1972c4f9bb3c3fcf95e84c68485a0b71b152b*!9865928748APRC;Y;41781320402139635621401969632506560255;161100350300067;463795;123457;4.0;161100350300067;123277620927551240282643249536321133879
+2018-01-19 19:46:20 INFO  RequestBuilder:69 - Response received from Server : RC00;Your MMID 9060212 allotted for the A/C No. XXXXXXXX0067 is cancelled.;19/01/2018 19:47;TXNID:801919241902;BID:C463795
+2018-01-19 19:46:20 INFO  RequestBuilder:71 - Transaction ID : 801919241902
+2018-01-19 19:46:20 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:20 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:20 INFO  RequestBuilder:33 - Request : Cheque Status
+2018-01-19 19:46:20 INFO  RequestBuilder:56 - Hmaced Request : a3e224017ddde76500cab7c8d9b5fd972e116ad3691e28a5e8c6ac8a26e07cb2*!9865928748APLW;Y;41781320402139635621401969632506560255;1234567;463795;123457;4.0;161100350300067;98493457289814956653272618743464241249
+2018-01-19 19:46:23 INFO  RequestBuilder:69 - Response received from Server : LW00;Your cheque (1234567) has been ;19/01/2018 19:47;TXNID:801919241903;BID:C463795
+2018-01-19 19:46:23 INFO  RequestBuilder:71 - Transaction ID : 801919241903
+2018-01-19 19:46:23 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:23 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:23 INFO  RequestBuilder:33 - Request : Email ID Fetch
+2018-01-19 19:46:23 INFO  RequestBuilder:56 - Hmaced Request : 2e5df2d49e79d21d7899b6a47b3499b567fbe4acc2826bc405a66a14df6883bf*!9865928748APZ6;Y;41781320402139635621401969632506560255;463795;123457;4.0;161100350300067;139799086550592160022590769168462532926
+2018-01-19 19:46:24 INFO  RequestBuilder:69 - Response received from Server : Z600;aboutsatham@gmail.com;19/01/2018 19:47;TXNID:801919241904;BID:C463795
+2018-01-19 19:46:24 INFO  RequestBuilder:71 - Transaction ID : 801919241904
+2018-01-19 19:46:24 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:24 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:24 INFO  RequestBuilder:33 - Request : Update Email ID
+2018-01-19 19:46:24 INFO  RequestBuilder:56 - Hmaced Request : ece2a67ab78332d152614e0c0dcab16ec8ffb7dcafaa0924de1327ec94076020*!9865928748APZ3;Y;41781320402139635621401969632506560255;aboutsatham@gmail.com;463795;123457;4.0;161100350300067;84499845474276245854288999325895605597
+2018-01-19 19:46:27 INFO  RequestBuilder:69 - Response received from Server : Z300;Your E-mail ID configured successfully;19/01/2018 19:47;TXNID:801919241905;BID:C463795
+2018-01-19 19:46:27 INFO  RequestBuilder:71 - Transaction ID : 801919241905
+2018-01-19 19:46:27 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:27 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:27 INFO  RequestBuilder:33 - Request : Generate MMID
+2018-01-19 19:46:27 INFO  RequestBuilder:56 - Hmaced Request : 010007bfa2265ba2000490b1f6a8598e0cb3af4824caf509952c5d1054463dcd*!9865928748APIM;Y;41781320402139635621401969632506560255;001;463795;123457;4.0;161100350300067;139500602349620305767031763639045363179
+2018-01-19 19:46:29 INFO  RequestBuilder:69 - Response received from Server : IM00;5012XXXXXX349283*9060005#5012XXXXXX849860*9060040#5012XXXXXX849862*9060205#2011XXXXX800005*9060385#2011XXXXX800065*9060456#5012XXXXXX349826*9060506#5012XXXXXX849822*9060550#5012XXXXXX849800*9060615#5012XXXXXX000000*9060948#1611XXXXX300067*9060529;1;N;19/01/2018 19:47;TXNID:801919241906;BID:C463795
+2018-01-19 19:46:29 INFO  RequestBuilder:71 - Transaction ID : 801919241906
+2018-01-19 19:46:29 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:29 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:29 INFO  RequestBuilder:33 - Request : IMPS P2A Add Beneficiary
+2018-01-19 19:46:29 INFO  RequestBuilder:56 - Hmaced Request : 4a55709ef62451a3a3fb7b6810231e732302605633edeb5f45b7138a5c958b26*!9865928748APK2;Y;41781320402139635621401969632506560255;24140566612121;SA;HDFC0000001;test;463795;123457;4.0;161100350300067;180965681041861655673112282670895253291
+2018-01-19 19:46:31 INFO  RequestBuilder:69 - Response received from Server : K209;You have already registered the nickname for another beneficiary;19/01/2018 19:47;TXNID:801919241907;BID:C463795
+2018-01-19 19:46:31 INFO  RequestBuilder:71 - Transaction ID : 801919241907
+2018-01-19 19:46:31 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:31 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:31 INFO  RequestBuilder:33 - Request : IMPS P2A Add Beneficiary confirmation
+2018-01-19 19:46:31 INFO  RequestBuilder:56 - Hmaced Request : 081ccd19a968f8018bb3780dc18e49311b9fc14178f47ea8197bb855ff50c753*!9865928748APK3;Y;41781320402139635621401969632506560255;9240123;9790954696;Appu;463795;123457;4.0;161100350300067;50620371579176942550495259508035671678
+2018-01-19 19:46:31 INFO  RequestBuilder:69 - Response received from Server : K3;Y;41781320402139635621401969632506560255;9240123;9790954696;Appu;463795;123457;4.0;161100350300067;9865928748
+2018-01-19 19:46:31 INFO  RequestBuilder:71 - Transaction ID : 417813204021
+2018-01-19 19:46:31 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:31 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:31 INFO  RequestBuilder:33 - Request : IMPS P2A Beneficiary Payment Confirmation
+2018-01-19 19:46:31 INFO  RequestBuilder:56 - Hmaced Request : 35e9f155b3a9b5af7565976b075101a4ffb70eba3d23b27b766bff0c7cc4c2ba*!9865928748APK5;Y;41781320402139635621401969632506560255;test;200;test;463795;123457;4.0;161100350300067;64531429200438268900277328322096239678
+2018-01-19 19:46:33 INFO  RequestBuilder:69 - Response received from Server : K509;Due to technical problem your last transaction was not processed. Please retry after some time;19/01/2018 19:47;TXNID:801919241908;BID:C463795
+2018-01-19 19:46:33 INFO  RequestBuilder:71 - Transaction ID : 801919241908
+2018-01-19 19:46:33 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:33 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:33 INFO  RequestBuilder:33 - Request : IMPS P2A Beneficiary Payment List enquiry
+2018-01-19 19:46:33 INFO  RequestBuilder:56 - Hmaced Request : 0e49e18caf6d07d506b5d620a4d32be82bab4fc18c93705b8d35951e9dc958fa*!9865928748APK4;Y;41781320402139635621401969632506560255;;1;463795;123457;4.0;161100350300067;69814546130000391186611803015476245578
+2018-01-19 19:46:34 INFO  RequestBuilder:69 - Response received from Server : K400; ;Bala*UTIB0000082*910010028738315*SA#qg*HDFC0000001*7272777772727727272*SA;1;N;TXNID:801919241909;BID:C463795
+2018-01-19 19:46:34 INFO  RequestBuilder:71 - Transaction ID : 801919241909
+2018-01-19 19:46:34 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:34 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:34 INFO  RequestBuilder:33 - Request : IMPS P2A Beneficiary Search List enquiry
+2018-01-19 19:46:34 INFO  RequestBuilder:56 - Hmaced Request : a6fdaa4026847ede54ae24f4b7ba3fc1ef2e791f5967cb2fe9dd0b24452caa33*!9865928748APD9;Y;41781320402139635621401969632506560255;;001;463795;123457;4.0;161100350300067;171945960804154413255119317393079435723
+2018-01-19 19:46:36 INFO  RequestBuilder:69 - Response received from Server : D900; ;balamob*Axis Bank*9211100*9500142261;1;N;TXNID:801919241910;BID:C463795
+2018-01-19 19:46:36 INFO  RequestBuilder:71 - Transaction ID : 801919241910
+2018-01-19 19:46:36 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:36 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:36 INFO  RequestBuilder:33 - Request : IMPS P2A Delete Beneficiary Confirmation
+2018-01-19 19:46:36 INFO  RequestBuilder:56 - Hmaced Request : 07188498494e8151875d0b2cb0e7cedaa28f799044c059933938c015da8a96fe*!9865928748AP5L;Y;41781320402139635621401969632506560255;test;001;463795;123457;4.0;161100350300067;176973759255099939736623044786120152403
+2018-01-19 19:46:37 INFO  RequestBuilder:69 - Response received from Server : 5L01;Beneficiary test not found.;19/01/2018 19:47;TXNID:801919241911;BID:C463795
+2018-01-19 19:46:37 INFO  RequestBuilder:71 - Transaction ID : 801919241911
+2018-01-19 19:46:38 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:38 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:38 INFO  RequestBuilder:33 - Request : IMPS P2A Delete Beneficiary List enquiry
+2018-01-19 19:46:38 INFO  RequestBuilder:56 - Hmaced Request : 9f3de016ec9a0067521bcb87c89e3b29e1621c9f1784886b90dbb243ca3ea63c*!9865928748AP5L;Y;41781320402139635621401969632506560255;;001;463795;123457;4.0;161100350300067;45770091680942283412581760515984587761
+2018-01-19 19:46:39 INFO  RequestBuilder:69 - Response received from Server : 5L00; ;balamob;1;N;TXNID:801919241912;BID:C463795
+2018-01-19 19:46:39 INFO  RequestBuilder:71 - Transaction ID : 801919241912
+2018-01-19 19:46:39 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:39 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:39 INFO  RequestBuilder:33 - Request : IMPS P2A Instant
+2018-01-19 19:46:39 INFO  RequestBuilder:56 - Hmaced Request : 24046d4f0c9c008b74f154fa9a4c07bca893c59e3302955a516f6859dfc7eaaa*!9865928748APK1;Y;41781320402139635621401969632506560255;24140566612121;SA;HDFC0000001;200;test;463795;123457;4.0;161100350300067;198423163763467818651086840940799153283
+2018-01-19 19:46:44 INFO  RequestBuilder:69 - Response received from Server : K109;Your fund transfer for Rs. 200.00 on 19-01-18 could not be processed. Please try later. (IMPS Ref no. 801919241913);19/01/2018 19:47;TXNID:801919241913;BID:C463795
+2018-01-19 19:46:44 INFO  RequestBuilder:71 - Transaction ID : 801919241913
+2018-01-19 19:46:44 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:44 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:44 INFO  RequestBuilder:33 - Request : IMPS P2P Add Beneficiary
+2018-01-19 19:46:44 INFO  RequestBuilder:56 - Hmaced Request : 0caf158c5c2a58302b8f83dc5ca4bbd61ce2cd51de60d4aae90a6b72e793ce0d*!9865928748APW1;Y;41781320402139635621401969632506560255;9240123;9790954696;Appu;463795;123457;4.0;161100350300067;56419297243219334896342178975470092074
+2018-01-19 19:46:45 INFO  RequestBuilder:69 - Response received from Server : W100;HDFC Bank;9240123;9790954696;Appu;19/01/2018 19:47;TXNID:801919241914;BID:C463795
+2018-01-19 19:46:45 INFO  RequestBuilder:71 - Transaction ID : 801919241914
+2018-01-19 19:46:45 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:45 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:45 INFO  RequestBuilder:33 - Request : IMPS P2P Add Beneficiary confirmation
+2018-01-19 19:46:45 INFO  RequestBuilder:56 - Hmaced Request : f4723bab40fa93f7402c08bcb8d2c938b451981143de8ffac60002fa1bad525a*!9865928748APW2;Y;41781320402139635621401969632506560255;9240123;9790954696;Appu;463795;123457;4.0;161100350300067;122989077106479710992090229983900464783
+2018-01-19 19:46:47 INFO  RequestBuilder:69 - Response received from Server : W200;Beneficiary Appu added successfully;19/01/2018 19:47;TXNID:801919241915;BID:C463795
+2018-01-19 19:46:47 INFO  RequestBuilder:71 - Transaction ID : 801919241915
+2018-01-19 19:46:47 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:47 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:47 INFO  RequestBuilder:33 - Request : IMPS P2P Beneficiary Payment Confirmation
+2018-01-19 19:46:47 INFO  RequestBuilder:56 - Hmaced Request : d94c23a68f14ab16332753e5a39154a419c6fe95a3d79cf79b1fa72380a5c0dc*!9865928748APW4;Y;41781320402139635621401969632506560255;200;test;test;463795;123457;4.0;161100350300067;83472328610887800986444083481707061063
+2018-01-19 19:46:49 INFO  RequestBuilder:69 - Response received from Server : W409;Due to technical problem your last transaction was not processed. Please retry after some time;19/01/2018 19:47;TXNID:801919241916;BID:C463795
+2018-01-19 19:46:49 INFO  RequestBuilder:71 - Transaction ID : 801919241916
+2018-01-19 19:46:49 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:49 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:49 INFO  RequestBuilder:33 - Request : IMPS P2P Beneficiary Payment List enquiry
+2018-01-19 19:46:49 INFO  RequestBuilder:56 - Hmaced Request : b56d68fa3575c063dd574fa6bf9b5b6ae39986dae5894e41cca18b44518b6e7c*!9865928748APW3;Y;41781320402139635621401969632506560255;P;;001;463795;123457;4.0;161100350300067;102767457567819316664089186069413922778
+2018-01-19 19:46:51 INFO  RequestBuilder:69 - Response received from Server : W300;P; ;appu#balamob;1;N;TXNID:801919241917;BID:C463795
+2018-01-19 19:46:51 INFO  RequestBuilder:71 - Transaction ID : 801919241917
+2018-01-19 19:46:51 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:51 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:51 INFO  RequestBuilder:33 - Request : IMPS P2P Beneficiary Search List enquiry
+2018-01-19 19:46:51 INFO  RequestBuilder:56 - Hmaced Request : afce6cad6bdc0957753e9b2191659dea43eca78ac1325e233e5808ca138e1a11*!9865928748APD9;Y;41781320402139635621401969632506560255;;001;463795;123457;4.0;161100350300067;139121318663720203812877416604338255781
+2018-01-19 19:46:52 INFO  RequestBuilder:69 - Response received from Server : D900; ;appu*HDFC Bank*9240123*9790954696#balamob*Axis Bank*9211100*9500142261;1;N;TXNID:801919241918;BID:C463795
+2018-01-19 19:46:52 INFO  RequestBuilder:71 - Transaction ID : 801919241918
+2018-01-19 19:46:53 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:53 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:53 INFO  RequestBuilder:33 - Request : IMPS P2P Delete Beneficiary Confirmation
+2018-01-19 19:46:53 INFO  RequestBuilder:56 - Hmaced Request : 45ff6e07d7fb857e294710cfc5751da396f2313e4679093944011f88d8949aa9*!9865928748AP5L;Y;41781320402139635621401969632506560255;test;001;463795;123457;4.0;161100350300067;160926786846528690984125415668893694598
+2018-01-19 19:46:54 INFO  RequestBuilder:69 - Response received from Server : 5L01;Beneficiary test not found.;19/01/2018 19:47;TXNID:801919241919;BID:C463795
+2018-01-19 19:46:54 INFO  RequestBuilder:71 - Transaction ID : 801919241919
+2018-01-19 19:46:54 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:54 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:54 INFO  RequestBuilder:33 - Request : IMPS P2P Delete Beneficiary List enquiry
+2018-01-19 19:46:54 INFO  RequestBuilder:56 - Hmaced Request : c6c97c8e41bdcae9890eb968b27067acd88b9c9b39b26d2d70f2510087ac1584*!9865928748AP5L;Y;41781320402139635621401969632506560255;;001;463795;123457;4.0;161100350300067;103404904729003657032458243851485269515
+2018-01-19 19:46:57 INFO  RequestBuilder:69 - Response received from Server : 5L00; ;appu#balamob;1;N;TXNID:801919241920;BID:C463795
+2018-01-19 19:46:57 INFO  RequestBuilder:71 - Transaction ID : 801919241920
+2018-01-19 19:46:57 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:46:57 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:46:57 INFO  RequestBuilder:33 - Request : IMPS P2P Instant
+2018-01-19 19:46:57 INFO  RequestBuilder:56 - Hmaced Request : aae83dae65d9e01d3650473099476e32567fb880dcbd8e1e9eea2b716d36cd23*!9865928748APQI;Y;41781320402139635621401969632506560255;9790954696;9240123;200;test;463795;123457;4.0;161100350300067;79855223758491106165679007581007197927
+2018-01-19 19:47:01 INFO  RequestBuilder:69 - Response received from Server : QI09;Your fund transfer for Rs. 200.00 on 19-01-18 could not be processed. Please try later. (IMPS Ref no. 801919241921);19/01/2018 19:48;TXNID:801919241921;BID:C463795
+2018-01-19 19:47:01 INFO  RequestBuilder:71 - Transaction ID : 801919241921
+2018-01-19 19:47:01 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:47:01 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:47:01 INFO  RequestBuilder:33 - Request : IMPS P2U Instant
+2018-01-19 19:47:01 INFO  RequestBuilder:56 - Hmaced Request : 5137a7958cd2f9f553eb39861c04638853a915525e98beeca255b5090d2a49a5*!9865928748AP1U;Y;41781320402139635621401969632506560255;789456123654;SA;200;test;463795;123457;4.0;161100350300067;192651182452691234520453222349774105559
+2018-01-19 19:47:06 INFO  RequestBuilder:69 - Response received from Server : 1U09;Your fund transfer for Rs. 200.00 on 19-01-18 could not be processed. Please try later. (IMPS Ref no. 801919241922);19/01/2018 19:48;TXNID:801919241922;BID:C463795
+2018-01-19 19:47:06 INFO  RequestBuilder:71 - Transaction ID : 801919241922
+2018-01-19 19:47:06 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:47:06 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:47:06 INFO  RequestBuilder:33 - Request : Mini Statement
+2018-01-19 19:47:06 INFO  RequestBuilder:56 - Hmaced Request : e7d735b37e435a7aa8e316599b72720ee9061693f19215eb8ae6194af586f0a6*!9865928748APMS;Y;41781320402139635621401969632506560255;463795;123457;4.0;161100350300067;60093960313264719310118183920093878038
+2018-01-19 19:47:08 INFO  RequestBuilder:69 - Response received from Server : MS00;08/11/17 D NEFT/SUBRAMANIAN-VELRAJAN 103.00#08/11/17 D NEFT/VGN-Facility-Mgmt-Se 107.00#08/11/17 D eBank/Tr-To-S.ANISH-KUMAR 201.00#08/11/17 D RTGS/TATA-CARD/TMBLH17312 216000.00#08/11/17 D eBank/Tr-To-SAROJINI.C 204.00#08/11/17 D NEFT/testaudit/TMBLH17312 108.00#08/11/17 D NEFT/Shanmugavel/TMBLH173 102.00#08/11/17 D NEFT/ing-vysys-test3/TMBL 109.00#08/11/17 D NEFT/ANNA-NAGAR-OWNER/TMB 100.00;63,320.82;TXNID:801919241923;BID:C463795
+2018-01-19 19:47:08 INFO  RequestBuilder:71 - Transaction ID : 801919241923
+2018-01-19 19:47:08 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:47:08 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:47:08 INFO  RequestBuilder:33 - Request : Retrieve MMID
+2018-01-19 19:47:08 INFO  RequestBuilder:56 - Hmaced Request : 64ee179822a8f3d4bec6adc02026815111cf9b813ef60c2b7b942bac66858ce5*!9865928748APS6;Y;41781320402139635621401969632506560255;161100350300067;463795;123457;4.0;161100350300067;148805202620221441823146912347676238960
+2018-01-19 19:47:10 INFO  RequestBuilder:69 - Response received from Server : S600;Your MMID allotted for the A/C No. XXXXXXXX0067 is 9060529.You can Send and Receive Money through IMPS option in Mobile Banking.;19/01/2018 19:48;TXNID:801919241924;BID:C463795
+2018-01-19 19:47:10 INFO  RequestBuilder:71 - Transaction ID : 801919241924
+2018-01-19 19:47:10 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:47:10 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:47:10 INFO  RequestBuilder:33 - Request : Stop Cheque
+2018-01-19 19:47:10 INFO  RequestBuilder:56 - Hmaced Request : 8bd8c7022d5b8b371446b8f957f5510e7958ac80a846e62b5670b3d51ad9465b*!9865928748APL4;Y;41781320402139635621401969632506560255;1234567;463795;123457;4.0;161100350300067;185853111968940401223022203810034457688
+2018-01-19 19:47:12 INFO  RequestBuilder:69 - Response received from Server : L400;Stop Payment request issued for Cheque no. 1234567 (a/c no. XXXXXXXX0067) has been executed successfully.;19/01/2018 19:48;TXNID:801919241925;BID:C463795
+2018-01-19 19:47:12 INFO  RequestBuilder:71 - Transaction ID : 801919241925
+2018-01-19 19:47:12 INFO  RequestBuilder:85 - ******************************END********************************
+
+2018-01-19 19:47:12 INFO  RequestBuilder:32 - ******************************START******************************
+2018-01-19 19:47:12 INFO  RequestBuilder:33 - Request : Transaction history
+2018-01-19 19:47:12 INFO  RequestBuilder:56 - Hmaced Request : 03e752ee42d92460f0388777074ff72559c4c378a7b9a5997c93377a34146e1a*!9865928748APTH;Y;41781320402139635621401969632506560255;001;463795;123457;4.0;161100350300067;487840163795632355649715399411741575
+2018-01-19 19:48:01 INFO  RequestBuilder:69 - Response received from Server : TH00;Mini Statement*19/01/18 19:47*S*.0*-*-*MOB*801919241923#P2U*19/01/18 19:47*F*200.0*1611XXXXX300067*-*MOB*801919241922#IMPS*19/01/18 19:46*F*200.0*1611XXXXX300067*-*MOB*801919241921#IMPS*19/01/18 19:46*F*200.0*1611XXXXX300067*test*MOB*801919241916#IMPS*19/01/18 19:46*F*200.0*1611XXXXX300067*-*MOB*801919241913#IMPS*19/01/18 19:46*F*200.0*1611XXXXX300067*test*MOB*801919241908#Balance enquiry*19/01/18 19:46*S*.0*-*-*MOB*801919241898#IMPS*19/01/18 19:18*F*100.0*1611XXXXX300067*qg*MOB*801919241896#IMPS*19/01/18 16:41*F*100.0*1611XXXXX300067*-*MOB*801916241888#IMPS*19/01/18 16:40*F*100.0*1611XXXXX300067*-*MOB*801916241887#IMPS*19/01/18 16:31*F*100.0*2011XXXXX800005*balamob*MOB*801916241884#Mini Statement*19/01/18 14:51*S*.0*-*-*MOB*801914241871#Balance enquiry*19/01/18 14:51*S*.0*-*-*MOB*801914241862#P2U*19/01/18 14:10*F*100.0*1611XXXXX300067*-*MOB*801914241855#IMPS*19/01/18 14:01*F*100.0*1611XXXXX300067*-*MOB*801914241853#Mini Statement*18/01/18 23:13*S*.0*-*-*MOB*801823241847#Balance enquiry*18/01/18 23:13*S*.0*-*-*MOB*801823241838#Mini Statement*18/01/18 23:05*S*.0*-*-*MOB*801823241834#Balance enquiry*18/01/18 23:02*S*.0*-*-*MOB*801823241827#Mini Statement*18/01/18 19:44*S*.0*-*-*MOB*801819241823#Balance enquiry*18/01/18 19:44*S*.0*-*-*MOB*801819241814#Mini Statement*18/01/18 19:38*S*.0*-*-*MOB*801819241810#Balance enquiry*18/01/18 19:37*S*.0*-*-*MOB*801819241801#Balance enquiry*18/01/18 19:34*S*.0*-*-*MOB*801819241799#Mini Statement*18/01/18 19:30*S*.0*-*-*MOB*801819241795#Balance enquiry*18/01/18 19:30*S*.0*-*-*MOB*801819241786#Balance enquiry*18/01/18 16:28*S*.0*-*-*MOB*801816241784#Mini Statement*18/01/18 16:21*S*.0*-*-*MOB*801816241780#Balance enquiry*18/01/18 16:20*S*.0*-*-*MOB*801816241771#Mini Statement*08/01/18 18:35*S*.0*-*-*MOB*800818241766;1;Y;TXNID:801919241926;BID:C463795
+2018-01-19 19:48:01 INFO  RequestBuilder:71 - Transaction ID : 801919241926
+2018-01-19 19:48:01 INFO  RequestBuilder:85 - ******************************END********************************
+

@@ -5,10 +5,18 @@
     <classes>
       <class name="mBankingControlCenter.MobileBanking">
         <methods>
+          <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
+          <include name="IMPSP2AAddBeneficiary"/>
           <include name="getResult"/>
-          <include name="TransactionHistory"/>
+          <include name="IMPSP2AAddBeneficiaryconfirmation"/>
+          <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
+          <include name="IMPSP2UInstant"/>
+          <include name="IMPSP2PInstant"/>
           <include name="endReport"/>
+          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
           <include name="startReport"/>
+          <include name="IMPSP2AInstant"/>
+          <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
         </methods>
       </class> <!-- mBankingControlCenter.MobileBanking -->
     </classes>

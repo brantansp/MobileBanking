@@ -16,7 +16,7 @@ public class StaticStore {
 		{"Account Sync",Configuration.RemMobileno+"APSY","2",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,"0"}, //1
 		{"Balance Enquiry",Configuration.RemMobileno+"APBE",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},    //2
 		{"Mini Statement",Configuration.RemMobileno+"APMS",Configuration.mPINRequired,Configuration.mPIN,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},      //3
-		{"Transaction history",Configuration.RemMobileno+"APT1",Configuration.mPINRequired,Configuration.mPIN,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //4
+		{"Transaction history",Configuration.RemMobileno+"APTH",Configuration.mPINRequired,Configuration.mPIN,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //4
 		{"Generate MMID",Configuration.RemMobileno+"APIM",Configuration.mPINRequired,Configuration.mPIN,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //5		
 		{"Retrieve MMID",Configuration.RemMobileno+"APS6",Configuration.mPINRequired,Configuration.mPIN,Configuration.RemAccountno,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //6
 		{"Cancel MMID All",Configuration.RemMobileno+"APRC",Configuration.mPINRequired,Configuration.mPIN,"ALL",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //7
@@ -25,9 +25,32 @@ public class StaticStore {
 		{"Update Email ID",Configuration.RemMobileno+"APZ3",Configuration.mPINRequired,Configuration.mPIN,"aboutsatham@gmail.com",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //10
 		{"Cheque Status",Configuration.RemMobileno+"APLW",Configuration.mPINRequired,Configuration.mPIN, Configuration.chequenum, Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //11
 		{"Stop Cheque", Configuration.RemMobileno+"APL4",Configuration.mPINRequired,Configuration.mPIN, Configuration.chequenum, Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno}, //12
-		//Financial Transactions
 		
-		{"IMPS P2P",Configuration.RemMobileno+"APQI",Configuration.mPINRequired, Configuration.mPIN,"9047637908","9240946","10","gsg",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //2
+		
+		//Financial Transactions		
+		//IMPS Instant Payment
+		{"IMPS P2P Instant",Configuration.RemMobileno+"APQI",Configuration.mPINRequired, Configuration.mPIN,Configuration.BenMobileNo,Configuration.BenMMID, Configuration.FTAmount,Configuration.FTRemarks,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //13
+		{"IMPS P2A Instant",Configuration.RemMobileno+"APK1",Configuration.mPINRequired, Configuration.mPIN,Configuration.BenAccountNo,Configuration.RemAccountType,Configuration.BenIFSCCode, Configuration.FTAmount,Configuration.FTRemarks,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //14
+		{"IMPS P2U Instant",Configuration.RemMobileno+"AP1U",Configuration.mPINRequired, Configuration.mPIN,Configuration.BenAadharNo,Configuration.RemAccountType, Configuration.FTAmount,Configuration.FTRemarks,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //15
+		
+		//IMPS Registration Payments
+		{"IMPS P2P Add Beneficiary",Configuration.RemMobileno+"APW1",Configuration.mPINRequired, Configuration.mPIN,Configuration.BenMMID,Configuration.BenMobileNo, Configuration.NicknameP2P,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //16
+		{"IMPS P2P Add Beneficiary confirmation",Configuration.RemMobileno+"APW2", Configuration.mPINRequired, Configuration.mPIN,Configuration.BenMMID,Configuration.BenMobileNo, Configuration.NicknameP2P,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //17
+		{"IMPS P2P Beneficiary Search List enquiry",Configuration.RemMobileno+"APD9", Configuration.mPINRequired, Configuration.mPIN,Configuration.BenSearchText,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //18
+		{"IMPS P2P Delete Beneficiary List enquiry",Configuration.RemMobileno+"AP5L", Configuration.mPINRequired, Configuration.mPIN,Configuration.BenSearchText,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //19
+		{"IMPS P2P Delete Beneficiary Confirmation",Configuration.RemMobileno+"AP5L", Configuration.mPINRequired, Configuration.mPIN,Configuration.BenName,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //20
+		{"IMPS P2P Beneficiary Payment List enquiry",Configuration.RemMobileno+"APW3", Configuration.mPINRequired, Configuration.mPIN,"P",Configuration.BenSearchText,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //21
+		{"IMPS P2P Beneficiary Payment Confirmation",Configuration.RemMobileno+"APW4", Configuration.mPINRequired, Configuration.mPIN,Configuration.FTAmount, Configuration.FTRemarks, Configuration.BenName  , Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //22
+
+		{"IMPS P2A Add Beneficiary",Configuration.RemMobileno+"APK2",Configuration.mPINRequired, Configuration.mPIN,Configuration.BenAccountNo,Configuration.BenAccType, Configuration.BenIFSCCode,Configuration.FTRemarks, Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //23
+		{"IMPS P2A Add Beneficiary confirmation",Configuration.RemMobileno+"APK3", Configuration.mPINRequired, Configuration.mPIN,Configuration.BenMMID,Configuration.BenMobileNo, Configuration.NicknameP2P,Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //24
+		{"IMPS P2A Beneficiary Search List enquiry",Configuration.RemMobileno+"APD9", Configuration.mPINRequired, Configuration.mPIN,Configuration.BenSearchText,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //25
+		{"IMPS P2A Delete Beneficiary List enquiry",Configuration.RemMobileno+"AP5L", Configuration.mPINRequired, Configuration.mPIN,Configuration.BenSearchText,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //26
+		{"IMPS P2A Delete Beneficiary Confirmation",Configuration.RemMobileno+"AP5L", Configuration.mPINRequired, Configuration.mPIN,Configuration.BenName,"001",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //27
+		{"IMPS P2A Beneficiary Payment List enquiry",Configuration.RemMobileno+"APK4", Configuration.mPINRequired, Configuration.mPIN, Configuration.BenSearchText,"1",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion,Configuration.RemAccountno},  //28
+		{"IMPS P2A Beneficiary Payment Confirmation",Configuration.RemMobileno+"APK5", Configuration.mPINRequired, Configuration.mPIN, Configuration.BenName , Configuration.FTAmount, Configuration.FTRemarks , Configuration.bankCode,Configuration.DUKPT, Configuration.buildVersion,Configuration.RemAccountno},  //29
+
+	
 		{"Add Beneficiary","APRM;Y",Configuration.mPIN,Configuration.bankCode,"Mobile No.",
          "Nickname","0001","4-4-N-Y-Y","","10-10-N-N-N","1-20-ANW-N-N","","5","true","true","Y"},//0
         {"Add Beneficiary","APRA;Y",Configuration.mPIN,Configuration.bankCode,"A/C No.","001",

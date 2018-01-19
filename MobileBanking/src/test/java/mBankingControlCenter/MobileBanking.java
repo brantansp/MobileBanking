@@ -35,9 +35,11 @@ public class MobileBanking {
           /**
            * For checking Single transactions
            */
-		index=2; //APBE
-		System.out.println("menus :"+ StaticStore.menuDesc[index][0]);
+		index=1; 
+
 		response =RequestBuilder.buildRequest(index);
+		System.out.println(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00");
+
 	}
 	
 	@BeforeTest
@@ -54,7 +56,7 @@ public class MobileBanking {
 		index=1; 
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("SY00"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, "Test Case Passed is passTest");
 	}
 	@Test
@@ -62,7 +64,7 @@ public class MobileBanking {
 		index=2; 
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("BE00"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, "Test Case Passed is passTest");
 	}
 	@Test
@@ -70,7 +72,7 @@ public class MobileBanking {
 		index=3; 
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("MS00"));	
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, "Test Case Passed is passTest");
 	}
 	
@@ -79,7 +81,7 @@ public class MobileBanking {
 		index=4;
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("TH00"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
 	}
 	@Test(priority = 0)
@@ -87,7 +89,7 @@ public class MobileBanking {
 		index=5; 
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("IM00"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
 	}
 	@Test
@@ -95,7 +97,7 @@ public class MobileBanking {
 		index=6; 
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("S600"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
 	}
 	@Test
@@ -104,7 +106,7 @@ public class MobileBanking {
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		RequestBuilder.buildRequest(5); // calling generate MMID
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("RC00"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
 	}
 	@Test
@@ -113,7 +115,7 @@ public class MobileBanking {
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		RequestBuilder.buildRequest(5); // calling generate MMID
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("RC00"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
 	}
 	@Test
@@ -121,7 +123,7 @@ public class MobileBanking {
 		index=9;
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("Z600"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
 	}
 	@Test
@@ -129,7 +131,7 @@ public class MobileBanking {
 		index=10;
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("Z300"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
 	}
 	@Test
@@ -137,18 +139,169 @@ public class MobileBanking {
 		index=11;
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("LW00"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
 	}
+	
 	@Test
 	public void StopCheque() throws IOException, SQLException {
 		index=12;
 		logger = extent.startTest(StaticStore.menuDesc[index][0]);
 		response =RequestBuilder.buildRequest(index);
-		assertTrue(response.contains("L400"));
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
 	}
 	
+	@Test
+	public void IMPSP2PInstant() throws IOException, SQLException {
+		index=13;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	@Test
+	public void IMPSP2AInstant() throws IOException, SQLException {
+		index=14;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2UInstant() throws IOException, SQLException {
+		index=15;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2PAddBeneficiary() throws IOException, SQLException {
+		index=16;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2PAddBeneficiaryconfirmation() throws IOException, SQLException {
+		index=17;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2PBeneficiarySearchListenquiry() throws IOException, SQLException {
+		index=18;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2PDeleteBeneficiaryListenquiry() throws IOException, SQLException {
+		index=19;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2PDeleteBeneficiaryConfirmation() throws IOException, SQLException {
+		index=20;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2PBeneficiaryPaymentListenquiry() throws IOException, SQLException {
+		index=21;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	@Test
+	public void IMPSP2PBeneficiaryPaymentConfirmation () throws IOException, SQLException {
+		index=22;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2AAddBeneficiary() throws IOException, SQLException {
+		index=23;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2AAddBeneficiaryconfirmation() throws IOException, SQLException {
+		index=24;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2ABeneficiarySearchListenquiry() throws IOException, SQLException {
+		index=25;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2ADeleteBeneficiaryListenquiry() throws IOException, SQLException {
+		index=26;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2ADeleteBeneficiaryConfirmation() throws IOException, SQLException {
+		index=27;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2ABeneficiaryPaymentListenquiry() throws IOException, SQLException {
+		index=28;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
+	
+	@Test
+	public void IMPSP2ABeneficiaryPaymentConfirmation() throws IOException, SQLException {
+		index=29;
+		logger = extent.startTest(StaticStore.menuDesc[index][0]);
+		response =RequestBuilder.buildRequest(index);
+		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
+		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
+	}
 	@AfterMethod
 	public void getResult(ITestResult result){
 		if(result.getStatus() == ITestResult.FAILURE){

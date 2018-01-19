@@ -24,6 +24,7 @@ public class Configuration {
     public static String BenMobileNo = "9790954696";
 	public static String NotRegMobileNo = "9842798393";
 	public static String BenMobileNo2 = "8754599510";
+	public static String BenMMID = "9240123";
 	public static String InitiatorMobNo = "8754533510";
 	public static String NotActivatedMobNo = "9677155591";
 	public static String MNickname = "Mobile";
@@ -31,15 +32,20 @@ public class Configuration {
 	public static String InvalidAccountNo = "24140100022696";
 	public static String InitiatorAccNo = "34545656756786";
 	public static String BenAccountNo2 = "24140156456465";
-	public static String ANickname = "Account";
-	public static String ANickname1 = "AccountN";
-	public static String AccType = "SAVINGS";
+	public static String RemAccountType = "SA";
+	public static String BenIFSCCode = "HDFC0000001";
+	public static String BenAadharNo = "789456123654";
+	public static String NicknameP2P = "Appu";
+	public static String NicknameP2A = "Babu";
+	public static String BenAccType = "SA";
 	public static String FTAmount = "200";
 	public static String FTAmount1 = "2";
 	public static String FTAmount2 = "9999999";
-	public static String FTRemarks = "";    	
+	public static String FTRemarks = "test";    	
 	public static String FTBenSearch = "Mobile";
 	public static String FTBenSearch1 = "Account";
+	public static String BenSearchText = "";
+	public static String BenName = "test";
 	//************Test Input for Other Bank - NEFT*********//
 	public static String BenNAccountNo = "24140100009637";
 	public static String BenNAccountNo1 = "24140100009636";

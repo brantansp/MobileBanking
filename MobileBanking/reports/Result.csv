@@ -138,3 +138,50 @@ Mini Statement,PASS,801819241823,2018-01-18 19:44:52.0,APMS,C,-,null,null,00,-
 Retrieve MMID,PASS,801819241824,2018-01-18 19:44:53.0,APS6,C,-,null,null,00,null
 Stop Cheque,PASS,801819241825,2018-01-18 19:44:55.0,APL4,C,-,null,null,00,-
 Transaction history,PASS,801819241825,2018-01-18 19:44:55.0,APL4,C,-,null,null,00,-
+Account Sync,PASS,801914241859,2018-01-19 14:45:27.0,APSY,C,-,null,null,00,-
+Account Sync,PASS,801914241860,2018-01-19 14:49:06.0,APSY,C,-,null,null,00,-
+Account Sync,PASS,801914241861,2018-01-19 14:51:21.0,APSY,C,-,null,null,00,-
+Balance Enquiry,PASS,801914241862,2018-01-19 14:51:26.0,APBE,C,-,null,null,00,-
+Generate MMID,PASS,801914241863,2018-01-19 14:51:28.0,APIM,C,-,null,null,00,null
+Cancel MMID All,PASS,801914241864,2018-01-19 14:51:30.0,APRC,C,-,null,null,00,null
+Generate MMID,PASS,801914241865,2018-01-19 14:51:32.0,APIM,C,-,null,null,00,null
+Cancel MMID Single,PASS,801914241866,2018-01-19 14:51:35.0,APRC,C,-,null,null,00,null
+Cheque Status,PASS,801914241867,2018-01-19 14:51:36.0,APLW,C,-,null,null,00,-
+Email ID Fetch,PASS,801914241868,2018-01-19 14:51:40.0,APZ6,C,-,null,null,00,null
+Update Email ID,PASS,801914241869,2018-01-19 14:51:42.0,APZ3,C,-,null,null,00,null
+Generate MMID,PASS,801914241870,2018-01-19 14:51:43.0,APIM,C,-,null,null,00,null
+Mini Statement,PASS,801914241871,2018-01-19 14:51:45.0,APMS,C,-,null,null,00,-
+Retrieve MMID,PASS,801914241872,2018-01-19 14:51:47.0,APS6,C,-,null,null,00,null
+Stop Cheque,PASS,801914241873,2018-01-19 14:51:49.0,APL4,C,-,null,null,00,-
+Transaction history,PASS,801914241873,2018-01-19 14:51:49.0,APL4,C,-,null,null,00,-
+Account Sync,PASS,801919241897,2018-01-19 19:46:03.0,APSY,C,-,null,null,00,-
+Balance Enquiry,PASS,801919241898,2018-01-19 19:46:11.0,APBE,C,-,null,null,00,-
+Generate MMID,PASS,801919241899,2018-01-19 19:46:13.0,APIM,C,-,null,null,00,null
+Cancel MMID All,PASS,801919241900,2018-01-19 19:46:15.0,APRC,C,-,null,null,00,null
+Generate MMID,PASS,801919241901,2018-01-19 19:46:17.0,APIM,C,-,null,null,00,null
+Cancel MMID Single,PASS,801919241902,2018-01-19 19:46:18.0,APRC,C,-,null,null,00,null
+Cheque Status,PASS,801919241903,2018-01-19 19:46:20.0,APLW,C,-,null,null,00,-
+Email ID Fetch,PASS,801919241904,2018-01-19 19:46:23.0,APZ6,C,-,null,null,00,null
+Update Email ID,PASS,801919241905,2018-01-19 19:46:25.0,APZ3,C,-,null,null,00,null
+Generate MMID,PASS,801919241906,2018-01-19 19:46:27.0,APIM,C,-,null,null,00,null
+IMPS P2A Add Beneficiary,FAIL,801919241907,2018-01-19 19:46:29.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Add Beneficiary confirmation,FAIL,801919241907,2018-01-19 19:46:29.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Beneficiary Payment Confirmation,FAIL,801919241908,2018-01-19 19:46:31.0,APK5,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
+IMPS P2A Beneficiary Payment List enquiry,PASS,801919241909,2018-01-19 19:46:33.0,APK4,C,-,null,null,00,null
+IMPS P2A Beneficiary Search List enquiry,PASS,801919241910,2018-01-19 19:46:35.0,APD9,C,-,null,null,00,null
+IMPS P2A Delete Beneficiary Confirmation,FAIL,801919241911,2018-01-19 19:46:36.0,AP5L,F,C,null,null,09,Beneficiary test not found.
+IMPS P2A Delete Beneficiary List enquiry,PASS,801919241912,2018-01-19 19:46:38.0,AP5L,C,-,null,null,00,null
+IMPS P2A Instant,FAIL,801919241913,2018-01-19 19:46:39.0,APK1,F,-,null,null,09,NPCI host is down.Please try after some time
+IMPS P2P Add Beneficiary,PASS,801919241914,2018-01-19 19:46:44.0,APW1,C,-,null,null,00,null
+IMPS P2P Add Beneficiary confirmation,PASS,801919241915,2018-01-19 19:46:46.0,APW2,C,-,null,null,00,null
+IMPS P2P Beneficiary Payment Confirmation,FAIL,801919241916,2018-01-19 19:46:48.0,APW4,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
+IMPS P2P Beneficiary Payment List enquiry,PASS,801919241917,2018-01-19 19:46:50.0,APW3,C,-,null,null,00,null
+IMPS P2P Beneficiary Search List enquiry,PASS,801919241918,2018-01-19 19:46:51.0,APD9,C,-,null,null,00,null
+IMPS P2P Delete Beneficiary Confirmation,FAIL,801919241919,2018-01-19 19:46:53.0,AP5L,F,C,null,null,09,Beneficiary test not found.
+IMPS P2P Delete Beneficiary List enquiry,PASS,801919241920,2018-01-19 19:46:54.0,AP5L,C,-,null,null,00,null
+IMPS P2P Instant,FAIL,801919241921,2018-01-19 19:46:57.0,APQI,F,-,null,null,09,NPCI host is down.Please try after some time
+IMPS P2U Instant,FAIL,801919241922,2018-01-19 19:47:02.0,AP1U,F,-,null,null,09,NPCI host is down.Please try after some time
+Mini Statement,PASS,801919241923,2018-01-19 19:47:06.0,APMS,C,-,null,null,00,-
+Retrieve MMID,PASS,801919241924,2018-01-19 19:47:09.0,APS6,C,-,null,null,00,null
+Stop Cheque,PASS,801919241925,2018-01-19 19:47:10.0,APL4,C,-,null,null,00,-
+Transaction history,PASS,801919241926,2018-01-19 19:47:13.0,APTH,C,-,null,null,00,null
