@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 //
-public class writeToFile {
+public class WriteToCSVFile {
 	public static String Transaction ;
 	public static String txndatetime;
 	public static String dbResult ;

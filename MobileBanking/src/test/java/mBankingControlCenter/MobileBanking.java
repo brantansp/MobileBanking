@@ -1,7 +1,5 @@
 package mBankingControlCenter;
 
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,7 +10,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import mBankingBasePageObject.RequestBuilder;
 import mBankingPageObjectModel.StaticStore;
 import mBankingUtilityCenter.HttpConnect;
-import mBankingUtilityCenter.dbTransactionlog;
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
@@ -22,7 +19,6 @@ import java.sql.SQLException;
 public class MobileBanking {
 	private static String response;
 	private static int index;
-	private static Log log = LogFactory.getLog(MobileBanking.class);
 	static ExtentReports extent;
 	ExtentTest logger;
     //public static FileHandler fh;  
@@ -300,16 +296,6 @@ public class MobileBanking {
 		response =RequestBuilder.buildRequest(index);
 		assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));
 		logger.log(LogStatus.PASS, StaticStore.menuDesc[index][0]+"is Passed");
-	}
-	@AfterMethod
-	public void getResult(ITestResult result){
-		if(result.getStatus() == ITestResult.FAILURE){
-			logger.log(LogStatus.FAIL, "Test Case Failed is "+result.getName());
-			logger.log(LogStatus.FAIL, "Test Case Failed is "+result.getThrowable());
-		}else if(result.getStatus() == ITestResult.SKIP){
-			logger.log(LogStatus.SKIP, "Test Case Skipped is "+result.getName());
-		}
-			extent.endTest(logger);
 	}
 	@AfterTest
 	public void endReport(){

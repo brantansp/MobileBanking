@@ -6,19 +6,15 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SignatureException;
 import java.sql.SQLException;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.testng.reporters.jq.Main;
-
-import mBankingControlCenter.MobileBanking;
 import mBankingPageObjectModel.Configuration;
 import mBankingPageObjectModel.StaticStore;
 import mBankingUtilityCenter.Hmac;
 import mBankingUtilityCenter.HttpConnect;
 import mBankingUtilityCenter.RandomNumGenerator;
 import mBankingUtilityCenter.dbTransactionlog;
-import mBankingUtilityCenter.writeToFile;
+import mBankingUtilityCenter.WriteToCSVFile;
 
 public class RequestBuilder {
 static HttpConnect obj=new HttpConnect();
@@ -74,7 +70,7 @@ public static String buildRequest(int index)
 			dbResult = dbTransactionlog.fetchRecord(transactionID);
 			//System.out.println(StaticStore.menuDesc[index][0]);
 			//log.info("DB Result : "+dbResult);
-			writeToFile.reportGeneration(StaticStore.menuDesc[index][0], dbResult);
+			WriteToCSVFile.reportGeneration(StaticStore.menuDesc[index][0], dbResult);
 		}		
 	} catch (IOException e) {
 		e.printStackTrace();
@@ -87,7 +83,7 @@ public static String buildRequest(int index)
   }
 
 public static void main(String[] args) {
-buildRequest(4);
+	log.info("message");
 
 }
 }
