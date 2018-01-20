@@ -6,11 +6,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.apache.commons.logging.*;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 import mBankingBasePageObject.RequestBuilder;
 import mBankingPageObjectModel.StaticStore;
 import mBankingUtilityCenter.HttpConnect;
@@ -51,6 +49,7 @@ public class MobileBanking {
                 .addSystemInfo("User Name", "Brantan sp");
                 extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 	}
+	
 	@Test
 	public void AccountSync() throws IOException, SQLException {
 		index=1; 
