@@ -6,9 +6,9 @@
           <class name = "mBankingControlCenter.NonFinancialTransactions"/>
       </classes>        
     </test>
-        <test name = "FInancial transaction">
+      <test name = "FInancial transaction">
       <classes>
-          <class name = "mBankingControlCenter.FinancialTransactions"/>
+          <class name="mBankingControlCenter.FinancialTransactions" />
       </classes>        
     </test>
 </suite>

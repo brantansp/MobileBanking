@@ -6,10 +6,13 @@
       <class name="mBankingControlCenter.NonFinancialTransactions">
         <methods>
           <include name="MiniStatement"/>
+          <include name="tearDown"/>
           <include name="StopCheque"/>
           <include name="BalanceEnquiry"/>
+          <include name="setUp"/>
           <include name="AccountSync"/>
-          <include name="beforeSuite"/>
+          <include name="getResult"/>
+          <include name="beforeMethod"/>
           <include name="ChequeStatus"/>
         </methods>
       </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
@@ -19,17 +22,21 @@
     <classes>
       <class name="mBankingControlCenter.FinancialTransactions">
         <methods>
+          <include name="tearDown"/>
           <include name="IMPSP2PAddBeneficiary"/>
-          <include name="IMPSP2AAddBeneficiary"/>
-          <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
-          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
           <include name="IMPSP2AInstant"/>
           <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
           <include name="IMPSP2PInstant"/>
-          <include name="IMPSP2AAddBeneficiaryconfirmation"/>
           <include name="IMPSP2PAddBeneficiaryconfirmation"/>
           <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
           <include name="IMPSP2UInstant"/>
+          <include name="IMPSP2AAddBeneficiary"/>
+          <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
+          <include name="setUp"/>
+          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
+          <include name="getResult"/>
+          <include name="IMPSP2AAddBeneficiaryconfirmation"/>
+          <include name="beforeMethod"/>
         </methods>
       </class> <!-- mBankingControlCenter.FinancialTransactions -->
     </classes>

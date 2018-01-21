@@ -2,12 +2,23 @@
 <testng-results skipped="0" failed="16" ignored="1" total="29" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Positive Transaction flow" duration-ms="73787" started-at="2018-01-21T07:53:47Z" finished-at="2018-01-21T07:55:01Z">
+  <suite name="Positive Transaction flow" duration-ms="74468" started-at="2018-01-21T12:12:33Z" finished-at="2018-01-21T12:13:48Z">
     <groups>
     </groups>
-    <test name="Non- FInancial transaction" duration-ms="31873" started-at="2018-01-21T07:53:47Z" finished-at="2018-01-21T07:54:19Z">
+    <test name="Non- FInancial transaction" duration-ms="33521" started-at="2018-01-21T12:12:33Z" finished-at="2018-01-21T12:13:07Z">
       <class name="mBankingControlCenter.NonFinancialTransactions">
-        <test-method status="FAIL" signature="AccountSync()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="AccountSync" duration-ms="2496" started-at="2018-01-21T13:23:47Z" finished-at="2018-01-21T13:23:49Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="4" started-at="2018-01-21T17:42:33Z" finished-at="2018-01-21T17:42:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.AccountSync() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="AccountSync()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="AccountSync" duration-ms="2781" started-at="2018-01-21T17:42:33Z" finished-at="2018-01-21T17:42:36Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -19,7 +30,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.NonFinancialTransactions.AccountSync(NonFinancialTransactions.java:41)
+	at mBankingControlCenter.NonFinancialTransactions.AccountSync(NonFinancialTransactions.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,7 +62,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AccountSync -->
-        <test-method status="FAIL" signature="BalanceEnquiry()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="BalanceEnquiry" duration-ms="3110" started-at="2018-01-21T13:23:49Z" finished-at="2018-01-21T13:23:53Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="3" started-at="2018-01-21T17:42:36Z" finished-at="2018-01-21T17:42:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AccountSync status=FAILURE method=NonFinancialTransactions.AccountSync()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="BalanceEnquiry()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="BalanceEnquiry" duration-ms="3177" started-at="2018-01-21T17:42:36Z" finished-at="2018-01-21T17:42:39Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -63,7 +85,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.NonFinancialTransactions.BalanceEnquiry(NonFinancialTransactions.java:47)
+	at mBankingControlCenter.NonFinancialTransactions.BalanceEnquiry(NonFinancialTransactions.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -95,15 +117,81 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BalanceEnquiry -->
-        <test-method status="PASS" signature="CancelMMIDAll()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="CancelMMIDAll" duration-ms="4153" started-at="2018-01-21T13:23:53Z" finished-at="2018-01-21T13:23:57Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:42:36Z" finished-at="2018-01-21T17:42:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.BalanceEnquiry() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:39Z" finished-at="2018-01-21T17:42:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BalanceEnquiry status=FAILURE method=NonFinancialTransactions.BalanceEnquiry()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:39Z" finished-at="2018-01-21T17:42:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.CancelMMIDAll() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="CancelMMIDAll()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="CancelMMIDAll" duration-ms="3974" started-at="2018-01-21T17:42:39Z" finished-at="2018-01-21T17:42:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CancelMMIDAll -->
-        <test-method status="PASS" signature="CancelMMIDSingle()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="CancelMMIDSingle" duration-ms="4797" started-at="2018-01-21T13:23:57Z" finished-at="2018-01-21T13:24:02Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-21T17:42:43Z" finished-at="2018-01-21T17:42:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CancelMMIDAll status=SUCCESS method=NonFinancialTransactions.CancelMMIDAll()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:43Z" finished-at="2018-01-21T17:42:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.CancelMMIDSingle() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="CancelMMIDSingle()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="CancelMMIDSingle" duration-ms="4980" started-at="2018-01-21T17:42:43Z" finished-at="2018-01-21T17:42:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CancelMMIDSingle -->
-        <test-method status="FAIL" signature="ChequeStatus()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="ChequeStatus" duration-ms="3838" started-at="2018-01-21T13:24:02Z" finished-at="2018-01-21T13:24:05Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:48Z" finished-at="2018-01-21T17:42:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CancelMMIDSingle status=SUCCESS method=NonFinancialTransactions.CancelMMIDSingle()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="ChequeStatus()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="ChequeStatus" duration-ms="4148" started-at="2018-01-21T17:42:48Z" finished-at="2018-01-21T17:42:52Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -115,7 +203,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.NonFinancialTransactions.ChequeStatus(NonFinancialTransactions.java:113)
+	at mBankingControlCenter.NonFinancialTransactions.ChequeStatus(NonFinancialTransactions.java:100)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -147,19 +235,107 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChequeStatus -->
-        <test-method status="PASS" signature="EmailIDFetch()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="EmailIDFetch" duration-ms="1916" started-at="2018-01-21T13:24:05Z" finished-at="2018-01-21T13:24:07Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:42:48Z" finished-at="2018-01-21T17:42:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.ChequeStatus() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:52Z" finished-at="2018-01-21T17:42:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ChequeStatus status=FAILURE method=NonFinancialTransactions.ChequeStatus()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:52Z" finished-at="2018-01-21T17:42:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.EmailIDFetch() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="EmailIDFetch()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="EmailIDFetch" duration-ms="1585" started-at="2018-01-21T17:42:52Z" finished-at="2018-01-21T17:42:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmailIDFetch -->
-        <test-method status="PASS" signature="EmailIDUpdate()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="EmailIDUpdate" duration-ms="1919" started-at="2018-01-21T13:24:07Z" finished-at="2018-01-21T13:24:09Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:54Z" finished-at="2018-01-21T17:42:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EmailIDFetch status=SUCCESS method=NonFinancialTransactions.EmailIDFetch()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:54Z" finished-at="2018-01-21T17:42:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.EmailIDUpdate() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="EmailIDUpdate()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="EmailIDUpdate" duration-ms="1597" started-at="2018-01-21T17:42:54Z" finished-at="2018-01-21T17:42:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmailIDUpdate -->
-        <test-method status="PASS" signature="GenerateMMID()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="GenerateMMID" duration-ms="2227" started-at="2018-01-21T13:24:09Z" finished-at="2018-01-21T13:24:11Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:55Z" finished-at="2018-01-21T17:42:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EmailIDUpdate status=SUCCESS method=NonFinancialTransactions.EmailIDUpdate()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="GenerateMMID()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="GenerateMMID" duration-ms="2246" started-at="2018-01-21T17:42:55Z" finished-at="2018-01-21T17:42:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GenerateMMID -->
-        <test-method status="FAIL" signature="MiniStatement()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="MiniStatement" duration-ms="2552" started-at="2018-01-21T13:24:11Z" finished-at="2018-01-21T13:24:14Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:42:55Z" finished-at="2018-01-21T17:42:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.GenerateMMID() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:42:58Z" finished-at="2018-01-21T17:42:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=GenerateMMID status=SUCCESS method=NonFinancialTransactions.GenerateMMID()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="MiniStatement()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="MiniStatement" duration-ms="4780" started-at="2018-01-21T17:42:58Z" finished-at="2018-01-21T17:43:02Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -171,7 +347,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.NonFinancialTransactions.MiniStatement(NonFinancialTransactions.java:55)
+	at mBankingControlCenter.NonFinancialTransactions.MiniStatement(NonFinancialTransactions.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -203,11 +379,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MiniStatement -->
-        <test-method status="PASS" signature="RetrieveMMID()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="RetrieveMMID" duration-ms="1905" started-at="2018-01-21T13:24:14Z" finished-at="2018-01-21T13:24:16Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:42:58Z" finished-at="2018-01-21T17:42:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.MiniStatement() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:02Z" finished-at="2018-01-21T17:43:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MiniStatement status=FAILURE method=NonFinancialTransactions.MiniStatement()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:02Z" finished-at="2018-01-21T17:43:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.RetrieveMMID() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="RetrieveMMID()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="RetrieveMMID" duration-ms="1593" started-at="2018-01-21T17:43:02Z" finished-at="2018-01-21T17:43:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RetrieveMMID -->
-        <test-method status="FAIL" signature="StopCheque()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="StopCheque" duration-ms="2877" started-at="2018-01-21T13:24:16Z" finished-at="2018-01-21T13:24:19Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:04Z" finished-at="2018-01-21T17:43:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RetrieveMMID status=SUCCESS method=NonFinancialTransactions.RetrieveMMID()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="StopCheque()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="StopCheque" duration-ms="2563" started-at="2018-01-21T17:43:04Z" finished-at="2018-01-21T17:43:07Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -219,7 +439,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.NonFinancialTransactions.StopCheque(NonFinancialTransactions.java:120)
+	at mBankingControlCenter.NonFinancialTransactions.StopCheque(NonFinancialTransactions.java:107)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -251,11 +471,48 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StopCheque -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:04Z" finished-at="2018-01-21T17:43:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.NonFinancialTransactions.StopCheque() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:07Z" finished-at="2018-01-21T17:43:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=StopCheque status=FAILURE method=NonFinancialTransactions.StopCheque()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@3a82f6ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
       </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
     </test> <!-- Non- FInancial transaction -->
-    <test name="FInancial transaction" duration-ms="41859" started-at="2018-01-21T07:54:19Z" finished-at="2018-01-21T07:55:01Z">
+    <test name="FInancial transaction" duration-ms="40895" started-at="2018-01-21T12:13:07Z" finished-at="2018-01-21T12:13:48Z">
       <class name="mBankingControlCenter.FinancialTransactions">
-        <test-method status="FAIL" signature="IMPSP2AAddBeneficiary()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2AAddBeneficiary" duration-ms="1855" started-at="2018-01-21T13:24:19Z" finished-at="2018-01-21T13:24:21Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="setUp" is-config="true" duration-ms="162" started-at="2018-01-21T17:42:33Z" finished-at="2018-01-21T17:42:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:07Z" finished-at="2018-01-21T17:43:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiary() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="IMPSP2AAddBeneficiary()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2AAddBeneficiary" duration-ms="1850" started-at="2018-01-21T17:43:07Z" finished-at="2018-01-21T17:43:09Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -267,7 +524,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiary(FinancialTransactions.java:102)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiary(FinancialTransactions.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -299,7 +556,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2AAddBeneficiary -->
-        <test-method status="FAIL" signature="IMPSP2AAddBeneficiaryconfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2AAddBeneficiaryconfirmation" duration-ms="316" started-at="2018-01-21T13:24:21Z" finished-at="2018-01-21T13:24:21Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="15" started-at="2018-01-21T17:43:09Z" finished-at="2018-01-21T17:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2AAddBeneficiary status=FAILURE method=FinancialTransactions.IMPSP2AAddBeneficiary()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:09Z" finished-at="2018-01-21T17:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiaryconfirmation() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="IMPSP2AAddBeneficiaryconfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2AAddBeneficiaryconfirmation" duration-ms="314" started-at="2018-01-21T17:43:09Z" finished-at="2018-01-21T17:43:09Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -311,7 +590,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiaryconfirmation(FinancialTransactions.java:109)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiaryconfirmation(FinancialTransactions.java:110)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -343,7 +622,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2AAddBeneficiaryconfirmation -->
-        <test-method status="FAIL" signature="IMPSP2ABeneficiaryPaymentConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2ABeneficiaryPaymentConfirmation" duration-ms="2557" started-at="2018-01-21T13:24:21Z" finished-at="2018-01-21T13:24:24Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:09Z" finished-at="2018-01-21T17:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2AAddBeneficiaryconfirmation status=FAILURE method=FinancialTransactions.IMPSP2AAddBeneficiaryconfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="IMPSP2ABeneficiaryPaymentConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2ABeneficiaryPaymentConfirmation" duration-ms="2561" started-at="2018-01-21T17:43:09Z" finished-at="2018-01-21T17:43:11Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -355,7 +645,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiaryPaymentConfirmation(FinancialTransactions.java:144)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiaryPaymentConfirmation(FinancialTransactions.java:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -387,15 +677,92 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2ABeneficiaryPaymentConfirmation -->
-        <test-method status="PASS" signature="IMPSP2ABeneficiaryPaymentListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2ABeneficiaryPaymentListenquiry" duration-ms="1916" started-at="2018-01-21T13:24:24Z" finished-at="2018-01-21T13:24:26Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:09Z" finished-at="2018-01-21T17:43:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiaryPaymentConfirmation() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:11Z" finished-at="2018-01-21T17:43:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2ABeneficiaryPaymentConfirmation status=FAILURE method=FinancialTransactions.IMPSP2ABeneficiaryPaymentConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="IMPSP2ABeneficiaryPaymentListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2ABeneficiaryPaymentListenquiry" duration-ms="1895" started-at="2018-01-21T17:43:11Z" finished-at="2018-01-21T17:43:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2ABeneficiaryPaymentListenquiry -->
-        <test-method status="PASS" signature="IMPSP2ABeneficiarySearchListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2ABeneficiarySearchListenquiry" duration-ms="2238" started-at="2018-01-21T13:24:26Z" finished-at="2018-01-21T13:24:28Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:11Z" finished-at="2018-01-21T17:43:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiaryPaymentListenquiry() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:13Z" finished-at="2018-01-21T17:43:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2ABeneficiaryPaymentListenquiry status=SUCCESS method=FinancialTransactions.IMPSP2ABeneficiaryPaymentListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2018-01-21T17:43:13Z" finished-at="2018-01-21T17:43:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiarySearchListenquiry() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="IMPSP2ABeneficiarySearchListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2ABeneficiarySearchListenquiry" duration-ms="2241" started-at="2018-01-21T17:43:13Z" finished-at="2018-01-21T17:43:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2ABeneficiarySearchListenquiry -->
-        <test-method status="FAIL" signature="IMPSP2ADeleteBeneficiaryConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2ADeleteBeneficiaryConfirmation" duration-ms="2236" started-at="2018-01-21T13:24:28Z" finished-at="2018-01-21T13:24:30Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="2" started-at="2018-01-21T17:43:16Z" finished-at="2018-01-21T17:43:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2ABeneficiarySearchListenquiry status=SUCCESS method=FinancialTransactions.IMPSP2ABeneficiarySearchListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:16Z" finished-at="2018-01-21T17:43:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2ADeleteBeneficiaryConfirmation() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="IMPSP2ADeleteBeneficiaryConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2ADeleteBeneficiaryConfirmation" duration-ms="1940" started-at="2018-01-21T17:43:16Z" finished-at="2018-01-21T17:43:18Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -407,7 +774,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ADeleteBeneficiaryConfirmation(FinancialTransactions.java:130)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2ADeleteBeneficiaryConfirmation(FinancialTransactions.java:131)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -439,11 +806,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2ADeleteBeneficiaryConfirmation -->
-        <test-method status="PASS" signature="IMPSP2ADeleteBeneficiaryListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2ADeleteBeneficiaryListenquiry" duration-ms="2236" started-at="2018-01-21T13:24:30Z" finished-at="2018-01-21T13:24:32Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="2" started-at="2018-01-21T17:43:18Z" finished-at="2018-01-21T17:43:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2ADeleteBeneficiaryConfirmation status=FAILURE method=FinancialTransactions.IMPSP2ADeleteBeneficiaryConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:18Z" finished-at="2018-01-21T17:43:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2ADeleteBeneficiaryListenquiry() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="IMPSP2ADeleteBeneficiaryListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2ADeleteBeneficiaryListenquiry" duration-ms="2201" started-at="2018-01-21T17:43:18Z" finished-at="2018-01-21T17:43:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2ADeleteBeneficiaryListenquiry -->
-        <test-method status="FAIL" signature="IMPSP2AInstant()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2AInstant" duration-ms="6712" started-at="2018-01-21T13:24:32Z" finished-at="2018-01-21T13:24:39Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:20Z" finished-at="2018-01-21T17:43:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2ADeleteBeneficiaryListenquiry status=SUCCESS method=FinancialTransactions.IMPSP2ADeleteBeneficiaryListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:20Z" finished-at="2018-01-21T17:43:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2AInstant() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="IMPSP2AInstant()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2AInstant" duration-ms="4163" started-at="2018-01-21T17:43:20Z" finished-at="2018-01-21T17:43:24Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -455,7 +866,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2AInstant(FinancialTransactions.java:39)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2AInstant(FinancialTransactions.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -487,7 +898,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2AInstant -->
-        <test-method status="FAIL" signature="IMPSP2PAddBeneficiary()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2PAddBeneficiary" duration-ms="1918" started-at="2018-01-21T13:24:39Z" finished-at="2018-01-21T13:24:41Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:24Z" finished-at="2018-01-21T17:43:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2AInstant status=FAILURE method=FinancialTransactions.IMPSP2AInstant()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2018-01-21T17:43:24Z" finished-at="2018-01-21T17:43:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiary() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="IMPSP2PAddBeneficiary()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2PAddBeneficiary" duration-ms="1889" started-at="2018-01-21T17:43:24Z" finished-at="2018-01-21T17:43:26Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -499,7 +932,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiary(FinancialTransactions.java:53)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiary(FinancialTransactions.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -531,7 +964,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2PAddBeneficiary -->
-        <test-method status="FAIL" signature="IMPSP2PAddBeneficiaryconfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2PAddBeneficiaryconfirmation" duration-ms="1917" started-at="2018-01-21T13:24:41Z" finished-at="2018-01-21T13:24:43Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:26Z" finished-at="2018-01-21T17:43:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2PAddBeneficiary status=FAILURE method=FinancialTransactions.IMPSP2PAddBeneficiary()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:26Z" finished-at="2018-01-21T17:43:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiaryconfirmation() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="IMPSP2PAddBeneficiaryconfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2PAddBeneficiaryconfirmation" duration-ms="1906" started-at="2018-01-21T17:43:26Z" finished-at="2018-01-21T17:43:28Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -543,7 +998,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiaryconfirmation(FinancialTransactions.java:60)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiaryconfirmation(FinancialTransactions.java:61)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -575,7 +1030,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2PAddBeneficiaryconfirmation -->
-        <test-method status="FAIL" signature="IMPSP2PBeneficiaryPaymentConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2PBeneficiaryPaymentConfirmation" duration-ms="2234" started-at="2018-01-21T13:24:43Z" finished-at="2018-01-21T13:24:45Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:28Z" finished-at="2018-01-21T17:43:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2PAddBeneficiaryconfirmation status=FAILURE method=FinancialTransactions.IMPSP2PAddBeneficiaryconfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:28Z" finished-at="2018-01-21T17:43:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiaryPaymentConfirmation() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="IMPSP2PBeneficiaryPaymentConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2PBeneficiaryPaymentConfirmation" duration-ms="3515" started-at="2018-01-21T17:43:28Z" finished-at="2018-01-21T17:43:31Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -587,7 +1064,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiaryPaymentConfirmation(FinancialTransactions.java:95)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiaryPaymentConfirmation(FinancialTransactions.java:96)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -619,15 +1096,81 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2PBeneficiaryPaymentConfirmation -->
-        <test-method status="PASS" signature="IMPSP2PBeneficiaryPaymentListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2PBeneficiaryPaymentListenquiry" duration-ms="1916" started-at="2018-01-21T13:24:45Z" finished-at="2018-01-21T13:24:47Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:31Z" finished-at="2018-01-21T17:43:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2PBeneficiaryPaymentConfirmation status=FAILURE method=FinancialTransactions.IMPSP2PBeneficiaryPaymentConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="IMPSP2PBeneficiaryPaymentListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2PBeneficiaryPaymentListenquiry" duration-ms="2235" started-at="2018-01-21T17:43:31Z" finished-at="2018-01-21T17:43:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2PBeneficiaryPaymentListenquiry -->
-        <test-method status="PASS" signature="IMPSP2PBeneficiarySearchListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2PBeneficiarySearchListenquiry" duration-ms="1850" started-at="2018-01-21T13:24:47Z" finished-at="2018-01-21T13:24:49Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:31Z" finished-at="2018-01-21T17:43:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiaryPaymentListenquiry() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:34Z" finished-at="2018-01-21T17:43:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2PBeneficiaryPaymentListenquiry status=SUCCESS method=FinancialTransactions.IMPSP2PBeneficiaryPaymentListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:34Z" finished-at="2018-01-21T17:43:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiarySearchListenquiry() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="IMPSP2PBeneficiarySearchListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2PBeneficiarySearchListenquiry" duration-ms="2023" started-at="2018-01-21T17:43:34Z" finished-at="2018-01-21T17:43:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2PBeneficiarySearchListenquiry -->
-        <test-method status="FAIL" signature="IMPSP2PDeleteBeneficiaryConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2PDeleteBeneficiaryConfirmation" duration-ms="2071" started-at="2018-01-21T13:24:49Z" finished-at="2018-01-21T13:24:51Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:36Z" finished-at="2018-01-21T17:43:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2PBeneficiarySearchListenquiry status=SUCCESS method=FinancialTransactions.IMPSP2PBeneficiarySearchListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:36Z" finished-at="2018-01-21T17:43:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2PDeleteBeneficiaryConfirmation() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="IMPSP2PDeleteBeneficiaryConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2PDeleteBeneficiaryConfirmation" duration-ms="2130" started-at="2018-01-21T17:43:36Z" finished-at="2018-01-21T17:43:38Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -639,7 +1182,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PDeleteBeneficiaryConfirmation(FinancialTransactions.java:81)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PDeleteBeneficiaryConfirmation(FinancialTransactions.java:82)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -671,11 +1214,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2PDeleteBeneficiaryConfirmation -->
-        <test-method status="PASS" signature="IMPSP2PDeleteBeneficiaryListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2PDeleteBeneficiaryListenquiry" duration-ms="2151" started-at="2018-01-21T13:24:51Z" finished-at="2018-01-21T13:24:53Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="2" started-at="2018-01-21T17:43:38Z" finished-at="2018-01-21T17:43:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2PDeleteBeneficiaryConfirmation status=FAILURE method=FinancialTransactions.IMPSP2PDeleteBeneficiaryConfirmation()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:38Z" finished-at="2018-01-21T17:43:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2PDeleteBeneficiaryListenquiry() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="IMPSP2PDeleteBeneficiaryListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2PDeleteBeneficiaryListenquiry" duration-ms="1931" started-at="2018-01-21T17:43:38Z" finished-at="2018-01-21T17:43:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2PDeleteBeneficiaryListenquiry -->
-        <test-method status="FAIL" signature="IMPSP2PInstant()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2PInstant" duration-ms="3839" started-at="2018-01-21T13:24:53Z" finished-at="2018-01-21T13:24:57Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:40Z" finished-at="2018-01-21T17:43:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2PDeleteBeneficiaryListenquiry status=SUCCESS method=FinancialTransactions.IMPSP2PDeleteBeneficiaryListenquiry()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:40Z" finished-at="2018-01-21T17:43:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2PInstant() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="IMPSP2PInstant()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2PInstant" duration-ms="3520" started-at="2018-01-21T17:43:40Z" finished-at="2018-01-21T17:43:43Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -687,7 +1274,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PInstant(FinancialTransactions.java:32)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PInstant(FinancialTransactions.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -719,7 +1306,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2PInstant -->
-        <test-method status="FAIL" signature="IMPSP2UInstant()[pri:0, instance:mBankingControlCenter.FinancialTransactions@20398b7c]" name="IMPSP2UInstant" duration-ms="3836" started-at="2018-01-21T13:24:57Z" finished-at="2018-01-21T13:25:01Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:43Z" finished-at="2018-01-21T17:43:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2PInstant status=FAILURE method=FinancialTransactions.IMPSP2PInstant()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="IMPSP2UInstant()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="IMPSP2UInstant" duration-ms="4453" started-at="2018-01-21T17:43:43Z" finished-at="2018-01-21T17:43:48Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -731,7 +1329,7 @@
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
 	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2UInstant(FinancialTransactions.java:46)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2UInstant(FinancialTransactions.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -763,13 +1361,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IMPSP2UInstant -->
-      </class> <!-- mBankingControlCenter.FinancialTransactions -->
-      <class name="mBankingControlCenter.NonFinancialTransactions">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:mBankingControlCenter.NonFinancialTransactions@23ceabc1]" name="beforeSuite" is-config="true" duration-ms="101" started-at="2018-01-21T13:23:47Z" finished-at="2018-01-21T13:23:47Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-01-21T17:43:43Z" finished-at="2018-01-21T17:43:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingControlCenter.FinancialTransactions.IMPSP2UInstant() throws java.io.IOException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-      </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="getResult" is-config="true" duration-ms="1" started-at="2018-01-21T17:43:48Z" finished-at="2018-01-21T17:43:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IMPSP2UInstant status=FAILURE method=FinancialTransactions.IMPSP2UInstant()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingControlCenter.FinancialTransactions@457e2f02]" name="tearDown" is-config="true" duration-ms="348" started-at="2018-01-21T17:43:48Z" finished-at="2018-01-21T17:43:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- mBankingControlCenter.FinancialTransactions -->
     </test> <!-- FInancial transaction -->
   </suite> <!-- Positive Transaction flow -->
 </testng-results>
