@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Non Financial Test cases]">
-  <test name="TMB Bank(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Non Financial Test cases]">
+  <test name="Non- FInancial transaction(failed)">
     <classes>
       <class name="mBankingControlCenter.MobileBanking">
         <methods>
@@ -22,7 +22,6 @@
           <include name="IMPSP2PAddBeneficiaryconfirmation"/>
           <include name="TransactionHistory"/>
           <include name="IMPSP2PBeneficiaryPaymentListenquiry"/>
-          <include name="endReport"/>
           <include name="AccountSync"/>
           <include name="StopCheque"/>
           <include name="startReport"/>
@@ -38,12 +37,15 @@
           <include name="IMPSP2AInstant"/>
         </methods>
       </class> <!-- mBankingControlCenter.MobileBanking -->
+    </classes>
+  </test> <!-- Non- FInancial transaction(failed) -->
+  <test name="FInancial transaction(failed)">
+    <classes>
       <class name="mBankingControlCenter.FinancialTransactions">
         <methods>
           <include name="IMPSP2ABeneficiaryPaymentListenquiry"/>
           <include name="getResult"/>
           <include name="RetrieveMMID"/>
-          <include name="startReport"/>
           <include name="CancelMMIDSingle"/>
           <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
           <include name="TransactionHistory"/>
@@ -69,11 +71,10 @@
           <include name="IMPSP2AAddBeneficiary"/>
           <include name="CancelMMIDAll"/>
           <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
-          <include name="endReport"/>
           <include name="StopCheque"/>
           <include name="IMPSP2PBeneficiaryPaymentListenquiry"/>
         </methods>
       </class> <!-- mBankingControlCenter.FinancialTransactions -->
     </classes>
-  </test> <!-- TMB Bank(failed) -->
+  </test> <!-- FInancial transaction(failed) -->
 </suite> <!-- Failed suite [Non Financial Test cases] -->

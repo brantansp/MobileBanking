@@ -1,79 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Non Financial Test cases]">
-  <test name="TMB Bank(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
+  <test name="Non- FInancial transaction(failed)">
     <classes>
-      <class name="mBankingControlCenter.MobileBanking">
+      <class name="mBankingControlCenter.NonFinancialTransactions">
         <methods>
-          <include name="IMPSP2PBeneficiarySearchListenquiry"/>
-          <include name="IMPSP2ABeneficiarySearchListenquiry"/>
           <include name="MiniStatement"/>
-          <include name="IMPSP2AAddBeneficiaryconfirmation"/>
-          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
-          <include name="IMPSP2ABeneficiaryPaymentListenquiry"/>
-          <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
-          <include name="RetrieveMMID"/>
-          <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
-          <include name="CancelMMIDSingle"/>
-          <include name="EmailIDUpdate"/>
-          <include name="EmailIDFetch"/>
-          <include name="IMPSP2AAddBeneficiary"/>
-          <include name="CancelMMIDAll"/>
-          <include name="IMPSP2PAddBeneficiaryconfirmation"/>
-          <include name="TransactionHistory"/>
-          <include name="IMPSP2PBeneficiaryPaymentListenquiry"/>
-          <include name="endReport"/>
-          <include name="AccountSync"/>
           <include name="StopCheque"/>
-          <include name="startReport"/>
-          <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
-          <include name="IMPSP2PAddBeneficiary"/>
-          <include name="IMPSP2PDeleteBeneficiaryListenquiry"/>
-          <include name="ChequeStatus"/>
-          <include name="IMPSP2ADeleteBeneficiaryListenquiry"/>
-          <include name="GenerateMMID"/>
-          <include name="IMPSP2UInstant"/>
-          <include name="IMPSP2PInstant"/>
           <include name="BalanceEnquiry"/>
-          <include name="IMPSP2AInstant"/>
+          <include name="AccountSync"/>
+          <include name="beforeSuite"/>
+          <include name="ChequeStatus"/>
         </methods>
-      </class> <!-- mBankingControlCenter.MobileBanking -->
+      </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
+    </classes>
+  </test> <!-- Non- FInancial transaction(failed) -->
+  <test name="FInancial transaction(failed)">
+    <classes>
       <class name="mBankingControlCenter.FinancialTransactions">
         <methods>
-          <include name="IMPSP2ABeneficiaryPaymentListenquiry"/>
-          <include name="getResult"/>
-          <include name="RetrieveMMID"/>
-          <include name="startReport"/>
-          <include name="CancelMMIDSingle"/>
-          <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
-          <include name="TransactionHistory"/>
-          <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
-          <include name="GenerateMMID"/>
-          <include name="IMPSP2PBeneficiarySearchListenquiry"/>
-          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
-          <include name="IMPSP2AAddBeneficiaryconfirmation"/>
-          <include name="MiniStatement"/>
-          <include name="ChequeStatus"/>
           <include name="IMPSP2PAddBeneficiary"/>
-          <include name="IMPSP2PDeleteBeneficiaryListenquiry"/>
-          <include name="EmailIDUpdate"/>
-          <include name="BalanceEnquiry"/>
-          <include name="IMPSP2ABeneficiarySearchListenquiry"/>
-          <include name="IMPSP2AInstant"/>
-          <include name="IMPSP2ADeleteBeneficiaryListenquiry"/>
-          <include name="IMPSP2PInstant"/>
-          <include name="IMPSP2PAddBeneficiaryconfirmation"/>
-          <include name="IMPSP2UInstant"/>
-          <include name="AccountSync"/>
-          <include name="EmailIDFetch"/>
           <include name="IMPSP2AAddBeneficiary"/>
-          <include name="CancelMMIDAll"/>
           <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
-          <include name="endReport"/>
-          <include name="StopCheque"/>
-          <include name="IMPSP2PBeneficiaryPaymentListenquiry"/>
+          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
+          <include name="IMPSP2AInstant"/>
+          <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
+          <include name="IMPSP2PInstant"/>
+          <include name="IMPSP2AAddBeneficiaryconfirmation"/>
+          <include name="IMPSP2PAddBeneficiaryconfirmation"/>
+          <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
+          <include name="IMPSP2UInstant"/>
         </methods>
       </class> <!-- mBankingControlCenter.FinancialTransactions -->
     </classes>
-  </test> <!-- TMB Bank(failed) -->
-</suite> <!-- Failed suite [Non Financial Test cases] -->
+  </test> <!-- FInancial transaction(failed) -->
+</suite> <!-- Failed suite [Positive Transaction flow] -->

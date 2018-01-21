@@ -1,5 +1,9 @@
 package mBankingBasePageObject;
 
+import static org.testng.Assert.assertTrue;
+
+import java.awt.SystemColor;
+import java.io.File;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.security.InvalidKeyException;
@@ -8,6 +12,10 @@ import java.security.SignatureException;
 import java.sql.SQLException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
 import mBankingPageObjectModel.Configuration;
 import mBankingPageObjectModel.StaticStore;
 import mBankingUtilityCenter.Hmac;
@@ -16,12 +24,15 @@ import mBankingUtilityCenter.RandomNumGenerator;
 import mBankingUtilityCenter.dbTransactionlog;
 import mBankingUtilityCenter.WriteToCSVFile;
 
-public class RequestBuilder {
+public class BaseObject {
 static HttpConnect obj=new HttpConnect();
 public static String response="";
 private static String dbResult[];
 public static String transactionID = "";
-private static Log log = LogFactory.getLog(RequestBuilder.class);
+public static ExtentReports extent;
+public static ExtentTest test;
+
+private static Log log = LogFactory.getLog(BaseObject.class);
 
 public static String buildRequest(int index)
 {
@@ -82,9 +93,9 @@ public static String buildRequest(int index)
 		return  response;
   }
 
-public static void main(String[] args) {
-	log.info("message");
-
+public static void assertResponse(String response, int index)
+{
+	assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));		
 }
 }
 

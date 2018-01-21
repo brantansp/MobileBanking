@@ -8,184 +8,89 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Non Financial Test cases</th></tr>
-<tr><td><a href="#t0">TMB Bank</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">58</td><td class="num">116,225</td><td></td><td></td></tr>
+<tr><th colspan="7">Positive Transaction flow</th></tr>
+<tr><td><a href="#t0">Non- FInancial transaction</a></td><td class="num">6</td><td class="num">0</td><td class="num attn">5</td><td class="num">31,873</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">FInancial transaction</a></td><td class="num">6</td><td class="num">0</td><td class="num attn">11</td><td class="num">41,859</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">12</th><th class="num">0</th><th class="num attn">16</th><th class="num">73,732</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Non Financial Test cases</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TMB Bank &#8212; failed</th></tr><tr class="failedeven"><td rowspan="29">mBankingControlCenter.FinancialTransactions</td><td><a href="#m0">AccountSync</a></td><td rowspan="1">1516462328109</td><td rowspan="1">1621</td></tr><tr class="failedeven"><td><a href="#m1">BalanceEnquiry</a></td><td rowspan="1">1516462329763</td><td rowspan="1">2121</td></tr><tr class="failedeven"><td><a href="#m2">CancelMMIDAll</a></td><td rowspan="1">1516462331888</td><td rowspan="1">3281</td></tr><tr class="failedeven"><td><a href="#m3">CancelMMIDSingle</a></td><td rowspan="1">1516462335173</td><td rowspan="1">2583</td></tr><tr class="failedeven"><td><a href="#m4">ChequeStatus</a></td><td rowspan="1">1516462337762</td><td rowspan="1">1589</td></tr><tr class="failedeven"><td><a href="#m5">EmailIDFetch</a></td><td rowspan="1">1516462339352</td><td rowspan="1">1578</td></tr><tr class="failedeven"><td><a href="#m6">EmailIDUpdate</a></td><td rowspan="1">1516462340934</td><td rowspan="1">1595</td></tr><tr class="failedeven"><td><a href="#m7">GenerateMMID</a></td><td rowspan="1">1516462342533</td><td rowspan="1">1830</td></tr><tr class="failedeven"><td><a href="#m8">IMPSP2AAddBeneficiary</a></td><td rowspan="1">1516462344366</td><td rowspan="1">1373</td></tr><tr class="failedeven"><td><a href="#m9">IMPSP2AAddBeneficiaryconfirmation</a></td><td rowspan="1">1516462345748</td><td rowspan="1">2136</td></tr><tr class="failedeven"><td><a href="#m10">IMPSP2ABeneficiaryPaymentConfirmation</a></td><td rowspan="1">1516462347887</td><td rowspan="1">1363</td></tr><tr class="failedeven"><td><a href="#m11">IMPSP2ABeneficiaryPaymentListenquiry</a></td><td rowspan="1">1516462349253</td><td rowspan="1">1276</td></tr><tr class="failedeven"><td><a href="#m12">IMPSP2ABeneficiarySearchListenquiry</a></td><td rowspan="1">1516462350532</td><td rowspan="1">1275</td></tr><tr class="failedeven"><td><a href="#m13">IMPSP2ADeleteBeneficiaryConfirmation</a></td><td rowspan="1">1516462351809</td><td rowspan="1">2155</td></tr><tr class="failedeven"><td><a href="#m14">IMPSP2ADeleteBeneficiaryListenquiry</a></td><td rowspan="1">1516462353967</td><td rowspan="1">1363</td></tr><tr class="failedeven"><td><a href="#m15">IMPSP2AInstant</a></td><td rowspan="1">1516462355334</td><td rowspan="1">1309</td></tr><tr class="failedeven"><td><a href="#m16">IMPSP2PAddBeneficiary</a></td><td rowspan="1">1516462356649</td><td rowspan="1">3839</td></tr><tr class="failedeven"><td><a href="#m17">IMPSP2PAddBeneficiaryconfirmation</a></td><td rowspan="1">1516462360492</td><td rowspan="1">1877</td></tr><tr class="failedeven"><td><a href="#m18">IMPSP2PBeneficiaryPaymentConfirmation</a></td><td rowspan="1">1516462362372</td><td rowspan="1">1512</td></tr><tr class="failedeven"><td><a href="#m19">IMPSP2PBeneficiaryPaymentListenquiry</a></td><td rowspan="1">1516462363887</td><td rowspan="1">1917</td></tr><tr class="failedeven"><td><a href="#m20">IMPSP2PBeneficiarySearchListenquiry</a></td><td rowspan="1">1516462365807</td><td rowspan="1">1917</td></tr><tr class="failedeven"><td><a href="#m21">IMPSP2PDeleteBeneficiaryConfirmation</a></td><td rowspan="1">1516462367728</td><td rowspan="1">1452</td></tr><tr class="failedeven"><td><a href="#m22">IMPSP2PDeleteBeneficiaryListenquiry</a></td><td rowspan="1">1516462369190</td><td rowspan="1">1910</td></tr><tr class="failedeven"><td><a href="#m23">IMPSP2PInstant</a></td><td rowspan="1">1516462371104</td><td rowspan="1">1624</td></tr><tr class="failedeven"><td><a href="#m24">IMPSP2UInstant</a></td><td rowspan="1">1516462372731</td><td rowspan="1">2069</td></tr><tr class="failedeven"><td><a href="#m25">MiniStatement</a></td><td rowspan="1">1516462374804</td><td rowspan="1">2199</td></tr><tr class="failedeven"><td><a href="#m26">RetrieveMMID</a></td><td rowspan="1">1516462377006</td><td rowspan="1">2237</td></tr><tr class="failedeven"><td><a href="#m27">StopCheque</a></td><td rowspan="1">1516462379246</td><td rowspan="1">2069</td></tr><tr class="failedeven"><td><a href="#m28">TransactionHistory</a></td><td rowspan="1">1516462381318</td><td rowspan="1">1342</td></tr><tr class="failedodd"><td rowspan="29">mBankingControlCenter.MobileBanking</td><td><a href="#m29">AccountSync</a></td><td rowspan="1">1516462267338</td><td rowspan="1">3762</td></tr><tr class="failedodd"><td><a href="#m30">BalanceEnquiry</a></td><td rowspan="1">1516462271115</td><td rowspan="1">1958</td></tr><tr class="failedodd"><td><a href="#m31">CancelMMIDAll</a></td><td rowspan="1">1516462273079</td><td rowspan="1">3123</td></tr><tr class="failedodd"><td><a href="#m32">CancelMMIDSingle</a></td><td rowspan="1">1516462276207</td><td rowspan="1">3851</td></tr><tr class="failedodd"><td><a href="#m33">ChequeStatus</a></td><td rowspan="1">1516462280066</td><td rowspan="1">2014</td></tr><tr class="failedodd"><td><a href="#m34">EmailIDFetch</a></td><td rowspan="1">1516462282085</td><td rowspan="1">1801</td></tr><tr class="failedodd"><td><a href="#m35">EmailIDUpdate</a></td><td rowspan="1">1516462283902</td><td rowspan="1">2327</td></tr><tr class="failedodd"><td><a href="#m36">GenerateMMID</a></td><td rowspan="1">1516462286233</td><td rowspan="1">2145</td></tr><tr class="failedodd"><td><a href="#m37">IMPSP2AAddBeneficiary</a></td><td rowspan="1">1516462288382</td><td rowspan="1">2064</td></tr><tr class="failedodd"><td><a href="#m38">IMPSP2AAddBeneficiaryconfirmation</a></td><td rowspan="1">1516462290450</td><td rowspan="1">2469</td></tr><tr class="failedodd"><td><a href="#m39">IMPSP2ABeneficiaryPaymentConfirmation</a></td><td rowspan="1">1516462292923</td><td rowspan="1">2275</td></tr><tr class="failedodd"><td><a href="#m40">IMPSP2ABeneficiaryPaymentListenquiry</a></td><td rowspan="1">1516462295202</td><td rowspan="1">1979</td></tr><tr class="failedodd"><td><a href="#m41">IMPSP2ABeneficiarySearchListenquiry</a></td><td rowspan="1">1516462297185</td><td rowspan="1">1825</td></tr><tr class="failedodd"><td><a href="#m42">IMPSP2ADeleteBeneficiaryConfirmation</a></td><td rowspan="1">1516462299014</td><td rowspan="1">4092</td></tr><tr class="failedodd"><td><a href="#m43">IMPSP2ADeleteBeneficiaryListenquiry</a></td><td rowspan="1">1516462303118</td><td rowspan="1">1908</td></tr><tr class="failedodd"><td><a href="#m44">IMPSP2AInstant</a></td><td rowspan="1">1516462305030</td><td rowspan="1">1586</td></tr><tr class="failedodd"><td><a href="#m45">IMPSP2PAddBeneficiary</a></td><td rowspan="1">1516462306620</td><td rowspan="1">1595</td></tr><tr class="failedodd"><td><a href="#m46">IMPSP2PAddBeneficiaryconfirmation</a></td><td rowspan="1">1516462308218</td><td rowspan="1">1596</td></tr><tr class="failedodd"><td><a href="#m47">IMPSP2PBeneficiaryPaymentConfirmation</a></td><td rowspan="1">1516462309816</td><td rowspan="1">1599</td></tr><tr class="failedodd"><td><a href="#m48">IMPSP2PBeneficiaryPaymentListenquiry</a></td><td rowspan="1">1516462311421</td><td rowspan="1">1594</td></tr><tr class="failedodd"><td><a href="#m49">IMPSP2PBeneficiarySearchListenquiry</a></td><td rowspan="1">1516462313019</td><td rowspan="1">1596</td></tr><tr class="failedodd"><td><a href="#m50">IMPSP2PDeleteBeneficiaryConfirmation</a></td><td rowspan="1">1516462314620</td><td rowspan="1">1605</td></tr><tr class="failedodd"><td><a href="#m51">IMPSP2PDeleteBeneficiaryListenquiry</a></td><td rowspan="1">1516462316230</td><td rowspan="1">1544</td></tr><tr class="failedodd"><td><a href="#m52">IMPSP2PInstant</a></td><td rowspan="1">1516462317777</td><td rowspan="1">1357</td></tr><tr class="failedodd"><td><a href="#m53">IMPSP2UInstant</a></td><td rowspan="1">1516462319137</td><td rowspan="1">1878</td></tr><tr class="failedodd"><td><a href="#m54">MiniStatement</a></td><td rowspan="1">1516462321018</td><td rowspan="1">1917</td></tr><tr class="failedodd"><td><a href="#m55">RetrieveMMID</a></td><td rowspan="1">1516462322938</td><td rowspan="1">1381</td></tr><tr class="failedodd"><td><a href="#m56">StopCheque</a></td><td rowspan="1">1516462324322</td><td rowspan="1">1567</td></tr><tr class="failedodd"><td><a href="#m57">TransactionHistory</a></td><td rowspan="1">1516462325891</td><td rowspan="1">2205</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Positive Transaction flow</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Non- FInancial transaction &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">mBankingControlCenter.NonFinancialTransactions</td><td><a href="#m0">AccountSync</a></td><td rowspan="1">1516521227438</td><td rowspan="1">2496</td></tr><tr class="failedeven"><td><a href="#m1">BalanceEnquiry</a></td><td rowspan="1">1516521229941</td><td rowspan="1">3110</td></tr><tr class="failedeven"><td><a href="#m2">ChequeStatus</a></td><td rowspan="1">1516521242013</td><td rowspan="1">3838</td></tr><tr class="failedeven"><td><a href="#m3">MiniStatement</a></td><td rowspan="1">1516521251938</td><td rowspan="1">2552</td></tr><tr class="failedeven"><td><a href="#m4">StopCheque</a></td><td rowspan="1">1516521256415</td><td rowspan="1">2877</td></tr><tr><th colspan="4">Non- FInancial transaction &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">mBankingControlCenter.NonFinancialTransactions</td><td><a href="#m5">CancelMMIDAll</a></td><td rowspan="1">1516521233057</td><td rowspan="1">4153</td></tr><tr class="passedeven"><td><a href="#m6">CancelMMIDSingle</a></td><td rowspan="1">1516521237213</td><td rowspan="1">4797</td></tr><tr class="passedeven"><td><a href="#m7">EmailIDFetch</a></td><td rowspan="1">1516521245856</td><td rowspan="1">1916</td></tr><tr class="passedeven"><td><a href="#m8">EmailIDUpdate</a></td><td rowspan="1">1516521247775</td><td rowspan="1">1919</td></tr><tr class="passedeven"><td><a href="#m9">GenerateMMID</a></td><td rowspan="1">1516521249708</td><td rowspan="1">2227</td></tr><tr class="passedeven"><td><a href="#m10">RetrieveMMID</a></td><td rowspan="1">1516521254507</td><td rowspan="1">1905</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">FInancial transaction &#8212; failed</th></tr><tr class="failedeven"><td rowspan="11">mBankingControlCenter.FinancialTransactions</td><td><a href="#m11">IMPSP2AAddBeneficiary</a></td><td rowspan="1">1516521259355</td><td rowspan="1">1855</td></tr><tr class="failedeven"><td><a href="#m12">IMPSP2AAddBeneficiaryconfirmation</a></td><td rowspan="1">1516521261213</td><td rowspan="1">316</td></tr><tr class="failedeven"><td><a href="#m13">IMPSP2ABeneficiaryPaymentConfirmation</a></td><td rowspan="1">1516521261533</td><td rowspan="1">2557</td></tr><tr class="failedeven"><td><a href="#m14">IMPSP2ADeleteBeneficiaryConfirmation</a></td><td rowspan="1">1516521268253</td><td rowspan="1">2236</td></tr><tr class="failedeven"><td><a href="#m15">IMPSP2AInstant</a></td><td rowspan="1">1516521272736</td><td rowspan="1">6712</td></tr><tr class="failedeven"><td><a href="#m16">IMPSP2PAddBeneficiary</a></td><td rowspan="1">1516521279451</td><td rowspan="1">1918</td></tr><tr class="failedeven"><td><a href="#m17">IMPSP2PAddBeneficiaryconfirmation</a></td><td rowspan="1">1516521281372</td><td rowspan="1">1917</td></tr><tr class="failedeven"><td><a href="#m18">IMPSP2PBeneficiaryPaymentConfirmation</a></td><td rowspan="1">1516521283295</td><td rowspan="1">2234</td></tr><tr class="failedeven"><td><a href="#m19">IMPSP2PDeleteBeneficiaryConfirmation</a></td><td rowspan="1">1516521289303</td><td rowspan="1">2071</td></tr><tr class="failedeven"><td><a href="#m20">IMPSP2PInstant</a></td><td rowspan="1">1516521293530</td><td rowspan="1">3839</td></tr><tr class="failedeven"><td><a href="#m21">IMPSP2UInstant</a></td><td rowspan="1">1516521297372</td><td rowspan="1">3836</td></tr><tr><th colspan="4">FInancial transaction &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">mBankingControlCenter.FinancialTransactions</td><td><a href="#m22">IMPSP2ABeneficiaryPaymentListenquiry</a></td><td rowspan="1">1516521264093</td><td rowspan="1">1916</td></tr><tr class="passedeven"><td><a href="#m23">IMPSP2ABeneficiarySearchListenquiry</a></td><td rowspan="1">1516521266012</td><td rowspan="1">2238</td></tr><tr class="passedeven"><td><a href="#m24">IMPSP2ADeleteBeneficiaryListenquiry</a></td><td rowspan="1">1516521270492</td><td rowspan="1">2236</td></tr><tr class="passedeven"><td><a href="#m25">IMPSP2PBeneficiaryPaymentListenquiry</a></td><td rowspan="1">1516521285532</td><td rowspan="1">1916</td></tr><tr class="passedeven"><td><a href="#m26">IMPSP2PBeneficiarySearchListenquiry</a></td><td rowspan="1">1516521287450</td><td rowspan="1">1850</td></tr><tr class="passedeven"><td><a href="#m27">IMPSP2PDeleteBeneficiaryListenquiry</a></td><td rowspan="1">1516521291377</td><td rowspan="1">2151</td></tr></tbody>
 </table>
-<h2>TMB Bank</h2><h3 id="m0">mBankingControlCenter.FinancialTransactions#AccountSync</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.AccountSync(FinancialTransactions.java:62)
+<h2>Non- FInancial transaction</h2><h3 id="m0">mBankingControlCenter.NonFinancialTransactions#AccountSync</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.NonFinancialTransactions.AccountSync(NonFinancialTransactions.java:41)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">mBankingControlCenter.FinancialTransactions#BalanceEnquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.BalanceEnquiry(FinancialTransactions.java:70)
+<h3 id="m1">mBankingControlCenter.NonFinancialTransactions#BalanceEnquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.NonFinancialTransactions.BalanceEnquiry(NonFinancialTransactions.java:47)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">mBankingControlCenter.FinancialTransactions#CancelMMIDAll</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.CancelMMIDAll(FinancialTransactions.java:112)
+<h3 id="m2">mBankingControlCenter.NonFinancialTransactions#ChequeStatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.NonFinancialTransactions.ChequeStatus(NonFinancialTransactions.java:113)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">mBankingControlCenter.FinancialTransactions#CancelMMIDSingle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.CancelMMIDSingle(FinancialTransactions.java:121)
+<h3 id="m3">mBankingControlCenter.NonFinancialTransactions#MiniStatement</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.NonFinancialTransactions.MiniStatement(NonFinancialTransactions.java:55)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">mBankingControlCenter.FinancialTransactions#ChequeStatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.ChequeStatus(FinancialTransactions.java:145)
+<h3 id="m4">mBankingControlCenter.NonFinancialTransactions#StopCheque</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.NonFinancialTransactions.StopCheque(NonFinancialTransactions.java:120)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">mBankingControlCenter.FinancialTransactions#EmailIDFetch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.EmailIDFetch(FinancialTransactions.java:129)
+<h3 id="m5">mBankingControlCenter.NonFinancialTransactions#CancelMMIDAll</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">mBankingControlCenter.NonFinancialTransactions#CancelMMIDSingle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">mBankingControlCenter.NonFinancialTransactions#EmailIDFetch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">mBankingControlCenter.NonFinancialTransactions#EmailIDUpdate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">mBankingControlCenter.NonFinancialTransactions#GenerateMMID</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">mBankingControlCenter.NonFinancialTransactions#RetrieveMMID</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>FInancial transaction</h2><h3 id="m11">mBankingControlCenter.FinancialTransactions#IMPSP2AAddBeneficiary</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiary(FinancialTransactions.java:102)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">mBankingControlCenter.FinancialTransactions#EmailIDUpdate</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.EmailIDUpdate(FinancialTransactions.java:137)
+<h3 id="m12">mBankingControlCenter.FinancialTransactions#IMPSP2AAddBeneficiaryconfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiaryconfirmation(FinancialTransactions.java:109)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">mBankingControlCenter.FinancialTransactions#GenerateMMID</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.GenerateMMID(FinancialTransactions.java:95)
+<h3 id="m13">mBankingControlCenter.FinancialTransactions#IMPSP2ABeneficiaryPaymentConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiaryPaymentConfirmation(FinancialTransactions.java:144)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">mBankingControlCenter.FinancialTransactions#IMPSP2AAddBeneficiary</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiary(FinancialTransactions.java:251)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">mBankingControlCenter.FinancialTransactions#IMPSP2AAddBeneficiaryconfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiaryconfirmation(FinancialTransactions.java:260)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">mBankingControlCenter.FinancialTransactions#IMPSP2ABeneficiaryPaymentConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiaryPaymentConfirmation(FinancialTransactions.java:305)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">mBankingControlCenter.FinancialTransactions#IMPSP2ABeneficiaryPaymentListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiaryPaymentListenquiry(FinancialTransactions.java:296)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">mBankingControlCenter.FinancialTransactions#IMPSP2ABeneficiarySearchListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiarySearchListenquiry(FinancialTransactions.java:269)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">mBankingControlCenter.FinancialTransactions#IMPSP2ADeleteBeneficiaryConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ADeleteBeneficiaryConfirmation(FinancialTransactions.java:287)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">mBankingControlCenter.FinancialTransactions#IMPSP2ADeleteBeneficiaryListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ADeleteBeneficiaryListenquiry(FinancialTransactions.java:278)
+<h3 id="m14">mBankingControlCenter.FinancialTransactions#IMPSP2ADeleteBeneficiaryConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2ADeleteBeneficiaryConfirmation(FinancialTransactions.java:130)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m15">mBankingControlCenter.FinancialTransactions#IMPSP2AInstant</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2AInstant(FinancialTransactions.java:171)
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2AInstant(FinancialTransactions.java:39)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m16">mBankingControlCenter.FinancialTransactions#IMPSP2PAddBeneficiary</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiary(FinancialTransactions.java:189)
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiary(FinancialTransactions.java:53)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m17">mBankingControlCenter.FinancialTransactions#IMPSP2PAddBeneficiaryconfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiaryconfirmation(FinancialTransactions.java:198)
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiaryconfirmation(FinancialTransactions.java:60)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m18">mBankingControlCenter.FinancialTransactions#IMPSP2PBeneficiaryPaymentConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiaryPaymentConfirmation(FinancialTransactions.java:242)
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiaryPaymentConfirmation(FinancialTransactions.java:95)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m19">mBankingControlCenter.FinancialTransactions#IMPSP2PBeneficiaryPaymentListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiaryPaymentListenquiry(FinancialTransactions.java:234)
+<h3 id="m19">mBankingControlCenter.FinancialTransactions#IMPSP2PDeleteBeneficiaryConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PDeleteBeneficiaryConfirmation(FinancialTransactions.java:81)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m20">mBankingControlCenter.FinancialTransactions#IMPSP2PBeneficiarySearchListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiarySearchListenquiry(FinancialTransactions.java:207)
+<h3 id="m20">mBankingControlCenter.FinancialTransactions#IMPSP2PInstant</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2PInstant(FinancialTransactions.java:32)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m21">mBankingControlCenter.FinancialTransactions#IMPSP2PDeleteBeneficiaryConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PDeleteBeneficiaryConfirmation(FinancialTransactions.java:225)
+<h3 id="m21">mBankingControlCenter.FinancialTransactions#IMPSP2UInstant</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at mBankingBasePageObject.BaseObject.assertResponse(BaseObject.java:98)
+	at mBankingControlCenter.FinancialTransactions.IMPSP2UInstant(FinancialTransactions.java:46)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m22">mBankingControlCenter.FinancialTransactions#IMPSP2PDeleteBeneficiaryListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PDeleteBeneficiaryListenquiry(FinancialTransactions.java:216)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m23">mBankingControlCenter.FinancialTransactions#IMPSP2PInstant</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PInstant(FinancialTransactions.java:163)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m24">mBankingControlCenter.FinancialTransactions#IMPSP2UInstant</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.IMPSP2UInstant(FinancialTransactions.java:180)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m25">mBankingControlCenter.FinancialTransactions#MiniStatement</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.MiniStatement(FinancialTransactions.java:78)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m26">mBankingControlCenter.FinancialTransactions#RetrieveMMID</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.RetrieveMMID(FinancialTransactions.java:103)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m27">mBankingControlCenter.FinancialTransactions#StopCheque</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.StopCheque(FinancialTransactions.java:154)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m28">mBankingControlCenter.FinancialTransactions#TransactionHistory</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.FinancialTransactions.TransactionHistory(FinancialTransactions.java:87)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m29">mBankingControlCenter.MobileBanking#AccountSync</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.AccountSync(MobileBanking.java:58)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m30">mBankingControlCenter.MobileBanking#BalanceEnquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.BalanceEnquiry(MobileBanking.java:66)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m31">mBankingControlCenter.MobileBanking#CancelMMIDAll</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.CancelMMIDAll(MobileBanking.java:108)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m32">mBankingControlCenter.MobileBanking#CancelMMIDSingle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.CancelMMIDSingle(MobileBanking.java:117)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m33">mBankingControlCenter.MobileBanking#ChequeStatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.ChequeStatus(MobileBanking.java:141)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m34">mBankingControlCenter.MobileBanking#EmailIDFetch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.EmailIDFetch(MobileBanking.java:125)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m35">mBankingControlCenter.MobileBanking#EmailIDUpdate</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.EmailIDUpdate(MobileBanking.java:133)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m36">mBankingControlCenter.MobileBanking#GenerateMMID</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.GenerateMMID(MobileBanking.java:91)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m37">mBankingControlCenter.MobileBanking#IMPSP2AAddBeneficiary</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2AAddBeneficiary(MobileBanking.java:247)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m38">mBankingControlCenter.MobileBanking#IMPSP2AAddBeneficiaryconfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2AAddBeneficiaryconfirmation(MobileBanking.java:256)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m39">mBankingControlCenter.MobileBanking#IMPSP2ABeneficiaryPaymentConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2ABeneficiaryPaymentConfirmation(MobileBanking.java:301)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m40">mBankingControlCenter.MobileBanking#IMPSP2ABeneficiaryPaymentListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2ABeneficiaryPaymentListenquiry(MobileBanking.java:292)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m41">mBankingControlCenter.MobileBanking#IMPSP2ABeneficiarySearchListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2ABeneficiarySearchListenquiry(MobileBanking.java:265)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m42">mBankingControlCenter.MobileBanking#IMPSP2ADeleteBeneficiaryConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2ADeleteBeneficiaryConfirmation(MobileBanking.java:283)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m43">mBankingControlCenter.MobileBanking#IMPSP2ADeleteBeneficiaryListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2ADeleteBeneficiaryListenquiry(MobileBanking.java:274)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m44">mBankingControlCenter.MobileBanking#IMPSP2AInstant</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2AInstant(MobileBanking.java:167)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m45">mBankingControlCenter.MobileBanking#IMPSP2PAddBeneficiary</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2PAddBeneficiary(MobileBanking.java:185)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m46">mBankingControlCenter.MobileBanking#IMPSP2PAddBeneficiaryconfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2PAddBeneficiaryconfirmation(MobileBanking.java:194)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m47">mBankingControlCenter.MobileBanking#IMPSP2PBeneficiaryPaymentConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2PBeneficiaryPaymentConfirmation(MobileBanking.java:238)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m48">mBankingControlCenter.MobileBanking#IMPSP2PBeneficiaryPaymentListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2PBeneficiaryPaymentListenquiry(MobileBanking.java:230)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m49">mBankingControlCenter.MobileBanking#IMPSP2PBeneficiarySearchListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2PBeneficiarySearchListenquiry(MobileBanking.java:203)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m50">mBankingControlCenter.MobileBanking#IMPSP2PDeleteBeneficiaryConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2PDeleteBeneficiaryConfirmation(MobileBanking.java:221)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m51">mBankingControlCenter.MobileBanking#IMPSP2PDeleteBeneficiaryListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2PDeleteBeneficiaryListenquiry(MobileBanking.java:212)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m52">mBankingControlCenter.MobileBanking#IMPSP2PInstant</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2PInstant(MobileBanking.java:159)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m53">mBankingControlCenter.MobileBanking#IMPSP2UInstant</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.IMPSP2UInstant(MobileBanking.java:176)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m54">mBankingControlCenter.MobileBanking#MiniStatement</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.MiniStatement(MobileBanking.java:74)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m55">mBankingControlCenter.MobileBanking#RetrieveMMID</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.RetrieveMMID(MobileBanking.java:99)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m56">mBankingControlCenter.MobileBanking#StopCheque</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.StopCheque(MobileBanking.java:150)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m57">mBankingControlCenter.MobileBanking#TransactionHistory</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at mBankingControlCenter.MobileBanking.TransactionHistory(MobileBanking.java:83)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">mBankingControlCenter.FinancialTransactions#IMPSP2ABeneficiaryPaymentListenquiry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">mBankingControlCenter.FinancialTransactions#IMPSP2ABeneficiarySearchListenquiry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">mBankingControlCenter.FinancialTransactions#IMPSP2ADeleteBeneficiaryListenquiry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">mBankingControlCenter.FinancialTransactions#IMPSP2PBeneficiaryPaymentListenquiry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">mBankingControlCenter.FinancialTransactions#IMPSP2PBeneficiarySearchListenquiry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">mBankingControlCenter.FinancialTransactions#IMPSP2PDeleteBeneficiaryListenquiry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
