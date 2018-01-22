@@ -3,7 +3,7 @@ package mBankingPageObjectModel;
 public class Configuration {
 	
 	public static String HMAC = "Y";
-	public static String dbReport = "N";
+	public static String dbReport = "Y";
 	public static String chequeMin=null;
 	public static String chequeMax=null;
 	public static String mobileType= null;

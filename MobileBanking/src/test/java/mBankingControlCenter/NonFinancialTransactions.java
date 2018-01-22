@@ -37,19 +37,18 @@ public class NonFinancialTransactions extends ExtentManager{
 	@Test
 	public void MiniStatement() throws IOException, SQLException {
 		index=3; 
-	
 		response =BaseObject.buildRequest(index);
 		BaseObject.assertResponse(response, index);
 	}
 	
-	@Test(enabled = false)
+	@Test
 	public void TransactionHistory() throws IOException, SQLException {
 		index=4;
 		response =BaseObject.buildRequest(index);
 		BaseObject.assertResponse(response, index);
 	}
 
-	@Test(priority = 0)
+	@Test
 	public void GenerateMMID() throws IOException, SQLException {
 		index=5; 
 		response =BaseObject.buildRequest(index);
