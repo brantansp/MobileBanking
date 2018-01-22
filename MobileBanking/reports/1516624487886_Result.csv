@@ -1,0 +1,2 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Email ID Fetch,PASS,802218242365,2018-01-22 18:04:47.0,APZ6,C,-,null,null,00,null

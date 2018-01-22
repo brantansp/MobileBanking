@@ -1,0 +1,2 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Transaction history,PASS,802218242371,2018-01-22 18:04:55.0,APTH,C,-,null,null,00,null

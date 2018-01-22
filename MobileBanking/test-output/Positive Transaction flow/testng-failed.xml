@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
+  <test name="FInancial transaction(failed)">
+    <classes>
+      <class name="mBankingControlCenter.FinancialTransactions">
+        <methods>
+          <include name="IMPSP2UDeleteBeneficiaryConfirmation"/>
+          <include name="endReport"/>
+          <include name="IMPSP2UBeneficiaryPaymentConfirmation"/>
+          <include name="IMPSP2PAddBeneficiary"/>
+          <include name="IMPSP2UAddBeneficiary"/>
+          <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
+          <include name="IMPSP2PAddBeneficiaryconfirmation"/>
+          <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
+          <include name="IMPSP2UInstantPayment"/>
+          <include name="IMPSP2PInstantPayment"/>
+          <include name="IMPSP2AAddBeneficiary"/>
+          <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
+          <include name="setUp"/>
+          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
+          <include name="getResult"/>
+          <include name="IMPSP2AInstantPayment"/>
+          <include name="IMPSP2UAddBeneficiaryconfirmation"/>
+          <include name="IMPSP2AAddBeneficiaryconfirmation"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- mBankingControlCenter.FinancialTransactions -->
+    </classes>
+  </test> <!-- FInancial transaction(failed) -->
+</suite> <!-- Failed suite [Positive Transaction flow] -->

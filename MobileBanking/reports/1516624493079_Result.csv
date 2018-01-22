@@ -1,0 +1,2 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Retrieve MMID,PASS,802218242369,2018-01-22 18:04:52.0,APS6,C,-,null,null,00,null

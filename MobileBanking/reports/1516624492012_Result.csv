@@ -1,0 +1,2 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Mini Statement,PASS,802218242368,2018-01-22 18:04:50.0,APMS,C,-,null,null,00,-

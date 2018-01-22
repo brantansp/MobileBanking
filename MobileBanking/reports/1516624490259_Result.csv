@@ -1,0 +1,2 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Generate MMID,PASS,802218242367,2018-01-22 18:04:49.0,APIM,C,-,null,null,00,null
