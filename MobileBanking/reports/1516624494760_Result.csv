@@ -1,2 +1,0 @@
-Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
-Stop Cheque,PASS,802218242370,2018-01-22 18:04:53.0,APL4,C,-,null,null,00,-

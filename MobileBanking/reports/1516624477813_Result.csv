@@ -1,2 +1,0 @@
-Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
-Balance Enquiry,PASS,802218242359,2018-01-22 18:04:35.0,APBE,C,-,null,null,00,-

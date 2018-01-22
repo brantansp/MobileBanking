@@ -1,2 +1,0 @@
-Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
-Cancel MMID Single,PASS,802218242363,2018-01-22 18:04:42.0,APRC,C,-,null,null,00,null

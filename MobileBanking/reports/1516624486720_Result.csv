@@ -1,2 +1,0 @@
-Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
-Cheque Status,PASS,802218242364,2018-01-22 18:04:44.0,APLW,C,-,null,null,00,-

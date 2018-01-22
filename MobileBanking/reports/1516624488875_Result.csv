@@ -1,2 +1,0 @@
-Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
-Update Email ID,PASS,802218242366,2018-01-22 18:04:48.0,APZ3,C,-,null,null,00,null
