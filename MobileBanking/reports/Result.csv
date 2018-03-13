@@ -1,63 +1,78 @@
 Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
-Account Sync,PASS,802215242333,2018-01-22 15:09:10.0,APSY,C,-,null,null,00,-
-Balance Enquiry,PASS,802215242334,2018-01-22 15:09:14.0,APBE,C,-,null,null,00,-
-Generate MMID,PASS,802215242335,2018-01-22 15:09:17.0,APIM,C,-,null,null,00,null
-Cancel MMID All,PASS,802215242336,2018-01-22 15:09:18.0,APRC,C,-,null,null,00,null
-Generate MMID,PASS,802215242337,2018-01-22 15:09:20.0,APIM,C,-,null,null,00,null
-Cancel MMID Single,PASS,802215242338,2018-01-22 15:09:23.0,APRC,C,-,null,null,00,null
-Cheque Status,PASS,802215242339,2018-01-22 15:09:24.0,APLW,C,-,null,null,00,-
-Email ID Fetch,PASS,802215242340,2018-01-22 15:09:26.0,APZ6,C,-,null,null,00,null
-Update Email ID,PASS,802215242341,2018-01-22 15:09:27.0,APZ3,C,-,null,null,00,null
-Generate MMID,PASS,802215242342,2018-01-22 15:09:28.0,APIM,C,-,null,null,00,null
-Mini Statement,PASS,802215242343,2018-01-22 15:09:30.0,APMS,C,-,null,null,00,-
-Retrieve MMID,PASS,802215242344,2018-01-22 15:09:31.0,APS6,C,-,null,null,00,null
-Stop Cheque,PASS,802215242345,2018-01-22 15:09:33.0,APL4,C,-,null,null,00,-
-Transaction history,PASS,802215242346,2018-01-22 15:09:34.0,APTH,C,-,null,null,00,null
-Stop Cheque,PASS,802215242347,2018-01-22 15:10:10.0,APL4,C,-,null,null,00,-
-Account Sync,PASS,802215242348,2018-01-22 15:10:12.0,APSY,C,-,null,null,00,-
-Account Sync,PASS,802217242350,2018-01-22 17:49:56.0,APSY,C,-,null,null,00,-
-Balance Enquiry,PASS,802217242351,2018-01-22 17:50:01.0,APBE,C,-,null,null,00,-
-Mini Statement,PASS,802217242352,2018-01-22 17:50:03.0,APMS,C,-,null,null,00,-
-Transaction history,PASS,802217242353,2018-01-22 17:50:05.0,APTH,C,-,null,null,00,null
-Generate MMID,PASS,802217242354,2018-01-22 17:50:43.0,APIM,C,-,null,null,00,null
-Retrieve MMID,PASS,802217242355,2018-01-22 17:50:46.0,APS6,C,-,null,null,00,null
-Cancel MMID All,PASS,802217242356,2018-01-22 17:50:47.0,APRC,C,-,null,null,00,null
-Cancel MMID Single,FAIL,802217242357,2018-01-22 17:50:49.0,APRC,F,C,null,null,09,Kindly register for IMPS to proceed with the transaction
-Account Sync,PASS,802218242372,2018-01-22 18:19:54.0,APSY,C,-,null,null,00,-
-Balance Enquiry,PASS,802218242373,2018-01-22 18:19:58.0,APBE,C,-,null,null,00,-
-Generate MMID,PASS,802218242374,2018-01-22 18:20:00.0,APIM,C,-,null,null,00,null
-Cancel MMID All,PASS,802218242375,2018-01-22 18:20:01.0,APRC,C,-,null,null,00,null
-Generate MMID,PASS,802218242376,2018-01-22 18:20:02.0,APIM,C,-,null,null,00,null
-Cancel MMID Single,PASS,802218242377,2018-01-22 18:20:04.0,APRC,C,-,null,null,00,null
-Cheque Status,PASS,802218242378,2018-01-22 18:20:05.0,APLW,C,-,null,null,00,-
-Email ID Fetch,PASS,802218242379,2018-01-22 18:20:07.0,APZ6,C,-,null,null,00,null
-Update Email ID,PASS,802218242380,2018-01-22 18:20:08.0,APZ3,C,-,null,null,00,null
-Generate MMID,PASS,802218242381,2018-01-22 18:20:09.0,APIM,C,-,null,null,00,null
-Mini Statement,PASS,802218242382,2018-01-22 18:20:11.0,APMS,C,-,null,null,00,-
-Retrieve MMID,PASS,802218242383,2018-01-22 18:20:13.0,APS6,C,-,null,null,00,null
-Stop Cheque,PASS,802218242384,2018-01-22 18:20:14.0,APL4,C,-,null,null,00,-
-Transaction history,PASS,802218242385,2018-01-22 18:20:16.0,APTH,C,-,null,null,00,null
-IMPS P2A Add Beneficiary,FAIL,802218242386,2018-01-22 18:20:54.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
-IMPS P2A Add Beneficiary confirmation,FAIL,802218242386,2018-01-22 18:20:54.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
-IMPS P2A Beneficiary Payment Confirmation,FAIL,802218242387,2018-01-22 18:20:56.0,APK5,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
-IMPS P2A Beneficiary Payment List enquiry,PASS,802218242388,2018-01-22 18:20:59.0,APK4,C,-,null,null,00,null
-IMPS P2A Beneficiary Search List enquiry,PASS,802218242389,2018-01-22 18:21:01.0,APD9,C,-,null,null,00,null
-IMPS P2A Delete Beneficiary Confirmation,FAIL,802218242390,2018-01-22 18:21:02.0,AP5L,F,C,null,null,09,Beneficiary test not found.
-IMPS P2A Delete Beneficiary List enquiry,PASS,802218242391,2018-01-22 18:21:04.0,AP5L,C,-,null,null,00,null
-IMPS P2A Instant,FAIL,802218242392,2018-01-22 18:21:06.0,APK1,F,-,null,null,09,NPCI host is down.Please try after some time
-IMPS P2P Add Beneficiary,FAIL,802218242393,2018-01-22 18:21:12.0,APW1,F,C,null,null,09,Beneficiary already added. Please contact bank for further details
-IMPS P2P Add Beneficiary confirmation,FAIL,802218242394,2018-01-22 18:21:13.0,APW2,F,C,null,null,09,Beneficiary already added. Please contact bank for further details
-IMPS P2P Beneficiary Payment Confirmation,FAIL,802218242395,2018-01-22 18:21:14.0,APW4,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
-IMPS P2P Beneficiary Payment List enquiry,PASS,802218242396,2018-01-22 18:21:17.0,APW3,C,-,null,null,00,null
-IMPS P2P Beneficiary Search List enquiry,PASS,802218242397,2018-01-22 18:21:18.0,APD9,C,-,null,null,00,null
-IMPS P2P Delete Beneficiary Confirmation,FAIL,802218242398,2018-01-22 18:21:20.0,AP5L,F,C,null,null,09,Beneficiary test not found.
-IMPS P2P Delete Beneficiary List enquiry,PASS,802218242399,2018-01-22 18:21:21.0,AP5L,C,-,null,null,00,null
-IMPS P2P Instant,FAIL,802218242400,2018-01-22 18:21:23.0,APQI,F,-,null,null,09,NPCI host is down.Please try after some time
-IMPS P2A Add Beneficiary,FAIL,802218242401,2018-01-22 18:21:27.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
-IMPS P2A Add Beneficiary confirmation,FAIL,802218242401,2018-01-22 18:21:27.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
-IMPS P2A Beneficiary Payment Confirmation,FAIL,802218242402,2018-01-22 18:21:29.0,APK5,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
-IMPS P2A Beneficiary Payment List enquiry,PASS,802218242403,2018-01-22 18:21:32.0,APK4,C,-,null,null,00,null
-IMPS P2A Beneficiary Search List enquiry,PASS,802218242404,2018-01-22 18:21:33.0,APD9,C,-,null,null,00,null
-IMPS P2A Delete Beneficiary Confirmation,FAIL,802218242405,2018-01-22 18:21:34.0,AP5L,F,C,null,null,09,Beneficiary test not found.
-IMPS P2A Delete Beneficiary List enquiry,PASS,802218242406,2018-01-22 18:21:35.0,AP5L,C,-,null,null,00,null
-IMPS P2U Instant,FAIL,802218242407,2018-01-22 18:21:37.0,AP1U,F,-,null,null,09,NPCI host is down.Please try after some time
+Account Sync,FAIL,806517244193,2018-03-06 17:27:08.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+Balance Enquiry,FAIL,806517244194,2018-03-06 17:27:11.0,APBE,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+Generate MMID,PASS,806517244195,2018-03-06 17:27:14.0,APIM,C,-,null,null,00,null
+Cancel MMID All,PASS,806517244196,2018-03-06 17:27:16.0,APRC,C,-,null,null,00,null
+Generate MMID,PASS,806517244197,2018-03-06 17:27:19.0,APIM,C,-,null,null,00,null
+Cancel MMID Single,PASS,806517244198,2018-03-06 17:27:22.0,APRC,C,-,null,null,00,null
+Cheque Status,FAIL,806517244199,2018-03-06 17:27:24.0,APLW,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+Email ID Fetch,PASS,806517244200,2018-03-06 17:27:27.0,APZ6,C,-,null,null,00,null
+Update Email ID,PASS,806517244201,2018-03-06 17:27:29.0,APZ3,C,-,null,null,00,null
+Generate MMID,PASS,806517244202,2018-03-06 17:27:31.0,APIM,C,-,null,null,00,null
+Mini Statement,FAIL,806517244203,2018-03-06 17:27:34.0,APMS,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+Retrieve MMID,PASS,806517244204,2018-03-06 17:27:36.0,APS6,C,-,null,null,00,null
+Stop Cheque,FAIL,806517244205,2018-03-06 17:27:38.0,APL4,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+IMPS P2A Add Beneficiary,FAIL,806517244206,2018-03-06 17:27:41.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Add Beneficiary confirmation,FAIL,806517244206,2018-03-06 17:27:41.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Beneficiary Payment Confirmation,FAIL,806517244207,2018-03-06 17:27:43.0,APK5,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
+IMPS P2A Beneficiary Payment List enquiry,PASS,806517244208,2018-03-06 17:27:45.0,APK4,C,-,null,null,00,null
+IMPS P2A Beneficiary Search List enquiry,PASS,806517244209,2018-03-06 17:27:48.0,APD9,C,-,null,null,00,null
+IMPS P2A Delete Beneficiary Confirmation,FAIL,806517244210,2018-03-06 17:27:51.0,AP5L,F,C,null,null,09,Beneficiary test not found.
+IMPS P2A Delete Beneficiary List enquiry,PASS,806517244211,2018-03-06 17:27:53.0,AP5L,C,-,null,null,00,null
+IMPS P2A Instant,FAIL,806517244212,2018-03-06 17:27:55.0,APK1,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+IMPS P2P Add Beneficiary,FAIL,806517244213,2018-03-06 17:27:59.0,APW1,F,C,null,null,09,Beneficiary already added. Please contact bank for further details
+IMPS P2P Add Beneficiary confirmation,FAIL,806517244214,2018-03-06 17:28:01.0,APW2,F,C,null,null,09,Beneficiary already added. Please contact bank for further details
+IMPS P2P Beneficiary Payment Confirmation,FAIL,806517244215,2018-03-06 17:28:03.0,APW4,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
+IMPS P2P Beneficiary Payment List enquiry,PASS,806517244216,2018-03-06 17:28:06.0,APW3,C,-,null,null,00,null
+IMPS P2P Beneficiary Search List enquiry,PASS,806517244217,2018-03-06 17:28:08.0,APD9,C,-,null,null,00,null
+IMPS P2P Delete Beneficiary Confirmation,FAIL,806517244218,2018-03-06 17:28:09.0,AP5L,F,C,null,null,09,Beneficiary test not found.
+IMPS P2P Delete Beneficiary List enquiry,PASS,806517244219,2018-03-06 17:28:12.0,AP5L,C,-,null,null,00,null
+IMPS P2P Instant,FAIL,806517244220,2018-03-06 17:28:14.0,APQI,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+IMPS P2A Add Beneficiary,FAIL,806517244221,2018-03-06 17:28:19.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Add Beneficiary confirmation,FAIL,806517244221,2018-03-06 17:28:19.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Beneficiary Payment Confirmation,FAIL,806517244222,2018-03-06 17:28:21.0,APK5,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
+IMPS P2A Beneficiary Payment List enquiry,PASS,806517244223,2018-03-06 17:28:28.0,APK4,C,-,null,null,00,null
+IMPS P2A Beneficiary Search List enquiry,PASS,806517244224,2018-03-06 17:28:30.0,APD9,C,-,null,null,00,null
+IMPS P2A Delete Beneficiary Confirmation,FAIL,806517244225,2018-03-06 17:28:32.0,AP5L,F,C,null,null,09,Beneficiary test not found.
+IMPS P2A Delete Beneficiary List enquiry,PASS,806517244226,2018-03-06 17:28:34.0,AP5L,C,-,null,null,00,null
+IMPS P2U Instant,FAIL,806517244227,2018-03-06 17:28:36.0,AP1U,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807111244320,2018-03-12 11:53:59.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807111244321,2018-03-12 11:55:29.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807112244322,2018-03-12 12:23:54.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807112244323,2018-03-12 12:27:16.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807112244324,2018-03-12 12:27:49.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807112244325,2018-03-12 12:36:20.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807112244326,2018-03-12 12:37:01.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807112244327,2018-03-12 12:41:52.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807113244328,2018-03-12 13:10:31.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+Account Sync,FAIL,807114244329,2018-03-12 14:34:43.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+Balance Enquiry,FAIL,807114244330,2018-03-12 14:34:46.0,APBE,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+Generate MMID,PASS,807114244331,2018-03-12 14:34:50.0,APIM,C,-,null,null,00,null
+Cancel MMID All,PASS,807114244332,2018-03-12 14:34:51.0,APRC,C,-,null,null,00,null
+Generate MMID,PASS,807114244333,2018-03-12 14:34:53.0,APIM,C,-,null,null,00,null
+Cancel MMID Single,PASS,807114244334,2018-03-12 14:34:56.0,APRC,C,-,null,null,00,null
+Account Sync,FAIL,807115244336,2018-03-12 15:40:39.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+Account Sync,FAIL,807116244337,2018-03-12 16:17:43.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807116244338,2018-03-12 16:18:46.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807116244339,2018-03-12 16:32:41.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807116244340,2018-03-12 16:40:39.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807116244341,2018-03-12 16:40:41.0,APBE,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807116244342,2018-03-12 16:41:53.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807116244343,2018-03-12 16:41:55.0,APBE,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807116244344,2018-03-12 16:42:57.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807116244345,2018-03-12 16:42:59.0,APBE,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807117244346,2018-03-12 17:20:02.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807117244347,2018-03-12 17:20:04.0,APBE,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807117244348,2018-03-12 17:32:11.0,APSY,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,PASS,807117244349,2018-03-12 17:32:14.0,APIM,C,-,null,null,00,null
+null,PASS,807117244350,2018-03-12 17:32:17.0,APRC,C,-,null,null,00,null
+null,PASS,807117244351,2018-03-12 17:32:23.0,APIM,C,-,null,null,00,null
+null,PASS,807117244352,2018-03-12 17:32:27.0,APRC,C,-,null,null,00,null
+null,FAIL,807117244353,2018-03-12 17:32:30.0,APLW,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,PASS,807117244354,2018-03-12 17:32:33.0,APZ6,C,-,null,null,00,null
+null,PASS,807117244355,2018-03-12 17:32:35.0,APZ3,C,-,null,null,00,null
+null,PASS,807117244356,2018-03-12 17:32:37.0,APIM,C,-,null,null,00,null
+null,FAIL,807117244357,2018-03-12 17:32:40.0,APMS,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,PASS,807117244358,2018-03-12 17:32:42.0,APS6,C,-,null,null,00,null
+null,FAIL,807117244359,2018-03-12 17:32:44.0,APL4,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807117244360,2018-03-12 17:32:48.0,APBE,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted

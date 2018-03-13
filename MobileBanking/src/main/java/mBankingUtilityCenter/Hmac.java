@@ -60,6 +60,7 @@ public class Hmac {
 	  public static String Hmacing(String fullRequest, String halfRequest, BigInteger uniNum) throws InvalidKeyException, SignatureException, NoSuchAlgorithmException
 	  {
 		  BigInteger encryptedKey = uniNum.modPow(new BigInteger(publickey, 10) , new BigInteger(modulus, 10));
+		  //System.out.println("encryptedKey : "+encryptedKey);
 		  String text = ""+uniNum; 
 		  String hashedRequest = calculateRFC2104HMAC(fullRequest, text);
 		  String FinalRequest=hashedRequest+ "*!"+halfRequest+encryptedKey;

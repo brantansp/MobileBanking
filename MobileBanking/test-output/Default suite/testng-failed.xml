@@ -3,15 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="mBankingUtilityCenter.ExtentManager">
+      <class name="mBankingControlCenter.NonFinancialTransactions">
         <methods>
           <include name="endReport"/>
-          <include name="startReport"/>
-          <include name="failTest"/>
+          <include name="MiniStatement"/>
+          <include name="StopCheque"/>
+          <include name="setUp"/>
+          <include name="balanceEnq"/>
+          <include name="AppLogin"/>
           <include name="getResult"/>
-          <include name="skipTest"/>
+          <include name="beforeMethod"/>
+          <include name="ChequeStatus"/>
         </methods>
-      </class> <!-- mBankingUtilityCenter.ExtentManager -->
+      </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

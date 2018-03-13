@@ -2,14 +2,1252 @@ package mBankingPageObjectModel;
 
 import mBankingUtilityCenter.RandomNumGenerator;
 
-public class StaticStore {
+public class StaticStore extends Configuration{
+	
+	static StringBuilder sb = new StringBuilder() ;
 	
 	public static void main(String[] args) 
 	{
-		System.out.println(menuDesc.length);
+		System.out.println(appLogin());
 		
 	}
-	//9865928748
+	
+	public static String appLogin ()
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno);
+		sb.append("APSY;");
+		sb.append("2;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	public static String balanceEnq ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APBE;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String miniStatement ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APMS;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String transactionHistory ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APTH;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String generateMMID ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APIM;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+
+	public static String retrieveMMID ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APS6;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(RemAccountno+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String cancelMMIDAll ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APRC;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append("ALL;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String cancelMMIDSingle ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APRC;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(RemAccountno+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String emailIDFetch ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APZ6;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String updateEmailID (String emailID)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APZ3;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(emailID+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String chequeStatus (String chqNo)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APLW;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(chqNo+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String stopCheque (String chqNo)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APL4;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(chqNo+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String Accountfetch ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APSY;");
+	    sb.append("0001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		return sb.toString();
+	}
+	
+	public static String changeloginpwd (String newpassword)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APP5;");
+		sb.append(newpassword+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		return sb.toString();
+	}
+	
+	//Financial Transactions		
+	//IMPS Instant Payment
+	public static String impsP2PInstant (String benMobNo, String benMMID, String amount, String remark)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APK1;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(benMobNo+";");
+		sb.append(benMMID+";");
+		sb.append(amount+";");
+		sb.append(remark+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String impsP2AInstant (String benAcNo, String benIFSC, String amount, String remark)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("AP1U;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(benAcNo+";");
+		sb.append(RemAccountType+";");
+		sb.append(benIFSC+";");
+		sb.append(amount+";");
+		sb.append(remark+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String impsP2UInstant (String aadharNo,  String amount, String remark)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APQI;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(aadharNo+";");
+		sb.append(RemAccountType+";");
+		sb.append(amount+";");
+		sb.append(remark+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+
+	//IMPS Registration Payments
+	public static String impsP2PAddBen (String benMobNo,  String benMMID, String nickname)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APW1;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(benMMID+";");
+		sb.append(benMobNo+";");
+		sb.append(nickname+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String impsP2PConfBen (String benMobNo,  String benMMID, String nickname)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APW2;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(benMMID+";");
+		sb.append(benMobNo+";");
+		sb.append(nickname+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+
+	public static String impsP2PBenSearch (String searchText)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APD9;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(searchText+";");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+
+	public static String impsP2PDelBenSearch (String searchText)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("AP5L;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(searchText+";");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+
+	public static String impsP2PDelBenConf (String benName)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("AP5L;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(benName+";");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String impsP2PPaySearch (String searchText)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APW3;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append("P;");
+		sb.append(searchText+";");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String impsP2PPayConf (String benName,String amount,String remark)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APW4;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(amount+";");
+		sb.append(remark+ ";");
+		sb.append(benName+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+
+	public static String impsP2AAddBen (String accNo,  String accType, String ifsccode, String remark)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APK2;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(accNo+";");
+		sb.append(accType+";");
+		sb.append(ifsccode+";");
+		sb.append(remark+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String impsP2AConfBen (String accNo,  String accType, String ifsccode, String remark)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APK3;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(accNo+";");
+		sb.append(accType+";");
+		sb.append(ifsccode+";");
+		sb.append(remark+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+
+	public static String impsP2ABenSearch (String searchText)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APD9;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(searchText+";");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+
+	public static String impsP2ADelBenSearch (String searchText)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("AP5L;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(searchText+";");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+
+	public static String impsP2ADelBenConf (String benName)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("AP5L;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(benName+";");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String impsP2APaySearch (String searchText)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APK4;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append("P;");
+		sb.append(searchText+";");
+		sb.append("1;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String impsP2APayConf (String benName,String amount,String remark)
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APK5;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		sb.append(amount+";");
+		sb.append(remark+ ";");
+		sb.append(benName+";");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	
+	//
+	// *** UNBI payments-Bill Pay ***//
+	
+	// *** Biller Registration ***//
+	public static String Billercategorylist()
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno+";");
+		sb.append("APB2;");
+        sb.append("P;");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String billerlist(String Typeofbiller)
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno+";");
+		sb.append("APB9;");
+		sb.append(Typeofbiller+";");
+        sb.append("P;");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String billerregisration(String Typeofbillerlist)
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno+";");
+		sb.append("APB3;");
+		sb.append(Typeofbillerlist+";");
+        sb.append("P;");
+	    sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	public static String biilerregistrationconfirm (String Typeofbiller, String Typeofbillerlist, String Field1, String Field2, String Nickname	)
+	{
+	 
+	    sb.append(RemMobileno+";");
+	    sb.append("APB4;");
+		sb.append(Typeofbiller+";");
+	    sb.append(Typeofbillerlist+";");
+	    sb.append("1;");
+	    sb.append(Field1+";");
+	    sb.append(Field2+";");
+	    sb.append(Nickname+";");
+	    sb.append(bankCode+";");
+	    sb.append(DUKPT+";");
+	    sb.append(buildVersion+";");
+	    sb.append(RemAccountno+";");
+	    return sb.toString();
+	}
+	 
+	
+	// *** Registered Bill Payment ***//
+	
+	public static String Accountselectionbiilerlist()
+	{
+	 
+	    sb.append(RemMobileno+";");
+	    sb.append("APBX;");
+		sb.append("001;");
+		sb.append(bankCode+";");
+	    sb.append(DUKPT+";");
+	    sb.append(buildVersion+";");
+	    sb.append(RemAccountno+";");
+	    return sb.toString();
+	}
+	
+	public static String biilerlistselection(String Registerdbiller1)
+	{ 
+	    sb.append(RemMobileno+";");
+	    sb.append("APBW;");
+	    sb.append(Registerdbiller1+";");
+		sb.append(bankCode+";");
+	    sb.append(DUKPT+";");
+	    sb.append(buildVersion+";");
+	    sb.append(RemAccountno+";");
+	    return sb.toString();
+	}
+	
+	public static String RegBillerpay(String Registerdbiller1)
+	{
+	 
+	    sb.append(RemMobileno+";");
+	    sb.append("AP1B;");
+	    sb.append("A;");
+	    sb.append(Registerdbiller1+";");
+	    sb.append("001;");
+		sb.append(bankCode+";");
+	    sb.append(DUKPT+";");
+	    sb.append(buildVersion+";");
+	    sb.append(RemAccountno+";");
+	    return sb.toString();
+	}
+	
+	public static String RegBillerpayconfirm(String Registerdbiller1, String Amount, String transactionId)
+	{
+	 
+	    sb.append(RemMobileno+";");
+	    sb.append("APB6;");
+	    sb.append(Registerdbiller1+";");
+	    sb.append("F;");
+	    sb.append("43209009;");
+	    sb.append(Amount+";");
+	    sb.append(transactionId+";");
+		sb.append(bankCode+";");
+	    sb.append(DUKPT+";");
+	    sb.append(buildVersion+";");
+	    sb.append(RemAccountno+";");
+	    return sb.toString();
+	}
+	
+	// *** Biller Deregistration ***//
+	
+	public static String biilerderegselection()
+	{
+	    sb.append(RemMobileno+";");
+	    sb.append("APBZ;");
+	    sb.append("001;");
+        sb.append(bankCode+";");
+	    sb.append(DUKPT+";");
+	    sb.append(buildVersion+";");
+	    sb.append(RemAccountno+";");
+	    return sb.toString();
+	}
+	
+	public static String biilerderegister(String Registerdbiller1)
+	{
+	    sb.append(RemMobileno+";");
+	    sb.append("APBY;");
+	    sb.append(Registerdbiller1+";");
+        sb.append(bankCode+";");
+	    sb.append(DUKPT+";");
+	    sb.append(buildVersion+";");
+	    sb.append(RemAccountno+";");
+	    return sb.toString();
+	}
+	
+	// *** Adhoc Bill Payment***//
+	
+	public static String AdHocBillercategorylist()
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno+";");
+		sb.append("APB2;");
+        sb.append("A;");
+		sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String AdHocbillerlist(String Typeofbiller)
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno+";");
+		sb.append("APDW;");
+		sb.append(Typeofbiller+";");
+        sb.append("001;");
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String billerlistselection(String Typeofbillerlist)
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno+";");
+		sb.append("APDT;");
+		sb.append(Typeofbillerlist+";");
+        sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String Adhocpayconfirm(String Typeofbillerlist, String Field1, String Field2, String Amount, String Transactionid	)
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno+";");
+		sb.append("APDM;");
+		sb.append(Typeofbillerlist+";");
+		sb.append(Field1+";");
+		sb.append(Field2+";");
+		sb.append(Amount+";");
+		sb.append(Transactionid+";");
+        sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String Rechargelist ()
+	{
+	    sb.delete(0, sb.length());
+	    sb.append(RemMobileno);
+	    sb.append("AP1T;");
+	    if(mPINRequired.equals("Y"))
+	    {
+	    sb.append(mPINRequired+";");
+	    sb.append(mPIN+";");
+	    }
+	    sb.append("0001;");
+	    sb.append(bankCode+";");
+	    sb.append(DUKPT+";");
+	    sb.append(buildVersion+";");
+	    sb.append(RemAccountno);
+	    return sb.toString();
+	}
+	
+	public static String Operatorsearch(String TypeofRecharge, String searchfield1)
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno);
+		sb.append("AP2T;");
+		  if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+		sb.append(TypeofRecharge+";");
+		sb.append(searchfield1+";");
+	    sb.append("MTP:DTH:DTC;");
+		sb.append("0001;");
+        sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String Rechargeconfirm(String TypeofRecharge, String searchresult, String RechargeMobNo,String RechargeAmount,String TransactionId )
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno);
+		sb.append("AP3T;");
+		  if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+		sb.append(TypeofRecharge+";");
+		sb.append(searchresult+";");
+		sb.append("O;");
+		sb.append("MTP:DTH:DTC;");
+		sb.append(RechargeMobNo+";");
+		sb.append(RechargeAmount+";");
+		sb.append(RechargeNickname+";");
+		sb.append(TransactionId+";");
+        sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String RechargeStatusEnq(String TypeofRecharge, String TransactionId )
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(RemMobileno+";");
+		sb.append("AP7T;");
+		sb.append(TypeofRecharge+";");
+		sb.append(TransactionId+";");
+		sb.append("1;");
+        sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
+		return sb.toString();
+	}
+	
+	//** Fund Transfer within bank **//
+		// 
+		public static String m2mQuickFT(String BenMobileNo,String Amount,String Remarks)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APQM;");
+			if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+			sb.append(BenMobileNo+";");
+			sb.append(Amount+";");
+			sb.append(Remarks+";");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String m2mBenAcclist(String BenMobileNo,String Nickname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APRM;");
+			if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+			sb.append(BenMobileNo+";");
+			sb.append(Nickname+";");
+			sb.append("0001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+			
+		public static String m2mBenReg(String BenAccountno,String Nickname,String Remarks)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APC1;");
+			if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+			sb.append(BenMobileNo+";");
+			sb.append(Nickname+";");
+			sb.append(BenAccountno+";");
+			sb.append("0001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String m2mRegbensearch()
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APF1;");
+			sb.append("P;");
+			sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String m2mbenpayment(String Benregname, String Amount,String Remarks)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APFT;");
+			if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+			sb.append(Amount+";");
+			sb.append(Remarks+";");
+			sb.append(Benregname+";");
+			sb.append("P;");
+			sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String m2mbensearch(String Benregname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APD5;");
+			if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+	        sb.append(Benregname+";");
+	        sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String m2mbendelsearch(String Benregname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("AP2L;");
+			if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+	        sb.append(Benregname+";");
+	        sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String P2Pbendelete(String Benregname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("AP2D;");
+			if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+	        sb.append(Benregname+";");
+	        sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String P2AQuickFT(String BenAccountno,String AccountType,String Amount)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APQT;");
+			if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+	        sb.append(BenAccountno+";");
+	        sb.append(AccountType+";");
+	        sb.append(Amount+";");
+	        sb.append(FTRemarks+";");
+	        sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String m2abenreg(String BenAccountno,String AccountType,String Amount)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APQT;");
+			if(mPINRequired.equals("Y"))
+		    {
+		    sb.append(mPINRequired+";");
+		    sb.append(mPIN+";");
+		    }
+	        sb.append(BenAccountno+";");
+	        sb.append(AccountType+";");
+	        sb.append(Amount+";");
+	        sb.append(FTRemarks+";");
+	        sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+
+		public static String m2abensearchreq(String BenAccountno,String AccountType,String Amount)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APF2;");
+		    sb.append(BenAccountno+";");
+	        sb.append("P;");
+	        sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		//** need to add P2Abenpayment **//
+		public static String m2abendetails(String searchfield1)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APD6;");
+		    sb.append(searchfield1+";");
+	        sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+
+		public static String m2abenderegsearch(String searchfield1)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("AP3L;");
+		    sb.append(searchfield1+";");
+	        sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		//** need to add P2Abendereg **//
+		
+		//** Fund Transfer-otherbank NEFT**//
+		public static String NEFTQuickFT(String benaccountno,String accounttype,String benIFSCcode,String benname, String Remarks)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APQN;");
+		    sb.append(benaccountno+";");
+		    sb.append(accounttype+";");
+		    sb.append(benIFSCcode+";");
+		    sb.append(benname+";");
+		    sb.append(Remarks+";");
+	        sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+
+		public static String NEFTbenreg(String benaccountno,String accounttype,String benIFSCcode,String benname )
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APQ2;");
+		    sb.append(benaccountno+";");
+		    sb.append(accounttype+";");
+		    sb.append(benIFSCcode+";");
+		    sb.append(benname+";");
+		    sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String NEFTbenregconfirm(String benaccountno,String accounttype,String benIFSCcode,String benname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APQ3;");
+		    sb.append(benaccountno+";");
+		    sb.append(accounttype+";");
+		    sb.append(benIFSCcode+";");
+		    sb.append(benname+";");
+		    sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String NEFTbenlist()
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APQ7;");
+		    sb.append("P;");
+		    sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String NEFTbenpayment(String Amount,String Benname, String Remarks)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APQ8;");
+		    sb.append(Amount+";");
+		    sb.append(Remarks+";");
+		    sb.append(Benname+";");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+	
+		public static String NEFTbendetail(String Benname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("APNL;");
+		    sb.append("N;");
+		    sb.append(Benname+";");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+	
+		public static String NEFTbendereglist(String Benname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("AP4L;");
+		    sb.append("N;");
+		    sb.append(Benname+";");
+		    sb.append("001;");
+	        sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+		
+		public static String NEFTbenderegconfirm(String Benname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(RemMobileno);
+			sb.append("AP4D;");
+		    sb.append("N;");
+		    sb.append(Benname+";");
+		    sb.append(bankCode+";");
+			sb.append(DUKPT+";");
+			sb.append(buildVersion+";");
+			sb.append(RemAccountno+";");
+			return sb.toString();
+		}
+
 	public static String menuDesc[][] = new String[][] {
 		//Non Financial Transactions
 		{"App Login",Configuration.RemMobileno+"APCG;BVD",Configuration.bankCode,Configuration.DUKPT,Configuration.buildVersion},   //0

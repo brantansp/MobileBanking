@@ -20,7 +20,7 @@ public class HttpConnect {
 	public String Post(String request) throws IOException
 	{
 		URL url = new URL(Configuration.GprsURL+Configuration.servlet+request);
-	   
+		   //System.out.println("Posting Url : "+Configuration.GprsURL+Configuration.servlet);
 	        StringBuilder postData = new StringBuilder();
 	   
 	        byte[] postDataBytes = postData.toString().getBytes("UTF-8");

@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
-  <test name="FInancial transaction(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="mBankingControlCenter.FinancialTransactions">
+      <class name="mBankingControlCenter.NonFinancialTransactions">
         <methods>
-          <include name="IMPSP2UDeleteBeneficiaryConfirmation"/>
           <include name="endReport"/>
-          <include name="IMPSP2UBeneficiaryPaymentConfirmation"/>
-          <include name="IMPSP2PAddBeneficiary"/>
-          <include name="IMPSP2UAddBeneficiary"/>
-          <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
-          <include name="IMPSP2PAddBeneficiaryconfirmation"/>
-          <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
-          <include name="IMPSP2UInstantPayment"/>
-          <include name="IMPSP2PInstantPayment"/>
-          <include name="IMPSP2AAddBeneficiary"/>
-          <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
+          <include name="MiniStatement"/>
+          <include name="StopCheque"/>
           <include name="setUp"/>
-          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
+          <include name="balanceEnq"/>
+          <include name="AppLogin"/>
           <include name="getResult"/>
-          <include name="IMPSP2AInstantPayment"/>
-          <include name="IMPSP2UAddBeneficiaryconfirmation"/>
-          <include name="IMPSP2AAddBeneficiaryconfirmation"/>
           <include name="beforeMethod"/>
+          <include name="ChequeStatus"/>
         </methods>
-      </class> <!-- mBankingControlCenter.FinancialTransactions -->
+      </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
     </classes>
-  </test> <!-- FInancial transaction(failed) -->
-</suite> <!-- Failed suite [Positive Transaction flow] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

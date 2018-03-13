@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
+  <test name="Non- FInancial transaction(failed)">
+    <classes>
+      <class name="mBankingControlCenter.NonFinancialTransactions">
+        <methods>
+          <include name="endReport"/>
+          <include name="MiniStatement"/>
+          <include name="StopCheque"/>
+          <include name="BalanceEnquiry"/>
+          <include name="setUp"/>
+          <include name="AccountSync"/>
+          <include name="getResult"/>
+          <include name="beforeMethod"/>
+          <include name="ChequeStatus"/>
+        </methods>
+      </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
+    </classes>
+  </test> <!-- Non- FInancial transaction(failed) -->
   <test name="FInancial transaction(failed)">
     <classes>
       <class name="mBankingControlCenter.FinancialTransactions">

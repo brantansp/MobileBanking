@@ -1,8 +1,22 @@
 package mBankingUtilityCenter;
 
-import java.io.File;
-import java.lang.reflect.Method;
+import static org.testng.Assert.assertTrue;
 
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Method;
+import java.math.BigInteger;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SignatureException;
+import java.sql.SQLException;
+
+import mBankingBasePageObject.BaseObject;
+import mBankingPageObjectModel.Configuration;
+import mBankingPageObjectModel.StaticStore;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.SkipException;
@@ -27,6 +41,11 @@ public class ExtentManager{
 	
 	public static ExtentReports extent;
 	public static ExtentTest extentLogger;
+	public static String response="";
+	public static String transactionID = "";
+	static HttpConnect obj=new HttpConnect();
+	private static String dbResult[];
+	private static Log log = LogFactory.getLog(ExtentManager.class);
 	
 	@BeforeSuite
 	public void setUp(){
@@ -58,6 +77,51 @@ public class ExtentManager{
 	public void endReport(){ 
                 extent.flush();
     } 
+	
+	public static void assertResponse(String response)
+	{
+		//log.info(response.substring(2, 4));
+		assertTrue(response.substring(2,4).contains("00"));		
+	}
+	
+	public static String buildReq (String Request, String txnType)
+	{
+		log.info("******************************START******************************");
+	    log.info("Request : " + txnType);
+	    BigInteger uniNum = RandomNumGenerator.generate();
+	  	if (Configuration.HMAC.equals("Y"))
+		{
+		  try {
+			Request=Hmac.Hmacing(Request+uniNum, Request, uniNum);
+			log.info("Hmaced Request : "+Request);
+		        } catch (InvalidKeyException | SignatureException | NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		   }
+		}
+		else {
+			Request = Request +";"+uniNum;
+			log.info("Non-Hmac request : "+Request);
+			log.info(" Request");
+		}
+		try {
+			 HttpConnect obj=new HttpConnect();
+			response = obj.Post(Request);
+			log.info("Response received from Server : "+response);
+			transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
+			log.info("Transaction ID : "+transactionID);
+			if(Configuration.dbReport=="Y")
+			{
+				dbResult = dbTransactionlog.fetchRecord(transactionID);
+				WriteToCSVFile.reportGeneration( dbResult);
+			}		
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	log.info("******************************END********************************\r\n");
+	return response;
+	}
 }
 
 
