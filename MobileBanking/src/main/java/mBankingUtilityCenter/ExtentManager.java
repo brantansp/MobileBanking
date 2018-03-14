@@ -84,7 +84,7 @@ public class ExtentManager{
 		assertTrue(response.substring(2,4).contains("00"));		
 	}
 	
-	public static String buildReq (String Request, String txnType)
+	public static String sendReq (String Request, String txnType)
 	{
 		log.info("******************************START******************************");
 	    log.info("Request : " + txnType);

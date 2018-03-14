@@ -26,7 +26,7 @@ public class NewTest extends ExtentManager {
 	@Test
 	public void AppLogin() throws IOException, SQLException {
 		request = StaticStore.appLogin();
-		response =buildReq(request, "App Login");
+		response =sendReq(request, "App Login");
 		assertResponse(response);
 	}
 	
@@ -34,7 +34,7 @@ public class NewTest extends ExtentManager {
 	public void balanceEnq()
 	{
 		request = StaticStore.balanceEnq();
-		response = buildReq (request, "Balance Enquiry");
+		response = sendReq (request, "Balance Enquiry");
 		assertResponse(response);
 	}
 

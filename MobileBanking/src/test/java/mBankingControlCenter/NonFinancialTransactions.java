@@ -36,86 +36,86 @@ public class NonFinancialTransactions extends ExtentManager{
 	@Test
 	public void AppLogin() throws IOException, SQLException {
 		request = StaticStore.appLogin();
-		response =buildReq(request, "App Login");
+		response =sendReq(request, "App Login");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void balanceEnq()
 	{
-		request = StaticStore.balanceEnq();
-		response = buildReq (request, "Balance Enquiry");
+		request = StaticStore.balanceEnq("5423645723322");
+		response = sendReq (request, "Balance Enquiry");
 		assertResponse(response);
 	}
 	@Test
 	public void MiniStatement() throws IOException, SQLException {
 		request = StaticStore.miniStatement();
-		response = buildReq (request, "Mini statement");
+		response = sendReq (request, "Mini statement");
 		assertResponse(response);
 	}
 	
 	//@Test
 	public void TransactionHistory() throws IOException, SQLException {
 		request = StaticStore.transactionHistory();
-		response = buildReq (request, "Transaction History");
+		response = sendReq (request, "Transaction History");
 		assertResponse(response);
 	}
 
 	@Test
 	public void GenerateMMID() throws IOException, SQLException {
 		request = StaticStore.generateMMID();
-		response = buildReq (request, "Generate MMID");
+		response = sendReq (request, "Generate MMID");
 		assertResponse(response);
 	}
 
 	@Test
 	public void RetrieveMMID() throws IOException, SQLException {
 		request = StaticStore.retrieveMMID();
-		response = buildReq (request, "Retrieve MMID");
+		response = sendReq (request, "Retrieve MMID");
 		assertResponse(response);
 	}
 
 	@Test
 	public void CancelMMIDAll() throws IOException, SQLException {
-		buildReq (StaticStore.generateMMID(), "Generate MMID"); // calling generate MMID
+		sendReq (StaticStore.generateMMID(), "Generate MMID"); // calling generate MMID
 		request = StaticStore.cancelMMIDAll();
-		response = buildReq (request, "Cancel MMID All");
+		response = sendReq (request, "Cancel MMID All");
 		assertResponse(response);
 	}
 
 	@Test
 	public void CancelMMIDSingle() throws IOException, SQLException {
-		buildReq (StaticStore.generateMMID(), "Generate MMID"); // calling generate MMID
+		sendReq (StaticStore.generateMMID(), "Generate MMID"); // calling generate MMID
 		request = StaticStore.cancelMMIDSingle();
-		response = buildReq (request, "Cancel MMID Single");
+		response = sendReq (request, "Cancel MMID Single");
 		assertResponse(response);
 	}
 
 	@Test
 	public void EmailIDFetch() throws IOException, SQLException {
 		request = StaticStore.emailIDFetch();
-		response = buildReq (request, "Email ID fetch");
+		response = sendReq (request, "Email ID fetch");
 		assertResponse(response);
 	}
 
 	@Test
 	public void EmailIDUpdate() throws IOException, SQLException {
 		request = StaticStore.updateEmailID("abc@fss.com");
-		response = buildReq (request, "Email ID Fetch");
+		response = sendReq (request, "Email ID Fetch");
 		assertResponse(response);
 	}
 
 	@Test
 	public void ChequeStatus() throws IOException, SQLException {
 		request = StaticStore.chequeStatus("123456");
-		response = buildReq (request, "Cheque status");
+		response = sendReq (request, "Cheque status");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void StopCheque() throws IOException, SQLException {
 		request = StaticStore.stopCheque("123456");
-		response = buildReq (request, "Stop Cheque");
+		response = sendReq (request, "Stop Cheque");
 		assertResponse(response);
 	}
 	

@@ -28,119 +28,127 @@ public class FinancialTransactions extends ExtentManager{
 	@Test
 	public void IMPSP2PInstantPayment() throws IOException, SQLException {
 		request = StaticStore.impsP2PInstant("", "", "", "");
-		response =buildReq(request, "IMPSP2PInstantPayment");
+		response =sendReq(request, "IMPSP2PInstantPayment");
+		assertResponse(response);
+	}
+	
+	//Billercategorylist
+	@Test
+	public void Billercategorylist() throws IOException, SQLException {
+		request = StaticStore.Billercategorylist();
+		response =sendReq(request, "Billercategorylist");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2AInstantPayment() throws IOException, SQLException {
 		request = StaticStore.impsP2AInstant("", "", "", "");
-		response =buildReq(request, "IMPSP2AInstantPayment");
+		response =sendReq(request, "IMPSP2AInstantPayment");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2UInstantPayment() throws IOException, SQLException {
 		request = StaticStore.impsP2UInstant("", "", "");
-		response =buildReq(request, "IMPSP2UInstantPayment");
+		response =sendReq(request, "IMPSP2UInstantPayment");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PAddBeneficiary() throws IOException, SQLException {
 		request = StaticStore.impsP2PAddBen( "", "", "");
-		response =buildReq(request, "IMPSP2PAddBeneficiary");
+		response =sendReq(request, "IMPSP2PAddBeneficiary");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PAddBeneficiaryconfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PConfBen( "", "", "");
-		response =buildReq(request, "IMPSP2PAddBeneficiaryconfirmation");
+		response =sendReq(request, "IMPSP2PAddBeneficiaryconfirmation");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PBeneficiarySearchListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2PBenSearch( "");
-		response =buildReq(request, "IMPSP2PBeneficiarySearchListenquiry");
+		response =sendReq(request, "IMPSP2PBeneficiarySearchListenquiry");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PDeleteBeneficiaryListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2PDelBenSearch( "");
-		response =buildReq(request, "IMPSP2PDeleteBeneficiaryListenquiry");
+		response =sendReq(request, "IMPSP2PDeleteBeneficiaryListenquiry");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PDeleteBeneficiaryConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PDelBenConf( "");
-		response =buildReq(request, "IMPSP2PDeleteBeneficiaryConfirmation");
+		response =sendReq(request, "IMPSP2PDeleteBeneficiaryConfirmation");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PBeneficiaryPaymentListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2PPaySearch( "");
-		response =buildReq(request, "IMPSP2PBeneficiaryPaymentListenquiry");
+		response =sendReq(request, "IMPSP2PBeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PBeneficiaryPaymentConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PPayConf("", "", "");
-		response =buildReq(request, "IMPSP2PBeneficiaryPaymentConfirmation");
+		response =sendReq(request, "IMPSP2PBeneficiaryPaymentConfirmation");
 		assertResponse(response);
 	}
 
 	@Test
 	public void IMPSP2AAddBeneficiary() throws IOException, SQLException {
 		request = StaticStore.impsP2AAddBen( "", "", "", "");
-		response =buildReq(request, "IMPSP2AAddBeneficiary");
+		response =sendReq(request, "IMPSP2AAddBeneficiary");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2AAddBeneficiaryconfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2AConfBen( "", "", "", "");
-		response =buildReq(request, "IMPSP2AAddBeneficiaryconfirmation");
+		response =sendReq(request, "IMPSP2AAddBeneficiaryconfirmation");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2ABeneficiarySearchListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2ABenSearch( "");
-		response =buildReq(request, "IMPSP2ABeneficiarySearchListenquiry");
+		response =sendReq(request, "IMPSP2ABeneficiarySearchListenquiry");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2ADeleteBeneficiaryListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2ADelBenSearch( "");
-		response =buildReq(request, "IMPSP2ADeleteBeneficiaryListenquiry");
+		response =sendReq(request, "IMPSP2ADeleteBeneficiaryListenquiry");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2ADeleteBeneficiaryConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2ADelBenConf( "");
-		response =buildReq(request, "IMPSP2ADeleteBeneficiaryConfirmation");
+		response =sendReq(request, "IMPSP2ADeleteBeneficiaryConfirmation");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2ABeneficiaryPaymentListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2APaySearch( "");
-		response =buildReq(request, "IMPSP2ABeneficiaryPaymentListenquiry");
+		response =sendReq(request, "IMPSP2ABeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2ABeneficiaryPaymentConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2APayConf("", "", "");
-		response =buildReq(request, "IMPSP2ABeneficiaryPaymentConfirmation");
+		response =sendReq(request, "IMPSP2ABeneficiaryPaymentConfirmation");
 		assertResponse(response);
 	}
 

@@ -25,7 +25,7 @@ public class StaticStore extends Configuration{
 		return sb.toString();
 	}
 	
-	public static String balanceEnq ()
+	public static String balanceEnq (String remAccountno)
 	{
 		sb.delete(0, sb.length());
 		sb.append(RemMobileno);
@@ -38,7 +38,7 @@ public class StaticStore extends Configuration{
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
 		sb.append(buildVersion+";");
-		sb.append(RemAccountno+";");
+		sb.append(remAccountno+";");
 		return sb.toString();
 	}
 	
@@ -220,6 +220,8 @@ public class StaticStore extends Configuration{
 		return sb.toString();
 	}
 	
+	// NA
+	
 	public static String Accountfetch ()
 	{
 		sb.delete(0, sb.length());
@@ -232,6 +234,7 @@ public class StaticStore extends Configuration{
 		return sb.toString();
 	}
 	
+	// NA
 	public static String changeloginpwd (String newpassword)
 	{
 		sb.delete(0, sb.length());
