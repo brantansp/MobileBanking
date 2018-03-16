@@ -30,13 +30,7 @@ public class NewTest extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	@Test
-	public void balanceEnq()
-	{
-		request = StaticStore.balanceEnq();
-		response = sendReq (request, "Balance Enquiry");
-		assertResponse(response);
-	}
+
 
 	
 	

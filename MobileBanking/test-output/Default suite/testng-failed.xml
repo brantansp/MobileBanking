@@ -6,14 +6,18 @@
       <class name="mBankingControlCenter.NonFinancialTransactions">
         <methods>
           <include name="endReport"/>
-          <include name="MiniStatement"/>
+          <include name="CancelMMIDSingle"/>
+          <include name="Accountfetch"/>
+          <include name="balanceEnq"/>
+          <include name="changeloginpwd"/>
+          <include name="RetrieveMMID"/>
+          <include name="ChequeStatus"/>
           <include name="StopCheque"/>
           <include name="setUp"/>
-          <include name="balanceEnq"/>
-          <include name="AppLogin"/>
           <include name="getResult"/>
+          <include name="CancelMMIDAll"/>
+          <include name="GenerateMMID"/>
           <include name="beforeMethod"/>
-          <include name="ChequeStatus"/>
         </methods>
       </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
     </classes>

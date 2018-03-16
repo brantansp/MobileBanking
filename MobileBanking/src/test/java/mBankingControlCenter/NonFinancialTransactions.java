@@ -26,7 +26,7 @@ public class NonFinancialTransactions extends ExtentManager{
 	public static ExtentReports extent;
 	public static ExtentTest extentLogger;
 	
-	@Test
+	//@Test
 	public void AccountSync() throws IOException, SQLException {/*
 		index=1; 
 		response =BaseObject.buildRequest(index);
@@ -119,13 +119,28 @@ public class NonFinancialTransactions extends ExtentManager{
 		assertResponse(response);
 	}
 	
+	@Test
+	public void Accountfetch() throws IOException, SQLException {
+		request = StaticStore.Accountfetch();
+		response = sendReq (request, "Account Fetch");
+		assertResponse(response);
+	}
+	
+	
+	@Test
+	public void changeloginpwd() throws IOException, SQLException {
+		request = StaticStore.changeloginpwd("");
+		response = sendReq (request, "Change Login Password");
+		assertResponse(response);
+	}
+	
 	public static void main(String[] args) throws IOException, SQLException {
         /**
          * For checking Single transactions
          */
-		index=1; 
-		response =BaseObject.buildRequest(index);
-		BaseObject.assertResponse(response, index);
+		request = StaticStore.generateMMID();
+		response = sendReq (request, "Generate MMID");
+		assertResponse(response);
 		}
 }
 

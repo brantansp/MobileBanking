@@ -76,3 +76,154 @@ null,FAIL,807117244357,2018-03-12 17:32:40.0,APMS,F,-,null,null,09,System is tem
 null,PASS,807117244358,2018-03-12 17:32:42.0,APS6,C,-,null,null,00,null
 null,FAIL,807117244359,2018-03-12 17:32:44.0,APL4,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
 null,FAIL,807117244360,2018-03-12 17:32:48.0,APBE,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807312244407,2018-03-14 12:37:36.0,APMS,F,C,null,null,09,Invalid mPIN. Please try again.
+null,FAIL,807312244408,2018-03-14 12:40:58.0,APMS,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,PASS,807314244412,2018-03-14 14:39:33.0,APMS,C,-,null,null,00,-
+null,PASS,807314244413,2018-03-14 14:39:56.0,APSY,C,-,null,null,00,-
+null,PASS,807314244414,2018-03-14 14:39:59.0,APIM,C,-,null,null,00,null
+null,PASS,807314244415,2018-03-14 14:40:03.0,APRC,C,-,null,null,00,null
+null,PASS,807314244416,2018-03-14 14:40:05.0,APIM,C,-,null,null,00,null
+null,PASS,807314244417,2018-03-14 14:40:07.0,APRC,C,-,null,null,00,null
+null,PASS,807314244418,2018-03-14 14:40:09.0,APLW,C,-,null,null,00,-
+null,PASS,807314244419,2018-03-14 14:40:12.0,APZ6,C,-,null,null,00,null
+null,PASS,807314244420,2018-03-14 14:40:13.0,APZ3,C,-,null,null,00,null
+null,PASS,807314244421,2018-03-14 14:40:15.0,APIM,C,-,null,null,00,null
+null,PASS,807314244422,2018-03-14 14:40:16.0,APMS,C,-,null,null,00,-
+null,PASS,807314244423,2018-03-14 14:40:19.0,APS6,C,-,null,null,00,null
+null,PASS,807314244424,2018-03-14 14:40:20.0,APL4,C,-,null,null,00,-
+null,PASS,807314244425,2018-03-14 14:40:23.0,APBE,C,-,null,null,00,-
+null,FAIL,807314244426,2018-03-14 14:48:15.0,APK2,F,C,null,null,09,Please enter the valid beneficiary account number
+null,FAIL,807314244427,2018-03-14 14:48:19.0,APK3,F,C,null,null,09,Please enter the valid beneficiary account number
+null,FAIL,807314244428,2018-03-14 14:48:22.0,APK5,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+null,FAIL,807314244428,2018-03-14 14:48:22.0,APK5,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+null,PASS,807314244430,2018-03-14 14:48:28.0,APD9,C,-,null,null,00,null
+null,PASS,807314244431,2018-03-14 14:48:31.0,AP5L,C,-,null,null,00,null
+null,PASS,807314244432,2018-03-14 14:48:32.0,AP5L,C,-,null,null,00,null
+null,PASS,807314244432,2018-03-14 14:48:32.0,AP5L,C,-,null,null,00,null
+null,PASS,807314244432,2018-03-14 14:48:32.0,AP5L,C,-,null,null,00,null
+null,PASS,807314244432,2018-03-14 14:48:32.0,AP5L,C,-,null,null,00,null
+null,FAIL,807314244434,2018-03-14 14:48:36.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+null,PASS,807314244435,2018-03-14 14:48:38.0,APW3,C,-,null,null,00,null
+null,PASS,807314244436,2018-03-14 14:48:40.0,APD9,C,-,null,null,00,null
+null,PASS,807314244437,2018-03-14 14:48:42.0,AP5L,C,-,null,null,00,null
+null,PASS,807314244438,2018-03-14 14:48:44.0,AP5L,C,-,null,null,00,null
+null,PASS,807314244438,2018-03-14 14:48:44.0,AP5L,C,-,null,null,00,null
+IMPS P2A Add Beneficiary,FAIL,807314244439,2018-03-14 14:48:46.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Add Beneficiary confirmation,FAIL,807314244439,2018-03-14 14:48:46.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Beneficiary Payment Confirmation,FAIL,807314244440,2018-03-14 14:48:49.0,APK5,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
+IMPS P2A Beneficiary Payment List enquiry,PASS,807314244441,2018-03-14 14:48:54.0,APK4,C,-,null,null,00,null
+IMPS P2A Beneficiary Search List enquiry,PASS,807314244442,2018-03-14 14:48:57.0,APD9,C,-,null,null,00,null
+IMPS P2A Delete Beneficiary Confirmation,FAIL,807314244443,2018-03-14 14:48:59.0,AP5L,F,C,null,null,09,Beneficiary test not found.
+IMPS P2A Delete Beneficiary List enquiry,PASS,807314244444,2018-03-14 14:49:01.0,AP5L,C,-,null,null,00,null
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807314244445,2018-03-14 14:49:03.0,APQI,F,C,null,null,09,Please enter a valid Beneficiary MMID to proceed with the transaction.
+null,FAIL,807314244446,2018-03-14 14:52:06.0,APQN,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244447,2018-03-14 14:52:07.0,AP4D,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244448,2018-03-14 14:52:09.0,AP4L,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244448,2018-03-14 14:52:09.0,AP4L,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244448,2018-03-14 14:52:09.0,AP4L,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244449,2018-03-14 14:52:12.0,APQ8,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244450,2018-03-14 14:52:13.0,APQ2,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244451,2018-03-14 14:52:15.0,APQ3,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244452,2018-03-14 14:52:17.0,AP2T,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+null,FAIL,807314244453,2018-03-14 14:52:20.0,APQT,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+null,FAIL,807314244454,2018-03-14 14:52:25.0,AP2D,F,-,null,null,-,null
+null,FAIL,807314244454,2018-03-14 14:52:25.0,AP2D,F,-,null,null,-,null
+null,FAIL,807314244454,2018-03-14 14:52:25.0,AP2D,F,-,null,null,-,null
+null,FAIL,807314244455,2018-03-14 14:52:32.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244456,2018-03-14 14:52:33.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244457,2018-03-14 14:52:34.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244458,2018-03-14 14:52:35.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244459,2018-03-14 14:52:36.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244459,2018-03-14 14:52:36.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244459,2018-03-14 14:52:36.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244459,2018-03-14 14:52:36.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244459,2018-03-14 14:52:36.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244459,2018-03-14 14:52:36.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+null,FAIL,807314244460,2018-03-14 14:52:38.0,APQT,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+null,FAIL,807314244461,2018-03-14 14:52:40.0,APF2,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244461,2018-03-14 14:52:40.0,APF2,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244461,2018-03-14 14:52:40.0,APF2,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+null,FAIL,807314244463,2018-03-14 14:52:43.0,APQM,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+null,FAIL,807314244463,2018-03-14 14:52:43.0,APQM,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+null,PASS,807314244464,2018-03-14 14:52:46.0,AP2L,C,-,null,null,00,null
+null,PASS,807314244464,2018-03-14 14:52:46.0,AP2L,C,-,null,null,00,null
+null,PASS,807314244466,2018-03-14 14:52:48.0,APD5,C,-,null,null,00,null
+null,PASS,807315244467,2018-03-14 15:03:18.0,APSY,C,-,null,null,00,-
+null,PASS,807315244468,2018-03-14 15:03:22.0,APIM,C,-,null,null,00,null
+null,PASS,807315244469,2018-03-14 15:03:24.0,APRC,C,-,null,null,00,null
+null,PASS,807315244470,2018-03-14 15:03:25.0,APIM,C,-,null,null,00,null
+null,PASS,807315244471,2018-03-14 15:03:28.0,APRC,C,-,null,null,00,null
+null,PASS,807315244472,2018-03-14 15:03:30.0,APLW,C,-,null,null,00,-
+null,PASS,807315244473,2018-03-14 15:03:33.0,APZ6,C,-,null,null,00,null
+null,PASS,807315244474,2018-03-14 15:03:35.0,APZ3,C,-,null,null,00,null
+null,PASS,807315244475,2018-03-14 15:03:36.0,APIM,C,-,null,null,00,null
+null,PASS,807315244476,2018-03-14 15:03:38.0,APMS,C,-,null,null,00,-
+null,PASS,807315244477,2018-03-14 15:03:41.0,APS6,C,-,null,null,00,null
+null,PASS,807315244478,2018-03-14 15:03:42.0,APL4,C,-,null,null,00,-
+null,PASS,807315244479,2018-03-14 15:03:45.0,APBE,C,-,null,null,00,-
+null,PASS,807315244479,2018-03-14 15:03:45.0,APBE,C,-,null,null,00,-
+null,FAIL,807315244480,2018-03-14 15:03:47.0,APK2,F,C,null,null,09,Please enter the valid beneficiary account number
+null,FAIL,807315244481,2018-03-14 15:03:49.0,APK3,F,C,null,null,09,Please enter the valid beneficiary account number
+null,FAIL,807315244482,2018-03-14 15:03:50.0,APK5,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+null,FAIL,807315244482,2018-03-14 15:03:50.0,APK5,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+null,PASS,807315244484,2018-03-14 15:03:52.0,APD9,C,-,null,null,00,null
+null,PASS,807315244485,2018-03-14 15:03:55.0,AP5L,C,-,null,null,00,null
+null,PASS,807315244486,2018-03-14 15:03:56.0,AP5L,C,-,null,null,00,null
+null,PASS,807315244486,2018-03-14 15:03:56.0,AP5L,C,-,null,null,00,null
+null,PASS,807315244486,2018-03-14 15:03:56.0,AP5L,C,-,null,null,00,null
+null,PASS,807315244486,2018-03-14 15:03:56.0,AP5L,C,-,null,null,00,null
+null,FAIL,807315244488,2018-03-14 15:04:01.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+null,PASS,807315244489,2018-03-14 15:04:02.0,APW3,C,-,null,null,00,null
+null,PASS,807315244490,2018-03-14 15:04:04.0,APD9,C,-,null,null,00,null
+null,PASS,807315244491,2018-03-14 15:04:06.0,AP5L,C,-,null,null,00,null
+null,PASS,807315244492,2018-03-14 15:04:07.0,AP5L,C,-,null,null,00,null
+null,PASS,807315244492,2018-03-14 15:04:07.0,AP5L,C,-,null,null,00,null
+IMPS P2A Add Beneficiary,FAIL,807315244493,2018-03-14 15:04:09.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Add Beneficiary confirmation,FAIL,807315244493,2018-03-14 15:04:09.0,APK2,F,C,null,null,09,You have already registered the nickname for another beneficiary
+IMPS P2A Beneficiary Payment Confirmation,FAIL,807315244494,2018-03-14 15:04:11.0,APK5,F,T,null,null,09,Due to technical problem your last transaction was not processed. Please retry after some time
+IMPS P2A Beneficiary Payment List enquiry,PASS,807315244495,2018-03-14 15:04:13.0,APK4,C,-,null,null,00,null
+IMPS P2A Beneficiary Search List enquiry,PASS,807315244496,2018-03-14 15:04:15.0,APD9,C,-,null,null,00,null
+IMPS P2A Delete Beneficiary Confirmation,FAIL,807315244497,2018-03-14 15:04:17.0,AP5L,F,C,null,null,09,Beneficiary test not found.
+IMPS P2A Delete Beneficiary List enquiry,PASS,807315244498,2018-03-14 15:04:18.0,AP5L,C,-,null,null,00,null
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244499,2018-03-14 15:04:20.0,APQI,F,C,null,null,09,Please enter a valid Beneficiary MMID to proceed with the transaction.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244500,2018-03-14 15:04:21.0,APQI,F,C,null,null,09,Please enter a valid Beneficiary MMID to proceed with the transaction.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244500,2018-03-14 15:04:21.0,APQI,F,C,null,null,09,Please enter a valid Beneficiary MMID to proceed with the transaction.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244500,2018-03-14 15:04:21.0,APQI,F,C,null,null,09,Please enter a valid Beneficiary MMID to proceed with the transaction.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244500,2018-03-14 15:04:21.0,APQI,F,C,null,null,09,Please enter a valid Beneficiary MMID to proceed with the transaction.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244500,2018-03-14 15:04:21.0,APQI,F,C,null,null,09,Please enter a valid Beneficiary MMID to proceed with the transaction.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244501,2018-03-14 15:04:22.0,APQN,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244502,2018-03-14 15:04:24.0,AP4D,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244503,2018-03-14 15:04:25.0,AP4L,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244503,2018-03-14 15:04:25.0,AP4L,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244503,2018-03-14 15:04:25.0,AP4L,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244504,2018-03-14 15:04:29.0,APQ8,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244505,2018-03-14 15:04:31.0,APQ2,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244506,2018-03-14 15:04:32.0,APQ3,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244507,2018-03-14 15:04:33.0,AP2T,F,-,null,null,09,System is temporarily unavailable.Inconvenience is regretted
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244508,2018-03-14 15:04:36.0,APQT,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244509,2018-03-14 15:04:38.0,AP2D,F,-,null,null,-,null
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244509,2018-03-14 15:04:38.0,AP2D,F,-,null,null,-,null
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244509,2018-03-14 15:04:38.0,AP2D,F,-,null,null,-,null
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244510,2018-03-14 15:04:40.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244511,2018-03-14 15:04:41.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244512,2018-03-14 15:04:42.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244513,2018-03-14 15:04:42.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244514,2018-03-14 15:04:43.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244514,2018-03-14 15:04:43.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244514,2018-03-14 15:04:43.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244514,2018-03-14 15:04:43.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244514,2018-03-14 15:04:43.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244514,2018-03-14 15:04:43.0,AP1T,F,C,null,null,09,This Mobile Number is not registered for TMB mConnect Service. Please contact your branch
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244515,2018-03-14 15:04:46.0,APQT,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244516,2018-03-14 15:04:47.0,APF2,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244516,2018-03-14 15:04:47.0,APF2,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244516,2018-03-14 15:04:47.0,APF2,F,C,null,null,09,Please enter mPIN.Contact nearest branch for further assistance.
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244518,2018-03-14 15:04:50.0,APQM,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPS P2A Delete Beneficiary List enquiry,FAIL,807315244518,2018-03-14 15:04:50.0,APQM,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPS P2A Delete Beneficiary List enquiry,PASS,807315244519,2018-03-14 15:04:51.0,AP2L,C,-,null,null,00,null
+IMPS P2A Delete Beneficiary List enquiry,PASS,807315244519,2018-03-14 15:04:51.0,AP2L,C,-,null,null,00,null
+IMPS P2A Delete Beneficiary List enquiry,PASS,807315244521,2018-03-14 15:04:54.0,APD5,C,-,null,null,00,null
+null,FAIL,807318244566,2018-03-14 18:45:35.0,APK2,F,C,null,null,09,Your account has been blocked / deactivated
+null,FAIL,807318244567,2018-03-14 18:47:05.0,APK2,F,C,null,null,09,Beneficiary already added. Please contact bank for further details.
+null,PASS,807318244568,2018-03-14 18:47:31.0,APK2,C,-,null,null,00,null
+null,FAIL,807319244586,2018-03-14 19:27:57.0,APK2,F,C,null,null,09,Your account has been blocked / deactivated

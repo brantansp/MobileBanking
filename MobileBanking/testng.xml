@@ -11,4 +11,9 @@
           <class name="mBankingControlCenter.FinancialTransactions" />
       </classes>        
     </test> 
+          <test name = "Payment transaction">
+      <classes>
+          <class name="mBankingControlCenter.PaymentTransactions" />
+      </classes>        
+    </test> 
 </suite>

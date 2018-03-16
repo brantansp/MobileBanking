@@ -1,21 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
+  <test name="Non- FInancial transaction(failed)">
     <classes>
       <class name="mBankingControlCenter.NonFinancialTransactions">
         <methods>
           <include name="endReport"/>
-          <include name="MiniStatement"/>
+          <include name="CancelMMIDSingle"/>
+          <include name="Accountfetch"/>
+          <include name="balanceEnq"/>
+          <include name="changeloginpwd"/>
+          <include name="RetrieveMMID"/>
+          <include name="ChequeStatus"/>
           <include name="StopCheque"/>
           <include name="setUp"/>
-          <include name="balanceEnq"/>
-          <include name="AppLogin"/>
           <include name="getResult"/>
+          <include name="CancelMMIDAll"/>
+          <include name="GenerateMMID"/>
           <include name="beforeMethod"/>
-          <include name="ChequeStatus"/>
         </methods>
       </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Non- FInancial transaction(failed) -->
+  <test name="FInancial transaction(failed)">
+    <classes>
+      <class name="mBankingControlCenter.FinancialTransactions">
+        <methods>
+          <include name="IMPSP2UDeleteBeneficiaryConfirmation"/>
+          <include name="endReport"/>
+          <include name="IMPSP2UBeneficiaryPaymentConfirmation"/>
+          <include name="Billercategorylist"/>
+          <include name="IMPSP2ABeneficiarySearchListenquiry"/>
+          <include name="IMPSP2ADeleteBeneficiaryListenquiry"/>
+          <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
+          <include name="IMPSP2UInstantPayment"/>
+          <include name="IMPSP2PBeneficiarySearchListenquiry"/>
+          <include name="IMPSP2PInstantPayment"/>
+          <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
+          <include name="setUp"/>
+          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
+          <include name="getResult"/>
+          <include name="IMPSP2AInstantPayment"/>
+          <include name="IMPSP2PBeneficiaryPaymentListenquiry"/>
+          <include name="IMPSP2UAddBeneficiaryconfirmation"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- mBankingControlCenter.FinancialTransactions -->
+    </classes>
+  </test> <!-- FInancial transaction(failed) -->
+  <test name="Payment transaction(failed)">
+    <classes>
+      <class name="mBankingControlCenter.PaymentTransactions">
+        <methods>
+          <include name="biilerregistrationconfirm"/>
+          <include name="biilerlistselection"/>
+          <include name="billerlistselection"/>
+          <include name="NEFTbenlist"/>
+          <include name="NEFTbenregconfirm"/>
+          <include name="m2mBenAcclist"/>
+          <include name="billerregisration"/>
+          <include name="Accountselectionbiilerlist"/>
+          <include name="Operatorsearch"/>
+          <include name="Adhocpayconfirm"/>
+          <include name="m2mRegbensearch"/>
+          <include name="AdHocbillerlist"/>
+          <include name="NEFTbenreg"/>
+          <include name="Billercategorylist"/>
+          <include name="NEFTbenpayment"/>
+          <include name="m2abenreg"/>
+          <include name="m2mBenReg"/>
+          <include name="m2mbenpayment"/>
+          <include name="biilerderegselection"/>
+          <include name="getResult"/>
+          <include name="beforeMethod"/>
+          <include name="Rechargelist"/>
+          <include name="m2abenderegsearch"/>
+          <include name="AdHocBillercategorylist"/>
+          <include name="P2AQuickFT"/>
+          <include name="endReport"/>
+          <include name="Rechargeconfirm"/>
+          <include name="m2abendetails"/>
+          <include name="RegBillerpayconfirm"/>
+          <include name="NEFTbenderegconfirm"/>
+          <include name="NEFTbendetail"/>
+          <include name="NEFTQuickFT"/>
+          <include name="RegBillerpay"/>
+          <include name="RechargeStatusEnq"/>
+          <include name="setUp"/>
+          <include name="P2Pbendelete"/>
+          <include name="billerlist"/>
+        </methods>
+      </class> <!-- mBankingControlCenter.PaymentTransactions -->
+    </classes>
+  </test> <!-- Payment transaction(failed) -->
+</suite> <!-- Failed suite [Positive Transaction flow] -->

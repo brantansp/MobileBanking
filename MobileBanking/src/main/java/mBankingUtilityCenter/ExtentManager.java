@@ -45,7 +45,7 @@ public class ExtentManager{
 	public static String transactionID = "";
 	static HttpConnect obj=new HttpConnect();
 	private static String dbResult[];
-	private static Log log = LogFactory.getLog(ExtentManager.class);
+	protected static Log log = LogFactory.getLog(ExtentManager.class);
 	
 	@BeforeSuite
 	public void setUp(){
@@ -107,13 +107,17 @@ public class ExtentManager{
 			 HttpConnect obj=new HttpConnect();
 			response = obj.Post(Request);
 			log.info("Response received from Server : "+response);
-			transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
-			log.info("Transaction ID : "+transactionID);
-			if(Configuration.dbReport=="Y")
+			if (response.contains("TXNID"))
 			{
-				dbResult = dbTransactionlog.fetchRecord(transactionID);
-				WriteToCSVFile.reportGeneration( dbResult);
-			}		
+				transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
+				log.info("Transaction ID : "+transactionID);
+				if(Configuration.dbReport=="Y")
+				{
+					dbResult = dbTransactionlog.fetchRecord(transactionID);
+					WriteToCSVFile.reportGeneration( dbResult);
+				}		
+			}
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {

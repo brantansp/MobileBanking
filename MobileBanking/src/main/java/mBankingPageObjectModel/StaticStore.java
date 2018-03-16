@@ -35,6 +35,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
 		sb.append(buildVersion+";");
@@ -52,6 +56,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
 		sb.append(buildVersion+";");
@@ -68,6 +76,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append("001;");
 		sb.append(bankCode+";");
@@ -87,6 +99,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append("001;");
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
@@ -104,6 +120,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(RemAccountno+";");
 		sb.append(bankCode+";");
@@ -123,6 +143,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append("ALL;");
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
@@ -140,6 +164,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(RemAccountno+";");
 		sb.append(bankCode+";");
@@ -159,6 +187,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
 		sb.append(buildVersion+";");
@@ -175,6 +207,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(emailID+";");
 		sb.append(bankCode+";");
@@ -194,6 +230,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(chqNo+";");
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
@@ -211,6 +251,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(chqNo+";");
 		sb.append(bankCode+";");
@@ -253,11 +297,15 @@ public class StaticStore extends Configuration{
 	{
 		sb.delete(0, sb.length());
 		sb.append(RemMobileno);
-		sb.append("APK1;");
+		sb.append("APQI;");
 		if(mPINRequired.equals("Y"))
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(benMobNo+";");
 		sb.append(benMMID+";");
@@ -274,11 +322,15 @@ public class StaticStore extends Configuration{
 	{
 		sb.delete(0, sb.length());
 		sb.append(RemMobileno);
-		sb.append("AP1U;");
+		sb.append("APK1;");
 		if(mPINRequired.equals("Y"))
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(benAcNo+";");
 		sb.append(RemAccountType+";");
@@ -302,6 +354,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(aadharNo+";");
 		sb.append(RemAccountType+";");
 		sb.append(amount+";");
@@ -314,7 +370,7 @@ public class StaticStore extends Configuration{
 	}
 
 	//IMPS Registration Payments
-	public static String impsP2PAddBen (String benMobNo,  String benMMID, String nickname)
+	public static String impsP2PAddBen ( String benMMID,String benMobNo, String nickname)
 	{
 		sb.delete(0, sb.length());
 		sb.append(RemMobileno);
@@ -323,6 +379,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(benMMID+";");
 		sb.append(benMobNo+";");
@@ -334,7 +394,7 @@ public class StaticStore extends Configuration{
 		return sb.toString();
 	}
 	
-	public static String impsP2PConfBen (String benMobNo,  String benMMID, String nickname)
+	public static String impsP2PConfBen ( String benMMID,String benMobNo, String nickname)
 	{
 		sb.delete(0, sb.length());
 		sb.append(RemMobileno);
@@ -343,6 +403,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(benMMID+";");
 		sb.append(benMobNo+";");
@@ -364,6 +428,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(searchText+";");
 		sb.append("001;");
 		sb.append(bankCode+";");
@@ -382,6 +450,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(searchText+";");
 		sb.append("001;");
@@ -402,6 +474,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(benName+";");
 		sb.append("001;");
 		sb.append(bankCode+";");
@@ -421,6 +497,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append("P;");
 		sb.append(searchText+";");
 		sb.append("001;");
@@ -431,7 +511,7 @@ public class StaticStore extends Configuration{
 		return sb.toString();
 	}
 	
-	public static String impsP2PPayConf (String benName,String amount,String remark)
+	public static String impsP2PPayConf (String amount,String remark,String benName)
 	{
 		sb.delete(0, sb.length());
 		sb.append(RemMobileno);
@@ -440,6 +520,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(amount+";");
 		sb.append(remark+ ";");
@@ -451,7 +535,7 @@ public class StaticStore extends Configuration{
 		return sb.toString();
 	}
 
-	public static String impsP2AAddBen (String accNo,  String accType, String ifsccode, String remark)
+	public static String impsP2AAddBen (String accNo,  String accType, String ifsccode, String nickname)
 	{
 		sb.delete(0, sb.length());
 		sb.append(RemMobileno);
@@ -461,10 +545,14 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(accNo+";");
 		sb.append(accType+";");
 		sb.append(ifsccode+";");
-		sb.append(remark+";");
+		sb.append(nickname+";");
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
 		sb.append(buildVersion+";");
@@ -472,7 +560,7 @@ public class StaticStore extends Configuration{
 		return sb.toString();
 	}
 	
-	public static String impsP2AConfBen (String accNo,  String accType, String ifsccode, String remark)
+	public static String impsP2AConfBen (String accNo,  String accType, String ifsccode, String nickname)
 	{
 		sb.delete(0, sb.length());
 		sb.append(RemMobileno);
@@ -482,10 +570,14 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(accNo+";");
 		sb.append(accType+";");
 		sb.append(ifsccode+";");
-		sb.append(remark+";");
+		sb.append(nickname+";");
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
 		sb.append(buildVersion+";");
@@ -502,6 +594,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(searchText+";");
 		sb.append("001;");
@@ -522,6 +618,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(searchText+";");
 		sb.append("001;");
 		sb.append(bankCode+";");
@@ -540,6 +640,10 @@ public class StaticStore extends Configuration{
 		{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
 		}
 		sb.append(benName+";");
 		sb.append("001;");
@@ -560,7 +664,10 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
-		sb.append("P;");
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(searchText+";");
 		sb.append("1;");
 		sb.append(bankCode+";");
@@ -580,9 +687,13 @@ public class StaticStore extends Configuration{
 		sb.append(mPINRequired+";");
 		sb.append(mPIN+";");
 		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
+		sb.append(benName+";");
 		sb.append(amount+";");
 		sb.append(remark+ ";");
-		sb.append(benName+";");
 		sb.append(bankCode+";");
 		sb.append(DUKPT+";");
 		sb.append(buildVersion+";");
@@ -598,7 +709,7 @@ public class StaticStore extends Configuration{
 	public static String Billercategorylist()
 	{
 		StringBuilder sb = new StringBuilder() ;
-		sb.append(RemMobileno+";");
+		sb.append(RemMobileno);
 		sb.append("APB2;");
         sb.append("P;");
 		sb.append("001;");
@@ -612,7 +723,7 @@ public class StaticStore extends Configuration{
 	public static String billerlist(String Typeofbiller)
 	{
 		StringBuilder sb = new StringBuilder() ;
-		sb.append(RemMobileno+";");
+		sb.append(RemMobileno);
 		sb.append("APB9;");
 		sb.append(Typeofbiller+";");
         sb.append("P;");
@@ -627,8 +738,17 @@ public class StaticStore extends Configuration{
 	public static String billerregisration(String Typeofbillerlist)
 	{
 		StringBuilder sb = new StringBuilder() ;
-		sb.append(RemMobileno+";");
+		sb.append(RemMobileno);
 		sb.append("APB3;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(Typeofbillerlist+";");
         sb.append("P;");
 	    sb.append(bankCode+";");
@@ -640,12 +760,21 @@ public class StaticStore extends Configuration{
 	public static String biilerregistrationconfirm (String Typeofbiller, String Typeofbillerlist, String Field1, String Field2, String Nickname	)
 	{
 	 
-	    sb.append(RemMobileno+";");
+	    sb.append(RemMobileno);
 	    sb.append("APB4;");
+	    if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append(Typeofbiller+";");
 	    sb.append(Typeofbillerlist+";");
-	    sb.append("1;");
-	    sb.append(Field1+";");
+	    sb.append("2;");
+	    sb.append(Field1+":");
 	    sb.append(Field2+";");
 	    sb.append(Nickname+";");
 	    sb.append(bankCode+";");
@@ -661,8 +790,17 @@ public class StaticStore extends Configuration{
 	public static String Accountselectionbiilerlist()
 	{
 	 
-	    sb.append(RemMobileno+";");
+	    sb.append(RemMobileno);
 	    sb.append("APBX;");
+	    if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 		sb.append("001;");
 		sb.append(bankCode+";");
 	    sb.append(DUKPT+";");
@@ -673,8 +811,17 @@ public class StaticStore extends Configuration{
 	
 	public static String biilerlistselection(String Registerdbiller1)
 	{ 
-	    sb.append(RemMobileno+";");
+	    sb.append(RemMobileno);
 	    sb.append("APBW;");
+	    if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 	    sb.append(Registerdbiller1+";");
 		sb.append(bankCode+";");
 	    sb.append(DUKPT+";");
@@ -686,8 +833,17 @@ public class StaticStore extends Configuration{
 	public static String RegBillerpay(String Registerdbiller1)
 	{
 	 
-	    sb.append(RemMobileno+";");
+	    sb.append(RemMobileno);
 	    sb.append("AP1B;");
+	    if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 	    sb.append("A;");
 	    sb.append(Registerdbiller1+";");
 	    sb.append("001;");
@@ -700,12 +856,21 @@ public class StaticStore extends Configuration{
 	
 	public static String RegBillerpayconfirm(String Registerdbiller1, String Amount, String transactionId)
 	{
-	 
-	    sb.append(RemMobileno+";");
+		sb.delete(0, sb.length());
+	    sb.append(RemMobileno);
 	    sb.append("APB6;");
+	    if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 	    sb.append(Registerdbiller1+";");
-	    sb.append("F;");
-	    sb.append("43209009;");
+	    sb.append("P;");
+	    sb.append("5044821053000059;");
 	    sb.append(Amount+";");
 	    sb.append(transactionId+";");
 		sb.append(bankCode+";");
@@ -719,8 +884,17 @@ public class StaticStore extends Configuration{
 	
 	public static String biilerderegselection()
 	{
-	    sb.append(RemMobileno+";");
+	    sb.append(RemMobileno);
 	    sb.append("APBZ;");
+	    if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 	    sb.append("001;");
         sb.append(bankCode+";");
 	    sb.append(DUKPT+";");
@@ -731,8 +905,17 @@ public class StaticStore extends Configuration{
 	
 	public static String biilerderegister(String Registerdbiller1)
 	{
-	    sb.append(RemMobileno+";");
+	    sb.append(RemMobileno);
 	    sb.append("APBY;");
+	    if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 	    sb.append(Registerdbiller1+";");
         sb.append(bankCode+";");
 	    sb.append(DUKPT+";");
@@ -746,8 +929,17 @@ public class StaticStore extends Configuration{
 	public static String AdHocBillercategorylist()
 	{
 		StringBuilder sb = new StringBuilder() ;
-		sb.append(RemMobileno+";");
+		sb.append(RemMobileno);
 		sb.append("APB2;");
+		 if(mPINRequired.equals("Y"))
+			{
+			sb.append(mPINRequired+";");
+			sb.append(mPIN+";");
+			}
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
         sb.append("A;");
 		sb.append("001;");
 		sb.append(bankCode+";");
@@ -760,8 +952,17 @@ public class StaticStore extends Configuration{
 	public static String AdHocbillerlist(String Typeofbiller)
 	{
 		StringBuilder sb = new StringBuilder() ;
-		sb.append(RemMobileno+";");
+		sb.append(RemMobileno);
 		sb.append("APDW;");
+		 if(mPINRequired.equals("Y"))
+			{
+			sb.append(mPINRequired+";");
+			sb.append(mPIN+";");
+			}
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 		sb.append(Typeofbiller+";");
         sb.append("001;");
 		sb.append(bankCode+";");
@@ -774,8 +975,17 @@ public class StaticStore extends Configuration{
 	public static String billerlistselection(String Typeofbillerlist)
 	{
 		StringBuilder sb = new StringBuilder() ;
-		sb.append(RemMobileno+";");
+		sb.append(RemMobileno);
 		sb.append("APDT;");
+		 if(mPINRequired.equals("Y"))
+			{
+			sb.append(mPINRequired+";");
+			sb.append(mPIN+";");
+			}
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 		sb.append(Typeofbillerlist+";");
         sb.append(bankCode+";");
 		sb.append(DUKPT+";");
@@ -787,8 +997,17 @@ public class StaticStore extends Configuration{
 	public static String Adhocpayconfirm(String Typeofbillerlist, String Field1, String Field2, String Amount, String Transactionid	)
 	{
 		StringBuilder sb = new StringBuilder() ;
-		sb.append(RemMobileno+";");
+		sb.append(RemMobileno);
 		sb.append("APDM;");
+		 if(mPINRequired.equals("Y"))
+			{
+			sb.append(mPINRequired+";");
+			sb.append(mPIN+";");
+			}
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 		sb.append(Typeofbillerlist+";");
 		sb.append(Field1+";");
 		sb.append(Field2+";");
@@ -803,14 +1022,19 @@ public class StaticStore extends Configuration{
 	
 	public static String Rechargelist ()
 	{
-	    sb.delete(0, sb.length());
+	   // sb.delete(0, sb.length());
+		StringBuilder sb = new StringBuilder() ;
 	    sb.append(RemMobileno);
-	    sb.append("AP1T;");
+	    sb.append("AP2T;");
 	    if(mPINRequired.equals("Y"))
 	    {
 	    sb.append(mPINRequired+";");
 	    sb.append(mPIN+";");
 	    }
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
 	    sb.append("0001;");
 	    sb.append(bankCode+";");
 	    sb.append(DUKPT+";");
@@ -829,6 +1053,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 		sb.append(TypeofRecharge+";");
 		sb.append(searchfield1+";");
 	    sb.append("MTP:DTH:DTC;");
@@ -850,6 +1078,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 		sb.append(TypeofRecharge+";");
 		sb.append(searchresult+";");
 		sb.append("O;");
@@ -868,8 +1100,17 @@ public class StaticStore extends Configuration{
 	public static String RechargeStatusEnq(String TypeofRecharge, String TransactionId )
 	{
 		StringBuilder sb = new StringBuilder() ;
-		sb.append(RemMobileno+";");
+		sb.append(RemMobileno);
 		sb.append("AP7T;");
+		 if(mPINRequired.equals("Y"))
+			{
+			sb.append(mPINRequired+";");
+			sb.append(mPIN+";");
+			}
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 		sb.append(TypeofRecharge+";");
 		sb.append(TransactionId+";");
 		sb.append("1;");
@@ -892,6 +1133,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 			sb.append(BenMobileNo+";");
 			sb.append(Amount+";");
 			sb.append(Remarks+";");
@@ -912,6 +1157,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 			sb.append(BenMobileNo+";");
 			sb.append(Nickname+";");
 			sb.append("0001;");
@@ -932,6 +1181,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 			sb.append(BenMobileNo+";");
 			sb.append(Nickname+";");
 			sb.append(BenAccountno+";");
@@ -967,6 +1220,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 			sb.append(Amount+";");
 			sb.append(Remarks+";");
 			sb.append(Benregname+";");
@@ -989,6 +1246,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 	        sb.append(Benregname+";");
 	        sb.append("001;");
 	        sb.append(bankCode+";");
@@ -1008,6 +1269,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 	        sb.append(Benregname+";");
 	        sb.append("001;");
 	        sb.append(bankCode+";");
@@ -1027,6 +1292,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 	        sb.append(Benregname+";");
 	        sb.append("001;");
 	        sb.append(bankCode+";");
@@ -1046,6 +1315,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 	        sb.append(BenAccountno+";");
 	        sb.append(AccountType+";");
 	        sb.append(Amount+";");
@@ -1068,6 +1341,10 @@ public class StaticStore extends Configuration{
 		    sb.append(mPINRequired+";");
 		    sb.append(mPIN+";");
 		    }
+			else
+			{
+			sb.append(mPINRequired+";");
+			}
 	        sb.append(BenAccountno+";");
 	        sb.append(AccountType+";");
 	        sb.append(Amount+";");

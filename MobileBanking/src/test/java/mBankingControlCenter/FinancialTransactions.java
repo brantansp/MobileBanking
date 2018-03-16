@@ -27,7 +27,7 @@ public class FinancialTransactions extends ExtentManager{
 	
 	@Test
 	public void IMPSP2PInstantPayment() throws IOException, SQLException {
-		request = StaticStore.impsP2PInstant("", "", "", "");
+		request = StaticStore.impsP2PInstant("9352478845", "9240123", "7", "dfsjh");
 		response =sendReq(request, "IMPSP2PInstantPayment");
 		assertResponse(response);
 	}
@@ -42,7 +42,7 @@ public class FinancialTransactions extends ExtentManager{
 	
 	@Test
 	public void IMPSP2AInstantPayment() throws IOException, SQLException {
-		request = StaticStore.impsP2AInstant("", "", "", "");
+		request = StaticStore.impsP2AInstant("3727163937362819373", "HDFC0000001", "10", "tehry");
 		response =sendReq(request, "IMPSP2AInstantPayment");
 		assertResponse(response);
 	}
@@ -56,21 +56,21 @@ public class FinancialTransactions extends ExtentManager{
 	
 	@Test
 	public void IMPSP2PAddBeneficiary() throws IOException, SQLException {
-		request = StaticStore.impsP2PAddBen( "", "", "");
+		request = StaticStore.impsP2PAddBen( "9240143", "9372616576", "yashuuuu");
 		response =sendReq(request, "IMPSP2PAddBeneficiary");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PAddBeneficiaryconfirmation() throws IOException, SQLException {
-		request = StaticStore.impsP2PConfBen( "", "", "");
+		request = StaticStore.impsP2PConfBen( "9240143", "9372616576", "yashuuuu");
 		response =sendReq(request, "IMPSP2PAddBeneficiaryconfirmation");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PBeneficiarySearchListenquiry() throws IOException, SQLException {
-		request = StaticStore.impsP2PBenSearch( "");
+		request = StaticStore.impsP2PBenSearch( "niiki");
 		response =sendReq(request, "IMPSP2PBeneficiarySearchListenquiry");
 		assertResponse(response);
 	}
@@ -91,28 +91,28 @@ public class FinancialTransactions extends ExtentManager{
 	
 	@Test
 	public void IMPSP2PBeneficiaryPaymentListenquiry() throws IOException, SQLException {
-		request = StaticStore.impsP2PPaySearch( "");
+		request = StaticStore.impsP2PPaySearch("niiki");
 		response =sendReq(request, "IMPSP2PBeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2PBeneficiaryPaymentConfirmation() throws IOException, SQLException {
-		request = StaticStore.impsP2PPayConf("", "", "");
+		request = StaticStore.impsP2PPayConf("20", "trans","yashuuuu");
 		response =sendReq(request, "IMPSP2PBeneficiaryPaymentConfirmation");
 		assertResponse(response);
 	}
 
 	@Test
 	public void IMPSP2AAddBeneficiary() throws IOException, SQLException {
-		request = StaticStore.impsP2AAddBen( "", "", "", "");
+		request = StaticStore.impsP2AAddBen( "6473839242827281547", "SA", "HDFC0000002", "nickii");
 		response =sendReq(request, "IMPSP2AAddBeneficiary");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2AAddBeneficiaryconfirmation() throws IOException, SQLException {
-		request = StaticStore.impsP2AConfBen( "", "", "", "");
+		request = StaticStore.impsP2AConfBen( "6473839242827281547", "SA", "HDFC0000002", "nickii");
 		response =sendReq(request, "IMPSP2AAddBeneficiaryconfirmation");
 		assertResponse(response);
 	}
@@ -140,14 +140,14 @@ public class FinancialTransactions extends ExtentManager{
 	
 	@Test
 	public void IMPSP2ABeneficiaryPaymentListenquiry() throws IOException, SQLException {
-		request = StaticStore.impsP2APaySearch( "");
+		request = StaticStore.impsP2APaySearch( "nickii");
 		response =sendReq(request, "IMPSP2ABeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
 	@Test
 	public void IMPSP2ABeneficiaryPaymentConfirmation() throws IOException, SQLException {
-		request = StaticStore.impsP2APayConf("", "", "");
+		request = StaticStore.impsP2APayConf( "nickii","10", "gffsa");
 		response =sendReq(request, "IMPSP2ABeneficiaryPaymentConfirmation");
 		assertResponse(response);
 	}
@@ -208,7 +208,45 @@ public class FinancialTransactions extends ExtentManager{
         /**
          * For checking Single transactions
          */
-		}
+		
+	/*	request = StaticStore.impsP2AConfBen( "3554678753121234666", "SA", "HDFC0000001", "mounika");
+		response =sendReq(request, "IMPSP2AAddBeneficiaryconfirmation");
+		assertResponse(response);*/
+	
+	/*	request = StaticStore.impsP2APayConf( "mounika","30","gffsa");
+		response =sendReq(request, "IMPSP2ABeneficiaryPaymentConfirmation");
+		assertResponse(response);*/
+		/*
+		request = StaticStore.impsP2APaySearch( "mounika");
+		response =sendReq(request, "IMPSP2ABeneficiaryPaymentListenquiry");
+		assertResponse(response);
+		
+		request = StaticStore.impsP2APayConf( "mounika","10", "gffsa");
+		response =sendReq(request, "IMPSP2ABeneficiaryPaymentConfirmation");
+		assertResponse(response);*/
+		
+		
+	/*	request = StaticStore.impsP2PAddBen( "9240143", "9372628276", "niiki");
+		response =sendReq(request, "IMPSP2PAddBeneficiary");
+		assertResponse(response);
+		
+		request = StaticStore.impsP2PConfBen( "9240143", "9372628276", "niiki");
+		response =sendReq(request, "IMPSP2PAddBeneficiaryconfirmation");
+		assertResponse(response);*/
+		
+		
+		
+	/*	request = StaticStore.impsP2AInstant("3727163947362819373", "HDFC0000001", "10", "tehry");
+		response =sendReq(request, "IMPSP2AInstantPayment");
+		assertResponse(response);*/
+		
+		/*request = StaticStore.impsP2PPaySearch("niiki");
+		response =sendReq(request, "IMPSP2PBeneficiaryPaymentListenquiry");
+		assertResponse(response);*/
+		/*request = StaticStore.impsP2PPayConf("20", "trans","yashuu");
+		response =sendReq(request, "IMPSP2PBeneficiaryPaymentConfirmation");
+		assertResponse(response);*/
+	}
 }
 
 
