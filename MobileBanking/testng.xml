@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name = "Positive Transaction flow" >
+<listeners>
+<listener class-name="mBankingUtilityCenter.AnotationListner"></listener>
+</listeners>
+   <test name = "Test">
+      <classes>
+          <class name = "mBankingControlCenter.NewTest"/>
+      </classes>        
+    </test><!-- 
     <test name = "Non- FInancial transaction">
       <classes>
           <class name = "mBankingControlCenter.NonFinancialTransactions"/>
       </classes>        
-    </test>
-      <test name = "FInancial transaction">
+    </test> -->
+    <!--   <test name = "FInancial transaction">
       <classes>
           <class name="mBankingControlCenter.FinancialTransactions" />
       </classes>        
@@ -15,5 +23,5 @@
       <classes>
           <class name="mBankingControlCenter.PaymentTransactions" />
       </classes>        
-    </test> 
+    </test> --> 
 </suite>

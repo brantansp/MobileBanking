@@ -7,11 +7,11 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 //
-public class dbTransactionlog {
-	private static final String DB_DRIVER = "oracle.jdbc.driver.OracleDriver";
-	private static final String DB_CONNECTION = "jdbc:oracle:thin:@//10.144.24.45:1527/ormpypre";
-	private static final String DB_USER = "TMB_P2TEST";
-	private static final String DB_PASSWORD = "tmb_p2test321#";
+public class dbTransactionlog extends ExtentManager{
+	public static final String DB_DRIVER = prop.getProperty("DB_DRIVER") ;
+	public static final String DB_CONNECTION = prop.getProperty("DB_CONNECTION");
+	public static final String DB_USER = prop.getProperty("DB_USER");
+	public static final String DB_PASSWORD = prop.getProperty("DB_PASSWORD");
 	private static Connection dbConnection = null;
 	private static Statement statement = null;
 	private static String transactionID="735418241323";

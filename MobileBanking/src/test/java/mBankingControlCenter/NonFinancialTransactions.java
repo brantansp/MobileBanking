@@ -1,6 +1,8 @@
 package mBankingControlCenter;
 
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -14,17 +16,15 @@ import mBankingUtilityCenter.HttpConnect;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Method;
 import java.sql.SQLException;
 
 public class NonFinancialTransactions extends ExtentManager{
 	private static String response;
-	private static int index;
 	public static String request;
-	static HttpConnect obj=new HttpConnect();
+	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	public static ExtentReports extent;
-	public static ExtentTest extentLogger;
 	
 	//@Test
 	public void AccountSync() throws IOException, SQLException {/*
@@ -138,8 +138,8 @@ public class NonFinancialTransactions extends ExtentManager{
         /**
          * For checking Single transactions
          */
-		request = StaticStore.generateMMID();
-		response = sendReq (request, "Generate MMID");
+		request = StaticStore.balanceEnq();
+		response = sendReq (request, "Balance Enquiry");
 		assertResponse(response);
 		}
 }

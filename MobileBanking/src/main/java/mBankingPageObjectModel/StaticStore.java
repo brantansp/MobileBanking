@@ -28,7 +28,7 @@ public class StaticStore extends Configuration{
 	public static String balanceEnq (String remAccountno)
 	{
 		sb.delete(0, sb.length());
-		sb.append(RemMobileno);
+		sb.append(prop.getProperty("RemMobileno"));
 		sb.append("APBE;");
 		if(mPINRequired.equals("Y"))
 		{
@@ -43,6 +43,27 @@ public class StaticStore extends Configuration{
 		sb.append(DUKPT+";");
 		sb.append(buildVersion+";");
 		sb.append(remAccountno+";");
+		return sb.toString();
+	}
+	
+	public static String balanceEnq ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(RemMobileno);
+		sb.append("APBE;");
+		if(mPINRequired.equals("Y"))
+		{
+		sb.append(mPINRequired+";");
+		sb.append(mPIN+";");
+		}
+		else
+		{
+		sb.append(mPINRequired+";");
+		}
+		sb.append(bankCode+";");
+		sb.append(DUKPT+";");
+		sb.append(buildVersion+";");
+		sb.append(RemAccountno+";");
 		return sb.toString();
 	}
 	

@@ -3,13 +3,17 @@ package mBankingUtilityCenter;
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Method;
 import java.math.BigInteger;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SignatureException;
 import java.sql.SQLException;
+import java.util.Properties;
 
 import mBankingBasePageObject.BaseObject;
 import mBankingPageObjectModel.Configuration;
@@ -45,12 +49,15 @@ public class ExtentManager{
 	public static String transactionID = "";
 	static HttpConnect obj=new HttpConnect();
 	private static String dbResult[];
-	protected static Log log = LogFactory.getLog(ExtentManager.class);
+	//protected static Log log = LogFactory.getLog(ExtentManager.class);
+	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
+	public static Properties prop;
 	
 	@BeforeSuite
 	public void setUp(){
 			extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
 			extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
+			prop =ExcelReader.setPropertyFromExcel("Data","InputData");
 	}
 
 	@BeforeMethod

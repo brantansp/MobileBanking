@@ -3,23 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="mBankingControlCenter.NonFinancialTransactions">
+      <class name="mBankingControlCenter.TestclassSample">
         <methods>
-          <include name="endReport"/>
-          <include name="CancelMMIDSingle"/>
-          <include name="Accountfetch"/>
-          <include name="balanceEnq"/>
-          <include name="changeloginpwd"/>
-          <include name="RetrieveMMID"/>
-          <include name="ChequeStatus"/>
-          <include name="StopCheque"/>
-          <include name="setUp"/>
-          <include name="getResult"/>
-          <include name="CancelMMIDAll"/>
-          <include name="GenerateMMID"/>
-          <include name="beforeMethod"/>
+          <include name="anotherTestMethod"/>
         </methods>
-      </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
+      </class> <!-- mBankingControlCenter.TestclassSample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

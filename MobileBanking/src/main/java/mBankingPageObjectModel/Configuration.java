@@ -1,9 +1,22 @@
 package mBankingPageObjectModel;
 
-public class Configuration {
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import mBankingUtilityCenter.ExtentManager;
+
+public class Configuration extends ExtentManager {
+	
+	public static void main(String[] args) {
+		
+	}
 	
 	public static String HMAC = "Y";
-	public static String dbReport = "N";
+	public static String dbReport = prop.getProperty("dbReport");
 	public static String chequeMin=null;
 	public static String chequeMax=null;
 	public static String mobileType= null;
@@ -11,15 +24,15 @@ public class Configuration {
 	public static String mobileScreenSize=null;
 	public static String mobileDetails=null;
 	public static boolean isForgotPassword= false;
-    public static String GprsURL="http://10.44.120.60:8040";
-    //public static String GprsURL="http://mobileprd.fssnet.co.in";
+    //public static String GprsURL="http://10.44.120.60:8040";
+    public static String GprsURL="http://mobiletest.fssnet.co.in";
     public static String servlet = "/ubimpayportal/servlet/MQSender?request=";
     public static String mPINRequired = "N";
     public static String mPIN = "129250811388771446483065454578215685270";
     public static String bankCode = "504432";
     public static String DUKPT = "123457";
     public static boolean mpinAtStart = false; 
-	public static String RemMobileno = "9987000876";
+	public static String RemMobileno = prop.getProperty("RemMobileno");
 	public static String RemAccountno= "566804020000080";
     public static String AppPwd = "1111";
     public static String BenMobileNo = "9790954696";
