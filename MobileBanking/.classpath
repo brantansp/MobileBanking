@@ -33,5 +33,11 @@
 	<classpathentry kind="lib" path="lib/poi-3.17.jar"/>
 	<classpathentry kind="lib" path="lib/poi-ooxml-3.17.jar"/>
 	<classpathentry kind="lib" path="lib/xmlbeans-xmlpublic-2.4.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-api-3.7.1.jar"/>
+	<classpathentry kind="lib" path="lib/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="lib/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-ie-driver-3.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-remote-driver-3.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/testng-6.9.10.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

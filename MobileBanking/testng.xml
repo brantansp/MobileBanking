@@ -8,13 +8,13 @@
       <classes>
           <class name = "mBankingControlCenter.NewTest"/>
       </classes>        
-    </test><!-- 
+    </test>
     <test name = "Non- FInancial transaction">
       <classes>
           <class name = "mBankingControlCenter.NonFinancialTransactions"/>
       </classes>        
-    </test> -->
-    <!--   <test name = "FInancial transaction">
+    </test>
+    <test name = "FInancial transaction">
       <classes>
           <class name="mBankingControlCenter.FinancialTransactions" />
       </classes>        
@@ -23,5 +23,5 @@
       <classes>
           <class name="mBankingControlCenter.PaymentTransactions" />
       </classes>        
-    </test> --> 
+    </test> 
 </suite>

@@ -21,6 +21,8 @@ import mBankingPageObjectModel.StaticStore;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.SkipException;
@@ -49,6 +51,7 @@ public class ExtentManager{
 	public static String transactionID = "";
 	static HttpConnect obj=new HttpConnect();
 	private static String dbResult[];
+	public WebDriver driver;
 	//protected static Log log = LogFactory.getLog(ExtentManager.class);
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	public static Properties prop;
@@ -84,6 +87,15 @@ public class ExtentManager{
 	public void endReport(){ 
                 extent.flush();
     } 
+	
+	public void launchReport()
+	{
+		System.out.println("*******************");
+		System.out.println("launching IE browser");
+		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\driver\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();
+		driver.manage().window().maximize();	
+	}
 	
 	public static void assertResponse(String response)
 	{
