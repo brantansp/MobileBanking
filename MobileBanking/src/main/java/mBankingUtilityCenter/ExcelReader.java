@@ -16,10 +16,6 @@ import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.reporters.jq.Main;
 import java.io.File;
 import java.io.FileInputStream;
@@ -37,7 +33,7 @@ import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 
 public class ExcelReader {
 
-	static String path = System.getProperty("user.dir")+"\\testdata\\Data.xlsx";
+	static String path = System.getProperty("user.dir")+"\\testdata\\Data.xls";
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	HashMap< String, String > properties = new HashMap< String, String >();
 	public static List<String> testRunFlag = new ArrayList<>();
@@ -58,22 +54,11 @@ public class ExcelReader {
 	
 	public static void  getRunFlagFromExcel(String workBook, String workSheet) {
 		try {
-			String path = System.getProperty("user.dir")+"\\testdata\\"+workBook+".xlsx";
+			String path = System.getProperty("user.dir")+"\\testdata\\"+workBook+".xls";
 			FileInputStream fis = new FileInputStream(new File(path));
 			
-/*			if (path.endsWith("xlsx"))
-			{
-			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheet(workSheet);
-			}else if (path.endsWith("xls")) {
-			HSSFWorkbook workbook = new HSSFWorkbook();
+			HSSFWorkbook workbook = new HSSFWorkbook(fis);
 			HSSFSheet sheet = workbook.getSheet(workSheet);
-		    } else {
-		        throw new IllegalArgumentException("The specified file is not Excel file");
-		    }
-*/			
-			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheet(workSheet);
 			
 			int rowCount = sheet.getLastRowNum();
 			//log.info(rowCount);
@@ -81,7 +66,7 @@ public class ExcelReader {
 			//log.info(columnCount);
 			for(int i=1; i <rowCount+1; i++){
 				try {
-					XSSFRow row = sheet.getRow(i);
+					HSSFRow row = sheet.getRow(i);
 					for(int j=1; j <columnCount; j=j+2 ){
 						try {
 							String cellValue = "";
@@ -111,11 +96,11 @@ public class ExcelReader {
 	public static Properties setPropertyFromExcel (String workBook, String workSheet) {
 		Properties prop = new Properties();
 		try {
-			String path = System.getProperty("user.dir")+"\\testdata\\"+workBook+".xlsx";
+			String path = System.getProperty("user.dir")+"\\testdata\\"+workBook+".xls";
 			FileInputStream fis = new FileInputStream(new File(path));
 					
-			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheet(workSheet);
+			HSSFWorkbook workbook = new HSSFWorkbook(fis);
+			HSSFSheet sheet = workbook.getSheet(workSheet);
 			
 			int rowCount = sheet.getLastRowNum();
 			//log.info(rowCount);
@@ -123,12 +108,12 @@ public class ExcelReader {
 			//log.info(columnCount);
 			for(int i=1; i <rowCount+1; i++){
 				try {
-					XSSFRow row = sheet.getRow(i);
+					HSSFRow row = sheet.getRow(i);
 					DataFormatter dataFormatter = new DataFormatter();
 					for(int j=1; j <columnCount; j=j+2){
 						try {
-							XSSFCell cellValue;
-							XSSFCell cellKey;
+							HSSFCell cellValue;
+							HSSFCell cellKey;
 							try{
 									cellKey = row.getCell(j);
 									cellValue = row.getCell(j+1);
@@ -155,14 +140,14 @@ public class ExcelReader {
 	public static List<String> getEnabledTests(String workBook, String sheetName)
    	{
 		try {
-			FileInputStream fis = new FileInputStream(new File(System.getProperty("user.dir")+"\\testdata\\"+workBook+".xlsx"));
-			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheet(sheetName);
+			FileInputStream fis = new FileInputStream(new File(System.getProperty("user.dir")+"\\testdata\\"+workBook+".xls"));
+			HSSFWorkbook workbook = new HSSFWorkbook(fis);
+			HSSFSheet sheet = workbook.getSheet(sheetName);
             int rowCount = sheet.getLastRowNum();
 			int columnCount = sheet.getRow(0).getLastCellNum();
 			for(int i=1; i <rowCount+1; i++){
 				try {
-					XSSFRow row = sheet.getRow(i);
+					HSSFRow row = sheet.getRow(i);
 					for(int j=1; j <columnCount; j=j+2){ // loop through the columns
 						try {
 							String cellValue = "";

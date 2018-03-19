@@ -58,7 +58,7 @@ public class ExtentManager{
 	
 	@BeforeSuite
 	public void setUp(){
-			extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
+			extent = new ExtentReports (System.getProperty("user.dir") +"/logs/STMExtentReport.html", true);
 			extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 			prop =ExcelReader.setPropertyFromExcel("Data","InputData");
 	}

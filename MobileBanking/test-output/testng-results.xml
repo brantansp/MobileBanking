@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36" started-at="2018-03-18T12:55:38Z" finished-at="2018-03-18T12:55:38Z">
+  <suite name="Default suite" duration-ms="33" started-at="2018-03-19T08:54:58Z" finished-at="2018-03-19T08:54:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36" started-at="2018-03-18T12:55:38Z" finished-at="2018-03-18T12:55:38Z">
+    <test name="Default test" duration-ms="33" started-at="2018-03-19T08:54:58Z" finished-at="2018-03-19T08:54:58Z">
       <class name="mBankingControlCenter.NewTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:mBankingControlCenter.NewTest@614ddd49]" name="setUp" is-config="true" duration-ms="818" started-at="2018-03-18T18:25:37Z" finished-at="2018-03-18T18:25:38Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:mBankingControlCenter.NewTest@32be31]" name="setUp" is-config="true" duration-ms="621" started-at="2018-03-19T14:24:57Z" finished-at="2018-03-19T14:24:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NewTest@614ddd49]" name="beforeMethod" is-config="true" duration-ms="4" started-at="2018-03-18T18:25:38Z" finished-at="2018-03-18T18:25:38Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingControlCenter.NewTest@32be31]" name="beforeMethod" is-config="true" duration-ms="7" started-at="2018-03-19T14:24:58Z" finished-at="2018-03-19T14:24:58Z">
           <params>
             <param index="0">
               <value>
@@ -22,22 +22,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="test()[pri:0, instance:mBankingControlCenter.NewTest@614ddd49]" name="test" duration-ms="15" started-at="2018-03-18T18:25:38Z" finished-at="2018-03-18T18:25:38Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:mBankingControlCenter.NewTest@32be31]" name="test" duration-ms="13" started-at="2018-03-19T14:24:58Z" finished-at="2018-03-19T14:24:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NewTest@614ddd49]" name="getResult" is-config="true" duration-ms="2" started-at="2018-03-18T18:25:38Z" finished-at="2018-03-18T18:25:38Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:mBankingControlCenter.NewTest@32be31]" name="getResult" is-config="true" duration-ms="2" started-at="2018-03-19T14:24:58Z" finished-at="2018-03-19T14:24:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=NewTest.test()[pri:0, instance:mBankingControlCenter.NewTest@614ddd49] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=NewTest.test()[pri:0, instance:mBankingControlCenter.NewTest@32be31] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:mBankingControlCenter.NewTest@614ddd49]" name="endReport" is-config="true" duration-ms="297" started-at="2018-03-18T18:25:38Z" finished-at="2018-03-18T18:25:38Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:mBankingControlCenter.NewTest@32be31]" name="endReport" is-config="true" duration-ms="258" started-at="2018-03-19T14:24:58Z" finished-at="2018-03-19T14:24:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->

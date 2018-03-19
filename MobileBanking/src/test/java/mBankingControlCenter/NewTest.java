@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.testng.SkipException;
 import org.testng.annotations.Test;
+
 import mBankingBasePageObject.BaseObject;
 import mBankingPageObjectModel.Configuration;
 import mBankingPageObjectModel.StaticStore;
@@ -21,10 +22,12 @@ import java.lang.reflect.Method;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.PropertyConfigurator;
 import org.testng.IAnnotationTransformer;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
 import org.testng.annotations.ITestAnnotation;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -32,10 +35,11 @@ public class NewTest extends ExtentManager {
 	private static String response;
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
-	 
+	
 	 //@Test
 		public void BalanceEnq()
 		{
+			PropertyConfigurator.configure("log4j.properties");
 			request = StaticStore.balanceEnq();
 			response = sendReq (request, "Balance Enquiry");
 			assertResponse(response);
