@@ -53,14 +53,14 @@ public class ExtentManager{
 	private static String dbResult[];
 	public WebDriver driver;
 	//protected static Log log = LogFactory.getLog(ExtentManager.class);
-	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
+	protected static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	public static Properties prop;
 	
 	@BeforeSuite
 	public void setUp(){
-			extent = new ExtentReports (System.getProperty("user.dir") +"/logs/STMExtentReport.html", true);
+			extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/ExtentReport/STMExtentReport.html", true);
 			extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
-			prop =ExcelReader.setPropertyFromExcel("Data","InputData");
+			prop =getProperty();
 	}
 
 	@BeforeMethod
@@ -88,6 +88,12 @@ public class ExtentManager{
                 extent.flush();
     } 
 	
+	public static Properties getProperty()
+	{
+		prop=ExcelReader.getPropertyFromExcel("Data","InputData");
+		return prop;
+	}
+	
 	public void launchReport()
 	{
 		System.out.println("*******************");
@@ -103,18 +109,19 @@ public class ExtentManager{
 		assertTrue(response.substring(2,4).contains("00"));		
 	}
 	
-	public static String sendReq (String Request, String txnType)
+	public static String sendReq (String Request, String txnType) throws IOException, SQLException
 	{
 		log.info("******************************START******************************");
 	    log.info("Request : " + txnType);
 	    BigInteger uniNum = RandomNumGenerator.generate();
-	  	if (Configuration.HMAC.equals("Y"))
+	  	if (prop.getProperty("HMAC").equals("Y"))
 		{
 		  try {
 			Request=Hmac.Hmacing(Request+uniNum, Request, uniNum);
 			log.info("Hmaced Request : "+Request);
 		        } catch (InvalidKeyException | SignatureException | NoSuchAlgorithmException e) {
 			e.printStackTrace();
+			log.error(e);
 		   }
 		}
 		else {
@@ -122,26 +129,20 @@ public class ExtentManager{
 			log.info("Non-Hmac request : "+Request);
 			log.info(" Request");
 		}
-		try {
+
 			 HttpConnect obj=new HttpConnect();
 			response = obj.Post(Request);
 			log.info("Response received from Server : "+response);
-			if (response.contains("TXNID"))
+/*     	if (response.contains("TXNID"))
 			{
 				transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
 				log.info("Transaction ID : "+transactionID);
-				if(Configuration.dbReport=="Y")
+				if(prop.getProperty("dbReport")=="Y")
 				{
 					dbResult = dbTransactionlog.fetchRecord(transactionID);
 					WriteToCSVFile.reportGeneration( dbResult);
 				}		
-			}
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			}*/
 	log.info("******************************END********************************\r\n");
 	return response;
 	}

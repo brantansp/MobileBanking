@@ -41,7 +41,7 @@ public class NonFinancialTransactions extends ExtentManager{
 	}
 	
 	@Test
-	public void balanceEnq()
+	public void balanceEnq() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq("5423645723322");
 		response = sendReq (request, "Balance Enquiry");
@@ -138,9 +138,7 @@ public class NonFinancialTransactions extends ExtentManager{
         /**
          * For checking Single transactions
          */
-		request = StaticStore.balanceEnq();
-		response = sendReq (request, "Balance Enquiry");
-		assertResponse(response);
+
 		}
 }
 

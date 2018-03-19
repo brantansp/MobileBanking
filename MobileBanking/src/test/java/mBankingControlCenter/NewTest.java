@@ -36,15 +36,15 @@ public class NewTest extends ExtentManager {
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	
-	 //@Test
-		public void BalanceEnq()
+	 @Test
+		public void BalanceEnq() throws IOException, SQLException
 		{
-			PropertyConfigurator.configure("log4j.properties");
+			//PropertyConfigurator.configure("log4j.properties");
 			request = StaticStore.balanceEnq();
 			response = sendReq (request, "Balance Enquiry");
 			assertResponse(response);
 		}
-		//@Test
+		@Test
 		public void MiniStatement() throws IOException, SQLException {
 			request = StaticStore.miniStatement();
 			response = sendReq (request, "Mini statement");
@@ -52,10 +52,11 @@ public class NewTest extends ExtentManager {
 		}
 	
 		@Test
-		public void test()
+		public void test() throws IOException, SQLException
 		{
 			log.info(request = StaticStore.balanceEnq());
-			//log.info(dbTransactionlog.DB_DRIVER);
+			response = sendReq (request, "Mini statement");
+			assertResponse(response);
 		}
 	
 

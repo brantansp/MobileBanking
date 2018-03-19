@@ -43,8 +43,8 @@ public class ExcelReader {
 	
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 
-		Properties props=setPropertyFromExcel("Data","InputData");
-        log.info(props.getProperty("RemMobileno"));
+		Properties props=getPropertyFromExcel("Data","InputData");
+        log.info(props.getProperty("AppPwd"));
 		/*for(Map.Entry m : setPropertyFromExcel("Data","InputData").entrySet())
 		{  
 			  System.out.println(m.getKey()+" "+m.getValue());  
@@ -93,7 +93,7 @@ public class ExcelReader {
 		}
 	}
 
-	public static Properties setPropertyFromExcel (String workBook, String workSheet) {
+	public static Properties getPropertyFromExcel (String workBook, String workSheet) {
 		Properties prop = new Properties();
 		try {
 			String path = System.getProperty("user.dir")+"\\testdata\\"+workBook+".xls";

@@ -14,7 +14,7 @@ public class Configuration extends ExtentManager {
 	public static void main(String[] args) {
 		
 	}
-	
+	/*
 	public static String HMAC = "Y";
 	public static String dbReport = prop.getProperty("dbReport");
 	public static String chequeMin=null;
@@ -60,7 +60,9 @@ public class Configuration extends ExtentManager {
 	public static String FTBenSearch1 = "Account";
 	public static String BenSearchText = "";
 	public static String BenName = "test";
-	//************Test Input for Other Bank - NEFT*********//
+	//************Test Input for Other Bank - NEFT*********/
+	
+	/*
 	public static String BenNAccountNo = "24140100009637";
 	public static String BenNAccountNo1 = "24140100009636";
 	public static String NNickname = "NEFT";
@@ -76,35 +78,35 @@ public class Configuration extends ExtentManager {
 	public static String NBenSearch = "NEFT";
 	public static String NBankname = "ANDHRA BANK";
 	public static String NLocationname = "B";
-	//*********Test Input for Request to Bank ********//
-	public static String FromDate = "20062013";
+	//*********Test Input for Request to Bank ********/
+/*	public static String FromDate = "20062013";
 	public static String ToDate = "20062014";
-	public static String FutureDate = "20062019";
+	public static String FutureDate = "20062019";*/
 	//*********Test Input for Bill Pay Transaction Set ********//
-	public static String BillerCategory = "INSURANCE";
+	/*public static String BillerCategory = "INSURANCE";
 	public static String BillerSubCategory = "INSURANCE";
 	public static String BillerName1 = "Life Insurance";
 	public static String Billeradhoc = "Life Insurance";
 	public static String BillConsumerNo = "7000";
 	public static String NicknameBP = "Robotium";
-	public static String Billpayamount = "100";
+	public static String Billpayamount = "100";*/
 	//*********Test Input for Recharge Transaction Set ********//
-	public static String RechargeCategory = "Mobile Recharge";
+	/*public static String RechargeCategory = "Mobile Recharge";
 	public static String OperatorName = "AIRTEL";
 	public static String RechargeMobNo = "4950000003";
 	public static String RechargeAmt = "100";
 	public static String RechargeNickname = "Robotium 11";
 	public static String RechargeNicknameAlready = "Robotium 10";
-	public static String RechargeTXNID = "";
+	public static String RechargeTXNID = "";*/
 	//*********Test Input for Institution Fees Payment Transaction Set ********//
-	public static String InstitutionName = "VIT";
+/*	public static String InstitutionName = "VIT";
 	public static String RollNo = "4703";
 	public static String Category = "";
 	public static String SubCategory = "";
 	public static String Course = "";
-	public static String data ="";
+	public static String data ="";*/
 	//************Test Input for IMPS - Fund Transfer*********//
-    public static String IMPS_Mobile="9840364946";
+  /*  public static String IMPS_Mobile="9840364946";
     public static String IMPS_Mobile1="8754599508";
 	public static String MMID = "9011151";
 	public static String MMID1 = "9011118";
@@ -128,30 +130,30 @@ public class Configuration extends ExtentManager {
 	public static String IAmount = "200";
 	public static String IAmount1 = "2";
 	public static String IAmount2 = "9999999";
-	public static String TXNID = "";
+	public static String TXNID = "";*/
 	//P2A
-    public static String IMPS_Acc ="24140100009737";
+   /* public static String IMPS_Acc ="24140100009737";
     public static String IFS = "alla0210299";
     public static String P2A_Nickname = "IMPS P2A";
     public static String P2A_Already = "IMPS P2A1";
-    public static String IMPS_Acc1 ="24140100002006";	
+    public static String IMPS_Acc1 ="24140100002006";	*/
 	//P2M
-    public static String IMPSM_Mobile ="9677107309"; 
-    public static String MMID_M ="9027934"; 
+/*    public static String IMPSM_Mobile ="9677107309"; 
+    public static String MMID_M ="9027934"; */
     //public static String IMPS_P2M_Nickname ="Merchant";
-    public static String PayRef ="Paid Ref1";
+/*    public static String PayRef ="Paid Ref1";*/
 	//************Test Input for Refer a Friend*****************//
-    public static String FriendName = "Robotium";
-    public static String Friendmob = "9840464070";
+/*    public static String FriendName = "Robotium";
+    public static String Friendmob = "9840464070";*/
     //************Test Input for Feedback*****************//
-    public static String Feedback ="Good";
+/*    public static String Feedback ="Good";*/
     //************Test Input for Stop Cheque & Cheque Status***********//
-  	public static String chequenum ="1234567";
-  	public static String chequenum1 ="2";
+/*  	public static String chequenum ="1234567";
+  	public static String chequenum1 ="2";*/
   	//************Test Input for Change Login Password*********//
   	/***********Password Change - Success********/
-    public static String NewPwd = "1111";
-  	public static String EmailID = "test@fss.co.in";
+/*    public static String NewPwd = "1111";
+  	public static String EmailID = "test@fss.co.in";*/
 }
 
 

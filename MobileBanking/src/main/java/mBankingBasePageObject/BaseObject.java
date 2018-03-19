@@ -39,7 +39,7 @@ public static ExtentTest test;
 
 private static Log log = LogFactory.getLog(BaseObject.class);
 
-public static void main(String[] args) {
+public static void main(String[] args) {/*
 	
     BigInteger uniNum = RandomNumGenerator.generate();
     String Request = StaticStore.appLogin().toString();
@@ -76,10 +76,10 @@ public static void main(String[] args) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-}
+*/}
 
 public static String buildRequest(int index)
-{
+{/*
 	log.info("******************************START******************************");
     log.info("Request : "+StaticStore.menuDesc[index][0]);
     String Request = ""; 
@@ -134,13 +134,14 @@ public static String buildRequest(int index)
 		e.printStackTrace();
 	}
 	log.info("******************************END********************************\r\n");
+	*/
 		return  response;
   }
 
 public static void assertResponse(String response, int index)
-{
+{/*
 	assertTrue(response.contains(StaticStore.menuDesc[index][1].substring(StaticStore.menuDesc[index][1].length()-2 , StaticStore.menuDesc[index][1].length())+"00"));		
-}
+*/}
 
 }
 
