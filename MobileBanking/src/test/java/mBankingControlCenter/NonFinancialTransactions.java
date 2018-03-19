@@ -19,13 +19,20 @@ import java.io.IOException;
 import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Method;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class NonFinancialTransactions extends ExtentManager{
+	private static int n = 0;
 	private static String response;
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	
+    static{
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
+        System.setProperty("current.date.time", dateFormat.format(new Date()));
+    }
+    
 	//@Test
 	public void AccountSync() throws IOException, SQLException {/*
 		index=1; 
@@ -134,12 +141,6 @@ public class NonFinancialTransactions extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	public static void main(String[] args) throws IOException, SQLException {
-        /**
-         * For checking Single transactions
-         */
-
-		}
 }
 
 

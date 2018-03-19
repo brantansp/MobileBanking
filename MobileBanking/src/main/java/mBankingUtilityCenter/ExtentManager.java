@@ -13,16 +13,21 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SignatureException;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.WebDriver;
 import mBankingBasePageObject.BaseObject;
 import mBankingPageObjectModel.Configuration;
 import mBankingPageObjectModel.StaticStore;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.SkipException;
@@ -51,13 +56,19 @@ public class ExtentManager{
 	public static String transactionID = "";
 	static HttpConnect obj=new HttpConnect();
 	private static String dbResult[];
-	public WebDriver driver;
+	public static WebDriver driver;
 	//protected static Log log = LogFactory.getLog(ExtentManager.class);
 	protected static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	public static Properties prop;
 	
+    static{
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
+        System.setProperty("current.date.time", dateFormat.format(new Date()));
+    }
+    
 	@BeforeSuite
 	public void setUp(){
+      	log.info("Running Mobile banking API Automation testing on mPAY 4.0"+"\r\n");
 			extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/ExtentReport/STMExtentReport.html", true);
 			extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 			prop =getProperty();
@@ -86,6 +97,7 @@ public class ExtentManager{
 	@AfterSuite
 	public void endReport(){ 
                 extent.flush();
+                launchReport();
     } 
 	
 	public static Properties getProperty()
@@ -94,13 +106,18 @@ public class ExtentManager{
 		return prop;
 	}
 	
-	public void launchReport()
+	public static void launchReport()
 	{
 		System.out.println("*******************");
-		System.out.println("launching IE browser");
-		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\driver\\IEDriverServer.exe");
-		driver = new InternetExplorerDriver();
-		driver.manage().window().maximize();	
+		System.out.println("launching Report in browser");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		System.setProperty("java.net.preferIPv4Stack", "true");
+/*		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\driver\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();*/
+		driver.manage().window().maximize();
+		driver.get(System.getProperty("user.dir")+"\\test-output\\ExtentReport\\STMExtentReport.html");
+		System.out.println("*******************");
 	}
 	
 	public static void assertResponse(String response)

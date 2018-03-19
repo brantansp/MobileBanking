@@ -8,436 +8,106 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Positive Transaction flow</th></tr>
-<tr><td><a href="#t0">Non- FInancial transaction</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">13</td><td class="num">59</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">FInancial transaction</a></td><td class="num">7</td><td class="num">0</td><td class="num attn">18</td><td class="num">35</td><td></td><td></td></tr>
-<tr><td><a href="#t2">Payment transaction</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">38</td><td class="num">82</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">7</th><th class="num">0</th><th class="num attn">69</th><th class="num">176</th><th colspan="2"></th></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21,430</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Positive Transaction flow</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Non- FInancial transaction &#8212; failed</th></tr><tr class="failedeven"><td rowspan="13">mBankingControlCenter.NonFinancialTransactions</td><td><a href="#m0">Accountfetch</a></td><td rowspan="1">1521468272432</td><td rowspan="1">21</td></tr><tr class="failedeven"><td><a href="#m1">AppLogin</a></td><td rowspan="1">1521468272457</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m2">CancelMMIDAll</a></td><td rowspan="1">1521468272459</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m3">CancelMMIDSingle</a></td><td rowspan="1">1521468272460</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m4">ChequeStatus</a></td><td rowspan="1">1521468272462</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m5">EmailIDFetch</a></td><td rowspan="1">1521468272463</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m6">EmailIDUpdate</a></td><td rowspan="1">1521468272465</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m7">GenerateMMID</a></td><td rowspan="1">1521468272466</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m8">MiniStatement</a></td><td rowspan="1">1521468272468</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m9">RetrieveMMID</a></td><td rowspan="1">1521468272469</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m10">StopCheque</a></td><td rowspan="1">1521468272470</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m11">balanceEnq</a></td><td rowspan="1">1521468272471</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m12">changeloginpwd</a></td><td rowspan="1">1521468272473</td><td rowspan="1">0</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">FInancial transaction &#8212; failed</th></tr><tr class="failedeven"><td rowspan="18">mBankingControlCenter.FinancialTransactions</td><td><a href="#m13">Billercategorylist</a></td><td rowspan="1">1521468272501</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m14">IMPSP2AAddBeneficiary</a></td><td rowspan="1">1521468272503</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m15">IMPSP2AAddBeneficiaryconfirmation</a></td><td rowspan="1">1521468272504</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m16">IMPSP2ABeneficiaryPaymentConfirmation</a></td><td rowspan="1">1521468272506</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m17">IMPSP2ABeneficiaryPaymentListenquiry</a></td><td rowspan="1">1521468272507</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m18">IMPSP2ABeneficiarySearchListenquiry</a></td><td rowspan="1">1521468272508</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m19">IMPSP2ADeleteBeneficiaryConfirmation</a></td><td rowspan="1">1521468272510</td><td rowspan="1">2</td></tr><tr class="failedeven"><td><a href="#m20">IMPSP2ADeleteBeneficiaryListenquiry</a></td><td rowspan="1">1521468272513</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m21">IMPSP2AInstantPayment</a></td><td rowspan="1">1521468272514</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m22">IMPSP2PAddBeneficiary</a></td><td rowspan="1">1521468272515</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m23">IMPSP2PAddBeneficiaryconfirmation</a></td><td rowspan="1">1521468272516</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m24">IMPSP2PBeneficiaryPaymentConfirmation</a></td><td rowspan="1">1521468272518</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m25">IMPSP2PBeneficiaryPaymentListenquiry</a></td><td rowspan="1">1521468272519</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m26">IMPSP2PBeneficiarySearchListenquiry</a></td><td rowspan="1">1521468272522</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m27">IMPSP2PDeleteBeneficiaryConfirmation</a></td><td rowspan="1">1521468272524</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m28">IMPSP2PDeleteBeneficiaryListenquiry</a></td><td rowspan="1">1521468272525</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m29">IMPSP2PInstantPayment</a></td><td rowspan="1">1521468272526</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m30">IMPSP2UInstantPayment</a></td><td rowspan="1">1521468272534</td><td rowspan="1">1</td></tr><tr><th colspan="4">FInancial transaction &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">mBankingControlCenter.FinancialTransactions</td><td><a href="#m31">IMPSP2UAddBeneficiary</a></td><td rowspan="1">1521468272527</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m32">IMPSP2UAddBeneficiaryconfirmation</a></td><td rowspan="1">1521468272529</td><td rowspan="1">0</td></tr><tr class="passedeven"><td><a href="#m33">IMPSP2UBeneficiaryPaymentConfirmation</a></td><td rowspan="1">1521468272530</td><td rowspan="1">0</td></tr><tr class="passedeven"><td><a href="#m34">IMPSP2UBeneficiaryPaymentListenquiry</a></td><td rowspan="1">1521468272531</td><td rowspan="1">0</td></tr><tr class="passedeven"><td><a href="#m35">IMPSP2UBeneficiarySearchListenquiry</a></td><td rowspan="1">1521468272531</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m36">IMPSP2UDeleteBeneficiaryConfirmation</a></td><td rowspan="1">1521468272533</td><td rowspan="1">0</td></tr><tr class="passedeven"><td><a href="#m37">IMPSP2UDeleteBeneficiaryListenquiry</a></td><td rowspan="1">1521468272533</td><td rowspan="1">1</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Payment transaction &#8212; failed</th></tr><tr class="failedeven"><td rowspan="38">mBankingControlCenter.PaymentTransactions</td><td><a href="#m38">Accountselectionbiilerlist</a></td><td rowspan="1">1521468272552</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m39">AdHocBillercategorylist</a></td><td rowspan="1">1521468272553</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m40">AdHocbillerlist</a></td><td rowspan="1">1521468272554</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m41">Adhocpayconfirm</a></td><td rowspan="1">1521468272556</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m42">Billercategorylist</a></td><td rowspan="1">1521468272557</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m43">NEFTQuickFT</a></td><td rowspan="1">1521468272558</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m44">NEFTbenderegconfirm</a></td><td rowspan="1">1521468272559</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m45">NEFTbendereglist</a></td><td rowspan="1">1521468272560</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m46">NEFTbendetail</a></td><td rowspan="1">1521468272561</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m47">NEFTbenlist</a></td><td rowspan="1">1521468272562</td><td rowspan="1">7</td></tr><tr class="failedeven"><td><a href="#m48">NEFTbenpayment</a></td><td rowspan="1">1521468272569</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m49">NEFTbenreg</a></td><td rowspan="1">1521468272573</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m50">NEFTbenregconfirm</a></td><td rowspan="1">1521468272575</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m51">Operatorsearch</a></td><td rowspan="1">1521468272576</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m52">P2AQuickFT</a></td><td rowspan="1">1521468272577</td><td rowspan="1">3</td></tr><tr class="failedeven"><td><a href="#m53">P2Pbendelete</a></td><td rowspan="1">1521468272581</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m54">RechargeStatusEnq</a></td><td rowspan="1">1521468272582</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m55">Rechargeconfirm</a></td><td rowspan="1">1521468272583</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m56">Rechargelist</a></td><td rowspan="1">1521468272584</td><td rowspan="1">9</td></tr><tr class="failedeven"><td><a href="#m57">RegBillerpay</a></td><td rowspan="1">1521468272594</td><td rowspan="1">5</td></tr><tr class="failedeven"><td><a href="#m58">RegBillerpayconfirm</a></td><td rowspan="1">1521468272600</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m59">biilerderegselection</a></td><td rowspan="1">1521468272601</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m60">biilerlistselection</a></td><td rowspan="1">1521468272602</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m61">biilerregistrationconfirm</a></td><td rowspan="1">1521468272603</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m62">billerlist</a></td><td rowspan="1">1521468272604</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m63">billerlistselection</a></td><td rowspan="1">1521468272605</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m64">billerregisration</a></td><td rowspan="1">1521468272606</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m65">m2abenderegsearch</a></td><td rowspan="1">1521468272607</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m66">m2abendetails</a></td><td rowspan="1">1521468272608</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m67">m2abenreg</a></td><td rowspan="1">1521468272609</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m68">m2abensearchreq</a></td><td rowspan="1">1521468272610</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m69">m2mBenAcclist</a></td><td rowspan="1">1521468272622</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m70">m2mBenReg</a></td><td rowspan="1">1521468272623</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m71">m2mQuickFT</a></td><td rowspan="1">1521468272624</td><td rowspan="1">3</td></tr><tr class="failedeven"><td><a href="#m72">m2mRegbensearch</a></td><td rowspan="1">1521468272628</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m73">m2mbendelsearch</a></td><td rowspan="1">1521468272629</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m74">m2mbenpayment</a></td><td rowspan="1">1521468272630</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m75">m2mbensearch</a></td><td rowspan="1">1521468272631</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">mBankingControlCenter.NewTest</td><td><a href="#m0">endReport</a></td><td rowspan="1">1521488147192</td><td rowspan="1">4535</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">mBankingControlCenter.NewTest</td><td><a href="#m1">test</a></td><td rowspan="1">1521488125653</td><td rowspan="1">21381</td></tr></tbody>
 </table>
-<h2>Non- FInancial transaction</h2><h3 id="m0">mBankingControlCenter.NonFinancialTransactions#Accountfetch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.Accountfetch(NonFinancialTransactions.java:125)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">mBankingControlCenter.NonFinancialTransactions#AppLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.AppLogin(NonFinancialTransactions.java:39)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">mBankingControlCenter.NonFinancialTransactions#CancelMMIDAll</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.CancelMMIDAll(NonFinancialTransactions.java:80)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">mBankingControlCenter.NonFinancialTransactions#CancelMMIDSingle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.CancelMMIDSingle(NonFinancialTransactions.java:88)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">mBankingControlCenter.NonFinancialTransactions#ChequeStatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.ChequeStatus(NonFinancialTransactions.java:111)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">mBankingControlCenter.NonFinancialTransactions#EmailIDFetch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.EmailIDFetch(NonFinancialTransactions.java:97)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">mBankingControlCenter.NonFinancialTransactions#EmailIDUpdate</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.EmailIDUpdate(NonFinancialTransactions.java:104)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">mBankingControlCenter.NonFinancialTransactions#GenerateMMID</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.GenerateMMID(NonFinancialTransactions.java:67)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">mBankingControlCenter.NonFinancialTransactions#MiniStatement</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.MiniStatement(NonFinancialTransactions.java:53)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">mBankingControlCenter.NonFinancialTransactions#RetrieveMMID</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.RetrieveMMID(NonFinancialTransactions.java:74)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">mBankingControlCenter.NonFinancialTransactions#StopCheque</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.StopCheque(NonFinancialTransactions.java:118)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">mBankingControlCenter.NonFinancialTransactions#balanceEnq</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.balanceEnq(NonFinancialTransactions.java:47)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">mBankingControlCenter.NonFinancialTransactions#changeloginpwd</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.NonFinancialTransactions.changeloginpwd(NonFinancialTransactions.java:133)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>FInancial transaction</h2><h3 id="m13">mBankingControlCenter.FinancialTransactions#Billercategorylist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.Billercategorylist(FinancialTransactions.java:39)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">mBankingControlCenter.FinancialTransactions#IMPSP2AAddBeneficiary</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiary(FinancialTransactions.java:109)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">mBankingControlCenter.FinancialTransactions#IMPSP2AAddBeneficiaryconfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2AAddBeneficiaryconfirmation(FinancialTransactions.java:116)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">mBankingControlCenter.FinancialTransactions#IMPSP2ABeneficiaryPaymentConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiaryPaymentConfirmation(FinancialTransactions.java:151)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">mBankingControlCenter.FinancialTransactions#IMPSP2ABeneficiaryPaymentListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiaryPaymentListenquiry(FinancialTransactions.java:144)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">mBankingControlCenter.FinancialTransactions#IMPSP2ABeneficiarySearchListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ABeneficiarySearchListenquiry(FinancialTransactions.java:123)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m19">mBankingControlCenter.FinancialTransactions#IMPSP2ADeleteBeneficiaryConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ADeleteBeneficiaryConfirmation(FinancialTransactions.java:137)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m20">mBankingControlCenter.FinancialTransactions#IMPSP2ADeleteBeneficiaryListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2ADeleteBeneficiaryListenquiry(FinancialTransactions.java:130)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m21">mBankingControlCenter.FinancialTransactions#IMPSP2AInstantPayment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2AInstantPayment(FinancialTransactions.java:46)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m22">mBankingControlCenter.FinancialTransactions#IMPSP2PAddBeneficiary</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiary(FinancialTransactions.java:60)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m23">mBankingControlCenter.FinancialTransactions#IMPSP2PAddBeneficiaryconfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PAddBeneficiaryconfirmation(FinancialTransactions.java:67)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m24">mBankingControlCenter.FinancialTransactions#IMPSP2PBeneficiaryPaymentConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiaryPaymentConfirmation(FinancialTransactions.java:102)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m25">mBankingControlCenter.FinancialTransactions#IMPSP2PBeneficiaryPaymentListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiaryPaymentListenquiry(FinancialTransactions.java:95)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m26">mBankingControlCenter.FinancialTransactions#IMPSP2PBeneficiarySearchListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PBeneficiarySearchListenquiry(FinancialTransactions.java:74)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m27">mBankingControlCenter.FinancialTransactions#IMPSP2PDeleteBeneficiaryConfirmation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PDeleteBeneficiaryConfirmation(FinancialTransactions.java:88)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m28">mBankingControlCenter.FinancialTransactions#IMPSP2PDeleteBeneficiaryListenquiry</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PDeleteBeneficiaryListenquiry(FinancialTransactions.java:81)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m29">mBankingControlCenter.FinancialTransactions#IMPSP2PInstantPayment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2PInstantPayment(FinancialTransactions.java:31)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m30">mBankingControlCenter.FinancialTransactions#IMPSP2UInstantPayment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.FinancialTransactions.IMPSP2UInstantPayment(FinancialTransactions.java:53)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m31">mBankingControlCenter.FinancialTransactions#IMPSP2UAddBeneficiary</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m32">mBankingControlCenter.FinancialTransactions#IMPSP2UAddBeneficiaryconfirmation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m33">mBankingControlCenter.FinancialTransactions#IMPSP2UBeneficiaryPaymentConfirmation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m34">mBankingControlCenter.FinancialTransactions#IMPSP2UBeneficiaryPaymentListenquiry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m35">mBankingControlCenter.FinancialTransactions#IMPSP2UBeneficiarySearchListenquiry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m36">mBankingControlCenter.FinancialTransactions#IMPSP2UDeleteBeneficiaryConfirmation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m37">mBankingControlCenter.FinancialTransactions#IMPSP2UDeleteBeneficiaryListenquiry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Payment transaction</h2><h3 id="m38">mBankingControlCenter.PaymentTransactions#Accountselectionbiilerlist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.Accountselectionbiilerlist(PaymentTransactions.java:60)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m39">mBankingControlCenter.PaymentTransactions#AdHocBillercategorylist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.AdHocBillercategorylist(PaymentTransactions.java:97)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m40">mBankingControlCenter.PaymentTransactions#AdHocbillerlist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.AdHocbillerlist(PaymentTransactions.java:104)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m41">mBankingControlCenter.PaymentTransactions#Adhocpayconfirm</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.Adhocpayconfirm(PaymentTransactions.java:118)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m42">mBankingControlCenter.PaymentTransactions#Billercategorylist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.Billercategorylist(PaymentTransactions.java:30)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m43">mBankingControlCenter.PaymentTransactions#NEFTQuickFT</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.NEFTQuickFT(PaymentTransactions.java:232)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m44">mBankingControlCenter.PaymentTransactions#NEFTbenderegconfirm</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.NEFTbenderegconfirm(PaymentTransactions.java:274)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m45">mBankingControlCenter.PaymentTransactions#NEFTbendereglist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.NEFTbendereglist(PaymentTransactions.java:268)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m46">mBankingControlCenter.PaymentTransactions#NEFTbendetail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.NEFTbendetail(PaymentTransactions.java:262)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m47">mBankingControlCenter.PaymentTransactions#NEFTbenlist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.NEFTbenlist(PaymentTransactions.java:250)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m48">mBankingControlCenter.PaymentTransactions#NEFTbenpayment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.NEFTbenpayment(PaymentTransactions.java:256)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m49">mBankingControlCenter.PaymentTransactions#NEFTbenreg</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.NEFTbenreg(PaymentTransactions.java:238)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m50">mBankingControlCenter.PaymentTransactions#NEFTbenregconfirm</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.NEFTbenregconfirm(PaymentTransactions.java:244)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m51">mBankingControlCenter.PaymentTransactions#Operatorsearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.Operatorsearch(PaymentTransactions.java:132)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m52">mBankingControlCenter.PaymentTransactions#P2AQuickFT</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.P2AQuickFT(PaymentTransactions.java:202)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m53">mBankingControlCenter.PaymentTransactions#P2Pbendelete</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.P2Pbendelete(PaymentTransactions.java:196)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m54">mBankingControlCenter.PaymentTransactions#RechargeStatusEnq</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.RechargeStatusEnq(PaymentTransactions.java:146)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m55">mBankingControlCenter.PaymentTransactions#Rechargeconfirm</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.Rechargeconfirm(PaymentTransactions.java:139)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m56">mBankingControlCenter.PaymentTransactions#Rechargelist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.Rechargelist(PaymentTransactions.java:125)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m57">mBankingControlCenter.PaymentTransactions#RegBillerpay</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.RegBillerpay(PaymentTransactions.java:75)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m58">mBankingControlCenter.PaymentTransactions#RegBillerpayconfirm</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.RegBillerpayconfirm(PaymentTransactions.java:82)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m59">mBankingControlCenter.PaymentTransactions#biilerderegselection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.biilerderegselection(PaymentTransactions.java:90)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m60">mBankingControlCenter.PaymentTransactions#biilerlistselection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.biilerlistselection(PaymentTransactions.java:67)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m61">mBankingControlCenter.PaymentTransactions#biilerregistrationconfirm</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.biilerregistrationconfirm(PaymentTransactions.java:52)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m62">mBankingControlCenter.PaymentTransactions#billerlist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.billerlist(PaymentTransactions.java:37)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m63">mBankingControlCenter.PaymentTransactions#billerlistselection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.billerlistselection(PaymentTransactions.java:111)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m64">mBankingControlCenter.PaymentTransactions#billerregisration</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.billerregisration(PaymentTransactions.java:44)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m65">mBankingControlCenter.PaymentTransactions#m2abenderegsearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2abenderegsearch(PaymentTransactions.java:226)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m66">mBankingControlCenter.PaymentTransactions#m2abendetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2abendetails(PaymentTransactions.java:220)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m67">mBankingControlCenter.PaymentTransactions#m2abenreg</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2abenreg(PaymentTransactions.java:208)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m68">mBankingControlCenter.PaymentTransactions#m2abensearchreq</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2abensearchreq(PaymentTransactions.java:214)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m69">mBankingControlCenter.PaymentTransactions#m2mBenAcclist</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2mBenAcclist(PaymentTransactions.java:160)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m70">mBankingControlCenter.PaymentTransactions#m2mBenReg</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2mBenReg(PaymentTransactions.java:166)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m71">mBankingControlCenter.PaymentTransactions#m2mQuickFT</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2mQuickFT(PaymentTransactions.java:153)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m72">mBankingControlCenter.PaymentTransactions#m2mRegbensearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2mRegbensearch(PaymentTransactions.java:172)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m73">mBankingControlCenter.PaymentTransactions#m2mbendelsearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2mbendelsearch(PaymentTransactions.java:190)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m74">mBankingControlCenter.PaymentTransactions#m2mbenpayment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2mbenpayment(PaymentTransactions.java:178)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m75">mBankingControlCenter.PaymentTransactions#m2mbensearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert &quot;new ClassType ( )&quot; to complete Expression
-
-	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:136)
-	at mBankingControlCenter.PaymentTransactions.m2mbensearch(PaymentTransactions.java:184)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">mBankingControlCenter.NewTest#endReport</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: unhandled inspector error: {&quot;code&quot;:-32000,&quot;message&quot;:&quot;No target with given id&quot;}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;BRANTANSP&apos;, ip: &apos;192.168.43.164&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\BRANTA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.186, webStorageEnabled: true}
+Session ID: 556bf560ba36e198057aacc5904c878d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:892)
+	at mBankingUtilityCenter.ExtentManager.launchReport(ExtentManager.java:119)
+	at mBankingUtilityCenter.ExtentManager.endReport(ExtentManager.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:395)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">mBankingControlCenter.NewTest#test</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.&lt;init&gt;(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at mBankingUtilityCenter.HttpConnect.Post(HttpConnect.java:43)
+	at mBankingUtilityCenter.ExtentManager.sendReq(ExtentManager.java:156)
+	at mBankingControlCenter.NewTest.test(NewTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -275,29 +275,4 @@ public class PaymentTransactions extends ExtentManager{
 		assertResponse(response);
 	}
 
-	
-	public static void main(String[] args) throws IOException, SQLException {
-	
-			/*request = StaticStore.billerregisration("000000000057");
-			response =sendReq(request, "Biller Registration");
-			assertResponse(response);
-		
-			request = StaticStore.biilerregistrationconfirm("000000000057","Birla Sunlife,Mumbai","228885555","5278875555","ikh");
-			response =sendReq(request, "Biller Registration Confirm");
-			assertResponse(response);*/
-		
-	
-	/*	request = StaticStore.RegBillerpay("gfxv");
-		response =sendReq(request, "Register Biller Pay");
-		assertResponse(response);
-		String txnid=txnID(response);
-		
-		request = StaticStore.RegBillerpayconfirm("gfxv","100",txnid);
-		response =sendReq(request, "Register Biller Pay Confirm");
-		assertResponse(response);*/
-		request = StaticStore.m2mQuickFT("9894060407","20","rtj");
-		response =sendReq(request, "m2m Quick FT");
-		assertResponse(response);
-	
-	}
 }

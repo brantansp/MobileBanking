@@ -27,10 +27,6 @@ public class HttpConnect extends ExtentManager {
 	public static Properties prop=getProperty();
 	protected static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	
-	public static void main(String[] args) throws IOException {
-		HttpConnect conn=new HttpConnect();
-		conn.Post("9894060407APBE;Y;143728359323132456871830477028309680594;403362;123457;4.0.5;1434134124123431;49175274512454");
-	}
 	public String Post(String request) throws IOException
 	{
 		URL url = new URL(prop.getProperty("GprsURL")+prop.getProperty("servlet")+request);

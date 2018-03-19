@@ -204,49 +204,7 @@ public class FinancialTransactions extends ExtentManager{
 		BaseObject.assertResponse(response, index);
 	}
 	
-	public static void main(String[] args) throws IOException, SQLException {
-        /**
-         * For checking Single transactions
-         */
-		
-	/*	request = StaticStore.impsP2AConfBen( "3554678753121234666", "SA", "HDFC0000001", "mounika");
-		response =sendReq(request, "IMPSP2AAddBeneficiaryconfirmation");
-		assertResponse(response);*/
-	
-	/*	request = StaticStore.impsP2APayConf( "mounika","30","gffsa");
-		response =sendReq(request, "IMPSP2ABeneficiaryPaymentConfirmation");
-		assertResponse(response);*/
-		/*
-		request = StaticStore.impsP2APaySearch( "mounika");
-		response =sendReq(request, "IMPSP2ABeneficiaryPaymentListenquiry");
-		assertResponse(response);
-		
-		request = StaticStore.impsP2APayConf( "mounika","10", "gffsa");
-		response =sendReq(request, "IMPSP2ABeneficiaryPaymentConfirmation");
-		assertResponse(response);*/
-		
-		
-	/*	request = StaticStore.impsP2PAddBen( "9240143", "9372628276", "niiki");
-		response =sendReq(request, "IMPSP2PAddBeneficiary");
-		assertResponse(response);
-		
-		request = StaticStore.impsP2PConfBen( "9240143", "9372628276", "niiki");
-		response =sendReq(request, "IMPSP2PAddBeneficiaryconfirmation");
-		assertResponse(response);*/
-		
-		
-		
-	/*	request = StaticStore.impsP2AInstant("3727163947362819373", "HDFC0000001", "10", "tehry");
-		response =sendReq(request, "IMPSP2AInstantPayment");
-		assertResponse(response);*/
-		
-		/*request = StaticStore.impsP2PPaySearch("niiki");
-		response =sendReq(request, "IMPSP2PBeneficiaryPaymentListenquiry");
-		assertResponse(response);*/
-		/*request = StaticStore.impsP2PPayConf("20", "trans","yashuu");
-		response =sendReq(request, "IMPSP2PBeneficiaryPaymentConfirmation");
-		assertResponse(response);*/
-	}
+
 }
 
 

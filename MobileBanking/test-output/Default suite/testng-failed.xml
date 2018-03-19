@@ -5,10 +5,10 @@
     <classes>
       <class name="mBankingControlCenter.NewTest">
         <methods>
-          <include name="BalanceEnq"/>
           <include name="endReport"/>
           <include name="setUp"/>
           <include name="getResult"/>
+          <include name="test"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- mBankingControlCenter.NewTest -->

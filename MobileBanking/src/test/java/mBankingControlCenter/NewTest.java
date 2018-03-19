@@ -2,8 +2,10 @@ package mBankingControlCenter;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.testng.SkipException;
@@ -36,7 +38,12 @@ public class NewTest extends ExtentManager {
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	
-	 @Test
+    static{
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
+        System.setProperty("current.date.time", dateFormat.format(new Date()));
+    }
+    
+	 //@Test
 		public void BalanceEnq() throws IOException, SQLException
 		{
 			//PropertyConfigurator.configure("log4j.properties");
@@ -44,7 +51,7 @@ public class NewTest extends ExtentManager {
 			response = sendReq (request, "Balance Enquiry");
 			assertResponse(response);
 		}
-		@Test
+		//@Test
 		public void MiniStatement() throws IOException, SQLException {
 			request = StaticStore.miniStatement();
 			response = sendReq (request, "Mini statement");
