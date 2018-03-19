@@ -48,7 +48,7 @@ public class ExcelReader {
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 
 		Properties props=setPropertyFromExcel("Data","InputData");
-        log.info(props.getProperty("Test11"));
+        log.info(props.getProperty("RemMobileno"));
 		/*for(Map.Entry m : setPropertyFromExcel("Data","InputData").entrySet())
 		{  
 			  System.out.println(m.getKey()+" "+m.getValue());  

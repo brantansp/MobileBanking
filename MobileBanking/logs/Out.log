@@ -10160,3 +10160,58 @@
 2018-03-18 19:01:14 INFO  ExtentManager:96 - ******************************START******************************
 2018-03-18 19:01:14 INFO  ExtentManager:97 - Request : Cancel MMID Single
 2018-03-18 19:01:14 INFO  ExtentManager:103 - Hmaced Request : 7e5177649b0881822d8de7ab59473175775f6bc8b5604b61c94dc69ebc27d7cd*!9987000876APRC;N;566804020000080;504432;123457;4.0.3;566804020000080;102237952393345256699044370396567137761
+2018-03-19 12:42:51 INFO  ExcelReader:51 - 
+2018-03-19 12:43:30 INFO  ExcelReader:51 - 9987000876
+2018-03-19 12:49:21 INFO  ExtentManager:108 - ******************************START******************************
+2018-03-19 12:49:21 INFO  ExtentManager:109 - Request : Account Fetch
+2018-03-19 12:49:21 INFO  ExtentManager:115 - Hmaced Request : 2d25ba0e3e4136074a506f492e90955acafab3a792d7153c83e2d83a5405e298*!9987000876APSY;0001;504432;123457;4.0.3;55184502708136796668994762365846143561
+2018-03-19 12:49:22 INFO  ExtentManager:128 - Response received from Server : null
+2018-03-19 12:49:22 INFO  ExtentManager:108 - ******************************START******************************
+2018-03-19 12:49:22 INFO  ExtentManager:109 - Request : App Login
+2018-03-19 12:49:22 INFO  ExtentManager:115 - Hmaced Request : 291eb939b760f726a613e990cbe6790cfaa7aa5d299b694b3f7f8964a7d95526*!9987000876APSY;2;504432;123457;4.0.3;0;32809371422454502748233086208936816445
+2018-03-19 12:49:23 INFO  ExtentManager:128 - Response received from Server : SY00;N;ABHILASHA  KUSHWAHA;2;1;566802070000196*  ;N;TXNID:807812145087;BID:C504432
+2018-03-19 12:49:23 INFO  ExtentManager:132 - Transaction ID : 807812145087
+2018-03-19 12:49:23 INFO  ExtentManager:145 - ******************************END********************************
+
+2018-03-19 12:49:23 INFO  ExtentManager:108 - ******************************START******************************
+2018-03-19 12:49:23 INFO  ExtentManager:109 - Request : Generate MMID
+2018-03-19 12:49:23 INFO  ExtentManager:115 - Hmaced Request : 2bad041597767edaa9710827a579c0435d92749c5d7b2c82e109f09d61a18612*!9987000876APIM;N;001;504432;123457;4.0.3;566804020000080;28968945770164525643036586849141194368
+2018-03-19 12:49:28 INFO  ExtentManager:128 - Response received from Server : IM08;Host Down;19/03/2018 12:50;TXNID:807812145088;BID:C504432
+2018-03-19 12:49:28 INFO  ExtentManager:132 - Transaction ID : 807812145088
+2018-03-19 12:49:28 INFO  ExtentManager:145 - ******************************END********************************
+
+2018-03-19 12:49:28 INFO  ExtentManager:108 - ******************************START******************************
+2018-03-19 12:49:28 INFO  ExtentManager:109 - Request : Cancel MMID All
+2018-03-19 12:49:28 INFO  ExtentManager:115 - Hmaced Request : 6ca40e0cc247377cca034fb6892c795d1f00092fc5d714c37d32bb8fed2be41b*!9987000876APRC;N;ALL;504432;123457;4.0.3;566804020000080;107354084665230428071641122570735867589
+2018-03-19 12:49:32 INFO  ExtentManager:128 - Response received from Server : RC08;Host Down;19/03/2018 12:50;TXNID:807812145089;BID:C504432
+2018-03-19 12:49:32 INFO  ExtentManager:132 - Transaction ID : 807812145089
+2018-03-19 12:49:32 INFO  ExtentManager:145 - ******************************END********************************
+
+2018-03-19 12:49:32 INFO  ExtentManager:108 - ******************************START******************************
+2018-03-19 12:49:32 INFO  ExtentManager:109 - Request : Generate MMID
+2018-03-19 12:49:32 INFO  ExtentManager:115 - Hmaced Request : 476f6b9fa887c2bbbaa558babe8e4291b5163f8ed53b99e1a66d9d8a881d57aa*!9987000876APIM;N;001;504432;123457;4.0.3;566804020000080;174516610246800084749204447712434737314
+2018-03-19 12:49:36 INFO  ExtentManager:128 - Response received from Server : IM08;Host Down;19/03/2018 12:50;TXNID:807812145090;BID:C504432
+2018-03-19 12:49:36 INFO  ExtentManager:132 - Transaction ID : 807812145090
+2018-03-19 12:49:36 INFO  ExtentManager:145 - ******************************END********************************
+
+2018-03-19 12:49:36 INFO  ExtentManager:108 - ******************************START******************************
+2018-03-19 12:49:36 INFO  ExtentManager:109 - Request : Cancel MMID Single
+2018-03-19 12:49:36 INFO  ExtentManager:115 - Hmaced Request : a88e10b5abea46cbc0b77313351f542c2b5c3104252ed3b21024bd666ff3078a*!9987000876APRC;N;566804020000080;504432;123457;4.0.3;566804020000080;120326400019027612772245229115108779566
+2018-03-19 12:49:43 INFO  ExtentManager:128 - Response received from Server : RC08;Host Down;19/03/2018 12:50;TXNID:807812145091;BID:C504432
+2018-03-19 12:49:43 INFO  ExtentManager:132 - Transaction ID : 807812145091
+2018-03-19 12:49:43 INFO  ExtentManager:145 - ******************************END********************************
+
+2018-03-19 12:49:43 INFO  ExtentManager:108 - ******************************START******************************
+2018-03-19 12:49:43 INFO  ExtentManager:109 - Request : Cheque status
+2018-03-19 12:49:43 INFO  ExtentManager:115 - Hmaced Request : 469d9a80fcd6842927b1984fdc993ca1040347a3980cdd318bcff31c53bd316b*!9987000876APLW;N;123456;504432;123457;4.0.3;566804020000080;38699822380633495422379997584714223336
+2018-03-19 12:49:43 INFO  ExtentManager:128 - Response received from Server : null
+2018-03-19 12:49:43 INFO  ExtentManager:108 - ******************************START******************************
+2018-03-19 12:49:43 INFO  ExtentManager:109 - Request : Email ID fetch
+2018-03-19 12:49:43 INFO  ExtentManager:115 - Hmaced Request : 259c26f4e20e32eef13ab8a45603e114cd75ef60ba700b3c01bd62a3084a3485*!9987000876APZ6;N;504432;123457;4.0.3;566804020000080;9717714804502913479910438911981158308
+2018-03-19 12:49:45 INFO  ExtentManager:128 - Response received from Server : Z600;abc@fss.com;19/03/2018 12:50;TXNID:807812145092;BID:C504432
+2018-03-19 12:49:45 INFO  ExtentManager:132 - Transaction ID : 807812145092
+2018-03-19 12:49:45 INFO  ExtentManager:145 - ******************************END********************************
+
+2018-03-19 12:49:45 INFO  ExtentManager:108 - ******************************START******************************
+2018-03-19 12:49:45 INFO  ExtentManager:109 - Request : Email ID Fetch
+2018-03-19 12:49:45 INFO  ExtentManager:115 - Hmaced Request : d0392a3271ef59f2b9ff2023c2dfe6bef71d741a116a02c9cf36b9fd530ac97f*!9987000876APZ3;N;abc@fss.com;504432;123457;4.0.3;566804020000080;184402453705859124887462996035819193913
