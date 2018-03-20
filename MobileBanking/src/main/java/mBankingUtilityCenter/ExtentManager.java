@@ -59,7 +59,7 @@ public class ExtentManager{
 	public static WebDriver driver;
 	//protected static Log log = LogFactory.getLog(ExtentManager.class);
 	protected static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
-	public static Properties prop;
+	public static Properties prop=getProperty();
 	
     static{
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
@@ -97,7 +97,10 @@ public class ExtentManager{
 	@AfterSuite
 	public void endReport(){ 
                 extent.flush();
-                launchReport();
+                if(prop.getProperty("openReportInBrowser").equals("Y"))
+                {
+                	 launchReport();
+                }
     } 
 	
 	public static Properties getProperty()
@@ -106,11 +109,15 @@ public class ExtentManager{
 		return prop;
 	}
 	
+	public static void main(String[] args) {
+		launchReport();
+	}
+	
 	public static void launchReport()
 	{
 		System.out.println("*******************");
 		System.out.println("launching Report in browser");
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver2.33.exe");
 		driver = new ChromeDriver();
 		System.setProperty("java.net.preferIPv4Stack", "true");
 /*		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\driver\\IEDriverServer.exe");

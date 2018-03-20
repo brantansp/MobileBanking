@@ -13,7 +13,7 @@ public class StaticStore extends ExtentManager{
 	
 	public static void main(String[] args) 
 	{
-		System.out.println(appLogin());
+		System.out.println(prop.getProperty("RemAccountno")+";");
 		
 	}
 	
@@ -58,7 +58,6 @@ public class StaticStore extends ExtentManager{
 		sb.append(prop.getProperty("RemMobileno"));
 		sb.append("APBE;");
 		if(prop.getProperty("mPINRequired").equals("Y"))
-			
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
 		sb.append(prop.getProperty("mPIN")+";");
@@ -70,7 +69,7 @@ public class StaticStore extends ExtentManager{
 		sb.append(prop.getProperty("bankCode")+";");
 		sb.append(prop.getProperty("DUKPT")+";");
 		sb.append(prop.getProperty("buildVersion")+";");
-		sb.append(prop.getProperty("RemAccountno ")+";");
+		sb.append(prop.getProperty("RemAccountno")+";");
 		return sb.toString();
 	}
 	

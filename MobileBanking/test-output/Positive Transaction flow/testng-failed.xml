@@ -9,21 +9,11 @@
       <class name="mBankingControlCenter.NonFinancialTransactions">
         <methods>
           <include name="endReport"/>
-          <include name="CancelMMIDSingle"/>
-          <include name="EmailIDUpdate"/>
           <include name="Accountfetch"/>
-          <include name="balanceEnq"/>
-          <include name="changeloginpwd"/>
-          <include name="RetrieveMMID"/>
-          <include name="ChequeStatus"/>
-          <include name="MiniStatement"/>
-          <include name="StopCheque"/>
           <include name="setUp"/>
-          <include name="EmailIDFetch"/>
           <include name="AppLogin"/>
           <include name="getResult"/>
-          <include name="CancelMMIDAll"/>
-          <include name="GenerateMMID"/>
+          <include name="changeloginpwd"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
@@ -34,26 +24,17 @@
       <class name="mBankingControlCenter.FinancialTransactions">
         <methods>
           <include name="endReport"/>
-          <include name="IMPSP2ABeneficiaryPaymentListenquiry"/>
           <include name="IMPSP2PAddBeneficiary"/>
-          <include name="IMPSP2PDeleteBeneficiaryListenquiry"/>
           <include name="Billercategorylist"/>
-          <include name="IMPSP2ABeneficiarySearchListenquiry"/>
-          <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
-          <include name="IMPSP2ADeleteBeneficiaryListenquiry"/>
-          <include name="IMPSP2PAddBeneficiaryconfirmation"/>
           <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
           <include name="IMPSP2UInstantPayment"/>
           <include name="IMPSP2PBeneficiarySearchListenquiry"/>
           <include name="IMPSP2PInstantPayment"/>
-          <include name="IMPSP2AAddBeneficiary"/>
           <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
           <include name="setUp"/>
-          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
           <include name="getResult"/>
           <include name="IMPSP2AInstantPayment"/>
           <include name="IMPSP2PBeneficiaryPaymentListenquiry"/>
-          <include name="IMPSP2AAddBeneficiaryconfirmation"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- mBankingControlCenter.FinancialTransactions -->
@@ -64,15 +45,11 @@
       <class name="mBankingControlCenter.PaymentTransactions">
         <methods>
           <include name="biilerregistrationconfirm"/>
-          <include name="m2mbendelsearch"/>
-          <include name="m2abensearchreq"/>
-          <include name="m2mbensearch"/>
           <include name="biilerlistselection"/>
           <include name="billerlistselection"/>
           <include name="NEFTbenlist"/>
           <include name="NEFTbenregconfirm"/>
           <include name="m2mBenAcclist"/>
-          <include name="billerregisration"/>
           <include name="m2mQuickFT"/>
           <include name="Accountselectionbiilerlist"/>
           <include name="Operatorsearch"/>
@@ -90,7 +67,6 @@
           <include name="beforeMethod"/>
           <include name="Rechargelist"/>
           <include name="m2abenderegsearch"/>
-          <include name="AdHocBillercategorylist"/>
           <include name="P2AQuickFT"/>
           <include name="endReport"/>
           <include name="Rechargeconfirm"/>
@@ -100,7 +76,6 @@
           <include name="NEFTbendetail"/>
           <include name="NEFTQuickFT"/>
           <include name="RegBillerpay"/>
-          <include name="NEFTbendereglist"/>
           <include name="RechargeStatusEnq"/>
           <include name="setUp"/>
           <include name="P2Pbendelete"/>
