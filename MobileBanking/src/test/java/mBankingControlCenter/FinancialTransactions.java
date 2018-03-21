@@ -25,127 +25,119 @@ public class FinancialTransactions extends ExtentManager{
 	public static ExtentReports extent;
 	public static ExtentTest extentLogger;
 	
-	@Test
+	@Test(priority=0)
 	public void IMPSP2PInstantPayment() throws IOException, SQLException {
 		request = StaticStore.impsP2PInstant("9352478845", "9240123", "7", "dfsjh");
 		response =sendReq(request, "IMPSP2PInstantPayment");
 		assertResponse(response);
 	}
 	
-	//Billercategorylist
-	@Test
-	public void Billercategorylist() throws IOException, SQLException {
-		request = StaticStore.Billercategorylist();
-		response =sendReq(request, "Billercategorylist");
-		assertResponse(response);
-	}
-	
-	@Test
+	@Test(priority=1)
 	public void IMPSP2AInstantPayment() throws IOException, SQLException {
 		request = StaticStore.impsP2AInstant("3727163937362819373", "HDFC0000001", "10", "tehry");
 		response =sendReq(request, "IMPSP2AInstantPayment");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=2)
 	public void IMPSP2UInstantPayment() throws IOException, SQLException {
 		request = StaticStore.impsP2UInstant("", "", "");
 		response =sendReq(request, "IMPSP2UInstantPayment");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=3)
 	public void IMPSP2PAddBeneficiary() throws IOException, SQLException {
 		request = StaticStore.impsP2PAddBen( "9240143", "9372616576", "yashuuuu");
 		response =sendReq(request, "IMPSP2PAddBeneficiary");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=4)
 	public void IMPSP2PAddBeneficiaryconfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PConfBen( "9240143", "9372616576", "yashuuuu");
 		response =sendReq(request, "IMPSP2PAddBeneficiaryconfirmation");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=5)
 	public void IMPSP2PBeneficiarySearchListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2PBenSearch( "niiki");
 		response =sendReq(request, "IMPSP2PBeneficiarySearchListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=6)
 	public void IMPSP2PDeleteBeneficiaryListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2PDelBenSearch( "");
 		response =sendReq(request, "IMPSP2PDeleteBeneficiaryListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=7)
 	public void IMPSP2PDeleteBeneficiaryConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PDelBenConf( "");
 		response =sendReq(request, "IMPSP2PDeleteBeneficiaryConfirmation");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=8)
 	public void IMPSP2PBeneficiaryPaymentListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2PPaySearch("niiki");
 		response =sendReq(request, "IMPSP2PBeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=9)
 	public void IMPSP2PBeneficiaryPaymentConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PPayConf("20", "trans","yashuuuu");
 		response =sendReq(request, "IMPSP2PBeneficiaryPaymentConfirmation");
 		assertResponse(response);
 	}
 
-	@Test
+	@Test(priority=10)
 	public void IMPSP2AAddBeneficiary() throws IOException, SQLException {
 		request = StaticStore.impsP2AAddBen( "6473839242827281547", "SA", "HDFC0000002", "nickii");
 		response =sendReq(request, "IMPSP2AAddBeneficiary");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=11)
 	public void IMPSP2AAddBeneficiaryconfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2AConfBen( "6473839242827281547", "SA", "HDFC0000002", "nickii");
 		response =sendReq(request, "IMPSP2AAddBeneficiaryconfirmation");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=12)
 	public void IMPSP2ABeneficiarySearchListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2ABenSearch( "");
 		response =sendReq(request, "IMPSP2ABeneficiarySearchListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=13)
 	public void IMPSP2ADeleteBeneficiaryListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2ADelBenSearch( "");
 		response =sendReq(request, "IMPSP2ADeleteBeneficiaryListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=14)
 	public void IMPSP2ADeleteBeneficiaryConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2ADelBenConf( "");
 		response =sendReq(request, "IMPSP2ADeleteBeneficiaryConfirmation");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=15)
 	public void IMPSP2ABeneficiaryPaymentListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2APaySearch( "nickii");
 		response =sendReq(request, "IMPSP2ABeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(priority=16)
 	public void IMPSP2ABeneficiaryPaymentConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2APayConf( "nickii","10", "gffsa");
 		response =sendReq(request, "IMPSP2ABeneficiaryPaymentConfirmation");
@@ -155,49 +147,49 @@ public class FinancialTransactions extends ExtentManager{
 	
 	//-----------------------------------------P2U Update Index value
 	
-	@Test
+	@Test(priority=17)
 	public void IMPSP2UAddBeneficiary() throws IOException, SQLException {
 		index=23;
 		response =BaseObject.buildRequest(index);
 		BaseObject.assertResponse(response, index);
 	}
 	
-	@Test
+	@Test(priority=18)
 	public void IMPSP2UAddBeneficiaryconfirmation() throws IOException, SQLException {
 		index=24;
 		response =BaseObject.buildRequest(index);
 		BaseObject.assertResponse(response, index);
 	}
 	
-	@Test
+	@Test(priority=19)
 	public void IMPSP2UBeneficiarySearchListenquiry() throws IOException, SQLException {
 		index=25;
 		response =BaseObject.buildRequest(index);
 		BaseObject.assertResponse(response, index);
 	}
 	
-	@Test
+	@Test(priority=20)
 	public void IMPSP2UDeleteBeneficiaryListenquiry() throws IOException, SQLException {
 		index=26;
 		response =BaseObject.buildRequest(index);
 		BaseObject.assertResponse(response, index);
 	}
 	
-	@Test
+	@Test(priority=21)
 	public void IMPSP2UDeleteBeneficiaryConfirmation() throws IOException, SQLException {
 		index=27;
 		response =BaseObject.buildRequest(index);
 		BaseObject.assertResponse(response, index);
 	}
 	
-	@Test
+	@Test(priority=22)
 	public void IMPSP2UBeneficiaryPaymentListenquiry() throws IOException, SQLException {
 		index=28;
 		response =BaseObject.buildRequest(index);
 		BaseObject.assertResponse(response, index);
 	}
 	
-	@Test
+	@Test(priority=23)
 	public void IMPSP2UBeneficiaryPaymentConfirmation() throws IOException, SQLException {
 		index=29;
 		response =BaseObject.buildRequest(index);

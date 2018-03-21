@@ -157,7 +157,7 @@ public class ExtentManager{
 			 HttpConnect obj=new HttpConnect();
 			response = obj.Post(Request);
 			log.info("Response received from Server : "+response);
-/*     	if (response.contains("TXNID"))
+     	if (response.contains("TXNID"))
 			{
 				transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
 				log.info("Transaction ID : "+transactionID);
@@ -166,7 +166,45 @@ public class ExtentManager{
 					dbResult = dbTransactionlog.fetchRecord(transactionID);
 					WriteToCSVFile.reportGeneration( dbResult);
 				}		
-			}*/
+			}
+	log.info("******************************END********************************\r\n");
+	return response;
+	}
+	
+	public static String sendReqAppLogin (String Request, String req2,String txnType) throws IOException, SQLException
+	{
+		log.info("******************************START******************************");
+	    log.info("Request : " + txnType);
+	    BigInteger uniNum = RandomNumGenerator.generate();
+	  	if (prop.getProperty("HMAC").equals("Y"))
+		{
+		  try {
+			Request=Hmac.Hmacing(req2+uniNum, Request, uniNum);
+			log.info("Hmaced Request : "+Request);
+		        } catch (InvalidKeyException | SignatureException | NoSuchAlgorithmException e) {
+			e.printStackTrace();
+			log.error(e);
+		   }
+		}
+		else {
+			Request = Request +";"+uniNum;
+			log.info("Non-Hmac request : "+Request);
+			log.info(" Request");
+		}
+
+			 HttpConnect obj=new HttpConnect();
+			response = obj.Post(Request);
+			log.info("Response received from Server : "+response);
+     	if (response.contains("TXNID"))
+			{
+				transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
+				log.info("Transaction ID : "+transactionID);
+				if(prop.getProperty("dbReport")=="Y")
+				{
+					dbResult = dbTransactionlog.fetchRecord(transactionID);
+					WriteToCSVFile.reportGeneration( dbResult);
+				}		
+			}
 	log.info("******************************END********************************\r\n");
 	return response;
 	}

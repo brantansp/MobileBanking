@@ -3,15 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="mBankingControlCenter.NewTest">
+      <class name="mBankingControlCenter.NonFinancialTransactions">
         <methods>
           <include name="endReport"/>
+          <include name="Accountfetch"/>
           <include name="setUp"/>
           <include name="getResult"/>
-          <include name="test"/>
+          <include name="changeloginpwd"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- mBankingControlCenter.NewTest -->
+      </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

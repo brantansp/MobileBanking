@@ -16,13 +16,28 @@ public class StaticStore extends ExtentManager{
 		System.out.println(prop.getProperty("RemAccountno")+";");
 		
 	}
-	
-	public static String appLogin ()
+	//APGC;BVD:4.0.9#ANDROID7.1.1#H1920W1080#LENOVO Lenovo K8 Plus#10.175.117.48#12.8354858,80.2235916;454545;123457;4.0.5;0;9894060407
+	public static String appLogin ()   //request with %23 instead of #
 	{
 		StringBuilder sb = new StringBuilder() ;
 		sb.append(prop.getProperty("RemMobileno"));
-		sb.append("APSY;");
-		sb.append("2;");
+		sb.append("APGC;");
+		sb.append("BVD:");
+		sb.append("4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO+Lenovo+K8+Plus%2310.175.117.48%2312.8354858%2C80.2235916%3B");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	public static String appLogin2()   //request with #
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APGC;");
+		sb.append("BVD:");
+		sb.append("4.0.9#ANDROID7.1.1#H1920W1080#LENOVO Lenovo K8 Plus#10.175.117.48#12.8354858,80.2235916;");
 		sb.append(prop.getProperty("bankCode")+";");
 		sb.append(prop.getProperty("DUKPT")+";");
 		sb.append(prop.getProperty("buildVersion")+";");
@@ -295,17 +310,24 @@ public class StaticStore extends ExtentManager{
 	
 	public static String Accountfetch ()
 	{
-		sb.delete(0, sb.length());
+		StringBuilder sb = new StringBuilder() ;
 		sb.append(prop.getProperty("RemMobileno"));
 		sb.append("APSY;");
-	    sb.append("0001;");
+		if(prop.getProperty("bankCode").equals("454545"))
+		{
+		sb.append("0001;");
+		}else
+		{
+		sb.append("2;");
+		}
 		sb.append(prop.getProperty("bankCode")+";");
 		sb.append(prop.getProperty("DUKPT")+";");
 		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
 		return sb.toString();
 	}
 	
-	// NA
+	 //9894060407APP5;8609547570776098518502128580812621291;454545;123457;4.0.5;182058368413177886340199749077473758504
 	public static String changeloginpwd (String newpassword)
 	{
 		sb.delete(0, sb.length());
@@ -315,6 +337,8 @@ public class StaticStore extends ExtentManager{
 		sb.append(prop.getProperty("bankCode")+";");
 		sb.append(prop.getProperty("DUKPT")+";");
 		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		System.out.println(sb.toString());
 		return sb.toString();
 	}
 	
