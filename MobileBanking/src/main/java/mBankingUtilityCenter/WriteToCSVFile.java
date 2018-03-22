@@ -9,6 +9,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 //
 public class WriteToCSVFile {
 	public static String Transaction ;
@@ -23,6 +25,10 @@ public class WriteToCSVFile {
 	public static String Responsecode ;
 	public static String Response_Description ;
 	public static String [] result ;
+	static SimpleDateFormat dateFormatter = new SimpleDateFormat("ddMMyyyy"); 
+	static SimpleDateFormat timeFormatter = new SimpleDateFormat("HHmmss"); 
+	static Date date = new Date();  
+	static String savestr = "Result"+timeFormatter.format(date)+".csv"; 
 	
     public static void main(String[]args) throws IOException{}
     
@@ -30,12 +36,11 @@ public class WriteToCSVFile {
     {
     	Transaction = transaction;
     	result = dbResult;
-    	File dir = new File(".\\reports");
+    	File dir = new File(System.getProperty("user.dir")+"\\output\\dbReport\\"+dateFormatter.format(date));
     	if (!dir.exists())
     	{
     		dir.mkdirs();
     	}
-    	String savestr = "Result.csv"; 
     	File file = new File(dir, savestr);
     	PrintWriter pw ;//new PrintWriter(file);
     	StringBuilder sb = new StringBuilder();

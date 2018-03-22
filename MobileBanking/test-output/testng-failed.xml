@@ -3,16 +3,29 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="mBankingControlCenter.NonFinancialTransactions">
+      <class name="mBankingControlCenter.FinancialTransactions">
         <methods>
           <include name="endReport"/>
-          <include name="Accountfetch"/>
+          <include name="IMPSP2PAddBeneficiary"/>
+          <include name="IMPSP2PDeleteBeneficiaryListenquiry"/>
+          <include name="IMPSP2ABeneficiarySearchListenquiry"/>
+          <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
+          <include name="IMPSP2ADeleteBeneficiaryListenquiry"/>
+          <include name="IMPSP2PAddBeneficiaryconfirmation"/>
+          <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
+          <include name="IMPSP2UInstantPayment"/>
+          <include name="IMPSP2PBeneficiarySearchListenquiry"/>
+          <include name="IMPSP2PInstantPayment"/>
+          <include name="IMPSP2AAddBeneficiary"/>
+          <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
           <include name="setUp"/>
+          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
           <include name="getResult"/>
-          <include name="changeloginpwd"/>
+          <include name="IMPSP2AInstantPayment"/>
+          <include name="IMPSP2PBeneficiaryPaymentListenquiry"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
+      </class> <!-- mBankingControlCenter.FinancialTransactions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

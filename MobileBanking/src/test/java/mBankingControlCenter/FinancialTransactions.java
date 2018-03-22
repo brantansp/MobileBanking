@@ -27,6 +27,7 @@ public class FinancialTransactions extends ExtentManager{
 	
 	@Test(priority=0)
 	public void IMPSP2PInstantPayment() throws IOException, SQLException {
+		StaticStore.generateMMID();
 		request = StaticStore.impsP2PInstant("9352478845", "9240123", "7", "dfsjh");
 		response =sendReq(request, "IMPSP2PInstantPayment");
 		assertResponse(response);

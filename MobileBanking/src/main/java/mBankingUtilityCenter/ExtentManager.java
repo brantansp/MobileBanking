@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -23,9 +24,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.WebDriver;
+
 import mBankingBasePageObject.BaseObject;
 import mBankingPageObjectModel.Configuration;
 import mBankingPageObjectModel.StaticStore;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.testng.Assert;
@@ -60,20 +63,25 @@ public class ExtentManager{
 	//protected static Log log = LogFactory.getLog(ExtentManager.class);
 	protected static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	public static Properties prop=getProperty();
-	
-    static{
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
-        System.setProperty("current.date.time", dateFormat.format(new Date()));
-    }
-    
+	static String reportPath;
+
 	@BeforeSuite
-	public void setUp(){
-      	log.info("Running Mobile banking API Automation testing on mPAY 4.0"+"\r\n");
-			extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/ExtentReport/STMExtentReport.html", true);
+	public void setUp()throws FileNotFoundException{
+      	    log.info("Running Mobile banking API Automation testing on mPAY 4.0"+"\r\n");
+    		SimpleDateFormat dateFormatter = new SimpleDateFormat("ddMMyyyy"); 
+    		SimpleDateFormat timeFormatter = new SimpleDateFormat("HHmmss"); 
+    		Date date = new Date();  
+        	File dir = new File(System.getProperty("user.dir")+"\\output\\ExtentReport\\"+dateFormatter.format(date));
+        	if (!dir.exists())
+        	{
+        		dir.mkdirs();
+        	}
+        	reportPath= dir+"\\ExtentReport_"+timeFormatter.format(date)+".html";
+			extent = new ExtentReports (reportPath, true);
 			extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 			prop =getProperty();
 	}
-
+	
 	@BeforeMethod
 	public void beforeMethod(Method method)
 	{
@@ -123,7 +131,7 @@ public class ExtentManager{
 /*		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\driver\\IEDriverServer.exe");
 		driver = new InternetExplorerDriver();*/
 		driver.manage().window().maximize();
-		driver.get(System.getProperty("user.dir")+"\\test-output\\ExtentReport\\STMExtentReport.html");
+		driver.get(reportPath);
 		System.out.println("*******************");
 	}
 	

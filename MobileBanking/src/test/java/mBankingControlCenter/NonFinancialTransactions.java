@@ -136,16 +136,10 @@ public class NonFinancialTransactions extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	public static void main(String[] args)  {
-		request = StaticStore.changeloginpwd("8609547570776098518502128580812621291");
-		try {
-			response = sendReq (request, "Change Login Password");
-		} catch (IOException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		assertResponse(response);
-	}
+	public static void main(String[] args)  {		
+		request = StaticStore.generateMMID();
+	response = sendReq (request, "Generate MMID");
+	assertResponse(response);}
 }
 
 

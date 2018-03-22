@@ -338,7 +338,6 @@ public class StaticStore extends ExtentManager{
 		sb.append(prop.getProperty("DUKPT")+";");
 		sb.append(prop.getProperty("buildVersion")+";");
 		sb.append("0;");
-		System.out.println(sb.toString());
 		return sb.toString();
 	}
 	
