@@ -137,9 +137,7 @@ public class NonFinancialTransactions extends ExtentManager{
 	}
 	
 	public static void main(String[] args)  {		
-		request = StaticStore.generateMMID();
-	response = sendReq (request, "Generate MMID");
-	assertResponse(response);}
+	
 }
 
 
