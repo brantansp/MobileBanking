@@ -136,8 +136,6 @@ public class NonFinancialTransactions extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	public static void main(String[] args)  {		
-	
 }
 
 
