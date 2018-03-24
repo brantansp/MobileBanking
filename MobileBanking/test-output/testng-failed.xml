@@ -3,29 +3,28 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="mBankingControlCenter.FinancialTransactions">
+      <class name="mBankingControlCenter.NonFinancialTransactions">
         <methods>
           <include name="endReport"/>
-          <include name="IMPSP2PAddBeneficiary"/>
-          <include name="IMPSP2PDeleteBeneficiaryListenquiry"/>
-          <include name="IMPSP2ABeneficiarySearchListenquiry"/>
-          <include name="IMPSP2PDeleteBeneficiaryConfirmation"/>
-          <include name="IMPSP2ADeleteBeneficiaryListenquiry"/>
-          <include name="IMPSP2PAddBeneficiaryconfirmation"/>
-          <include name="IMPSP2PBeneficiaryPaymentConfirmation"/>
-          <include name="IMPSP2UInstantPayment"/>
-          <include name="IMPSP2PBeneficiarySearchListenquiry"/>
-          <include name="IMPSP2PInstantPayment"/>
-          <include name="IMPSP2AAddBeneficiary"/>
-          <include name="IMPSP2ABeneficiaryPaymentConfirmation"/>
+          <include name="CancelMMIDSingle"/>
+          <include name="EmailIDUpdate"/>
+          <include name="Accountfetch"/>
+          <include name="balanceEnq"/>
+          <include name="changeloginpwd"/>
+          <include name="RetrieveMMID"/>
+          <include name="ChequeStatus"/>
+          <include name="MiniStatement"/>
+          <include name="StopCheque"/>
           <include name="setUp"/>
-          <include name="IMPSP2ADeleteBeneficiaryConfirmation"/>
+          <include name="EmailIDFetch"/>
+          <include name="AppLogin"/>
           <include name="getResult"/>
-          <include name="IMPSP2AInstantPayment"/>
-          <include name="IMPSP2PBeneficiaryPaymentListenquiry"/>
+          <include name="CancelMMIDAll"/>
+          <include name="GenerateMMID"/>
           <include name="beforeMethod"/>
+          <include name="TransactionHistory"/>
         </methods>
-      </class> <!-- mBankingControlCenter.FinancialTransactions -->
+      </class> <!-- mBankingControlCenter.NonFinancialTransactions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

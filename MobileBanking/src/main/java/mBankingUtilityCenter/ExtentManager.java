@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
+import java.util.Scanner;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -31,6 +32,8 @@ import mBankingPageObjectModel.StaticStore;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.SimpleLayout;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.SkipException;
@@ -60,7 +63,6 @@ public class ExtentManager{
 	static HttpConnect obj=new HttpConnect();
 	private static String dbResult[];
 	public static WebDriver driver;
-	//protected static Log log = LogFactory.getLog(ExtentManager.class);
 	protected static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	public static Properties prop=getProperty();
 	static String reportPath;
@@ -105,11 +107,50 @@ public class ExtentManager{
 	@AfterSuite
 	public void endReport(){ 
                 extent.flush();
-                if(prop.getProperty("openReportInBrowser").equals("Y"))
+                Scanner sc = new Scanner (System.in);
+                boolean loop = true;
+                while (loop)
                 {
-                	 launchReport();
-                }
-    } 
+                     System.out.println("Please enter y to Launch report and n to cancel");
+                     String flag = sc.nextLine();
+                     switch (flag)
+                        {
+                            case "y":
+                            log.info("Launching report");
+                            loop = false;
+            	            launchReport();
+                            break;
+                            case "n":
+                            log.info("Launching report canceled");
+                            loop = false;
+                            break;
+                            default : 
+                            log.info("Please select only y or n");
+                            loop = true;
+                        }
+                } 
+                loop = true;
+                while (loop)
+                {
+                     System.out.println("Please enter y to send mail to Stakeholders or n to cancel");
+                     String flag = sc.nextLine();
+                     switch (flag)
+                        {
+                            case "y":
+                            log.info("Launching report");
+                            loop = false;
+                            //code goes here
+                            break;
+                            case "n":
+                            log.info("Sending mail was canceled");
+                            loop = false;
+                            break;
+                            default : 
+                            log.info("Please select only y or n");
+                            loop = true;
+                        }
+                } 
+  }
 	
 	public static Properties getProperty()
 	{
