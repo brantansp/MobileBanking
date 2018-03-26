@@ -66,13 +66,13 @@ public class ExtentManager{
 	protected static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	public static Properties prop=getProperty();
 	static String reportPath;
-
+	SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyyMMdd"); 
+	SimpleDateFormat timeFormatter = new SimpleDateFormat("HHmmss"); 
+	Date date = new Date();  
+	
 	@BeforeSuite
 	public void setUp()throws FileNotFoundException{
-      	    log.info("Running Mobile banking API Automation testing on mPAY 4.0"+"\r\n");
-    		SimpleDateFormat dateFormatter = new SimpleDateFormat("ddMMyyyy"); 
-    		SimpleDateFormat timeFormatter = new SimpleDateFormat("HHmmss"); 
-    		Date date = new Date();  
+      	    log.info("Running Mobile banking API Automation testing on mPAY 4.0"+"\r\n"); 
         	File dir = new File(System.getProperty("user.dir")+"\\output\\ExtentReport\\"+dateFormatter.format(date));
         	if (!dir.exists())
         	{
@@ -139,7 +139,7 @@ public class ExtentManager{
                             case "y":
                             log.info("Launching report");
                             loop = false;
-                            //code goes here
+                           // SendEmail.sendEmail(dateFormatter.format(date), timeFormatter.format(date));
                             break;
                             case "n":
                             log.info("Sending mail was canceled");
