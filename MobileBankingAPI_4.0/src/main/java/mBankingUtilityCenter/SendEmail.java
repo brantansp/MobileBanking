@@ -31,19 +31,16 @@ import com.sun.mail.smtp.SMTPTransport;
  *Mail
  */
 
-public class SendEmail extends ExtentManager
+public class SendEmail 
 {
-
+	public static Properties prop=ExtentManager.getProperty();
 	protected static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
-	public static Properties prop=getProperty();
 	
 	public static void main(String[] args) {
-		
-		//sendEmail( "", "");
-		System.out.println(lastFileModified(System.getProperty("user.dir")+"\\output\\logs\\20180326\\"));
+		sendEmail("20180326");
 	}
 
-	public static void sendEmail(String folder, String file) {
+	public static void sendEmail(String folder) {
 
 		
         final String smtpAuthUserName = prop.getProperty("smtpAuthUserName");
@@ -77,7 +74,7 @@ public class SendEmail extends ExtentManager
         	
         	for (int i=0; i<toMail.length; i++)
         	{
-        		System.out.println("mail are : " +toMail[i]);
+        		System.out.println("Mail address : " +toMail[i]);
         	}
         	
             msg.setFrom(new InternetAddress(emailFrom));
@@ -95,28 +92,26 @@ public class SendEmail extends ExtentManager
             textBodyPart.setText("Please find the status for the automation test run");
 
             MimeBodyPart attachmentBodyPart1= new MimeBodyPart();
-            //DataSource source = new FileDataSource(System.getProperty("user.dir")+"\\output\\ExtentReport\\24032018\\ExtentReport_220713.html");
-            DataSource source = new FileDataSource(System.getProperty("user.dir")+"\\output\\ExtentReport\\"+folder+"\\ExtentReport_"+file+".html");
+            String extentReportPath = System.getProperty("user.dir")+"\\output\\ExtentReport\\"+folder+"\\";
+            DataSource source = new FileDataSource(extentReportPath+lastFileModified(extentReportPath));
             attachmentBodyPart1.setDataHandler(new DataHandler(source));
-            attachmentBodyPart1.setFileName("Report.html"); // ex : "test.pdf"
-            multipart.addBodyPart(textBodyPart);  // add the text part
-            multipart.addBodyPart(attachmentBodyPart1); // add the attachement part
+            attachmentBodyPart1.setFileName("Report.html"); 
+            multipart.addBodyPart(textBodyPart);  
+            multipart.addBodyPart(attachmentBodyPart1); 
             
-            MimeBodyPart attachmentBodyPart2 = new MimeBodyPart(); 
-            //DataSource source2 = new FileDataSource(System.getProperty("user.dir")+"\\output\\logs\\20180326\\Output_20180326170500.log");
-            DataSource source2 = new FileDataSource(System.getProperty("user.dir")+"\\output\\logs\\"+folder+"\\Output_20180326170500.log"); 
+            MimeBodyPart attachmentBodyPart2 = new MimeBodyPart();
+            String outputLogsPath = System.getProperty("user.dir")+"\\output\\logs\\"+folder+"\\";
+            DataSource source2 = new FileDataSource(outputLogsPath+lastFileModified(outputLogsPath)); 
             attachmentBodyPart2.setDataHandler( new DataHandler(source2)); 
             attachmentBodyPart2.setFileName("Logs.txt"); 
             multipart.addBodyPart(attachmentBodyPart2); 
             
             msg.setContent(multipart);
             Transport.send(msg);
-            
+            log.info("Mail sent successfully");
         } catch (MessagingException e) {
         	e.printStackTrace();
         }
-   
-		
 	}
 
 	public static String lastFileModified(String dir) {

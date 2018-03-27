@@ -137,9 +137,9 @@ public class ExtentManager{
                      switch (flag)
                         {
                             case "y":
-                            log.info("Launching report");
+                            log.info("Sending mail");
                             loop = false;
-                           // SendEmail.sendEmail(dateFormatter.format(date), timeFormatter.format(date));
+                            SendEmail.sendEmail(dateFormatter.format(date));
                             break;
                             case "n":
                             log.info("Sending mail was canceled");
