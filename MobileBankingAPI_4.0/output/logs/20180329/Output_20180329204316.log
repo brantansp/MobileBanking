@@ -1,0 +1,51 @@
+[INFO] 2018-03-29 20:43:17,336 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-29 20:43:17,481 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 20:43:17,481 ExtentManager sendReq - Request : NEFT benificiary registration
+[INFO] 2018-03-29 20:43:18,123 ExtentManager sendReq - Hmaced Request : 47a90b344880c418e9cf146a8a4411bf948aff6d20832f84928d670a4d307704*!9894060407APQ2;Y;15316170605690416310253121025515855714;32864783264;SA;HDFC0000001;NeftBeneficiary;463795;123457;4.0;2478623864983269;152232855082264732562746462447508986625
+[INFO] 2018-03-29 20:43:19,016 ExtentManager sendReq - Response received from Server : Q200;HDFC BANK LTD.;MUMBAI;32864783264;SA;HDFC0000001;NeftBeneficiary;HDFC;29/03/2018 20:44;TXNID:808820245398;BID:C463795
+[INFO] 2018-03-29 20:43:19,017 ExtentManager sendReq - Transaction ID : 808820245398
+[INFO] 2018-03-29 20:43:19,018 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 20:43:19,041 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 20:43:19,042 ExtentManager sendReq - Request : NEFT benificiary registration confirm
+[INFO] 2018-03-29 20:43:19,044 ExtentManager sendReq - Hmaced Request : 549a41a3b9a4cdaa06e40fd6fb19afe0f2749e464aa38a430d1014b29cf7b695*!9894060407APQ3;Y;15316170605690416310253121025515855714;32864783264;SA;HDFC0000001;NeftBeneficiary;463795;123457;4.0;2478623864983269;63152867249139420431252603612210714080
+[INFO] 2018-03-29 20:43:20,221 ExtentManager sendReq - Response received from Server : Q300;Beneficiary successfully created. Payment can be made after 1 hours;29/03/2018 20:44;TXNID:808820245399;BID:C463795
+[INFO] 2018-03-29 20:43:20,222 ExtentManager sendReq - Transaction ID : 808820245399
+[INFO] 2018-03-29 20:43:20,223 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 20:43:20,230 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 20:43:20,231 ExtentManager sendReq - Request : NEFT benificiary list
+[INFO] 2018-03-29 20:43:20,234 ExtentManager sendReq - Hmaced Request : 153c261b83a998214fcf91c44f486ef730d20d6ecbe821ad7471fbf1d82c9c77*!9894060407APQ7;Y;15316170605690416310253121025515855714;P;001;463795;123457;4.0;2478623864983269;186376352641784059435227340125800393884
+[INFO] 2018-03-29 20:43:21,167 ExtentManager sendReq - Response received from Server : Q700;P;NeftBeneficiary#nefttest;1;N;TXNID:808820245400;BID:C463795
+[INFO] 2018-03-29 20:43:21,167 ExtentManager sendReq - Transaction ID : 808820245400
+[INFO] 2018-03-29 20:43:21,167 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 20:43:21,170 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 20:43:21,171 ExtentManager sendReq - Request : NEFT benificiary payment
+[INFO] 2018-03-29 20:43:21,172 ExtentManager sendReq - Hmaced Request : ef2c28d4d5a6b54cd2debe36edd700e6c8b1305655706008a3b143e989e38011*!9894060407APQ8;Y;15316170605690416310253121025515855714;30;NeftTest;NeftBeneficiary;463795;123457;4.0;2478623864983269;134187827477958226167839906740869269471
+[INFO] 2018-03-29 20:43:22,435 ExtentManager sendReq - Response received from Server : Q832;Beneficiary not activated yet. Please try after sometime;29/03/2018 20:44;TXNID:808820245401;BID:C463795
+[INFO] 2018-03-29 20:43:22,436 ExtentManager sendReq - Transaction ID : 808820245401
+[INFO] 2018-03-29 20:43:22,437 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 20:43:22,442 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 20:43:22,442 ExtentManager sendReq - Request : NEFT benificiary detail
+[INFO] 2018-03-29 20:43:22,445 ExtentManager sendReq - Hmaced Request : d999d34c37319a436b95e93107cdddac202e6770ce3fcacb222ea5a1402b1c94*!9894060407APNL;Y;15316170605690416310253121025515855714;NeftBeneficiary;001;463795;123457;4.0;2478623864983269;12158145010396676810039553431157405286
+[INFO] 2018-03-29 20:43:23,737 ExtentManager sendReq - Response received from Server : NL00;NeftBeneficiary;NeftBeneficiary*HDFC BANK LTD.*MUMBAI*32864783264*SA*HDFC0000001;1;N;TXNID:808820245402;BID:C463795
+[INFO] 2018-03-29 20:43:23,738 ExtentManager sendReq - Transaction ID : 808820245402
+[INFO] 2018-03-29 20:43:23,740 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 20:43:23,747 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 20:43:23,748 ExtentManager sendReq - Request : NEFT benificiary de-registration list
+[INFO] 2018-03-29 20:43:23,751 ExtentManager sendReq - Hmaced Request : 4a790e53703ca6c9c36368003d2d5905d1ed84313db7977358cfbf4b96056257*!9894060407AP4L;Y;15316170605690416310253121025515855714;;001;463795;123457;4.0;2478623864983269;184214816510241954471225308470748086492
+[INFO] 2018-03-29 20:43:24,637 ExtentManager sendReq - Response received from Server : 4L00; ;NeftBeneficiary#nefttest;1;N;TXNID:808820245403;BID:C463795
+[INFO] 2018-03-29 20:43:24,637 ExtentManager sendReq - Transaction ID : 808820245403
+[INFO] 2018-03-29 20:43:24,638 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 20:43:24,640 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 20:43:24,640 ExtentManager sendReq - Request : NEFT benificiary de-registration confirm
+[INFO] 2018-03-29 20:43:24,641 ExtentManager sendReq - Hmaced Request : 29c8529482ba5f0303f849579ae40ea6ee27fec6ae5ec9756ca755f00454de77*!9894060407AP4D;Y;15316170605690416310253121025515855714;NeftBeneficiary;463795;123457;4.0;2478623864983269;1060509806957041628009715856029008501
+[INFO] 2018-03-29 20:43:26,349 ExtentManager sendReq - Response received from Server : 4D00;Beneficiary NeftBeneficiary deleted successfully;29/03/2018 20:44;TXNID:808820245404;BID:C463795
+[INFO] 2018-03-29 20:43:26,350 ExtentManager sendReq - Transaction ID : 808820245404
+[INFO] 2018-03-29 20:43:26,351 ExtentManager sendReq - ******************************END********************************
+

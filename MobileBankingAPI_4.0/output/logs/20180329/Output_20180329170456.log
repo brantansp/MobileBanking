@@ -1,0 +1,12 @@
+[INFO] 2018-03-29 17:04:56,400 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-29 17:04:56,545 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:04:56,545 ExtentManager sendReq - Request : m2m Quick FT
+[INFO] 2018-03-29 17:04:57,156 ExtentManager sendReq - Hmaced Request : 6b5a8171cc80cd72374a334df356db1225c8cd7e1574fc6adc0dd232bea30ae0*!9894060407APQM;Y;15316170605690416310253121025515855714;8778602561;10;test   ;463795;123457;4.0;2478623864983269;88551574126202869384849726911506356404
+[INFO] 2018-03-29 17:04:59,748 ExtentManager sendReq - Response received from Server : QM00;Fund Transfer to 3286XXX326489632 - +918778602561 successful. Rs. 10.00 debited from 2478XXX864983269;29/03/2018 17:06;TXNID:808817245250;BID:C463795
+[INFO] 2018-03-29 17:04:59,749 ExtentManager sendReq - Transaction ID : 808817245250
+[INFO] 2018-03-29 17:04:59,750 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 17:04:59,767 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:04:59,775 ExtentManager sendReq - Request : m2m Benificiary Account list
+[INFO] 2018-03-29 17:04:59,776 ExtentManager sendReq - Hmaced Request : 0f43fa12b9ec63dea3dc99cd39b72822cf21e70a074b9a34ba998b06a75b4762*!9894060407APRM;Y;15316170605690416310253121025515855714;463795;8778602561;FTBeneficiary;0001;463795;123457;4.0;2478623864983269;92889564626956426636932886681695877421

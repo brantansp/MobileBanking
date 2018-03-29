@@ -1,0 +1,9 @@
+[INFO] 2018-03-29 20:36:38,446 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-29 20:36:38,603 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 20:36:38,604 ExtentManager sendReq - Request : NEFT benificiary de-registration list
+[INFO] 2018-03-29 20:36:39,254 ExtentManager sendReq - Hmaced Request : 0399ea6572360cb37f36df06284f5d39e1e3089a0800fc5ed15dbe321a058073*!9894060407AP4L;Y;15316170605690416310253121025515855714;;001;463795;123457;4.0;2478623864983269;82499917142690698381275037078727128102
+[INFO] 2018-03-29 20:36:40,310 ExtentManager sendReq - Response received from Server : 4L00; ;NeftBeneficiary#nefttest#test;1;N;TXNID:808820245388;BID:C463795
+[INFO] 2018-03-29 20:36:40,310 ExtentManager sendReq - Transaction ID : 808820245388
+[INFO] 2018-03-29 20:36:40,311 ExtentManager sendReq - ******************************END********************************
+

@@ -1,0 +1,7 @@
+[INFO] 2018-03-29 14:55:52,382 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 14:55:52,385 ExtentManager sendReq - Request : m2m Benificiary Account list
+[INFO] 2018-03-29 14:55:53,023 ExtentManager sendReq - Hmaced Request : 05ef4a8990d781ad9fa7333cc3869965afd91a5c95db9c3211d2f841327abae6*!9894060407APRM;Y;15316170605690416310253121025515855714;463795;8778602561;test;0001;463795;123457;4.0;2478623864983269;9894060407132159258778474222837965405450164326114
+[INFO] 2018-03-29 14:55:53,072 ExtentManager sendReq - Response received from Server : RM51;Data has been manipulated. Due to security reason, application will not be allowed proceed further action.29/03/2018 14:56;TXNID:808814528006
+[INFO] 2018-03-29 14:55:53,072 ExtentManager sendReq - Transaction ID : 808814528006
+[INFO] 2018-03-29 14:55:53,072 ExtentManager sendReq - ******************************END********************************
+

@@ -1,0 +1,7 @@
+[INFO] 2018-03-29 17:02:32,894 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:02:32,897 ExtentManager sendReq - Request : m2m Benificiary Account list
+[INFO] 2018-03-29 17:02:34,007 ExtentManager sendReq - Hmaced Request : 200d57e6a6a6334a4dbb31f6f142241f400a9caae737053930068400f0fd5b19*!9894060407APD5;Y;15316170605690416310253121025515855714;FTBeneficiary;001;463795;123457;4.0;2478623864983269;31815453667453137734165299862081171561
+[INFO] 2018-03-29 17:02:34,989 ExtentManager sendReq - Response received from Server : D501;Beneficiary FTBeneficiary not found.;29/03/2018 17:03;TXNID:808817245234;BID:C463795
+[INFO] 2018-03-29 17:02:34,989 ExtentManager sendReq - Transaction ID : 808817245234
+[INFO] 2018-03-29 17:02:34,989 ExtentManager sendReq - ******************************END********************************
+

@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
-import mBankingBasePageObject.BaseObject;
 import mBankingPageObjectModel.StaticStore;
 import mBankingUtilityCenter.ExtentManager;
 import mBankingUtilityCenter.HttpConnect;
@@ -23,7 +21,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class NonFinancialTransactions extends ExtentManager{
-	private static int n = 0;
 	private static String response;
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());

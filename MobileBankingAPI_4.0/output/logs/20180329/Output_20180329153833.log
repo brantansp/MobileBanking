@@ -1,0 +1,7 @@
+[INFO] 2018-03-29 15:38:34,202 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 15:38:34,205 ExtentManager sendReq - Request : m2m Benificiary Account list
+[INFO] 2018-03-29 15:38:34,896 ExtentManager sendReq - Hmaced Request : 11f6f4265770ec8c50ddc131747da7842b55f196e1074d7c593f33e95819ca8e*!9894060407APRM;Y;15316170605690416310253121025515855714;463795;8778602561;test;0001;463795;123457;4.0;2478623864983269;152625948293647660996006518130707082875
+[INFO] 2018-03-29 15:38:35,970 ExtentManager sendReq - Response received from Server : RM09;Beneficiary already added. Please contact bank for further details;29/03/2018 15:39;TXNID:808815245161;BID:C463795
+[INFO] 2018-03-29 15:38:35,971 ExtentManager sendReq - Transaction ID : 808815245161
+[INFO] 2018-03-29 15:38:35,971 ExtentManager sendReq - ******************************END********************************
+

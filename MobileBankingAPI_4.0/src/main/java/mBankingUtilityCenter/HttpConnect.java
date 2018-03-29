@@ -11,8 +11,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.testng.reporters.jq.Main;
 
-import mBankingPageObjectModel.Configuration;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.cert.Certificate;

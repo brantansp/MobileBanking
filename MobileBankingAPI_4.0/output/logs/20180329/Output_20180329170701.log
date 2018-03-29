@@ -1,0 +1,35 @@
+[INFO] 2018-03-29 17:07:02,233 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-29 17:07:02,370 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:07:02,370 ExtentManager sendReq - Request : P2A Quick FT
+[INFO] 2018-03-29 17:07:03,003 ExtentManager sendReq - Hmaced Request : 279890fa64d5a3718203ea514d36cb52908b237ac59c5aa0d24f26263a38bb0e*!9894060407APQT;Y;15316170605690416310253121025515855714;;;;test   ;001;463795;123457;4.0;2478623864983269;115554755599414332279785352182764616966
+[INFO] 2018-03-29 17:07:03,880 ExtentManager sendReq - Response received from Server : QT20;Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount;29/03/2018 17:08;TXNID:808817245273;BID:C463795
+[INFO] 2018-03-29 17:07:03,881 ExtentManager sendReq - Transaction ID : 808817245273
+[INFO] 2018-03-29 17:07:03,882 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 17:07:03,904 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:07:03,904 ExtentManager sendReq - Request : m2a benificary registration
+[INFO] 2018-03-29 17:07:03,915 ExtentManager sendReq - Hmaced Request : 43db5a4685b2d7b8de178684547c4d5d4175033b9d5e43ca85a677dbc1165a8f*!9894060407APQT;Y;15316170605690416310253121025515855714;;;;test   ;001;463795;123457;4.0;2478623864983269;160521735193767592075042586311409395362
+[INFO] 2018-03-29 17:07:04,765 ExtentManager sendReq - Response received from Server : QT20;Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount;29/03/2018 17:08;TXNID:808817245274;BID:C463795
+[INFO] 2018-03-29 17:07:04,765 ExtentManager sendReq - Transaction ID : 808817245274
+[INFO] 2018-03-29 17:07:04,765 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 17:07:04,769 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:07:04,769 ExtentManager sendReq - Request : m2a benificiary search req
+[INFO] 2018-03-29 17:07:04,770 ExtentManager sendReq - Hmaced Request : 6dc137d2b70ecd8a10f9117c51342a5c0cc767034f0b3bc2f5cf4b54a60c2ed6*!9894060407APF2;;P;001;463795;123457;4.0;2478623864983269;29423646528860065902361355913951713354
+[INFO] 2018-03-29 17:07:05,718 ExtentManager sendReq - Response received from Server : F208;Please enter mPIN.Contact nearest branch for further assistance.;29/03/2018 17:08;TXNID:808817245275;BID:C463795
+[INFO] 2018-03-29 17:07:05,719 ExtentManager sendReq - Transaction ID : 808817245275
+[INFO] 2018-03-29 17:07:05,720 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 17:07:05,729 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:07:05,729 ExtentManager sendReq - Request : m2a benificiary details
+[INFO] 2018-03-29 17:07:05,733 ExtentManager sendReq - Hmaced Request : e199af9c0c20cc4ba0aee90fef9b4953f334880c59627e5d3c6730895aa2cbb0*!9894060407APD6;;001;463795;123457;4.0;2478623864983269;29278668970043667084638721383229384586
+[INFO] 2018-03-29 17:07:05,868 ExtentManager sendReq - Response received from Server : D6; ;001;463795;123457;4.0;2478623864983269;9894060407
+[INFO] 2018-03-29 17:07:05,869 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 17:07:05,877 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:07:05,878 ExtentManager sendReq - Request : m2a benificiary deregistration search
+[INFO] 2018-03-29 17:07:05,881 ExtentManager sendReq - Hmaced Request : bbf800aed65877a84814c2d022fdc3ea81898db948a2f6809297d4eed36a72df*!9894060407AP3L;;001;463795;123457;4.0;2478623864983269;122705350608558851967202750688871658134
+[INFO] 2018-03-29 17:07:06,008 ExtentManager sendReq - Response received from Server : 3L; ;001;463795;123457;4.0;2478623864983269;9894060407
+[INFO] 2018-03-29 17:07:06,009 ExtentManager sendReq - ******************************END********************************
+

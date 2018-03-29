@@ -1,0 +1,53 @@
+[INFO] 2018-03-29 18:17:25,286 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-29 18:17:25,452 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 18:17:25,452 ExtentManager sendReq - Request : NEFT Quick FT
+[INFO] 2018-03-29 18:17:26,120 ExtentManager sendReq - Hmaced Request : ad9a0f5de38d9172500a42db15ad81ddcca0e046acf286c0c9f791f788129c4d*!9894060407APQN;;;;;;001;463795;123457;4.0;2478623864983269;44940633081494802464661169445551283152
+[INFO] 2018-03-29 18:17:30,473 ExtentManager sendReq - Response received from Server : QN08;Please enter mPIN.Contact nearest branch for further assistance.;29/03/2018 18:18;TXNID:808818245351;BID:C463795
+[INFO] 2018-03-29 18:17:30,473 ExtentManager sendReq - Transaction ID : 808818245351
+[INFO] 2018-03-29 18:17:30,474 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 18:17:30,481 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 18:17:30,485 ExtentManager sendReq - Request : NEFT benificiary registration
+[INFO] 2018-03-29 18:17:30,486 ExtentManager sendReq - Hmaced Request : 82b88c1f3b31d681add68cc318ec54798373325d198054986febd61b193152b4*!9894060407APQ2;;;;;001;463795;123457;4.0;2478623864983269;124000818360628347407565989293885765346
+[INFO] 2018-03-29 18:17:32,568 ExtentManager sendReq - Response received from Server : Q208;Please enter mPIN.Contact nearest branch for further assistance.;29/03/2018 18:18;TXNID:808818245352;BID:C463795
+[INFO] 2018-03-29 18:17:32,569 ExtentManager sendReq - Transaction ID : 808818245352
+[INFO] 2018-03-29 18:17:32,569 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 18:17:32,571 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 18:17:32,572 ExtentManager sendReq - Request : NEFT benificiary registration confirm
+[INFO] 2018-03-29 18:17:32,573 ExtentManager sendReq - Hmaced Request : a5fdf621e888176091806f019ae61d527ad4e3628c4317b84dada69bf3aad4bd*!9894060407APQ3;;;;;001;463795;123457;4.0;2478623864983269;36309634384006522731857721810996771985
+[INFO] 2018-03-29 18:17:34,177 ExtentManager sendReq - Response received from Server : Q308;Please enter mPIN.Contact nearest branch for further assistance.;29/03/2018 18:18;TXNID:808818245353;BID:C463795
+[INFO] 2018-03-29 18:17:34,178 ExtentManager sendReq - Transaction ID : 808818245353
+[INFO] 2018-03-29 18:17:34,178 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 18:17:34,181 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 18:17:34,181 ExtentManager sendReq - Request : NEFT benificiary list
+[INFO] 2018-03-29 18:17:34,182 ExtentManager sendReq - Hmaced Request : 7306ebccea80f2c667a0160bc87aa55cf2204fda32a05f92f3932507d4a527f6*!9894060407APQ7;P;001;463795;123457;4.0;2478623864983269;171008953817823571956764210908046113497
+[INFO] 2018-03-29 18:17:34,444 ExtentManager sendReq - Response received from Server : Q7;P;001;463795;123457;4.0;2478623864983269;9894060407
+[INFO] 2018-03-29 18:17:34,444 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 18:17:34,448 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 18:17:34,449 ExtentManager sendReq - Request : NEFT benificiary payment
+[INFO] 2018-03-29 18:17:34,449 ExtentManager sendReq - Hmaced Request : e1cd269a5412d9b3b00a1721dde1ca75f987065d86a883dbaf1043df8e7dec04*!9894060407APQ8;;;;463795;123457;4.0;2478623864983269;47626391195553190841498965253557293921
+[INFO] 2018-03-29 18:17:37,007 ExtentManager sendReq - Response received from Server : Q808;Please enter mPIN.Contact nearest branch for further assistance.;29/03/2018 18:18;TXNID:808818245354;BID:C463795
+[INFO] 2018-03-29 18:17:37,007 ExtentManager sendReq - Transaction ID : 808818245354
+[INFO] 2018-03-29 18:17:37,008 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 18:17:37,013 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 18:17:37,013 ExtentManager sendReq - Request : NEFT benificiary detail
+[INFO] 2018-03-29 18:17:37,014 ExtentManager sendReq - Hmaced Request : 038164acacc2c346849d935c08f2dc6faf2dd03e4f5c67e397b6942afe6714e9*!9894060407APNL;N;;463795;123457;4.0;2478623864983269;124919299440567200730294186785699415003
+[INFO] 2018-03-29 18:17:37,260 ExtentManager sendReq - Response received from Server : NL;N; ;463795;123457;4.0;2478623864983269;9894060407
+[INFO] 2018-03-29 18:17:37,260 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 18:17:37,265 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 18:17:37,266 ExtentManager sendReq - Request : NEFT benificiary de-registration list
+[INFO] 2018-03-29 18:17:37,267 ExtentManager sendReq - Hmaced Request : 5043bac0fbf355a28b2e03a99c85b08873b8350c6fb79306b73c9d67ac66f0e0*!9894060407AP4L;N;;001;463795;123457;4.0;2478623864983269;72483928392336751518263535906364107731
+[INFO] 2018-03-29 18:17:38,451 ExtentManager sendReq - Response received from Server : 4L08;Please enter mPIN.Contact nearest branch for further assistance.;29/03/2018 18:18;TXNID:808818245355;BID:C463795
+[INFO] 2018-03-29 18:17:38,451 ExtentManager sendReq - Transaction ID : 808818245355
+[INFO] 2018-03-29 18:17:38,451 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 18:17:38,454 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 18:17:38,454 ExtentManager sendReq - Request : NEFT benificiary de-registration confirm
+[INFO] 2018-03-29 18:17:38,454 ExtentManager sendReq - Hmaced Request : 1e0eab91667107138650f2adf9e935b33fe64f72ac73068c837c717999091179*!9894060407AP4D;N;;463795;123457;4.0;2478623864983269101602323664112637801718228552194051337
+[INFO] 2018-03-29 18:17:38,465 ExtentManager sendReq - Response received from Server : null

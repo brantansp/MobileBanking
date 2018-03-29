@@ -1,0 +1,23 @@
+[INFO] 2018-03-29 17:38:30,875 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-29 17:38:31,017 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:38:31,017 ExtentManager sendReq - Request : P2A Quick FT
+[INFO] 2018-03-29 17:38:31,628 ExtentManager sendReq - Hmaced Request : 5bf48e2d1ecef7a48500abf9310cc24ed1319180d88fc8223df2bba87873b544*!9894060407APQT;Y;15316170605690416310253121025515855714;3286478326489632;10;10;test   ;001;463795;123457;4.0;2478623864983269;170982340475496139263409966489055731623
+[INFO] 2018-03-29 17:38:34,034 ExtentManager sendReq - Response received from Server : QT00;Fund Transfer to 3286XXX326489632 - successful. Rs. 10.00 debited from 2478XXX864983269;29/03/2018 17:39;TXNID:808817245298;BID:C463795
+[INFO] 2018-03-29 17:38:34,035 ExtentManager sendReq - Transaction ID : 808817245298
+[INFO] 2018-03-29 17:38:34,035 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 17:38:34,056 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:38:34,057 ExtentManager sendReq - Request : m2a benificary registration
+[INFO] 2018-03-29 17:38:34,059 ExtentManager sendReq - Hmaced Request : 30c58b645a7b1555e028f5ae9b03e3bbf2a0514f9f2f8aeee7522f952b446d26*!9894060407APRA;Y;15316170605690416310253121025515855714;463795;3286478326489632;10;FTBeneficiary;463795;123457;4.0;2478623864983269;188520141723290196456627789834378228159
+[INFO] 2018-03-29 17:38:35,116 ExtentManager sendReq - Response received from Server : RA00;FTBeneficiary;3286478326489632;10;FTBeneficiary;29/03/2018 17:39;TXNID:808817245299;BID:C463795
+[INFO] 2018-03-29 17:38:35,126 ExtentManager sendReq - Transaction ID : 808817245299
+[INFO] 2018-03-29 17:38:35,127 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 17:38:35,134 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:38:35,135 ExtentManager sendReq - Request : m2a benificiary req
+[INFO] 2018-03-29 17:38:35,138 ExtentManager sendReq - Hmaced Request : 0c484a970730e86b315ec18794bac8d78f564b259f80fe8b2e0b51bb7b6d8e32*!9894060407APC2;Y;15316170605690416310253121025515855714;463795;3286478326489632;10;FTBeneficiary;463795;123457;4.0;2478623864983269;52578515731472662942012307792148831045
+[INFO] 2018-03-29 17:38:38,445 ExtentManager sendReq - Response received from Server : C200;Beneficiary FTBeneficiary added successfully;29/03/2018 17:39;TXNID:808817245300;BID:C463795
+[INFO] 2018-03-29 17:38:38,446 ExtentManager sendReq - Transaction ID : 808817245300
+[INFO] 2018-03-29 17:38:38,447 ExtentManager sendReq - ******************************END********************************
+

@@ -1197,7 +1197,7 @@ public class StaticStore extends ExtentManager{
 			return sb.toString();
 		}
 		
-		public static String m2mBenAcclist(String BenMobileNo,String Nickname)
+		public static String m2mBenRegAcclist(String BenMobileNo,String Nickname)
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
@@ -1211,17 +1211,18 @@ public class StaticStore extends ExtentManager{
 			{
 			sb.append(prop.getProperty("mPINRequired")+";");
 			}
+	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(BenMobileNo+";");
 			sb.append(Nickname+";");
 			sb.append("0001;");
-	        sb.append(prop.getProperty("bankCode")+";");
+			sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
 			sb.append(prop.getProperty("RemAccountno")+";");
 			return sb.toString();
 		}
-			
-		public static String m2mBenReg(String BenAccountno,String Nickname,String Remarks)
+		
+		public static String m2mBenReg(String BenMobileNo,String Nickname, String BenAccountno)
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
@@ -1235,10 +1236,10 @@ public class StaticStore extends ExtentManager{
 			{
 			sb.append(prop.getProperty("mPINRequired")+";");
 			}
-			sb.append(prop.getProperty("BenMobileNo")+";");
+	        sb.append(prop.getProperty("bankCode")+";");
+			sb.append(BenMobileNo+";");
 			sb.append(Nickname+";");
 			sb.append(BenAccountno+";");
-			sb.append("0001;");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
@@ -1246,11 +1247,21 @@ public class StaticStore extends ExtentManager{
 			return sb.toString();
 		}
 		
-		public static String m2mRegbensearch()
+		//APF1;Y;15316170605690416310253121025515855714;P;001;463795;123457;4.0;2478623864983269;9894060407
+		public static String m2mPaybensearch()
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("APF1;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 			sb.append("P;");
 			sb.append("001;");
 	        sb.append(prop.getProperty("bankCode")+";");
@@ -1260,6 +1271,7 @@ public class StaticStore extends ExtentManager{
 			return sb.toString();
 		}
 		
+       //APFT;Y;130924667927751279584590111688231373857?15316170605690416310253121025515855714;10;test;FTBeneficiary;463795;123457;4.0;2478623864983269;9894060407
 		public static String m2mbenpayment(String Benregname, String Amount,String Remarks)
 		{
 			StringBuilder sb = new StringBuilder() ;
@@ -1277,8 +1289,6 @@ public class StaticStore extends ExtentManager{
 			sb.append(Amount+";");
 			sb.append(Remarks+";");
 			sb.append(Benregname+";");
-			sb.append("P;");
-			sb.append("001;");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
@@ -1332,7 +1342,7 @@ public class StaticStore extends ExtentManager{
 			return sb.toString();
 		}
 		
-		public static String P2Pbendelete(String Benregname)
+		public static String m2mbenedelete(String Benregname)
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
@@ -1347,7 +1357,6 @@ public class StaticStore extends ExtentManager{
 			sb.append(prop.getProperty("mPINRequired")+";");
 			}
 	        sb.append(Benregname+";");
-	        sb.append("001;");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
@@ -1355,7 +1364,7 @@ public class StaticStore extends ExtentManager{
 			return sb.toString();
 		}
 		
-		public static String P2AQuickFT(String BenAccountno,String AccountType,String Amount)
+		public static String m2aQuickFT(String BenAccountno,String AccountType,String Amount)
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
@@ -1381,11 +1390,12 @@ public class StaticStore extends ExtentManager{
 			return sb.toString();
 		}
 		
-		public static String m2abenreg(String BenAccountno,String AccountType,String Amount)
+	
+		public static String m2aBenRegSearch(String BenAccountno,String AccountType, String Benregname)
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
-			sb.append("APQT;");
+			sb.append("APRA;");
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
@@ -1395,26 +1405,82 @@ public class StaticStore extends ExtentManager{
 			{
 			sb.append(prop.getProperty("mPINRequired")+";");
 			}
+			sb.append(prop.getProperty("bankCode")+";");
 	        sb.append(BenAccountno+";");
 	        sb.append(AccountType+";");
-	        sb.append(Amount+";");
-	        sb.append(prop.getProperty("FTRemarks")+";");
-	        sb.append("001;");
+	        sb.append(Benregname+";");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
 			sb.append(prop.getProperty("RemAccountno")+";");
 			return sb.toString();
 		}
-
-		public static String m2abensearchreq(String BenAccountno,String AccountType,String Amount)
+		
+		public static String m2abenreg(String BenAccountno,String accountType,String benregname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(prop.getProperty("RemMobileno"));
+			sb.append("APC2;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
+			sb.append(prop.getProperty("bankCode")+";");
+		    sb.append(BenAccountno+";");
+	        sb.append(accountType+";");
+	        sb.append(benregname+";");
+	        sb.append(prop.getProperty("bankCode")+";");
+			sb.append(prop.getProperty("DUKPT")+";");
+			sb.append(prop.getProperty("buildVersion")+";");
+			sb.append(prop.getProperty("RemAccountno")+";");
+			return sb.toString();
+		}
+		
+		public static String m2aBenPaySearch()
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("APF2;");
-		    sb.append(BenAccountno+";");
-	        sb.append("P;");
-	        sb.append("001;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
+			sb.append("F;");
+			sb.append("001;");
+			sb.append(prop.getProperty("bankCode")+";");
+			sb.append(prop.getProperty("DUKPT")+";");
+			sb.append(prop.getProperty("buildVersion")+";");
+			sb.append(prop.getProperty("RemAccountno")+";");
+			return sb.toString();
+		}
+
+		public static String m2aBenPay(String benregname, String amount, String remarks)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(prop.getProperty("RemMobileno"));
+			sb.append("APFA;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
+	        sb.append(amount+";");
+	        sb.append(remarks+";");
+	        sb.append(benregname+";");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
@@ -1422,13 +1488,22 @@ public class StaticStore extends ExtentManager{
 			return sb.toString();
 		}
 		
-		//** need to add P2Abenpayment **//
-		public static String m2abendetails(String searchfield1)
+		
+		public static String m2abendetails(String searchtext)
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("APD6;");
-		    sb.append(searchfield1+";");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
+		    sb.append(searchtext+";");
 	        sb.append("001;");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
@@ -1437,13 +1512,44 @@ public class StaticStore extends ExtentManager{
 			return sb.toString();
 		}
 
-		public static String m2abenderegsearch(String searchfield1)
+		public static String m2aBenDeregSearch(String searchfield1)
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("AP3L;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 		    sb.append(searchfield1+";");
 	        sb.append("001;");
+	        sb.append(prop.getProperty("bankCode")+";");
+			sb.append(prop.getProperty("DUKPT")+";");
+			sb.append(prop.getProperty("buildVersion")+";");
+			sb.append(prop.getProperty("RemAccountno")+";");
+			return sb.toString();
+		}
+		
+		public static String m2aBenDereg(String benregname)
+		{
+			StringBuilder sb = new StringBuilder() ;
+			sb.append(prop.getProperty("RemMobileno"));
+			sb.append("AP3D;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
+	        sb.append(benregname+";");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
@@ -1459,6 +1565,15 @@ public class StaticStore extends ExtentManager{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("APQN;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 		    sb.append(benaccountno+";");
 		    sb.append(accounttype+";");
 		    sb.append(benIFSCcode+";");
@@ -1471,17 +1586,26 @@ public class StaticStore extends ExtentManager{
 			sb.append(prop.getProperty("RemAccountno")+";");
 			return sb.toString();
 		}
-
+		
+		
 		public static String NEFTbenreg(String benaccountno,String accounttype,String benIFSCcode,String benname )
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("APQ2;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 		    sb.append(benaccountno+";");
 		    sb.append(accounttype+";");
 		    sb.append(benIFSCcode+";");
 		    sb.append(benname+";");
-		    sb.append("001;");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
@@ -1494,11 +1618,19 @@ public class StaticStore extends ExtentManager{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("APQ3;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 		    sb.append(benaccountno+";");
 		    sb.append(accounttype+";");
 		    sb.append(benIFSCcode+";");
 		    sb.append(benname+";");
-		    sb.append("001;");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
@@ -1511,6 +1643,15 @@ public class StaticStore extends ExtentManager{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("APQ7;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 		    sb.append("P;");
 		    sb.append("001;");
 	        sb.append(prop.getProperty("bankCode")+";");
@@ -1525,6 +1666,15 @@ public class StaticStore extends ExtentManager{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("APQ8;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 		    sb.append(Amount+";");
 		    sb.append(Remarks+";");
 		    sb.append(Benname+";");
@@ -1540,8 +1690,17 @@ public class StaticStore extends ExtentManager{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("APNL;");
-		    sb.append("N;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 		    sb.append(Benname+";");
+		    sb.append("001;");
 	        sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
@@ -1554,7 +1713,15 @@ public class StaticStore extends ExtentManager{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("AP4L;");
-		    sb.append("N;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 		    sb.append(Benname+";");
 		    sb.append("001;");
 	        sb.append(prop.getProperty("bankCode")+";");
@@ -1563,18 +1730,27 @@ public class StaticStore extends ExtentManager{
 			sb.append(prop.getProperty("RemAccountno")+";");
 			return sb.toString();
 		}
+	
 		
 		public static String NEFTbenderegconfirm(String Benname)
 		{
 			StringBuilder sb = new StringBuilder() ;
 			sb.append(prop.getProperty("RemMobileno"));
 			sb.append("AP4D;");
-		    sb.append("N;");
+			if(prop.getProperty("mPINRequired").equals("Y"))
+		    {
+		    sb.append(prop.getProperty("mPINRequired")+";");
+		    sb.append(prop.getProperty("mPIN")+";");
+		    }
+			else
+			{
+			sb.append(prop.getProperty("mPINRequired")+";");
+			}
 		    sb.append(Benname+";");
 		    sb.append(prop.getProperty("bankCode")+";");
 			sb.append(prop.getProperty("DUKPT")+";");
 			sb.append(prop.getProperty("buildVersion")+";");
-			sb.append(prop.getProperty("RemAccountno"));
+			sb.append(prop.getProperty("RemAccountno")+";");
 			return sb.toString();
 		}
 

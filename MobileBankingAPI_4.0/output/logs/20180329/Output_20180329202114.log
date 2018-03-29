@@ -1,0 +1,9 @@
+[INFO] 2018-03-29 20:21:15,270 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-29 20:21:15,415 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 20:21:15,415 ExtentManager sendReq - Request : NEFT benificiary registration
+[INFO] 2018-03-29 20:21:16,081 ExtentManager sendReq - Hmaced Request : d2b8ed0c63b1c072ac98ab2ce42e78d1a50adfc7e4d96afb99c029614b8322a7*!9894060407APQ2;Y;15316170605690416310253121025515855714;3286478326489632;10;HDFC0000001;NeftBeneficiary;001;463795;123457;4.0;2478623864983269;19104798830173650088317260162590565039
+[INFO] 2018-03-29 20:21:16,422 ExtentManager sendReq - Response received from Server : Q209;Due to technical problem your last transaction was not processed. Please retry after some time;29/03/2018 20:22;TXNID:808820245366;BID:C463795
+[INFO] 2018-03-29 20:21:16,422 ExtentManager sendReq - Transaction ID : 808820245366
+[INFO] 2018-03-29 20:21:16,423 ExtentManager sendReq - ******************************END********************************
+

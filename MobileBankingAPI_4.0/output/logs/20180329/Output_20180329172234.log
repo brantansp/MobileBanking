@@ -1,0 +1,16 @@
+[INFO] 2018-03-29 17:22:34,472 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-29 17:22:34,617 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:22:34,617 ExtentManager sendReq - Request : P2A Quick FT
+[INFO] 2018-03-29 17:22:35,242 ExtentManager sendReq - Hmaced Request : e89caaef75c92b30c816d9bd75349aa3a0d61db8b0e121378a44a64907c4147d*!9894060407APQT;Y;15316170605690416310253121025515855714;3286478326489632;10;10;test   ;001;463795;123457;4.0;2478623864983269;202674622930253852475162570753392673848
+[INFO] 2018-03-29 17:22:37,631 ExtentManager sendReq - Response received from Server : QT00;Fund Transfer to 3286XXX326489632 - successful. Rs. 10.00 debited from 2478XXX864983269;29/03/2018 17:23;TXNID:808817245281;BID:C463795
+[INFO] 2018-03-29 17:22:37,632 ExtentManager sendReq - Transaction ID : 808817245281
+[INFO] 2018-03-29 17:22:37,633 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-29 17:22:37,650 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-29 17:22:37,651 ExtentManager sendReq - Request : m2a benificary registration
+[INFO] 2018-03-29 17:22:37,653 ExtentManager sendReq - Hmaced Request : 0d1bffe74b1772a2c03097c600a12b9ddc7d12f94adb8398d4866d387c03aca6*!9894060407APRA;Y;15316170605690416310253121025515855714;463795;3286478326489632;10;FTBeneficiary;463795;123457;4.0;2478623864983269;203193209771465181327323246926128942689
+[INFO] 2018-03-29 17:22:38,828 ExtentManager sendReq - Response received from Server : RA09;You have already registered the nickname for another beneficiary;29/03/2018 17:23;TXNID:808817245282;BID:C463795
+[INFO] 2018-03-29 17:22:38,829 ExtentManager sendReq - Transaction ID : 808817245282
+[INFO] 2018-03-29 17:22:38,830 ExtentManager sendReq - ******************************END********************************
+
