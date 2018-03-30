@@ -34,7 +34,7 @@ public class IMPSTransactions extends ExtentManager{
 	}
 	
 	/*
-	 *  IMPS P2P 
+	 *  IMPS P2P.
 	 */
 	
 	@Test(priority=0)
