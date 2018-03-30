@@ -1,0 +1,37 @@
+[INFO] 2018-03-30 13:07:24,298 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 13:07:24,451 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 13:07:24,451 ExtentManager sendReq - Request : IMPSP2UBeneficiarySearchListenquiry
+[INFO] 2018-03-30 13:07:25,104 ExtentManager sendReq - Hmaced Request : 739827f149dde42d1869a967f538ff0f06c5d5b8ce8ae19b44d743f0971b5305*!9894060407AP6U;Y;15316170605690416310253121025515855714;IMPSBenenficiary;001;463795;123457;4.0;2478623864983269;49611236279484923815336697253191026014
+[INFO] 2018-03-30 13:07:28,781 ExtentManager sendReq - Response received from Server : 6U00;IMPSBenenficiary;IMPSBenenficiary*989401300000*SA;1;N;TXNID:808913245662;BID:C463795
+[INFO] 2018-03-30 13:07:28,782 ExtentManager sendReq - Transaction ID : 808913245662
+[INFO] 2018-03-30 13:07:28,783 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 13:07:28,801 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 13:07:28,802 ExtentManager sendReq - Request : IMPSP2UDeleteBeneficiaryListenquiry
+[INFO] 2018-03-30 13:07:28,805 ExtentManager sendReq - Hmaced Request : 7450f1bd2143653df66760e90f6563e3a22590c8664030691ee07375fcce62be*!9894060407AP7U;Y;15316170605690416310253121025515855714;IMPSBenenficiary;001;463795;123457;4.0;2478623864983269;160735428806168235914349365264621143928
+[INFO] 2018-03-30 13:07:29,959 ExtentManager sendReq - Response received from Server : 7U00;IMPSBenenficiary;IMPSBenenficiary;1;N;TXNID:808913245663;BID:C463795
+[INFO] 2018-03-30 13:07:29,960 ExtentManager sendReq - Transaction ID : 808913245663
+[INFO] 2018-03-30 13:07:29,961 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 13:07:29,968 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 13:07:29,969 ExtentManager sendReq - Request : IMPSP2UDeleteBeneficiaryConfirmation
+[INFO] 2018-03-30 13:07:29,972 ExtentManager sendReq - Hmaced Request : 7eddd62c599602ef50fa2c7a2c3fc0e215ad7965aeb3ee34e7f6e60c6b473b67*!9894060407AP8U;Y;15316170605690416310253121025515855714;IMPSBenenficiary;463795;123457;4.0;2478623864983269;152996461169971492594794930734116466559
+[INFO] 2018-03-30 13:07:30,939 ExtentManager sendReq - Response received from Server : 8U00;Beneficiary IMPSBenenficiary deleted successfully;30/03/2018 13:08;TXNID:808913245664;BID:C463795
+[INFO] 2018-03-30 13:07:30,940 ExtentManager sendReq - Transaction ID : 808913245664
+[INFO] 2018-03-30 13:07:30,941 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 13:07:30,948 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 13:07:30,949 ExtentManager sendReq - Request : IMPSP2UBeneficiaryPaymentListenquiry
+[INFO] 2018-03-30 13:07:30,952 ExtentManager sendReq - Hmaced Request : 69a22a94fd708572596ae6b382d914da05583d4a2ec0910c8375405a3078deee*!9894060407AP4U;Y;15316170605690416310253121025515855714;IMPSBenenficiary;001;463795;123457;4.0;2478623864983269;113431913832947779903453703533635173011
+[INFO] 2018-03-30 13:07:31,799 ExtentManager sendReq - Response received from Server : 4U09;Beneficiary IMPSBenenficiary not found.;30/03/2018 13:08;TXNID:808913245665;BID:C463795
+[INFO] 2018-03-30 13:07:31,800 ExtentManager sendReq - Transaction ID : 808913245665
+[INFO] 2018-03-30 13:07:31,801 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 13:07:31,808 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 13:07:31,809 ExtentManager sendReq - Request : IMPSP2UAddBeneficiaryconfirmation
+[INFO] 2018-03-30 13:07:31,811 ExtentManager sendReq - Hmaced Request : 831098c955ed537d1073aed7bf7c86dffaf56d459f5c3b8fe31889c1ef90fc7c*!9894060407AP5U;Y;15316170605690416310253121025515855714;IMPSBenenficiary;20;IMPSTest;463795;123457;4.0;2478623864983269;13758225469294765974761831605935831067
+[INFO] 2018-03-30 13:07:33,799 ExtentManager sendReq - Response received from Server : 5U09;Beneficiary not registered. Please register the Beneficiary and proceed;30/03/2018 13:08;TXNID:808913245666;BID:C463795
+[INFO] 2018-03-30 13:07:33,800 ExtentManager sendReq - Transaction ID : 808913245666
+[INFO] 2018-03-30 13:07:33,801 ExtentManager sendReq - ******************************END********************************
+

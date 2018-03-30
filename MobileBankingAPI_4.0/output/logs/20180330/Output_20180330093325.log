@@ -1,0 +1,16 @@
+[INFO] 2018-03-30 09:33:26,329 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 09:33:26,478 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 09:33:26,478 ExtentManager sendReq - Request : IMPSP2PBeneficiaryPaymentListenquiry
+[INFO] 2018-03-30 09:33:27,140 ExtentManager sendReq - Hmaced Request : edb69dc80923df7f56e1bc0de176d740e0c2e07dadeb95e194f755b019962210*!9894060407APW3;Y;15316170605690416310253121025515855714;P;IMPSBenenficiary;001;463795;123457;4.0;2478623864983269;63331484549115725668319097525594771411
+[INFO] 2018-03-30 09:33:28,518 ExtentManager sendReq - Response received from Server : W300;P;IMPSBenenficiary;impsbenenficiary;1;N;TXNID:808909245500;BID:C463795
+[INFO] 2018-03-30 09:33:28,519 ExtentManager sendReq - Transaction ID : 808909245500
+[INFO] 2018-03-30 09:33:28,526 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 09:33:28,533 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 09:33:28,534 ExtentManager sendReq - Request : IMPSP2PBeneficiaryPaymentConfirmation
+[INFO] 2018-03-30 09:33:28,535 ExtentManager sendReq - Hmaced Request : e0c981a27b31d36807d11d50e73fcb2aa41077f4bd671494899cfa1fa1b9008a*!9894060407APW4;Y;15316170605690416310253121025515855714;20;IMPSTest;IMPSBenenficiary;463795;123457;4.0;2478623864983269;151676939947533598019970525541215417003
+[INFO] 2018-03-30 09:33:32,815 ExtentManager sendReq - Response received from Server : W400;Your a/c no. XXXXXXXX3269 is debited for Rs. 20.00 on 30-03-18 and a/c linked to mobile 9XXXXXX000 credited (IMPS Ref no 808909245501);30/03/2018 09:34;TXNID:808909245501;BID:C463795
+[INFO] 2018-03-30 09:33:32,816 ExtentManager sendReq - Transaction ID : 808909245501
+[INFO] 2018-03-30 09:33:32,817 ExtentManager sendReq - ******************************END********************************
+

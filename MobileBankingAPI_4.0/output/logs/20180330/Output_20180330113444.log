@@ -1,0 +1,10 @@
+[INFO] 2018-03-30 11:34:45,256 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 11:34:45,414 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 11:34:45,414 ExtentManager sendReq - Request : Generate MMID
+[INFO] 2018-03-30 11:34:46,077 ExtentManager sendReq - Hmaced Request : abe5e1298430a07785503fee749a13fde0eab19937c7182ac76088aa5c39f839*!9894060407APIM;Y;57560065011725370936685646717511860633;001;454545;123457;4.0.5;584327598432758;138321502478823630349614041240484828221
+[ERROR] 2018-03-30 11:36:19,464 HttpConnect Post - java.io.IOException: Server returned HTTP response code: 503 for URL: http://mobileprd.fssnet.co.in:80/vijayampayportal/servlet/MQSender?request=abe5e1298430a07785503fee749a13fde0eab19937c7182ac76088aa5c39f839*!9894060407APIM;Y;57560065011725370936685646717511860633;001;454545;123457;4.0.5;584327598432758;138321502478823630349614041240484828221
+[INFO] 2018-03-30 11:36:19,465 ExtentManager sendReq - Response received from Server : null
+[INFO] 2018-03-30 11:36:19,471 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 11:36:19,472 ExtentManager sendReq - Request : IMPSP2PAddBeneficiaryPreConfirmation
+[INFO] 2018-03-30 11:36:19,472 ExtentManager sendReq - Hmaced Request : ef3effa64561ed7186fffb9c2879a905a6477ddb26ebf017778ea66f03c61ade*!9894060407APW1;Y;57560065011725370936685646717511860633;;;;454545;123457;4.0.5;584327598432758;5960561988573138882687519031087545574

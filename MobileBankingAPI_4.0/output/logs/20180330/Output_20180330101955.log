@@ -1,0 +1,9 @@
+[INFO] 2018-03-30 10:19:55,846 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 10:19:55,987 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 10:19:55,988 ExtentManager sendReq - Request : IMPSP2ABeneficiarySearchListenquiry
+[INFO] 2018-03-30 10:19:56,638 ExtentManager sendReq - Hmaced Request : 4e2dd571bec3e570bf275490270f7631e5f914a903b7f817ff982c31e612c946*!9894060407APD9;Y;15316170605690416310253121025515855714;IMPSBenenficiary;001;463795;123457;4.0;2478623864983269;57487724735791660891442585701052812610
+[INFO] 2018-03-30 10:19:57,518 ExtentManager sendReq - Response received from Server : D901;Beneficiary IMPSBenenficiary not found.;30/03/2018 10:21;TXNID:808910245576;BID:C463795
+[INFO] 2018-03-30 10:19:57,519 ExtentManager sendReq - Transaction ID : 808910245576
+[INFO] 2018-03-30 10:19:57,520 ExtentManager sendReq - ******************************END********************************
+

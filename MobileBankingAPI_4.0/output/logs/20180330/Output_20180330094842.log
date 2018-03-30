@@ -1,0 +1,9 @@
+[INFO] 2018-03-30 09:48:43,204 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 09:48:43,349 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 09:48:43,349 ExtentManager sendReq - Request : IMPSP2AAddBeneficiary
+[INFO] 2018-03-30 09:48:44,025 ExtentManager sendReq - Hmaced Request : 938d508106dcdf599ad80029b40edfb9e0d3d2962d35a98c7c4fed70fa23af22*!9894060407APK2;Y;15316170605690416310253121025515855714;9894012000000;null;HDFC0000001;IMPSBenenficiary;463795;123457;4.0;2478623864983269;105830467285849791033574858692284775729
+[INFO] 2018-03-30 09:48:44,481 ExtentManager sendReq - Response received from Server : K209;Due to technical problem your last transaction was not processed. Please retry after some time;30/03/2018 09:49;TXNID:808909245534;BID:C463795
+[INFO] 2018-03-30 09:48:44,482 ExtentManager sendReq - Transaction ID : 808909245534
+[INFO] 2018-03-30 09:48:44,483 ExtentManager sendReq - ******************************END********************************
+

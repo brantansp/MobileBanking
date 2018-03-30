@@ -1,0 +1,16 @@
+[INFO] 2018-03-30 10:12:25,757 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 10:12:25,901 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 10:12:25,901 ExtentManager sendReq - Request : IMPSP2AAddBeneficiary
+[INFO] 2018-03-30 10:12:26,574 ExtentManager sendReq - Hmaced Request : 2c28847ba667761deff6cece5ef7cf2565ac202e1b55b4897a7ca578b11c5ccf*!9894060407APK2;Y;15316170605690416310253121025515855714;9894012000000;SA;HDFC0000001;IMPSBenenficiary;463795;123457;4.0;2478623864983269;47849410239046448915341079895460918564
+[INFO] 2018-03-30 10:12:27,476 ExtentManager sendReq - Response received from Server : K200;9894012000000;SA;HDFC BANK LTD.;MUMBAI;HDFC0000001;IMPSBenenficiary;30/03/2018 10:13;TXNID:808910245539;BID:C463795
+[INFO] 2018-03-30 10:12:27,477 ExtentManager sendReq - Transaction ID : 808910245539
+[INFO] 2018-03-30 10:12:27,487 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 10:12:27,505 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 10:12:27,505 ExtentManager sendReq - Request : IMPSP2AAddBeneficiaryconfirmation
+[INFO] 2018-03-30 10:12:27,508 ExtentManager sendReq - Hmaced Request : 3b41a3de92f2824af818733f617606daa1c13893ea12fd09552acb5b45f3dbc9*!9894060407APK3;Y;15316170605690416310253121025515855714;9894012000000;SA;HDFC0000001;IMPSBenenficiary;463795;123457;4.0;2478623864983269;121679779532171837197380877831390559965
+[INFO] 2018-03-30 10:12:28,475 ExtentManager sendReq - Response received from Server : K300;Beneficiary IMPSBenenficiary added successfully;30/03/2018 10:13;TXNID:808910245540;BID:C463795
+[INFO] 2018-03-30 10:12:28,476 ExtentManager sendReq - Transaction ID : 808910245540
+[INFO] 2018-03-30 10:12:28,477 ExtentManager sendReq - ******************************END********************************
+

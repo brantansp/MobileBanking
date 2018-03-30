@@ -1,0 +1,16 @@
+[INFO] 2018-03-30 12:52:49,550 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 12:52:49,690 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 12:52:49,692 ExtentManager sendReq - Request : impsP2UAddBenPreConf
+[INFO] 2018-03-30 12:52:50,320 ExtentManager sendReq - Hmaced Request : 68351da3ac1c703d0d43ed6ce03765a24696e51a68e31f7709f05bc75c05e5b9*!9894060407AP2U;Y;15316170605690416310253121025515855714;989401300000;SA;IMPSBenenficiary;463795;123457;4.0;2478623864983269;153313446545454168264976705923817511656
+[INFO] 2018-03-30 12:52:51,203 ExtentManager sendReq - Response received from Server : 2U00;989401300000;SA;IMPSBenenficiary;30/03/2018 12:53;TXNID:808912245654;BID:C463795
+[INFO] 2018-03-30 12:52:51,204 ExtentManager sendReq - Transaction ID : 808912245654
+[INFO] 2018-03-30 12:52:51,205 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 12:52:51,219 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 12:52:51,220 ExtentManager sendReq - Request : IMPSP2UAddBeneficiaryconfirmation
+[INFO] 2018-03-30 12:52:51,223 ExtentManager sendReq - Hmaced Request : 3a5b7b57629cc62ab057da5c3884c83a7698a6bca8799eb658d1e2efad71b62d*!9894060407AP3U;Y;15316170605690416310253121025515855714;989401300000;SA;IMPSBenenficiary;463795;123457;4.0;2478623864983269;75085503839911632917702619355690583113
+[INFO] 2018-03-30 12:52:52,196 ExtentManager sendReq - Response received from Server : 3U00;Beneficiary IMPSBenenficiary added successfully;30/03/2018 12:53;TXNID:808912245655;BID:C463795
+[INFO] 2018-03-30 12:52:52,197 ExtentManager sendReq - Transaction ID : 808912245655
+[INFO] 2018-03-30 12:52:52,197 ExtentManager sendReq - ******************************END********************************
+

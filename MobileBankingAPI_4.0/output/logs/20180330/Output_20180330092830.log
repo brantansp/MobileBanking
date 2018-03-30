@@ -1,0 +1,9 @@
+[INFO] 2018-03-30 09:28:31,036 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 09:28:31,183 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 09:28:31,183 ExtentManager sendReq - Request : IMPSP2PDeleteBeneficiaryConfirmation
+[INFO] 2018-03-30 09:28:31,821 ExtentManager sendReq - Hmaced Request : efa96e67b457723c3b187d6d7c5bf23b0e8f800c9bf73c1aa00aa5f844aa2cd2*!9894060407AP5D;Y;15316170605690416310253121025515855714;;463795;123457;4.0;2478623864983269;194174983583026227662938399865658964711
+[INFO] 2018-03-30 09:28:32,683 ExtentManager sendReq - Response received from Server : 5D01;Beneficiary deregistration not successful;30/03/2018 09:29;TXNID:808909245498;BID:C463795
+[INFO] 2018-03-30 09:28:32,683 ExtentManager sendReq - Transaction ID : 808909245498
+[INFO] 2018-03-30 09:28:32,683 ExtentManager sendReq - ******************************END********************************
+

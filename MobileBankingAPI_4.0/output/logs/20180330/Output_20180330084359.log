@@ -1,0 +1,72 @@
+[INFO] 2018-03-30 08:44:00,333 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 08:44:00,486 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:00,486 ExtentManager sendReq - Request : Generate MMID
+[INFO] 2018-03-30 08:44:01,128 ExtentManager sendReq - Hmaced Request : e29a8dc8f109b2efebf3deaa5445da17c683d4b98ee5541ff1c9e75f76bccd72*!9894060407APIM;Y;15316170605690416310253121025515855714;001;463795;123457;4.0;2478623864983269;88692502889068718203910614076167180273
+[INFO] 2018-03-30 08:44:02,424 ExtentManager sendReq - Response received from Server : IM00;5012XXXXXX349283*9060124#2011XXXXX800065*9060148#5012XXXXXX000000*9060159#5012XXXXXX849862*9060308#5012XXXXXX849860*9060325#2478XXXXXX983269*9060387#2011XXXXX800005*9060427#5012XXXXXX849800*9060488#5012XXXXXX349826*9060683#5012XXXXXX849822*9060831;1;N;30/03/2018 08:45;TXNID:808908245469;BID:C463795
+[INFO] 2018-03-30 08:44:02,425 ExtentManager sendReq - Transaction ID : 808908245469
+[INFO] 2018-03-30 08:44:02,426 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 08:44:02,427 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:02,428 ExtentManager sendReq - Request : IMPSP2PInstantPayment
+[INFO] 2018-03-30 08:44:02,441 ExtentManager sendReq - Hmaced Request : d2c75aa8db283a961ae044de1b5a949ee67f959772dc6a8792f62945fa2f489f*!9894060407APQI;Y;15316170605690416310253121025515855714;9352478845;9240123;7;dfsjh;463795;123457;4.0;2478623864983269;1252115622474883297624930998633922260
+[INFO] 2018-03-30 08:44:46,097 ExtentManager sendReq - Response received from Server : QI08;Your last transaction has been timed out due to technical problem. Please retry after some time;30/03/2018 08:45;TXNID:808908245470;BID:C463795
+[INFO] 2018-03-30 08:44:46,098 ExtentManager sendReq - Transaction ID : 808908245470
+[INFO] 2018-03-30 08:44:46,099 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 08:44:46,126 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:46,127 ExtentManager sendReq - Request : IMPSP2UInstantPayment
+[INFO] 2018-03-30 08:44:46,131 ExtentManager sendReq - Hmaced Request : 774d2a7a5fa61452dee11d48fe990f22269d811863962245e17c9dc92e217fa1*!9894060407APQI;Y;15316170605690416310253121025515855714;;SA;;;463795;123457;4.0;2478623864983269;145836265404603398142351869320421593603
+[INFO] 2018-03-30 08:44:46,583 ExtentManager sendReq - Response received from Server : QI09;Please enter a valid Beneficiary MMID to proceed with the transaction.;30/03/2018 08:45;TXNID:808908245471;BID:C463795
+[INFO] 2018-03-30 08:44:46,584 ExtentManager sendReq - Transaction ID : 808908245471
+[INFO] 2018-03-30 08:44:46,585 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 08:44:46,594 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:46,595 ExtentManager sendReq - Request : IMPSP2PAddBeneficiary
+[INFO] 2018-03-30 08:44:46,598 ExtentManager sendReq - Hmaced Request : 55aebb3bf19980d96d19eae9144103f428cf039b543d9e284e1a4016806b8095*!9894060407APW1;Y;15316170605690416310253121025515855714;9240143;9372616576;yashuuuu;463795;123457;4.0;null;104624203989852435245120401986368046813
+[INFO] 2018-03-30 08:44:47,664 ExtentManager sendReq - Response received from Server : W1AF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;30/03/2018 08:45;TXNID:808908245472;BID:C463795
+[INFO] 2018-03-30 08:44:47,665 ExtentManager sendReq - Transaction ID : 808908245472
+[INFO] 2018-03-30 08:44:47,666 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 08:44:47,674 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:47,675 ExtentManager sendReq - Request : IMPSP2PAddBeneficiaryconfirmation
+[INFO] 2018-03-30 08:44:47,679 ExtentManager sendReq - Hmaced Request : d794876b851b3abd61b070dde935443f3e4174e8914d24e4acf016e91a552dc9*!9894060407APW2;Y;15316170605690416310253121025515855714;9240143;9372616576;yashuuuu;463795;123457;4.0;2478623864983269;119770771346084384253721227795170089912
+[INFO] 2018-03-30 08:44:48,517 ExtentManager sendReq - Response received from Server : W209;Beneficiary already added. Please contact bank for further details;30/03/2018 08:45;TXNID:808908245473;BID:C463795
+[INFO] 2018-03-30 08:44:48,518 ExtentManager sendReq - Transaction ID : 808908245473
+[INFO] 2018-03-30 08:44:48,520 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 08:44:48,528 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:48,529 ExtentManager sendReq - Request : IMPSP2PBeneficiarySearchListenquiry
+[INFO] 2018-03-30 08:44:48,531 ExtentManager sendReq - Hmaced Request : 89086d83ba337253c8f1a3c167dddf14d3654824a616e02c303a876d44473b0b*!9894060407APD9;Y;15316170605690416310253121025515855714;niiki;001;463795;123457;4.0;2478623864983269;71467600431566669872363022047210773845
+[INFO] 2018-03-30 08:44:49,490 ExtentManager sendReq - Response received from Server : D901;Beneficiary niiki not found.;30/03/2018 08:45;TXNID:808908245474;BID:C463795
+[INFO] 2018-03-30 08:44:49,491 ExtentManager sendReq - Transaction ID : 808908245474
+[INFO] 2018-03-30 08:44:49,492 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 08:44:49,500 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:49,501 ExtentManager sendReq - Request : IMPSP2PDeleteBeneficiaryListenquiry
+[INFO] 2018-03-30 08:44:49,504 ExtentManager sendReq - Hmaced Request : 17eebd898bc690cd3f5d435f9166249b6832c471fb9393a983a8abb30bb726f4*!9894060407AP5L;Y;15316170605690416310253121025515855714;;001;463795;123457;4.0;2478623864983269;153325984411428244633145793629594470236
+[INFO] 2018-03-30 08:44:50,471 ExtentManager sendReq - Response received from Server : 5L00; ;yashuuuu;1;N;TXNID:808908245475;BID:C463795
+[INFO] 2018-03-30 08:44:50,472 ExtentManager sendReq - Transaction ID : 808908245475
+[INFO] 2018-03-30 08:44:50,472 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 08:44:50,479 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:50,480 ExtentManager sendReq - Request : IMPSP2PDeleteBeneficiaryConfirmation
+[INFO] 2018-03-30 08:44:50,483 ExtentManager sendReq - Hmaced Request : 4b59f0e55ac9a2f12b9e93eb8d3883bcb9d93f9d7068adc6397fb8dec8890e75*!9894060407AP5L;Y;15316170605690416310253121025515855714;;001;463795;123457;4.0;2478623864983269;3068425660944686949475452416950883512
+[INFO] 2018-03-30 08:44:51,554 ExtentManager sendReq - Response received from Server : 5L00; ;yashuuuu;1;N;TXNID:808908245476;BID:C463795
+[INFO] 2018-03-30 08:44:51,555 ExtentManager sendReq - Transaction ID : 808908245476
+[INFO] 2018-03-30 08:44:51,556 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 08:44:51,563 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:51,571 ExtentManager sendReq - Request : IMPSP2PBeneficiaryPaymentListenquiry
+[INFO] 2018-03-30 08:44:51,574 ExtentManager sendReq - Hmaced Request : 065cae0d482ddf2c7b21fee57b445044de3f48f3ea683e5a6c198885869d31fb*!9894060407APW3;Y;15316170605690416310253121025515855714;P;niiki;001;463795;123457;4.0;2478623864983269;102655841967667103024154303606446937872
+[INFO] 2018-03-30 08:44:52,919 ExtentManager sendReq - Response received from Server : W309;Beneficiary niiki not found.;30/03/2018 08:45;TXNID:808908245477;BID:C463795
+[INFO] 2018-03-30 08:44:52,920 ExtentManager sendReq - Transaction ID : 808908245477
+[INFO] 2018-03-30 08:44:52,921 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 08:44:52,928 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 08:44:52,928 ExtentManager sendReq - Request : IMPSP2PBeneficiaryPaymentConfirmation
+[INFO] 2018-03-30 08:44:52,931 ExtentManager sendReq - Hmaced Request : 5e73680c17c258f7cea0100fbd69129f967a880ead3e233cc2fef24a751e8cbb*!9894060407APW4;Y;15316170605690416310253121025515855714;20;trans;yashuuuu;463795;123457;4.0;2478623864983269;23180236640732095623749940515252925404
+[INFO] 2018-03-30 08:44:59,590 ExtentManager sendReq - Response received from Server : W400;Your a/c no. XXXXXXXX3269 is debited for Rs. 20.00 on 30-03-18 and a/c linked to mobile 9XXXXXX576 credited (IMPS Ref no 808908245478);30/03/2018 08:46;TXNID:808908245478;BID:C463795
+[INFO] 2018-03-30 08:44:59,591 ExtentManager sendReq - Transaction ID : 808908245478
+[INFO] 2018-03-30 08:44:59,591 ExtentManager sendReq - ******************************END********************************
+

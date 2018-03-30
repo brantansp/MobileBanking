@@ -1,0 +1,12 @@
+[INFO] 2018-03-30 11:23:43,332 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 11:23:43,486 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 11:23:43,487 ExtentManager sendReq - Request : Generate MMID
+[INFO] 2018-03-30 11:23:44,139 ExtentManager sendReq - Hmaced Request : 45bab52155ae6f5b900762d97a632f972a12f8595fa2df7432447319ad3cbfa5*!9894060407APIM;Y;15316170605690416310253121025515855714;001;463795;123457;4.0;2478623864983269;189924500016953147977849602453787404195
+[INFO] 2018-03-30 11:25:34,205 ExtentManager sendReq - Response received from Server : IM21;Unable to process, please try after some time;30/03/2018 11:26;TXNID:808911982378
+[INFO] 2018-03-30 11:25:34,207 ExtentManager sendReq - Transaction ID : 808911982378
+[INFO] 2018-03-30 11:25:34,208 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 11:25:34,209 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 11:25:34,209 ExtentManager sendReq - Request : IMPSP2PInstantPayment
+[INFO] 2018-03-30 11:25:34,213 ExtentManager sendReq - Hmaced Request : 899acb3a459a787f3b38412c4ac125803ecb9d5d3bc97edd007fb2a78d72c3a9*!9894060407APQI;Y;15316170605690416310253121025515855714;9894011000;9240123;20;IMPSTest;463795;123457;4.0;2478623864983269;55749109070327416148255465476454678462

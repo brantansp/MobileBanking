@@ -1,0 +1,9 @@
+[INFO] 2018-03-30 09:16:29,195 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 09:16:29,359 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 09:16:29,359 ExtentManager sendReq - Request : IMPSP2PAddBeneficiary
+[INFO] 2018-03-30 09:16:30,075 ExtentManager sendReq - Hmaced Request : c170a8409f9dd66e3ab0d43141914fb6663b533406428f2944fcb3164f719cc5*!9894060407APW1;Y;15316170605690416310253121025515855714;9240123;9894011000;IMPSBenenficiary;463795;123457;4.0;null;52652329620580444130531123074592662553
+[INFO] 2018-03-30 09:16:30,827 ExtentManager sendReq - Response received from Server : W1AF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;30/03/2018 09:17;TXNID:808909245484;BID:C463795
+[INFO] 2018-03-30 09:16:30,827 ExtentManager sendReq - Transaction ID : 808909245484
+[INFO] 2018-03-30 09:16:30,828 ExtentManager sendReq - ******************************END********************************
+
