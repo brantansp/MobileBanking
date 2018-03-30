@@ -191,10 +191,10 @@ public class ExtentManager{
 			{
 				transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
 				log.info("Transaction ID : "+transactionID);
-				if(prop.getProperty("dbReport")=="Y")
+				if("Y".equals(prop.getProperty("dbReport")))
 				{
 					dbResult = dbTransactionlog.fetchRecord(transactionID);
-					WriteToCSVFile.reportGeneration( dbResult);
+					WriteToCSVFile.reportGeneration( txnType, dbResult);
 				}		
 			}
 	log.info("******************************END********************************\r\n");
@@ -229,7 +229,7 @@ public class ExtentManager{
 			{
 				transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
 				log.info("Transaction ID : "+transactionID);
-				if(prop.getProperty("dbReport")=="Y")
+				if("Y".equals(prop.getProperty("dbReport")))
 				{
 					dbResult = dbTransactionlog.fetchRecord(transactionID);
 					WriteToCSVFile.reportGeneration( dbResult);

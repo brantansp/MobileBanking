@@ -1,0 +1,18 @@
+[INFO] 2018-03-30 14:14:09,381 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-03-30 14:14:09,520 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-03-30 14:14:09,520 ExtentManager sendReqAppLogin - Request : App Login
+[INFO] 2018-03-30 14:14:10,143 ExtentManager sendReqAppLogin - Hmaced Request : be74545cf44a9c96794cc5db88fb573674f0fa6d6255f8e070ee6498b57b1826*!9894060407APGC;BVD:4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO+Lenovo+K8+Plus%2310.175.117.48%2312.8354858%2C80.2235916%3B463795;123457;4.0;0;148714198663332794659200293853493403559
+[INFO] 2018-03-30 14:14:11,484 ExtentManager sendReqAppLogin - Response received from Server : GC00;N; ; ;N; ; ;Y;7ffffffffffff0ef;ffffffffffffffff;ffffffffffffffff;N;N;N;0508;http://www.freshersopenings.in/wp-content/uploads/2013/08/fss-logo.jpg;BID:C463795
+[INFO] 2018-03-30 14:14:11,485 ExtentManager sendReqAppLogin - ******************************END********************************
+
+[INFO] 2018-03-30 14:14:11,502 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 14:14:11,503 ExtentManager sendReq - Request : Balance Enquiry
+[INFO] 2018-03-30 14:14:11,506 ExtentManager sendReq - Hmaced Request : c9201e687fa26da0bbbe473c3c844491949aa8d3bd7a4f9959e441025ebf09b5*!9894060407APBE;Y;15316170605690416310253121025515855714;463795;123457;4.0;2478623864983269;77437145707925804840039762214550400068
+[INFO] 2018-03-30 14:14:13,298 ExtentManager sendReq - Response received from Server : BE00;2,080.88;2,065.13; ;30/03/2018 14:15;TXNID:808914245713;BID:C463795
+[INFO] 2018-03-30 14:14:13,299 ExtentManager sendReq - Transaction ID : 808914245713
+[INFO] 2018-03-30 14:14:13,300 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-03-30 14:14:13,309 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-03-30 14:14:13,310 ExtentManager sendReq - Request : Mini statement
+[INFO] 2018-03-30 14:14:13,313 ExtentManager sendReq - Hmaced Request : 621aacfeddd001eb30dfabecaba83cf2a8a97a1fa6eb30bea8fd0ed0339e729c*!9894060407APMS;Y;15316170605690416310253121025515855714;463795;123457;4.0;2478623864983269;29129299590753240396391524946718158191

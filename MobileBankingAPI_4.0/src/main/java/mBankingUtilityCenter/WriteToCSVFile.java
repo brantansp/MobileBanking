@@ -28,7 +28,7 @@ public class WriteToCSVFile {
 	static SimpleDateFormat dateFormatter = new SimpleDateFormat("ddMMyyyy"); 
 	static SimpleDateFormat timeFormatter = new SimpleDateFormat("HHmmss"); 
 	static Date date = new Date();  
-	static String savestr = "Result"+timeFormatter.format(date)+".csv"; 
+	static String savestr = "Result_"+timeFormatter.format(date)+".csv"; 
 	
     public static void main(String[]args) throws IOException{}
     

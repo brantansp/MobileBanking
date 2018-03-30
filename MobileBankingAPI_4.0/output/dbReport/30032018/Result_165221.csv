@@ -1,0 +1,77 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Balance Enquiry,PASS,808916245984,2018-03-30 16:49:44.0,APBE,C,-,null,null,00,-
+Mini statement,PASS,808916245985,2018-03-30 16:49:46.0,APMS,C,-,null,null,00,-
+Transaction History,PASS,808916245986,2018-03-30 16:49:47.0,APTH,C,-,null,null,00,null
+Generate MMID,PASS,808916245987,2018-03-30 16:49:52.0,APIM,C,-,null,null,00,null
+Retrieve MMID,PASS,808916245988,2018-03-30 16:49:54.0,APS6,C,-,null,null,00,null
+Generate MMID,PASS,808916245989,2018-03-30 16:49:54.0,APIM,C,-,null,null,00,null
+Cancel MMID All,PASS,808916245990,2018-03-30 16:49:55.0,APRC,C,-,null,null,00,null
+Generate MMID,PASS,808916245991,2018-03-30 16:49:56.0,APIM,C,-,null,null,00,null
+Cancel MMID Single,PASS,808916245992,2018-03-30 16:49:58.0,APRC,C,-,null,null,00,null
+Email ID fetch,PASS,808916245993,2018-03-30 16:49:59.0,APZ6,C,-,null,null,00,null
+Email ID Fetch,PASS,808916245994,2018-03-30 16:49:59.0,APZ3,C,-,null,null,00,null
+Cheque status,PASS,808916245995,2018-03-30 16:50:01.0,APLW,C,-,null,null,00,-
+Account Fetch,PASS,808916245996,2018-03-30 16:50:02.0,APSY,C,-,null,null,00,-
+Stop Cheque,PASS,808916245997,2018-03-30 16:50:05.0,APL4,C,-,null,null,00,-
+Change Login Password,PASS,808916245998,2018-03-30 16:50:07.0,APP5,C,-,null,null,00,null
+Generate MMID,PASS,808916245999,2018-03-30 16:50:08.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPayment,PASS,808916246000,2018-03-30 16:50:09.0,APQI,C,-,null,null,00,-
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,808916246001,2018-03-30 16:50:13.0,APW1,C,-,null,null,00,null
+IMPSP2PAddBeneficiaryconfirmation,PASS,808916246002,2018-03-30 16:50:13.0,APW2,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentListenquiry,PASS,808916246003,2018-03-30 16:50:14.0,APW3,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentListenquiry,PASS,808916246004,2018-03-30 16:50:15.0,APW3,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentConfirmation,PASS,808916246005,2018-03-30 16:50:16.0,APW4,C,-,null,null,00,-
+IMPSP2PBeneficiarySearchListenquiryWKw,PASS,808916246006,2018-03-30 16:50:20.0,APD9,C,-,null,null,00,null
+IMPSP2PBeneficiarySearchListenquiryWoKw,PASS,808916246007,2018-03-30 16:50:24.0,APD9,C,-,null,null,00,null
+IMPSP2PDeleteBeneficiaryListenquiry,PASS,808916246008,2018-03-30 16:50:25.0,AP5L,C,-,null,null,00,null
+IMPSP2PDeleteBeneficiaryListenquiry,PASS,808916246009,2018-03-30 16:50:26.0,AP5L,C,-,null,null,00,null
+IMPSP2PDeleteBeneficiaryConfirmation,PASS,808916246010,2018-03-30 16:50:27.0,AP5D,C,-,null,null,00,null
+Generate MMID,PASS,808916246011,2018-03-30 16:50:28.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPayment,PASS,808916246012,2018-03-30 16:50:29.0,APK1,C,-,null,null,00,-
+IMPSP2AAddBeneficiary,PASS,808916246013,2018-03-30 16:50:33.0,APK2,C,-,null,null,00,null
+IMPSP2AAddBeneficiaryconfirmation,PASS,808916246014,2018-03-30 16:50:33.0,APK3,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentListenquiry,PASS,808916246015,2018-03-30 16:50:34.0,APK4,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentListenquiry,PASS,808916246016,2018-03-30 16:50:35.0,APK4,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,PASS,808916246017,2018-03-30 16:50:36.0,APK5,C,-,null,null,00,-
+IMPSP2ABeneficiarySearchListenquiry,PASS,808916246018,2018-03-30 16:50:40.0,AP4W,C,-,null,null,00,null
+IMPSP2ABeneficiarySearchListenquiry,PASS,808916246019,2018-03-30 16:50:40.0,AP4W,C,-,null,null,00,null
+IMPSP2ADeleteBeneficiaryListenquiry,PASS,808916246020,2018-03-30 16:50:41.0,AP6L,C,-,null,null,00,null
+IMPSP2ADeleteBeneficiaryConfirmation,PASS,808916246021,2018-03-30 16:50:42.0,AP6D,C,-,null,null,00,null
+IMPSP2UInstantPayment,PASS,808916246022,2018-03-30 16:50:43.0,AP1U,C,-,null,null,00,-
+impsP2UAddBenPreConf,PASS,808916246023,2018-03-30 16:50:48.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,PASS,808916246024,2018-03-30 16:50:49.0,AP3U,C,-,null,null,00,null
+IMPSP2UBeneficiaryPaymentListenquiryWKw,PASS,808916246025,2018-03-30 16:50:52.0,AP4U,C,-,null,null,00,null
+IMPSP2UBeneficiaryPaymentListenquiryWoKw,PASS,808916246026,2018-03-30 16:50:54.0,AP4U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,PASS,808916246027,2018-03-30 16:50:55.0,AP5U,C,-,null,null,00,-
+IMPSP2UBeneficiarySearchListenquiry,PASS,808916246028,2018-03-30 16:50:59.0,AP6U,C,-,null,null,00,null
+IMPSP2UBeneficiarySearchListenquiryWoKw,PASS,808916246029,2018-03-30 16:51:00.0,AP6U,C,-,null,null,00,null
+IMPSP2UDeleteBeneficiaryListenquiry,PASS,808916246030,2018-03-30 16:51:01.0,AP7U,C,-,null,null,00,null
+IMPSP2UDeleteBeneficiaryListenquiry,PASS,808916246031,2018-03-30 16:51:02.0,AP7U,C,-,null,null,00,null
+IMPSP2UDeleteBeneficiaryConfirmation,PASS,808916246032,2018-03-30 16:51:03.0,AP8U,C,-,null,null,00,null
+m2m Quick FT,PASS,808916246033,2018-03-30 16:51:04.0,APQM,C,-,null,null,00,-
+m2m Benificiary Account list,PASS,808916246034,2018-03-30 16:51:07.0,APRM,C,-,null,null,00,null
+m2m Benificiary Registration,PASS,808916246035,2018-03-30 16:51:08.0,APC1,C,-,null,null,00,null
+m2m Register benificiary search,PASS,808916246036,2018-03-30 16:51:09.0,APF1,C,-,null,null,00,null
+m2m benificiary payment,PASS,808916246037,2018-03-30 16:51:09.0,APFT,C,-,null,null,00,-
+m2m benificiary search,PASS,808916246038,2018-03-30 16:51:12.0,APD5,C,-,null,null,00,null
+m2m benificiary search,PASS,808916246039,2018-03-30 16:51:13.0,APD5,C,-,null,null,00,null
+m2m benificiary delete search,PASS,808916246040,2018-03-30 16:51:14.0,AP2L,C,-,null,null,00,null
+m2m benificiary delete search,PASS,808916246041,2018-03-30 16:51:15.0,AP2L,C,-,null,null,00,null
+M2M benificiary delete,PASS,808916246042,2018-03-30 16:51:16.0,AP2D,C,-,null,null,00,null
+P2A Quick FT,PASS,808916246043,2018-03-30 16:51:17.0,APQT,C,-,null,null,00,-
+m2a benificary registration search,PASS,808916246044,2018-03-30 16:51:20.0,APRA,C,-,null,null,00,-
+m2a benificiary req,PASS,808916246045,2018-03-30 16:51:21.0,APC2,C,-,null,null,00,null
+m2a benificiary payment search,PASS,808916246046,2018-03-30 16:51:22.0,APF2,C,-,null,null,00,null
+m2a benificiary payment,PASS,808916246047,2018-03-30 16:51:23.0,APFA,C,-,null,null,00,-
+m2a benificiary details Without Keyword,PASS,808916246048,2018-03-30 16:51:26.0,APD6,C,-,null,null,00,null
+m2a benificiary details With Keyword,PASS,808916246049,2018-03-30 16:51:27.0,APD6,C,-,null,null,00,null
+m2a benificiary deregistration search without keyword,PASS,808916246050,2018-03-30 16:51:28.0,AP3L,C,-,null,null,00,null
+m2a benificiary deregistration search with keyword,PASS,808916246051,2018-03-30 16:51:28.0,AP3L,C,-,null,null,00,null
+m2a benificiary deregistration search with keyword,PASS,808916246052,2018-03-30 16:51:29.0,AP3D,C,-,null,null,00,null
+NEFT benificiary registration,PASS,808916246053,2018-03-30 16:51:31.0,APQ2,C,-,null,null,00,null
+NEFT benificiary registration confirm,PASS,808916246054,2018-03-30 16:51:32.0,APQ3,C,-,null,null,00,null
+NEFT benificiary list,PASS,808916246055,2018-03-30 16:51:33.0,APQ7,C,-,null,null,00,null
+NEFT benificiary payment,FAIL,808916246056,2018-03-30 16:51:34.0,APQ8,F,B,null,null,09,Beneficiary not activated yet. Please try after sometime
+NEFT benificiary detail,PASS,808916246057,2018-03-30 16:51:35.0,APNL,C,-,null,null,00,null
+NEFT benificiary de-registration list,PASS,808916246058,2018-03-30 16:51:36.0,AP4L,C,-,null,null,00,null
+NEFT benificiary de-registration confirm,PASS,808916246059,2018-03-30 16:51:37.0,AP4D,C,-,null,null,00,null
