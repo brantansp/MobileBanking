@@ -85,7 +85,9 @@ public class ExtentManager{
 	}
 	
 	@AfterSuite
-	public void endReport(){ 
+	public void endReport(){
+		 extent.flush();
+		/* 
                 extent.flush();
                 Scanner sc = new Scanner (System.in);
                 boolean loop = true;
@@ -131,7 +133,7 @@ public class ExtentManager{
                         }
                 } 
                 sc.close();
-  }
+  */}
 	
 	public static Properties getProperty()
 	{
@@ -160,7 +162,7 @@ public class ExtentManager{
 	public static void assertResponse(String response)
 	{
 		//log.info(response.substring(2, 4));
-		//assertTrue(response.substring(2,4).contains("00"));		
+		assertTrue(response.substring(2,4).contains("00"));		
 	}
 	
 	public static String sendReq (String Request, String txnType) throws IOException, SQLException
@@ -201,11 +203,10 @@ public class ExtentManager{
 	return response;
 	}
 	
-	public static String sendReqAppLogin (String Request, String req2,String txnType) throws IOException, SQLException
+	public static String sendReqAppLogin (String Request, String req2,String txnType, BigInteger uniNum) throws IOException, SQLException
 	{
 		log.info("******************************START******************************");
 	    log.info("Request : " + txnType);
-	    BigInteger uniNum = RandomNumGenerator.generate();
 	  	if (prop.getProperty("HMAC").equals("Y"))
 		{
 		  try {
