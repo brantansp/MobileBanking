@@ -160,7 +160,7 @@ public class ExtentManager{
 	public static void assertResponse(String response)
 	{
 		//log.info(response.substring(2, 4));
-		//assertTrue(response.substring(2,4).contains("00"));		
+		assertTrue(response.substring(2,4).contains("00"));		
 	}
 	
 	public static String sendReq (String Request, String txnType) throws IOException, SQLException

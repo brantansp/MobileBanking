@@ -1,0 +1,3 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Generate MMID,PASS,809318246764,2018-04-03 18:13:49.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPayment,PASS,809318246765,2018-04-03 18:13:51.0,APQI,C,-,null,null,00,-

@@ -67,6 +67,7 @@ public class StaticStore extends ExtentManager{
 		return sb.toString();
 	}
 	
+	
 	public static String balanceEnq ()
 	{
 		sb.delete(0, sb.length());
@@ -109,6 +110,26 @@ public class StaticStore extends ExtentManager{
 		return sb.toString();
 	}
 	
+	public static String miniStatement (String remAccountno)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APMS;");
+		if(prop.getProperty("mPINRequired").equals("Y"))
+		{
+		sb.append(prop.getProperty("mPINRequired")+";");
+		sb.append(prop.getProperty("mPIN")+";");
+		}
+		else
+		{
+		sb.append(prop.getProperty("mPINRequired")+";");
+		}
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append(remAccountno+";");
+		return sb.toString();
+	}
 	public static String transactionHistory ()
 	{
 		sb.delete(0, sb.length());

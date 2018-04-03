@@ -1,0 +1,57 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Generate MMID,PASS,809309246221,2018-04-03 09:41:02.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPayment,PASS,809309246222,2018-04-03 09:41:05.0,APQI,C,-,null,null,00,-
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809309246223,2018-04-03 09:41:10.0,APW1,C,-,null,null,00,null
+IMPSP2PAddBeneficiaryconfirmation,PASS,809309246224,2018-04-03 09:41:11.0,APW2,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentListenquiry,PASS,809309246225,2018-04-03 09:41:12.0,APW3,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentListenquiry,PASS,809309246226,2018-04-03 09:41:14.0,APW3,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentConfirmation,PASS,809309246227,2018-04-03 09:41:15.0,APW4,C,-,null,null,00,-
+IMPSP2PBeneficiarySearchListenquiryWKw,PASS,809309246228,2018-04-03 09:41:19.0,APD9,C,-,null,null,00,null
+IMPSP2PBeneficiarySearchListenquiryWoKw,PASS,809309246229,2018-04-03 09:41:20.0,APD9,C,-,null,null,00,null
+IMPSP2PDeleteBeneficiaryListenquiry,PASS,809309246230,2018-04-03 09:41:22.0,AP5L,C,-,null,null,00,null
+IMPSP2PDeleteBeneficiaryListenquiry,PASS,809309246231,2018-04-03 09:41:23.0,AP5L,C,-,null,null,00,null
+IMPSP2PDeleteBeneficiaryConfirmation,PASS,809309246232,2018-04-03 09:41:24.0,AP5D,C,-,null,null,00,null
+Generate MMID,PASS,809309246233,2018-04-03 09:41:25.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPayment,PASS,809309246234,2018-04-03 09:41:27.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809309246235,2018-04-03 09:41:30.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPayment,FAIL,809309246236,2018-04-03 09:41:31.0,APQI,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+Generate MMID,PASS,809309246237,2018-04-03 09:41:32.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPayment,FAIL,809309246238,2018-04-03 09:41:33.0,APQI,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPSP2PBeneficiaryPaymentConfirmation,FAIL,809309246239,2018-04-03 09:41:35.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2PBeneficiaryPaymentConfirmation,FAIL,809309246240,2018-04-03 09:41:36.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+Generate MMID,PASS,809309246241,2018-04-03 09:41:37.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPayment,PASS,809309246242,2018-04-03 09:41:38.0,APK1,C,-,null,null,00,-
+IMPSP2AAddBeneficiary,PASS,809309246243,2018-04-03 09:41:42.0,APK2,C,-,null,null,00,null
+IMPSP2AAddBeneficiaryconfirmation,PASS,809309246244,2018-04-03 09:41:43.0,APK3,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentListenquiry,PASS,809309246245,2018-04-03 09:41:45.0,APK4,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentListenquiry,PASS,809309246246,2018-04-03 09:41:47.0,APK4,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,PASS,809309246247,2018-04-03 09:41:48.0,APK5,C,-,null,null,00,-
+IMPSP2ABeneficiarySearchListenquiry,PASS,809309246248,2018-04-03 09:41:53.0,AP4W,C,-,null,null,00,null
+IMPSP2ABeneficiarySearchListenquiry,PASS,809309246249,2018-04-03 09:41:54.0,AP4W,C,-,null,null,00,null
+IMPSP2ADeleteBeneficiaryListenquiry,PASS,809309246250,2018-04-03 09:41:55.0,AP6L,C,-,null,null,00,null
+IMPSP2ADeleteBeneficiaryConfirmation,PASS,809309246251,2018-04-03 09:41:56.0,AP6D,C,-,null,null,00,null
+Generate MMID,PASS,809309246252,2018-04-03 09:41:58.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPayment,FAIL,809309246253,2018-04-03 09:41:59.0,APK1,F,C,null,null,09,NBIN not configured for the entered IFS Code
+Generate MMID,PASS,809309246254,2018-04-03 09:42:00.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPayment,FAIL,809309246255,2018-04-03 09:42:02.0,APK1,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+Generate MMID,PASS,809309246256,2018-04-03 09:42:03.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPayment,FAIL,809309246257,2018-04-03 09:42:04.0,APK1,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPSP2AAddBeneficiary,FAIL,809309246258,2018-04-03 09:42:05.0,APK2,F,C,null,null,09,Invalid IFS code
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809309246259,2018-04-03 09:42:06.0,APK5,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809309246260,2018-04-03 09:42:08.0,APK5,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPSP2UInstantPayment,PASS,809309246261,2018-04-03 09:42:09.0,AP1U,C,-,null,null,00,-
+impsP2UAddBenPreConf,PASS,809309246262,2018-04-03 09:42:13.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,PASS,809309246263,2018-04-03 09:42:14.0,AP3U,C,-,null,null,00,null
+IMPSP2UBeneficiaryPaymentListenquiryWKw,PASS,809309246264,2018-04-03 09:42:15.0,AP4U,C,-,null,null,00,null
+IMPSP2UBeneficiaryPaymentListenquiryWoKw,PASS,809309246265,2018-04-03 09:42:16.0,AP4U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,PASS,809309246266,2018-04-03 09:42:17.0,AP5U,C,-,null,null,00,-
+IMPSP2UBeneficiarySearchListenquiry,PASS,809309246267,2018-04-03 09:42:23.0,AP6U,C,-,null,null,00,null
+IMPSP2UBeneficiarySearchListenquiryWoKw,PASS,809309246268,2018-04-03 09:42:25.0,AP6U,C,-,null,null,00,null
+IMPSP2UDeleteBeneficiaryListenquiry,PASS,809309246269,2018-04-03 09:42:26.0,AP7U,C,-,null,null,00,null
+IMPSP2UDeleteBeneficiaryListenquiry,PASS,809309246270,2018-04-03 09:42:27.0,AP7U,C,-,null,null,00,null
+IMPSP2UDeleteBeneficiaryConfirmation,PASS,809309246271,2018-04-03 09:42:28.0,AP8U,C,-,null,null,00,null
+IMPSP2UInstantPayment,PASS,809309246272,2018-04-03 09:42:30.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPayment,FAIL,809309246273,2018-04-03 09:42:33.0,AP1U,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+IMPSP2UInstantPayment,FAIL,809309246274,2018-04-03 09:42:34.0,AP1U,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809309246275,2018-04-03 09:42:35.0,AP5U,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809309246276,2018-04-03 09:42:36.0,AP5U,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount

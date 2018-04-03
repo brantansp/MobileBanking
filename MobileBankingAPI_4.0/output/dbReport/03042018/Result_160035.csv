@@ -1,0 +1,36 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+m2m Quick FT,FAIL,809316246659,2018-04-03 15:57:55.0,APQM,F,C,null,null,09,Invalid mPIN. Please try again.
+m2m Benificiary Account list,FAIL,809316246660,2018-04-03 15:57:58.0,APRM,F,C,null,null,09,Invalid mPIN. Please try again.
+m2m Benificiary Registration,FAIL,809316246661,2018-04-03 15:57:59.0,APC1,F,C,null,null,09,Your account has been blocked / deactivated
+m2m Register benificiary search,FAIL,809316246662,2018-04-03 15:58:00.0,APF1,F,C,null,null,09,Your account has been blocked / deactivated
+m2m benificiary payment,FAIL,809316246663,2018-04-03 15:58:01.0,APFT,F,C,null,null,09,Your account has been blocked / deactivated
+m2m benificiary search,FAIL,809316246664,2018-04-03 15:58:03.0,APD5,F,C,null,null,09,Your account has been blocked / deactivated
+m2m benificiary search,FAIL,809316246665,2018-04-03 15:58:04.0,APD5,F,C,null,null,09,Your account has been blocked / deactivated
+m2m benificiary delete search,FAIL,809316246666,2018-04-03 15:58:05.0,AP2L,F,C,null,null,09,Your account has been blocked / deactivated
+m2m benificiary delete search,FAIL,809316246667,2018-04-03 15:58:06.0,AP2L,F,C,null,null,09,Your account has been blocked / deactivated
+M2M benificiary delete,FAIL,809316246668,2018-04-03 15:58:07.0,AP2D,F,C,null,null,09,Your account has been blocked / deactivated
+m2m Quick FT Benificiary Not Registered For Mobile Banking,FAIL,809316246669,2018-04-03 15:58:09.0,APQM,F,C,null,null,09,Your account has been blocked / deactivated
+m2m Quick FT Insufficient Amount,FAIL,809316246670,2018-04-03 15:58:10.0,APQM,F,C,null,null,09,Your account has been blocked / deactivated
+m2m Quick FT Amount Exceeds Limit,FAIL,809316246671,2018-04-03 15:58:11.0,APQM,F,C,null,null,09,Your account has been blocked / deactivated
+m2m Ben Reg Acclist For Random Mobile No,FAIL,809316246672,2018-04-03 15:58:12.0,APRM,F,C,null,null,09,Your account has been blocked / deactivated
+m2m ben payment Exceed Transaction Amount,FAIL,809316246673,2018-04-03 15:58:14.0,APFT,F,C,null,null,09,Your account has been blocked / deactivated
+m2m ben payment Insufficient Amount,FAIL,809316246674,2018-04-03 15:58:15.0,APFT,F,C,null,null,09,Your account has been blocked / deactivated
+m2m Ben Del Same Ben SearchWKw,FAIL,809316246675,2018-04-03 15:58:17.0,AP2L,F,C,null,null,09,Your account has been blocked / deactivated
+P2A Quick FT,FAIL,809316246676,2018-04-03 15:58:18.0,APQT,F,C,null,null,09,Your account has been blocked / deactivated
+m2a benificary registration search,FAIL,809316246677,2018-04-03 15:58:19.0,APRA,F,C,null,null,09,Your account has been blocked / deactivated
+m2a benificiary req,FAIL,809316246678,2018-04-03 15:58:20.0,APC2,F,C,null,null,09,Your account has been blocked / deactivated
+m2a benificiary payment search,FAIL,809316246679,2018-04-03 15:58:21.0,APF2,F,C,null,null,09,Your account has been blocked / deactivated
+m2a benificiary payment,FAIL,809316246680,2018-04-03 15:58:22.0,APFA,F,C,null,null,09,Your account has been blocked / deactivated
+m2a benificiary details Without Keyword,FAIL,809316246681,2018-04-03 15:58:24.0,APD6,F,C,null,null,09,Your account has been blocked / deactivated
+m2a benificiary details With Keyword,FAIL,809316246682,2018-04-03 15:58:26.0,APD6,F,C,null,null,09,Your account has been blocked / deactivated
+m2a benificiary deregistration search without keyword,FAIL,809316246683,2018-04-03 15:58:27.0,AP3L,F,C,null,null,09,Your account has been blocked / deactivated
+m2a benificiary deregistration search with keyword,FAIL,809316246684,2018-04-03 15:58:29.0,AP3L,F,C,null,null,09,Your account has been blocked / deactivated
+m2a benificiary deregistration search with keyword,FAIL,809316246685,2018-04-03 15:58:30.0,AP3D,F,C,null,null,09,Your account has been blocked / deactivated
+m2a Quick FT Random Ben Account,FAIL,809316246686,2018-04-03 15:58:31.0,APQT,F,C,null,null,09,Your account has been blocked / deactivated
+m2a Quick FT Exceeds Transaction Amount,FAIL,809316246687,2018-04-03 15:58:32.0,APQT,F,C,null,null,09,Your account has been blocked / deactivated
+m2a QuickFT Insufficient Amount,FAIL,809316246688,2018-04-03 15:58:33.0,APQT,F,C,null,null,09,Your account has been blocked / deactivated
+m2a Ben Reg With Random Ben Account,FAIL,809316246689,2018-04-03 15:58:35.0,APC2,F,C,null,null,09,Your account has been blocked / deactivated
+m2a Ben Payment Exceed Transaction Amount,FAIL,809316246690,2018-04-03 15:58:36.0,APFA,F,C,null,null,09,Your account has been blocked / deactivated
+m2a Ben Payment InSufficient Amount,FAIL,809316246691,2018-04-03 15:58:36.0,APFA,F,C,null,null,09,Your account has been blocked / deactivated
+m2a Ben De-register Same Ben,FAIL,809316246692,2018-04-03 15:58:38.0,AP3D,F,C,null,null,09,Your account has been blocked / deactivated
+NEFT benificiary registration,FAIL,809316246693,2018-04-03 15:58:39.0,APQ2,F,C,null,null,09,Your account has been blocked / deactivated

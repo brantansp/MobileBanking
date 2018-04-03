@@ -1,0 +1,32 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+m2m Quick FT,PASS,809216246113,2018-04-02 16:14:27.0,APQM,C,-,null,null,00,-
+m2m Benificiary Account list,PASS,809216246114,2018-04-02 16:14:30.0,APRM,C,-,null,null,00,null
+m2m Benificiary Account list,FAIL,809216246115,2018-04-02 16:14:31.0,APRM,F,B,null,null,09,Beneficiary not a mobile banking customer. Please contact bank for further details
+m2m Quick FT,FAIL,809216246116,2018-04-02 16:14:33.0,APQM,F,C,null,null,09,Beneficiary not registered for mobile banking.Kindly transfer funds through mobile to account option
+m2m Benificiary Registration,FAIL,809216246117,2018-04-02 16:14:34.0,APC1,F,C,null,null,09,Selected account number has been deregistered by the beneficiary
+m2m Quick FT,FAIL,809216246118,2018-04-02 16:14:35.0,APQM,F,C,null,null,09,Please enter the valid amount to complete the transaction 
+m2m Register benificiary search,FAIL,809216246119,2018-04-02 16:14:36.0,APF1,F,C,null,null,09,You are yet to register a beneficiary
+m2m Quick FT,FAIL,809216246120,2018-04-02 16:14:38.0,APQM,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+m2m benificiary payment,FAIL,809216246121,2018-04-02 16:14:39.0,APFT,F,C,null,null,09,Beneficiary not registered in mobile banking server
+m2m benificiary search,FAIL,809216246122,2018-04-02 16:14:40.0,APD5,F,C,null,null,09,You are yet to register a beneficiary
+m2m benificiary search,FAIL,809216246123,2018-04-02 16:14:42.0,APD5,F,C,null,null,09,Beneficiary FTBeneficiary not found.
+m2m benificiary delete search,FAIL,809216246124,2018-04-02 16:14:43.0,AP2L,F,C,null,null,09,You are yet to register a beneficiary
+m2m benificiary delete search,FAIL,809216246125,2018-04-02 16:14:44.0,AP2L,F,C,null,null,09,Beneficiary FTBeneficiary not found.
+M2M benificiary delete,FAIL,809216246126,2018-04-02 16:14:45.0,AP2D,F,B,null,null,09,Beneficiary deregistration not successful
+P2A Quick FT,PASS,809216246127,2018-04-02 16:14:47.0,APQT,C,-,null,null,00,-
+m2a benificary registration search,PASS,809216246128,2018-04-02 16:14:49.0,APRA,C,-,null,null,00,-
+m2a benificiary req,PASS,809216246129,2018-04-02 16:14:52.0,APC2,C,-,null,null,00,null
+m2a benificiary payment search,PASS,809216246130,2018-04-02 16:14:53.0,APF2,C,-,null,null,00,null
+m2a benificiary payment,PASS,809216246131,2018-04-02 16:14:54.0,APFA,C,-,null,null,00,-
+m2a benificiary details Without Keyword,PASS,809216246132,2018-04-02 16:14:57.0,APD6,C,-,null,null,00,null
+m2a benificiary details With Keyword,PASS,809216246133,2018-04-02 16:14:58.0,APD6,C,-,null,null,00,null
+m2a benificiary deregistration search without keyword,PASS,809216246134,2018-04-02 16:14:59.0,AP3L,C,-,null,null,00,null
+m2a benificiary deregistration search with keyword,PASS,809216246135,2018-04-02 16:15:00.0,AP3L,C,-,null,null,00,null
+m2a benificiary deregistration search with keyword,PASS,809216246136,2018-04-02 16:15:01.0,AP3D,C,-,null,null,00,null
+NEFT benificiary registration,PASS,809216246137,2018-04-02 16:15:03.0,APQ2,C,-,null,null,00,null
+NEFT benificiary registration confirm,PASS,809216246138,2018-04-02 16:15:04.0,APQ3,C,-,null,null,00,null
+NEFT benificiary list,PASS,809216246139,2018-04-02 16:15:06.0,APQ7,C,-,null,null,00,null
+NEFT benificiary payment,FAIL,809216246140,2018-04-02 16:15:07.0,APQ8,F,B,null,null,09,Beneficiary not activated yet. Please try after sometime
+NEFT benificiary detail,PASS,809216246141,2018-04-02 16:15:08.0,APNL,C,-,null,null,00,null
+NEFT benificiary de-registration list,PASS,809216246142,2018-04-02 16:15:10.0,AP4L,C,-,null,null,00,null
+NEFT benificiary de-registration confirm,PASS,809216246143,2018-04-02 16:15:11.0,AP4D,C,-,null,null,00,null

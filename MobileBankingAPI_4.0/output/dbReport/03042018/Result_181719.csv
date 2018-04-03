@@ -1,0 +1,253 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Balance Enquiry,PASS,809318246769,2018-04-03 18:14:38.0,APBE,C,-,null,null,00,-
+Mini statement,PASS,809318246770,2018-04-03 18:14:41.0,APMS,C,-,null,null,00,-
+Transaction History,PASS,809318246771,2018-04-03 18:14:45.0,APTH,C,-,null,null,00,null
+Generate MMID,PASS,809318246772,2018-04-03 18:14:47.0,APIM,C,-,null,null,00,null
+Retrieve MMID,PASS,809318246773,2018-04-03 18:14:48.0,APS6,C,-,null,null,00,null
+Generate MMID,PASS,809318246774,2018-04-03 18:14:49.0,APIM,C,-,null,null,00,null
+Cancel MMID All,PASS,809318246775,2018-04-03 18:14:51.0,APRC,C,-,null,null,00,null
+Generate MMID,PASS,809318246776,2018-04-03 18:14:53.0,APIM,C,-,null,null,00,null
+Cancel MMID Single,PASS,809318246777,2018-04-03 18:14:55.0,APRC,C,-,null,null,00,null
+Email ID fetch,PASS,809318246778,2018-04-03 18:14:56.0,APZ6,C,-,null,null,00,null
+Email ID Update,PASS,809318246779,2018-04-03 18:14:58.0,APZ3,C,-,null,null,00,null
+Cheque status,PASS,809318246780,2018-04-03 18:14:59.0,APLW,C,-,null,null,00,-
+Account Fetch,PASS,809318246781,2018-04-03 18:15:01.0,APSY,C,-,null,null,00,-
+Stop Cheque,PASS,809318246782,2018-04-03 18:15:07.0,APL4,C,-,null,null,00,-
+Change Login Password,PASS,809318246783,2018-04-03 18:15:09.0,APP5,C,-,null,null,00,null
+Balance Enquiry with closed Account,FAIL,809318246784,2018-04-03 18:15:10.0,APBE,F,C,null,null,09,Your Mobile Number is not registered for TMB Mconnect. Please contact your branch
+Balance Enquiry with Inactive Account,FAIL,809318246785,2018-04-03 18:15:11.0,APBE,F,C,null,null,09,Your Mobile Number is not registered for TMB Mconnect. Please contact your branch
+Balance Enquiry with Blocked Account,FAIL,809318246786,2018-04-03 18:15:14.0,APBE,F,C,null,null,09,Your Mobile Number is not registered for TMB Mconnect. Please contact your branch
+Balance Enquiry For Account Having Zero Balance,FAIL,809318246787,2018-04-03 18:15:15.0,APBE,F,C,null,null,09,Your Mobile Number is not registered for TMB Mconnect. Please contact your branch
+Balance Enquiry For Account Having Negative Balance,FAIL,809318246788,2018-04-03 18:15:17.0,APBE,F,C,null,null,09,Your Mobile Number is not registered for TMB Mconnect. Please contact your branch
+Mini statement For Closed Account,FAIL,809318246789,2018-04-03 18:15:18.0,APMS,F,C,null,null,09,Your Mobile Number is not registered for TMB Mconnect. Please contact your branch
+Mini statement For Inactive Account,FAIL,809318246790,2018-04-03 18:15:19.0,APMS,F,C,null,null,09,Your Mobile Number is not registered for TMB Mconnect. Please contact your branch
+Mini Statement For Blocked Account,FAIL,809318246791,2018-04-03 18:15:20.0,APMS,F,C,null,null,09,Your Mobile Number is not registered for TMB Mconnect. Please contact your branch
+Cheque Status Check Not Issued To Customer,PASS,809318246792,2018-04-03 18:15:21.0,APLW,C,-,null,null,00,-
+Stop Cheque Check Already Stopped,PASS,809318246793,2018-04-03 18:15:24.0,APL4,C,-,null,null,00,-
+Again Cancel All MMIDs,PASS,809318246794,2018-04-03 18:15:26.0,APIM,C,-,null,null,00,null
+Again Cancel All MMIDs,PASS,809318246795,2018-04-03 18:15:28.0,APRC,C,-,null,null,00,null
+Retrieve MMID,FAIL,809318246796,2018-04-03 18:15:29.0,APS6,F,C,null,null,09,Please do Generate MMID to proceed with the transaction.
+Generate MMID,FAIL,809318246797,2018-04-03 18:15:31.0,APS6,F,C,null,null,09,Please do Generate MMID to proceed with the transaction.
+Generate MMID,PASS,809318246798,2018-04-03 18:15:32.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPayment,PASS,809318246799,2018-04-03 18:15:35.0,APQI,C,-,null,null,00,-
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809318246800,2018-04-03 18:15:39.0,APW1,C,-,null,null,00,null
+IMPSP2PAddBeneficiaryconfirmation,PASS,809318246801,2018-04-03 18:15:41.0,APW2,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentListenquiry,PASS,809318246802,2018-04-03 18:15:44.0,APW3,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentListenquiry,PASS,809318246803,2018-04-03 18:15:46.0,APW3,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentConfirmation,PASS,809318246804,2018-04-03 18:15:48.0,APW4,C,-,null,null,00,-
+IMPSP2PBeneficiarySearchListenquiryWKw,PASS,809318246805,2018-04-03 18:15:53.0,APD9,C,-,null,null,00,null
+IMPSP2PBeneficiarySearchListenquiryWoKw,PASS,809318246806,2018-04-03 18:15:55.0,APD9,C,-,null,null,00,null
+IMPSP2PDeleteBeneficiaryListenquiry,PASS,809318246807,2018-04-03 18:15:56.0,AP5L,C,-,null,null,00,null
+IMPSP2PDeleteBeneficiaryListenquiry,PASS,809318246808,2018-04-03 18:15:58.0,AP5L,C,-,null,null,00,null
+IMPSP2PDeleteBeneficiaryConfirmation,PASS,809318246809,2018-04-03 18:15:59.0,AP5D,C,-,null,null,00,null
+Generate MMID,PASS,809318246810,2018-04-03 18:16:00.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentWithInvalidMMID,PASS,809318246811,2018-04-03 18:16:02.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246812,2018-04-03 18:16:07.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentWithExceededAmount,FAIL,809318246813,2018-04-03 18:16:08.0,APQI,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+Generate MMID,PASS,809318246814,2018-04-03 18:16:10.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentWithInsufficientAmount,FAIL,809318246815,2018-04-03 18:16:11.0,APQI,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPSP2PBeneficiaryPaymentConfirmationwithExceededAmount,FAIL,809318246816,2018-04-03 18:16:14.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2PBeneficiaryPaymentConfirmationwithInsufficientAmount,FAIL,809318246817,2018-04-03 18:16:15.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+Generate MMID,PASS,809318246818,2018-04-03 18:16:17.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentForM0Decline,PASS,809318246819,2018-04-03 18:16:18.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246820,2018-04-03 18:16:23.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentForM1Decline,PASS,809318246821,2018-04-03 18:16:25.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246822,2018-04-03 18:16:30.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentForM2Decline,PASS,809318246823,2018-04-03 18:16:31.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246824,2018-04-03 18:16:37.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentForM3Decline,PASS,809318246825,2018-04-03 18:16:38.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246826,2018-04-03 18:16:44.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentForM4Decline,PASS,809318246827,2018-04-03 18:16:45.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246828,2018-04-03 18:16:50.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentForM5Decline,PASS,809318246829,2018-04-03 18:16:52.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246830,2018-04-03 18:16:57.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentForM6Decline,PASS,809318246831,2018-04-03 18:16:58.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246832,2018-04-03 18:17:04.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentfor92Decline,PASS,809318246833,2018-04-03 18:17:05.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246834,2018-04-03 18:17:10.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentfor13Decline,PASS,809318246835,2018-04-03 18:17:11.0,APQI,C,-,null,null,00,-
+Generate MMID,PASS,809318246836,2018-04-03 18:17:18.0,APIM,C,-,null,null,00,null
+IMPSP2PInstantPaymentfor51Decline,PASS,809318246837,2018-04-03 18:17:19.0,APQI,C,-,null,null,00,-
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809318246838,2018-04-03 18:17:25.0,APW1,C,-,null,null,00,null
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809318246839,2018-04-03 18:17:26.0,APW1,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentListenquiry,FAIL,809318246840,2018-04-03 18:17:27.0,APW3,F,C,null,null,09,Beneficiary ufhbjnk not found.
+IMPSP2PBeneficiaryPaymentConfirmation,FAIL,809318246841,2018-04-03 18:17:29.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2PDeleteBeneficiaryConfirmation,FAIL,809318246842,2018-04-03 18:17:30.0,AP5D,F,B,null,null,09,Beneficiary deregistration not successful
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809318246843,2018-04-03 18:17:31.0,APW1,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentConfirmation,FAIL,809318246844,2018-04-03 18:17:33.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809318246845,2018-04-03 18:17:35.0,APW1,C,-,null,null,00,null
+IMPSP2PRegBeneficiaryPaymentForM1Decline,FAIL,809318246846,2018-04-03 18:17:36.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809318246847,2018-04-03 18:17:37.0,APW1,C,-,null,null,00,null
+IMPSP2PRegBeneficiaryPaymentForM2Decline,FAIL,809318246848,2018-04-03 18:17:39.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2PRegBeneficiaryPaymentForM3Decline,PASS,809318246849,2018-04-03 18:17:40.0,APW1,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentConfirmation,FAIL,809318246850,2018-04-03 18:17:41.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809318246851,2018-04-03 18:17:47.0,APW1,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentConfirmation,FAIL,809318246852,2018-04-03 18:17:48.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809318246853,2018-04-03 18:17:50.0,APW1,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentConfirmation,FAIL,809318246854,2018-04-03 18:17:51.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2PAddBeneficiaryPreConfirmation,PASS,809318246855,2018-04-03 18:17:53.0,APW1,C,-,null,null,00,null
+IMPSP2PBeneficiaryPaymentConfirmation,FAIL,809318246856,2018-04-03 18:17:54.0,APW4,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+Generate MMID,PASS,809318246857,2018-04-03 18:17:55.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPayment,PASS,809318246858,2018-04-03 18:17:57.0,APK1,C,-,null,null,00,-
+IMPSP2AAddBeneficiary,PASS,809318246859,2018-04-03 18:18:01.0,APK2,C,-,null,null,00,null
+IMPSP2AAddBeneficiaryconfirmation,PASS,809318246860,2018-04-03 18:18:04.0,APK3,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentListenquiry,PASS,809318246861,2018-04-03 18:18:05.0,APK4,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentListenquiry,PASS,809318246862,2018-04-03 18:18:07.0,APK4,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,PASS,809318246863,2018-04-03 18:18:08.0,APK5,C,-,null,null,00,-
+IMPSP2ABeneficiarySearchListenquiry,PASS,809318246864,2018-04-03 18:18:14.0,AP4W,C,-,null,null,00,null
+IMPSP2ABeneficiarySearchListenquiry,PASS,809318246865,2018-04-03 18:18:16.0,AP4W,C,-,null,null,00,null
+IMPSP2ADeleteBeneficiaryListenquiry,PASS,809318246866,2018-04-03 18:18:17.0,AP6L,C,-,null,null,00,null
+IMPSP2ADeleteBeneficiaryConfirmation,PASS,809318246867,2018-04-03 18:18:19.0,AP6D,C,-,null,null,00,null
+Generate MMID,PASS,809318246868,2018-04-03 18:18:20.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentWithRandomAccandIFSCcode,FAIL,809318246869,2018-04-03 18:18:22.0,APK1,F,C,null,null,09,NBIN not configured for the entered IFS Code
+Generate MMID,PASS,809318246870,2018-04-03 18:18:24.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentWithExceededAmount,FAIL,809318246871,2018-04-03 18:18:26.0,APK1,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+Generate MMID,PASS,809318246872,2018-04-03 18:18:27.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentWithInsufficientAmount,FAIL,809318246873,2018-04-03 18:18:28.0,APK1,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPSP2AAddBeneficiaryWithRandomAccandIFSCcode,FAIL,809318246874,2018-04-03 18:18:29.0,APK2,F,C,null,null,09,Invalid IFS code
+IMPSP2ABeneficiaryPaymentConfirmationWithExceedeAmount,FAIL,809318246875,2018-04-03 18:18:30.0,APK5,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+IMPSP2ABeneficiaryPaymentConfirmationWithInsufficientAmount,FAIL,809318246876,2018-04-03 18:18:32.0,APK5,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+Generate MMID,PASS,809318246877,2018-04-03 18:18:34.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentForM0Decline,PASS,809318246878,2018-04-03 18:18:35.0,APK1,C,-,null,null,00,-
+Generate MMID,PASS,809318246879,2018-04-03 18:18:39.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentForM1Decline,PASS,809318246880,2018-04-03 18:18:40.0,APK1,C,-,null,null,00,-
+Generate MMID,PASS,809318246881,2018-04-03 18:18:47.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentForM2Decline,PASS,809318246882,2018-04-03 18:18:48.0,APK1,C,-,null,null,00,-
+Generate MMID,PASS,809318246883,2018-04-03 18:18:52.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentForM3Decline,PASS,809318246884,2018-04-03 18:18:54.0,APK1,C,-,null,null,00,-
+Generate MMID,PASS,809318246885,2018-04-03 18:18:59.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentForM4Decline,PASS,809318246886,2018-04-03 18:19:00.0,APK1,C,-,null,null,00,-
+Generate MMID,PASS,809318246887,2018-04-03 18:19:05.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentForM5Decline,PASS,809318246888,2018-04-03 18:19:06.0,APK1,C,-,null,null,00,-
+Generate MMID,PASS,809318246889,2018-04-03 18:19:11.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentForM6Decline,PASS,809318246890,2018-04-03 18:19:15.0,APK1,C,-,null,null,00,-
+Generate MMID,PASS,809318246891,2018-04-03 18:19:20.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentfor92Decline,PASS,809318246892,2018-04-03 18:19:21.0,APK1,C,-,null,null,00,-
+Generate MMID,PASS,809318246893,2018-04-03 18:19:28.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentfor13Decline,PASS,809318246894,2018-04-03 18:19:29.0,APK1,C,-,null,null,00,-
+Generate MMID,PASS,809318246895,2018-04-03 18:19:34.0,APIM,C,-,null,null,00,null
+IMPSP2AInstantPaymentfor51Decline,PASS,809318246896,2018-04-03 18:19:35.0,APK1,C,-,null,null,00,-
+IMPSP2AAddBeneficiary,PASS,809318246897,2018-04-03 18:19:40.0,APK2,C,-,null,null,00,null
+IMPSP2AAddBeneficiary,PASS,809318246898,2018-04-03 18:19:43.0,APK2,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentListenquiry,FAIL,809318246899,2018-04-03 18:19:46.0,APK4,F,C,null,null,09,Beneficiary ufhbjnk not found.
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809318246900,2018-04-03 18:19:48.0,APK5,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2AAddBeneficiary,PASS,809318246901,2018-04-03 18:19:50.0,APK2,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809318246902,2018-04-03 18:19:51.0,APK5,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2ARegBeneficiaryPaymentForM0Decline,FAIL,809318246903,2018-04-03 18:19:54.0,AP6D,F,B,null,null,09,Beneficiary deregistration not successful
+IMPSP2AAddBeneficiary,PASS,809318246904,2018-04-03 18:19:55.0,APK2,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809318246905,2018-04-03 18:19:56.0,APK5,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2ARegBeneficiaryPaymentForM1Decline,FAIL,809318246906,2018-04-03 18:19:58.0,AP6D,F,B,null,null,09,Beneficiary deregistration not successful
+IMPSP2AAddBeneficiary,PASS,809318246907,2018-04-03 18:19:59.0,APK2,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809318246908,2018-04-03 18:20:00.0,APK5,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2ARegBeneficiaryPaymentForM2Decline,FAIL,809318246909,2018-04-03 18:20:03.0,AP6D,F,B,null,null,09,Beneficiary deregistration not successful
+IMPSP2AAddBeneficiary,PASS,809318246910,2018-04-03 18:20:04.0,APK2,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809318246911,2018-04-03 18:20:06.0,APK5,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2ARegBeneficiaryPaymentForM3Decline,FAIL,809318246912,2018-04-03 18:20:08.0,AP6D,F,B,null,null,09,Beneficiary deregistration not successful
+IMPSP2AAddBeneficiary,PASS,809318246913,2018-04-03 18:20:09.0,APK2,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809318246914,2018-04-03 18:20:10.0,APK5,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2ARegBeneficiaryPaymentForM4Decline,FAIL,809318246915,2018-04-03 18:20:15.0,AP6D,F,B,null,null,09,Beneficiary deregistration not successful
+IMPSP2AAddBeneficiary,PASS,809318246916,2018-04-03 18:20:16.0,APK2,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809318246917,2018-04-03 18:20:18.0,APK5,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2ARegBeneficiaryPaymentForM5Decline,FAIL,809318246918,2018-04-03 18:20:20.0,AP6D,F,B,null,null,09,Beneficiary deregistration not successful
+IMPSP2AAddBeneficiary,PASS,809318246919,2018-04-03 18:20:21.0,APK2,C,-,null,null,00,null
+IMPSP2ABeneficiaryPaymentConfirmation,FAIL,809318246920,2018-04-03 18:20:22.0,APK5,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2ARegBeneficiaryPaymentForM6Decline,FAIL,809318246921,2018-04-03 18:20:26.0,AP6D,F,B,null,null,09,Beneficiary deregistration not successful
+IMPSP2UInstantPayment,PASS,809318246922,2018-04-03 18:20:28.0,AP1U,C,-,null,null,00,-
+impsP2UAddBenPreConf,PASS,809318246923,2018-04-03 18:20:33.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,PASS,809318246924,2018-04-03 18:20:34.0,AP3U,C,-,null,null,00,null
+IMPSP2UBeneficiaryPaymentListenquiryWKw,PASS,809318246925,2018-04-03 18:20:36.0,AP4U,C,-,null,null,00,null
+IMPSP2UBeneficiaryPaymentListenquiryWoKw,PASS,809318246926,2018-04-03 18:20:37.0,AP4U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,PASS,809318246927,2018-04-03 18:20:39.0,AP5U,C,-,null,null,00,-
+IMPSP2UBeneficiarySearchListenquiry,PASS,809318246928,2018-04-03 18:20:46.0,AP6U,C,-,null,null,00,null
+IMPSP2UBeneficiarySearchListenquiryWoKw,PASS,809318246929,2018-04-03 18:20:47.0,AP6U,C,-,null,null,00,null
+IMPSP2UDeleteBeneficiaryListenquiry,PASS,809318246930,2018-04-03 18:20:48.0,AP7U,C,-,null,null,00,null
+IMPSP2UDeleteBeneficiaryListenquiry,PASS,809318246931,2018-04-03 18:20:50.0,AP7U,C,-,null,null,00,null
+IMPSP2UDeleteBeneficiaryConfirmation,PASS,809318246932,2018-04-03 18:20:51.0,AP8U,C,-,null,null,00,null
+IMPSP2UInstantPaymentWithInvalidAadhar,PASS,809318246933,2018-04-03 18:20:53.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentWithExceededAmount,FAIL,809318246934,2018-04-03 18:20:58.0,AP1U,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+IMPSP2UInstantPaymentWithInsufficientAmount,FAIL,809318246935,2018-04-03 18:20:59.0,AP1U,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+IMPSP2UBeneficiaryPaymentConfirmationWithExceededAmount,FAIL,809318246936,2018-04-03 18:21:00.0,AP5U,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+IMPSP2UBeneficiaryPaymentConfirmationWithInsufficientAmount,FAIL,809318246937,2018-04-03 18:21:02.0,AP5U,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+impsP2UAddBenPreConf,PASS,809318246938,2018-04-03 18:21:04.0,AP2U,C,-,null,null,00,null
+IMPSP2UInstantPaymentForM0Decline,PASS,809318246939,2018-04-03 18:21:05.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentForM1Decline,PASS,809318246940,2018-04-03 18:21:10.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentForM2Decline,PASS,809318246941,2018-04-03 18:21:16.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentForM3Decline,PASS,809318246942,2018-04-03 18:21:20.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentForM4Decline,PASS,809318246943,2018-04-03 18:21:26.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentForM5Decline,PASS,809318246944,2018-04-03 18:21:30.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentForM6Decline,PASS,809318246945,2018-04-03 18:21:36.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentFor92Decline,PASS,809318246946,2018-04-03 18:21:40.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentFor13Decline,PASS,809318246947,2018-04-03 18:21:47.0,AP1U,C,-,null,null,00,-
+IMPSP2UInstantPaymentFor51Decline,PASS,809318246948,2018-04-03 18:21:52.0,AP1U,C,-,null,null,00,-
+impsP2UAddBenPreConf,PASS,809318246949,2018-04-03 18:21:57.0,AP2U,C,-,null,null,00,null
+impsP2UAddBenPreConf,PASS,809318246950,2018-04-03 18:21:58.0,AP2U,C,-,null,null,00,null
+IMPSP2UBeneficiarySearchListenquiry,FAIL,809318246951,2018-04-03 18:22:00.0,AP6U,F,C,null,null,09,Beneficiary ufhbjnk not found.
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809318246952,2018-04-03 18:22:02.0,AP5U,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+impsP2UAddBenPreConf,PASS,809318246953,2018-04-03 18:22:04.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809318246954,2018-04-03 18:22:05.0,AP5U,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2URegBeneficiaryPaymentForM0Decline,FAIL,809318246955,2018-04-03 18:22:07.0,AP8U,F,B,null,null,09,Beneficiary deregistration not successful
+impsP2UAddBenPreConf,PASS,809318246956,2018-04-03 18:22:08.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809318246957,2018-04-03 18:22:09.0,AP5U,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2URegBeneficiaryPaymentForM1Decline,FAIL,809318246958,2018-04-03 18:22:11.0,AP8U,F,B,null,null,09,Beneficiary deregistration not successful
+impsP2UAddBenPreConf,PASS,809318246959,2018-04-03 18:22:14.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809318246960,2018-04-03 18:22:16.0,AP5U,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2URegBeneficiaryPaymentForM2Decline,FAIL,809318246961,2018-04-03 18:22:18.0,AP8U,F,B,null,null,09,Beneficiary deregistration not successful
+impsP2UAddBenPreConf,PASS,809318246962,2018-04-03 18:22:19.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809318246963,2018-04-03 18:22:20.0,AP5U,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2URegBeneficiaryPaymentForM3Decline,FAIL,809318246964,2018-04-03 18:22:22.0,AP8U,F,B,null,null,09,Beneficiary deregistration not successful
+impsP2UAddBenPreConf,PASS,809318246965,2018-04-03 18:22:24.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809318246966,2018-04-03 18:22:26.0,AP5U,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2URegBeneficiaryPaymentForM4Decline,FAIL,809318246967,2018-04-03 18:22:29.0,AP8U,F,B,null,null,09,Beneficiary deregistration not successful
+impsP2UAddBenPreConf,PASS,809318246968,2018-04-03 18:22:30.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809318246969,2018-04-03 18:22:31.0,AP5U,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2URegBeneficiaryPaymentForM5Decline,FAIL,809318246970,2018-04-03 18:22:33.0,AP8U,F,B,null,null,09,Beneficiary deregistration not successful
+impsP2UAddBenPreConf,PASS,809318246971,2018-04-03 18:22:35.0,AP2U,C,-,null,null,00,null
+IMPSP2UAddBeneficiaryconfirmation,FAIL,809318246972,2018-04-03 18:22:36.0,AP5U,F,C,null,null,09,Beneficiary not registered. Please register the Beneficiary and proceed
+IMPSP2URegBeneficiaryPaymentForM6Decline,FAIL,809318246973,2018-04-03 18:22:38.0,AP8U,F,B,null,null,09,Beneficiary deregistration not successful
+m2m Quick FT,PASS,809318246974,2018-04-03 18:22:39.0,APQM,C,-,null,null,00,-
+m2m Benificiary Account list,PASS,809318246975,2018-04-03 18:22:44.0,APRM,C,-,null,null,00,null
+m2m Benificiary Registration,PASS,809318246976,2018-04-03 18:22:46.0,APC1,C,-,null,null,00,null
+m2m Register benificiary search,PASS,809318246977,2018-04-03 18:22:47.0,APF1,C,-,null,null,00,null
+m2m benificiary payment,PASS,809318246978,2018-04-03 18:22:49.0,APFT,C,-,null,null,00,-
+m2m benificiary search,PASS,809318246979,2018-04-03 18:22:53.0,APD5,C,-,null,null,00,null
+m2m benificiary search,PASS,809318246980,2018-04-03 18:22:55.0,APD5,C,-,null,null,00,null
+m2m benificiary delete search,PASS,809318246981,2018-04-03 18:22:56.0,AP2L,C,-,null,null,00,null
+m2m benificiary delete search,PASS,809318246982,2018-04-03 18:22:57.0,AP2L,C,-,null,null,00,null
+M2M benificiary delete,PASS,809318246983,2018-04-03 18:22:59.0,AP2D,C,-,null,null,00,null
+m2m Quick FT Benificiary Not Registered For Mobile Banking,FAIL,809318246984,2018-04-03 18:23:00.0,APQM,F,C,null,null,09,Beneficiary not registered for mobile banking.Kindly transfer funds through mobile to account option
+m2m Quick FT Insufficient Amount,FAIL,809318246985,2018-04-03 18:23:02.0,APQM,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+m2m Quick FT Amount Exceeds Limit,FAIL,809318246986,2018-04-03 18:23:03.0,APQM,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+m2m Ben Reg Acclist For Random Mobile No,FAIL,809318246987,2018-04-03 18:23:05.0,APRM,F,B,null,null,09,Beneficiary not a mobile banking customer. Please contact bank for further details
+m2m ben payment Exceed Transaction Amount,FAIL,809318246988,2018-04-03 18:23:06.0,APFT,F,C,null,null,09,Beneficiary not registered in mobile banking server
+m2m ben payment Insufficient Amount,FAIL,809318246989,2018-04-03 18:23:08.0,APFT,F,C,null,null,09,Beneficiary not registered in mobile banking server
+m2m Ben Del Same Ben SearchWKw,FAIL,809318246990,2018-04-03 18:23:09.0,AP2L,F,C,null,null,09,Beneficiary FTBeneficiary not found.
+P2A Quick FT,PASS,809318246991,2018-04-03 18:23:10.0,APQT,C,-,null,null,00,-
+m2a benificary registration search,PASS,809318246992,2018-04-03 18:23:15.0,APRA,C,-,null,null,00,-
+m2a benificiary req,PASS,809318246993,2018-04-03 18:23:16.0,APC2,C,-,null,null,00,null
+m2a benificiary payment search,PASS,809318246994,2018-04-03 18:23:17.0,APF2,C,-,null,null,00,null
+m2a benificiary payment,PASS,809318246995,2018-04-03 18:23:19.0,APFA,C,-,null,null,00,-
+m2a benificiary details Without Keyword,PASS,809318246996,2018-04-03 18:23:22.0,APD6,C,-,null,null,00,null
+m2a benificiary details With Keyword,PASS,809318246997,2018-04-03 18:23:23.0,APD6,C,-,null,null,00,null
+m2a benificiary deregistration search without keyword,PASS,809318246998,2018-04-03 18:23:25.0,AP3L,C,-,null,null,00,null
+m2a benificiary deregistration search with keyword,PASS,809318246999,2018-04-03 18:23:26.0,AP3L,C,-,null,null,00,null
+m2a benificiary deregistration search with keyword,PASS,809318247000,2018-04-03 18:23:27.0,AP3D,C,-,null,null,00,null
+m2a Quick FT Random Ben Account,PASS,809318247001,2018-04-03 18:23:29.0,APQT,C,-,null,null,00,-
+m2a Quick FT Exceeds Transaction Amount,FAIL,809318247002,2018-04-03 18:23:32.0,APQT,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+m2a QuickFT Insufficient Amount,FAIL,809318247003,2018-04-03 18:23:34.0,APQT,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+m2a Ben Reg With Random Ben Account,PASS,809318247004,2018-04-03 18:23:35.0,APC2,C,-,null,null,00,null
+m2a Ben Payment Exceed Transaction Amount,FAIL,809318247005,2018-04-03 18:23:36.0,APFA,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+m2a Ben Payment InSufficient Amount,FAIL,809318247006,2018-04-03 18:23:38.0,APFA,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+m2a Ben De-register Same Ben,PASS,809318247007,2018-04-03 18:23:39.0,AP3D,C,-,null,null,00,null
+NEFT benificiary registration,PASS,809318247008,2018-04-03 18:23:40.0,APQ2,C,-,null,null,00,null
+NEFT benificiary registration confirm,PASS,809318247009,2018-04-03 18:23:43.0,APQ3,C,-,null,null,00,null
+NEFT benificiary list,PASS,809318247010,2018-04-03 18:23:45.0,APQ7,C,-,null,null,00,null
+NEFT benificiary payment,FAIL,809318247011,2018-04-03 18:23:46.0,APQ8,F,B,null,null,09,Beneficiary not activated yet. Please try after sometime
+NEFT benificiary detail,PASS,809318247012,2018-04-03 18:23:49.0,APNL,C,-,null,null,00,null
+NEFT benificiary de-registration list,PASS,809318247013,2018-04-03 18:23:50.0,AP4L,C,-,null,null,00,null
+NEFT benificiary de-registration confirm,PASS,809318247014,2018-04-03 18:23:52.0,AP4D,C,-,null,null,00,null
+NEFT Quick FT With Invalid IFSC code,FAIL,809318247015,2018-04-03 18:23:54.0,APQN,F,C,null,null,09,Please enter the valid amount to complete the transaction 
+NEFT ben reg With Invalid IFSC code,FAIL,809318247016,2018-04-03 18:23:55.0,APQ2,F,B,null,null,09,Invalid IFS code
+NEFT ben reg confirm With Invalid IFSC code,PASS,809318247017,2018-04-03 18:23:57.0,APQ3,C,-,null,null,00,null
+NEFT ben payment With Exceeded Amount,FAIL,809318247018,2018-04-03 18:23:58.0,APQ8,F,B,null,null,09,Beneficiary IFS Code not found. Please contact Bank for further details
+NEFT ben payment With Insufficient Amount,FAIL,809318247019,2018-04-03 18:23:59.0,APQ8,F,B,null,null,09,Beneficiary IFS Code not found. Please contact Bank for further details
+NEFTbenpaymentWithRandomNickname,FAIL,809318247020,2018-04-03 18:24:00.0,APQ8,F,C,null,null,09,Beneficiary not registered in mobile banking server

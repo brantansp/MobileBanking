@@ -1,0 +1,47 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+m2m Quick FT,PASS,809312246584,2018-04-03 12:03:33.0,APQM,C,-,null,null,00,-
+m2m Benificiary Account list,PASS,809312246585,2018-04-03 12:03:37.0,APRM,C,-,null,null,00,null
+m2m Benificiary Registration,PASS,809312246586,2018-04-03 12:03:39.0,APC1,C,-,null,null,00,null
+m2m Register benificiary search,PASS,809312246587,2018-04-03 12:03:40.0,APF1,C,-,null,null,00,null
+m2m benificiary payment,PASS,809312246588,2018-04-03 12:03:42.0,APFT,C,-,null,null,00,-
+m2m benificiary search,PASS,809312246590,2018-04-03 12:03:47.0,APD5,C,-,null,null,00,null
+m2m benificiary search,PASS,809312246591,2018-04-03 12:03:48.0,APD5,C,-,null,null,00,null
+m2m benificiary delete search,PASS,809312246592,2018-04-03 12:03:50.0,AP2L,C,-,null,null,00,null
+m2m benificiary delete search,PASS,809312246593,2018-04-03 12:03:51.0,AP2L,C,-,null,null,00,null
+M2M benificiary delete,PASS,809312246594,2018-04-03 12:03:52.0,AP2D,C,-,null,null,00,null
+m2m Quick FT Benificiary Not Registered For Mobile Banking,FAIL,809312246595,2018-04-03 12:03:54.0,APQM,F,C,null,null,09,Beneficiary not registered for mobile banking.Kindly transfer funds through mobile to account option
+m2m Quick FT Insufficient Amount,FAIL,809312246596,2018-04-03 12:03:55.0,APQM,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+m2m Quick FT Amount Exceeds Limit,FAIL,809312246597,2018-04-03 12:03:56.0,APQM,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+m2m Ben Reg Acclist For Random Mobile No,FAIL,809312246598,2018-04-03 12:03:57.0,APRM,F,B,null,null,09,Beneficiary not a mobile banking customer. Please contact bank for further details
+m2m ben payment Exceed Transaction Amount,FAIL,809312246599,2018-04-03 12:03:59.0,APFT,F,C,null,null,09,Beneficiary not registered in mobile banking server
+m2m ben payment Insufficient Amount,FAIL,809312246600,2018-04-03 12:04:00.0,APFT,F,C,null,null,09,Beneficiary not registered in mobile banking server
+m2m Ben Del Same Ben SearchWKw,FAIL,809312246601,2018-04-03 12:04:02.0,AP2L,F,C,null,null,09,Beneficiary FTBeneficiary not found.
+P2A Quick FT,PASS,809312246602,2018-04-03 12:04:03.0,APQT,C,-,null,null,00,-
+m2a benificary registration search,PASS,809312246603,2018-04-03 12:04:06.0,APRA,C,-,null,null,00,-
+m2a benificiary req,PASS,809312246604,2018-04-03 12:04:07.0,APC2,C,-,null,null,00,null
+m2a benificiary payment search,PASS,809312246605,2018-04-03 12:04:08.0,APF2,C,-,null,null,00,null
+m2a benificiary payment,PASS,809312246606,2018-04-03 12:04:10.0,APFA,C,-,null,null,00,-
+m2a benificiary details Without Keyword,PASS,809312246607,2018-04-03 12:04:14.0,APD6,C,-,null,null,00,null
+m2a benificiary details With Keyword,PASS,809312246608,2018-04-03 12:04:16.0,APD6,C,-,null,null,00,null
+m2a benificiary deregistration search without keyword,PASS,809312246609,2018-04-03 12:04:17.0,AP3L,C,-,null,null,00,null
+m2a benificiary deregistration search with keyword,PASS,809312246610,2018-04-03 12:04:18.0,AP3L,C,-,null,null,00,null
+m2a benificiary deregistration search with keyword,PASS,809312246611,2018-04-03 12:04:20.0,AP3D,C,-,null,null,00,null
+m2a Quick FT Random Ben Account,PASS,809312246612,2018-04-03 12:04:21.0,APQT,C,-,null,null,00,-
+m2a Quick FT Exceeds Transaction Amount,FAIL,809312246613,2018-04-03 12:04:24.0,APQT,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+m2a QuickFT Insufficient Amount,FAIL,809312246614,2018-04-03 12:04:26.0,APQT,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+m2a Ben Reg With Random Ben Account,PASS,809312246615,2018-04-03 12:04:27.0,APC2,C,-,null,null,00,null
+m2a Ben Payment Exceed Transaction Amount,FAIL,809312246616,2018-04-03 12:04:28.0,APFA,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount
+m2a Ben Payment InSufficient Amount,FAIL,809312246617,2018-04-03 12:04:29.0,APFA,F,B,null,null,09,Minimum Amount permitted for this transaction is Rs. 5.00. Please enter a higher amount
+m2a Ben De-register Same Ben,PASS,809312246618,2018-04-03 12:04:31.0,AP3D,C,-,null,null,00,null
+NEFT benificiary registration,PASS,809312246619,2018-04-03 12:04:33.0,APQ2,C,-,null,null,00,null
+NEFT benificiary registration confirm,PASS,809312246620,2018-04-03 12:04:34.0,APQ3,C,-,null,null,00,null
+NEFT benificiary list,PASS,809312246621,2018-04-03 12:04:35.0,APQ7,C,-,null,null,00,null
+NEFT benificiary payment,FAIL,809312246622,2018-04-03 12:04:37.0,APQ8,F,B,null,null,09,Beneficiary not activated yet. Please try after sometime
+NEFT benificiary detail,PASS,809312246623,2018-04-03 12:04:38.0,APNL,C,-,null,null,00,null
+NEFT benificiary de-registration list,PASS,809312246624,2018-04-03 12:04:39.0,AP4L,C,-,null,null,00,null
+NEFT benificiary de-registration confirm,PASS,809312246625,2018-04-03 12:04:41.0,AP4D,C,-,null,null,00,null
+NEFT Quick FT With Invalid IFSC code,FAIL,809312246626,2018-04-03 12:04:42.0,APQN,F,C,null,null,09,Please enter the valid amount to complete the transaction 
+NEFT ben reg With Invalid IFSC code,FAIL,809312246627,2018-04-03 12:04:44.0,APQ2,F,B,null,null,09,Invalid IFS code
+NEFT ben reg confirm With Invalid IFSC code,PASS,809312246628,2018-04-03 12:04:45.0,APQ3,C,-,null,null,00,null
+NEFT ben payment With Exceeded Amount,FAIL,809312246629,2018-04-03 12:04:47.0,APQ8,F,B,null,null,09,Beneficiary IFS Code not found. Please contact Bank for further details
+NEFT ben payment With Insufficient Amount,FAIL,809312246630,2018-04-03 12:04:48.0,APQ8,F,B,null,null,09,Beneficiary IFS Code not found. Please contact Bank for further details

@@ -1,0 +1,9 @@
+Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
+Balance Enquiry,FAIL,809316246709,2018-04-03 16:13:58.0,APBE,F,C,null,null,09,Invalid mPIN. Please try again.
+Mini statement,FAIL,809316246710,2018-04-03 16:14:00.0,APMS,F,C,null,null,09,Invalid mPIN. Please try again.
+Transaction History,FAIL,809316246711,2018-04-03 16:14:01.0,APTH,F,C,null,null,09,Your account has been blocked / deactivated
+Generate MMID,FAIL,809316246712,2018-04-03 16:14:02.0,APIM,F,C,null,null,09,Your account has been blocked / deactivated
+Retrieve MMID,FAIL,809316246713,2018-04-03 16:14:03.0,APS6,F,C,null,null,09,Your account has been blocked / deactivated
+Generate MMID,FAIL,809316246714,2018-04-03 16:14:05.0,APIM,F,C,null,null,09,Your account has been blocked / deactivated
+Cancel MMID All,FAIL,809316246715,2018-04-03 16:14:06.0,APRC,F,C,null,null,09,Your account has been blocked / deactivated
+Generate MMID,FAIL,809316246716,2018-04-03 16:14:07.0,APIM,F,C,null,null,09,Your account has been blocked / deactivated
