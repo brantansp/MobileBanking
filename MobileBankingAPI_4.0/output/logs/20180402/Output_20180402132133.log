@@ -1,0 +1,9 @@
+[INFO] 2018-04-02 13:21:33,637 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-04-02 13:21:33,796 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-04-02 13:21:33,796 ExtentManager sendReqAppLogin - Request : App Login
+[INFO] 2018-04-02 13:21:34,514 ExtentManager sendReqAppLogin - Hmaced Request : 070dc650f08fd5083e48e1f2ea2405a648e35b0b7b3330a4b1789007e5c69d51*!XXXXXXXXXXAPMN;BVD:4.3.12%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus%23864829030310400%231522649949908;504432;123457;4.0.3;0;149342595223159141645758312840708292034
+[INFO] 2018-04-02 13:22:14,596 ExtentManager sendReqAppLogin - Response received from Server : MN01;Your last transaction has been timed out due to technical problem. Please retry after some time;02/04/2018 13:23;TXNID:809213539826;BID:C504432
+[INFO] 2018-04-02 13:22:14,597 ExtentManager sendReqAppLogin - Transaction ID : 809213539826
+[INFO] 2018-04-02 13:22:14,608 ExtentManager sendReqAppLogin - ******************************END********************************
+

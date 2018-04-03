@@ -1,6 +1,8 @@
 package mBankingControlCenter;
 
 
+import static org.testng.Assert.assertTrue;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.testng.annotations.Test;
@@ -8,14 +10,17 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
 import mBankingPageObjectModel.StaticStore;
 import mBankingUtilityCenter.ExtentManager;
 import mBankingUtilityCenter.HttpConnect;
+import mBankingUtilityCenter.RandomNumGenerator;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Method;
+import java.math.BigInteger;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -33,9 +38,10 @@ public class NonFinancialTransactions extends ExtentManager{
 	
 	@Test(priority=0)
 	public void AppLogin() throws IOException, SQLException {
+		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.appLogin();
 		String req2=StaticStore.appLogin2();
-		response =sendReqAppLogin(request, req2, "App Login");
+		response =sendReqAppLogin(request, req2, "App Login", uniNum);
 		assertResponse(response);
 	}
 	
@@ -45,6 +51,15 @@ public class NonFinancialTransactions extends ExtentManager{
 		request = StaticStore.balanceEnq();
 		response = sendReq (request, "Balance Enquiry");
 		assertResponse(response);
+	}
+	
+
+	@Test(priority=1)
+	public void balanceEnqWithInvalidAccNo() throws IOException, SQLException
+	{
+		request = StaticStore.balanceEnq(prop.getProperty("invalidaccno"));
+		response = sendReq (request, "Balance Enquiry");
+		assertTrue(response.substring(2,4).contains("01"));	
 	}
 	
 	@Test(priority=2)

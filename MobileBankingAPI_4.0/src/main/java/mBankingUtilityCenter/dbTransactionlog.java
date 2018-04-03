@@ -70,7 +70,7 @@ public class dbTransactionlog extends ExtentManager{
 		return result;
 	}
 
-	private static Connection getDBConnection() {
+	public static Connection getDBConnection() {
 		Connection dbConnection = null;
 		try {
 			Class.forName(DB_DRIVER);
