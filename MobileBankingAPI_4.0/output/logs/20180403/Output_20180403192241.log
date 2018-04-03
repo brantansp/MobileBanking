@@ -1,0 +1,28 @@
+[INFO] 2018-04-03 19:22:41,864 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-04-03 19:22:42,556 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-04-03 19:22:42,556 ExtentManager sendReqAppLogin - Request : ApplicationMobileNumber
+[INFO] 2018-04-03 19:22:43,268 ExtentManager sendReqAppLogin - Hmaced Request : 442e369e96f8a8e0316fe152a65352a694e31ff582fa6fe76d49510aaf60a4cd*!8778602561APMN;BVD:4.3.12%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus%23864829030310400%231030418192242;463795;123457;4.0;0;122373130973432667506063063292439078934
+[INFO] 2018-04-03 19:22:43,368 ExtentManager sendReqAppLogin - Response received from Server : MN00;8778602561;03/04/2018 19:23;TXNID:809319938531;BID:C463795
+[INFO] 2018-04-03 19:22:43,368 ExtentManager sendReqAppLogin - Transaction ID : 809319938531
+[INFO] 2018-04-03 19:22:43,369 ExtentManager sendReqAppLogin - ******************************END********************************
+
+[INFO] 2018-04-03 19:22:43,374 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-04-03 19:22:43,375 ExtentManager sendReqAppLogin - Request : GPRS Check
+[INFO] 2018-04-03 19:22:43,375 ExtentManager sendReqAppLogin - Hmaced Request : aa962c48d8c972b6cce53282e96a7c55ff16cf648a666a6a624c5547ab47ea17*!8778602561APGC;BVD:4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO+Lenovo+K8+Plus%2310.175.117.48%2312.8354858%2C80.2235916%3B463795;123457;4.0;0;97303931710554765350084490013836630160
+[INFO] 2018-04-03 19:22:46,444 ExtentManager sendReqAppLogin - Response received from Server : GC00;N; ; ;N; ; ;Y;7ffffffffffff0ef;ffffffffffffffff;ffffffffffffffff;N;N;N;0508;http://www.freshersopenings.in/wp-content/uploads/2013/08/fss-logo.jpg;BID:C463795
+[INFO] 2018-04-03 19:22:46,444 ExtentManager sendReqAppLogin - ******************************END********************************
+
+[INFO] 2018-04-03 19:22:46,447 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-04-03 19:22:46,448 ExtentManager sendReqAppLogin - Request : buildActivation
+[INFO] 2018-04-03 19:22:46,449 ExtentManager sendReqAppLogin - Hmaced Request : 8ac883cdb7e18bebea1f0cfda861b549966788c49a4b25ec74822f3718ae9129*!8778602561APNA;BVD:4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus;187130741006119135681847934352771245371;463795;123457;4.0;0;125695468057595763815032588922075959641
+[INFO] 2018-04-03 19:22:48,157 ExtentManager sendReqAppLogin - Response received from Server : NA00;You have successfully activated your TMB mConnect application.;E;8778602561;1111;Y;7ffffffffffff0ef;ffffffffffffffff;ffffffffffffffff;N;N;N;0508;193988280801964360165245522652939955897;BID:C463795
+[INFO] 2018-04-03 19:22:48,157 ExtentManager sendReqAppLogin - ******************************END********************************
+
+[INFO] 2018-04-03 19:22:48,160 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-04-03 19:22:48,160 ExtentManager sendReqAppLogin - Request : buildActivation
+[INFO] 2018-04-03 19:22:48,161 ExtentManager sendReqAppLogin - Hmaced Request : b14dafd3bea596306c180c34aa7e1488c9dcd3e36efc9b84339b5449ec101a55*!8778602561APCG;BVD:4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus;463795;123457;4.0;0;118324965535910574435559873821519154285
+[INFO] 2018-04-03 19:22:49,402 ExtentManager sendReqAppLogin - Response received from Server : CG00;N; ; ;N; ; ;Y;7ffffffffffff0ef;ffffffffffffffff;ffffffffffffffff;N;N;N;0508;http://www.freshersopenings.in/wp-content/uploads/2013/08/fss-logo.jpg;N;;03/04/2018 19:23;TXNID:809319247029;BID:C463795
+[INFO] 2018-04-03 19:22:49,402 ExtentManager sendReqAppLogin - Transaction ID : 809319247029
+[INFO] 2018-04-03 19:22:49,403 ExtentManager sendReqAppLogin - ******************************END********************************
+

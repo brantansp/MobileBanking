@@ -1,0 +1,26 @@
+[INFO] 2018-04-03 19:19:21,422 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-04-03 19:19:21,967 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-04-03 19:19:21,967 ExtentManager sendReqAppLogin - Request : ApplicationMobileNumber
+[INFO] 2018-04-03 19:19:22,579 ExtentManager sendReqAppLogin - Hmaced Request : fb95244a199b229aacb43ebad76d186c0a6f85628da33a742b3d2385b464824c*!8778602561APMN;BVD:4.3.12%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus%23864829030310400%231030418191921;463795;123457;4.0;0;161350315307826810433810341534383990850
+[INFO] 2018-04-03 19:19:22,594 ExtentManager sendReqAppLogin - Response received from Server : Unauthorised Access
+[INFO] 2018-04-03 19:19:22,595 ExtentManager sendReqAppLogin - ******************************END********************************
+
+[INFO] 2018-04-03 19:19:22,601 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-04-03 19:19:22,601 ExtentManager sendReqAppLogin - Request : GPRS Check
+[INFO] 2018-04-03 19:19:22,602 ExtentManager sendReqAppLogin - Hmaced Request : 4ef292d4847e2c44164a1a2d06d233158b7fd67ea5aed07f26b1830307a329e6*!8778602561APGC;BVD:4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO+Lenovo+K8+Plus%2310.175.117.48%2312.8354858%2C80.2235916%3B463795;123457;4.0;0;50423864539980154942984447505222646183
+[INFO] 2018-04-03 19:19:22,606 ExtentManager sendReqAppLogin - Response received from Server : Unauthorised Access
+[INFO] 2018-04-03 19:19:22,606 ExtentManager sendReqAppLogin - ******************************END********************************
+
+[INFO] 2018-04-03 19:19:22,608 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-04-03 19:19:22,608 ExtentManager sendReqAppLogin - Request : buildActivation
+[INFO] 2018-04-03 19:19:22,609 ExtentManager sendReqAppLogin - Hmaced Request : 70c9ec1051cce0e64d868710688ccbbf069d213e9cc3b9d938afbc8d07bb9f69*!8778602561APNA;BVD:4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus;187130741006119135681847934352771245371;463795;123457;4.0;0;12349664948943712517489965500054848615
+[INFO] 2018-04-03 19:19:22,613 ExtentManager sendReqAppLogin - Response received from Server : Unauthorised Access
+[INFO] 2018-04-03 19:19:22,614 ExtentManager sendReqAppLogin - ******************************END********************************
+
+[INFO] 2018-04-03 19:19:22,615 ExtentManager sendReqAppLogin - ******************************START******************************
+[INFO] 2018-04-03 19:19:22,616 ExtentManager sendReqAppLogin - Request : buildActivation
+[INFO] 2018-04-03 19:19:22,616 ExtentManager sendReqAppLogin - Hmaced Request : 4189e403bf01ce93c7f74e992bb175fcde1e0c858e06d0de871b738cfb0b6633*!8778602561APCG;BVD:4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus;463795;123457;4.0;0;153354807989736455444608827143723846242
+[INFO] 2018-04-03 19:19:22,621 ExtentManager sendReqAppLogin - Response received from Server : Unauthorised Access
+[INFO] 2018-04-03 19:19:22,622 ExtentManager sendReqAppLogin - ******************************END********************************
+

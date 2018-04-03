@@ -1,0 +1,212 @@
+[INFO] 2018-04-03 19:28:13,224 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
+
+[INFO] 2018-04-03 19:28:13,381 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:13,381 ExtentManager sendReq - Request : Balance Enquiry
+[INFO] 2018-04-03 19:28:14,015 ExtentManager sendReq - Hmaced Request : 3fc7511ddc76190f59dae35e4c3db0da95f761add5843ca944967825c7e700e0*!8778602561APBE;Y;190934055003449538762612830180469690629;463795;123457;4.0;null;52186251703902728679234914874377455346
+[INFO] 2018-04-03 19:28:14,903 ExtentManager sendReq - Response received from Server : BEAF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;03/04/2018 19:29;TXNID:809319247044;BID:C463795
+[INFO] 2018-04-03 19:28:14,904 ExtentManager sendReq - Transaction ID : 809319247044
+[INFO] 2018-04-03 19:28:14,905 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:14,920 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:14,920 ExtentManager sendReq - Request : Balance Enquiry
+[INFO] 2018-04-03 19:28:14,921 ExtentManager sendReq - Hmaced Request : 3f83e824f7dd36effe57d18896704cff9cd626f2bf2780e9659a12336c43161e*!8778602561APBE;Y;190934055003449538762612830180469690629;463795;123457;4.0;3286478326489632;146532735318120406668096772906579902318
+[INFO] 2018-04-03 19:28:16,974 ExtentManager sendReq - Response received from Server : BE00;88,836.28;88,820.53; ;03/04/2018 19:29;TXNID:809319247045;BID:C463795
+[INFO] 2018-04-03 19:28:16,975 ExtentManager sendReq - Transaction ID : 809319247045
+[INFO] 2018-04-03 19:28:16,976 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:16,994 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:16,994 ExtentManager sendReq - Request : Mini statement
+[INFO] 2018-04-03 19:28:16,996 ExtentManager sendReq - Hmaced Request : eea2056776a8f43518725f64fc6d2a36b15aaeff1171fe21d76129de3f8b5beb*!8778602561APMS;Y;190934055003449538762612830180469690629;463795;123457;4.0;3286478326489632;202343476037030024945379540973271234071
+[INFO] 2018-04-03 19:28:19,046 ExtentManager sendReq - Response received from Server : MS00;08/11/17 D NEFT/SUBRAMANIAN-VELRAJAN 103.00#08/11/17 D NEFT/VGN-Facility-Mgmt-Se 107.00#08/11/17 D eBank/Tr-To-S.ANISH-KUMAR 201.00#08/11/17 D RTGS/TATA-CARD/TMBLH17312 216000.00#08/11/17 D eBank/Tr-To-SAROJINI.C 204.00#08/11/17 D NEFT/testaudit/TMBLH17312 108.00#08/11/17 D NEFT/Shanmugavel/TMBLH173 102.00#08/11/17 D NEFT/ing-vysys-test3/TMBL 109.00#08/11/17 D NEFT/ANNA-NAGAR-OWNER/TMB 100.00;88,836.28;TXNID:809319247046;BID:C463795
+[INFO] 2018-04-03 19:28:19,046 ExtentManager sendReq - Transaction ID : 809319247046
+[INFO] 2018-04-03 19:28:19,046 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:19,048 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:19,048 ExtentManager sendReq - Request : Transaction History
+[INFO] 2018-04-03 19:28:19,049 ExtentManager sendReq - Hmaced Request : 19a05576eba2bebb77dfd1fd66f8972955cedda4ebd4af895ebada79f720a872*!8778602561APTH;Y;190934055003449538762612830180469690629;001;463795;123457;4.0;3286478326489632;177190342337692556401974045810810465945
+[INFO] 2018-04-03 19:28:23,191 ExtentManager sendReq - Response received from Server : TH00;Mini Statement*03/04/18 19:25*S*.0*-*-*MOB*809319247046#Balance enquiry*03/04/18 19:25*S*.0*-*-*MOB*809319247045#Balance enquiry*03/04/18 19:25*F*.0*-*-*MOB*809319247044#Balance enquiry*03/04/18 19:25*S*.0*-*-*MOB*809319247043#Mini Statement*03/04/18 19:23*F*.0*-*-*MOB*809319247040#Mini Statement*03/04/18 19:21*F*.0*-*-*MOB*809319247039#Balance enquiry*03/04/18 19:21*S*.0*-*-*MOB*809319247038#Mini Statement*03/04/18 19:20*F*.0*-*-*MOB*809319247032#Balance enquiry*03/04/18 19:20*F*.0*-*-*MOB*809319247031#Balance enquiry*03/04/18 19:20*F*.0*-*-*MOB*809319247030#NEFT*03/04/18 18:24*F*30.0*3286XXXXXX489632*ufhbjnk*MOB*809318247020#NEFT*03/04/18 18:23*F*4.0*3286XXXXXX489632*NeftBeneficiary*MOB*809318247019#NEFT*03/04/18 18:23*F*256487.0*3286XXXXXX489632*NeftBeneficiary*MOB*809318247018#NEFT*03/04/18 18:23*F*.0*3286XXXXXX489632*NeftBeneficiary*MOB*809318247015#NEFT*03/04/18 18:23*F*30.0*3286XXXXXX489632*NeftBeneficiary*MOB*809318247011#M2A*03/04/18 18:23*F*4.0*3286XXXXXX489632*FTBeneficiary*MOB*809318247006#M2A*03/04/18 18:23*F*256487.0*3286XXXXXX489632*FTBeneficiary*MOB*809318247005#M2A*03/04/18 18:23*F*4.0*3286XXXXXX489632*-*MOB*809318247003#M2A*03/04/18 18:23*F*256487.0*3286XXXXXX489632*-*MOB*809318247002#M2A*03/04/18 18:23*S*10.0*3286XXXXXX489632*-*MOB*809318247001#M2A*03/04/18 18:23*S*10.0*3286XXXXXX489632*FTBeneficiary*MOB*809318246995#M2A*03/04/18 18:23*S*10.0*3286XXXXXX489632*-*MOB*809318246991#M2M*03/04/18 18:23*F*4.0*3286XXXXXX489632*FTBeneficiary*MOB*809318246989#M2M*03/04/18 18:23*F*256487.0*3286XXXXXX489632*FTBeneficiary*MOB*809318246988#M2M*03/04/18 18:23*F*256487.0*3286XXXXXX489632*-*MOB*809318246986#M2M*03/04/18 18:23*F*4.0*3286XXXXXX489632*-*MOB*809318246985#M2M*03/04/18 18:23*F*10.0*3286XXXXXX489632*-*MOB*809318246984#M2M*03/04/18 18:22*S*10.0*3286XXXXXX489632*FTBeneficiary*MOB*809318246978#M2M*03/04/18 18:22*S*11.0*3286XXXXXX489632*-*MOB*809318246974#P2U*03/04/18 18:22*F*20.0*3286XXXXXX489632*ufhbjnk*MOB*809318246972;1;Y;TXNID:809319247047;BID:C463795
+[INFO] 2018-04-03 19:28:23,192 ExtentManager sendReq - Transaction ID : 809319247047
+[INFO] 2018-04-03 19:28:23,193 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:23,202 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:23,202 ExtentManager sendReq - Request : Generate MMID
+[INFO] 2018-04-03 19:28:23,205 ExtentManager sendReq - Hmaced Request : 34091013cd1eec81f6718d0aaa9954c20ea21169f9ca5daa53c7817ac10129e6*!8778602561APIM;Y;190934055003449538762612830180469690629;001;463795;123457;4.0;3286478326489632;152872016476743896104158524206984342272
+[INFO] 2018-04-03 19:28:24,275 ExtentManager sendReq - Response received from Server : IM00;2011XXXXX800005*9060142#3286XXXXXX489632*9060406#5012XXXXXX849862*9060427#5012XXXXXX849860*9060439#5012XXXXXX349283*9060580#5012XXXXXX000000*9060706#5012XXXXXX849822*9060822#5012XXXXXX849800*9060851#2011XXXXX800065*9060880#5012XXXXXX349826*9060980;1;N;03/04/2018 19:29;TXNID:809319247048;BID:C463795
+[INFO] 2018-04-03 19:28:24,276 ExtentManager sendReq - Transaction ID : 809319247048
+[INFO] 2018-04-03 19:28:24,277 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:24,283 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:24,284 ExtentManager sendReq - Request : Retrieve MMID
+[INFO] 2018-04-03 19:28:24,286 ExtentManager sendReq - Hmaced Request : 57a4e4e671a5c43434cd50084f29984c1fe678f9f10a282a0f8ba00fba61fb32*!8778602561APS6;Y;190934055003449538762612830180469690629;3286478326489632;463795;123457;4.0;3286478326489632;126466111912840290093642114030816651766
+[INFO] 2018-04-03 19:28:25,368 ExtentManager sendReq - Response received from Server : S600;Your MMID allotted for the A/C No. XXXXXXXX9632 is 9060406.You can Send and Receive Money through IMPS option in Mobile Banking.;03/04/2018 19:29;TXNID:809319247049;BID:C463795
+[INFO] 2018-04-03 19:28:25,369 ExtentManager sendReq - Transaction ID : 809319247049
+[INFO] 2018-04-03 19:28:25,370 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:25,377 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:25,378 ExtentManager sendReq - Request : Generate MMID
+[INFO] 2018-04-03 19:28:25,381 ExtentManager sendReq - Hmaced Request : bbc1c5645756daae28060b1e541c5c6b1efd5b3cf6c800c2ad71ee95f741d85c*!8778602561APIM;Y;190934055003449538762612830180469690629;001;463795;123457;4.0;3286478326489632;115449496743384351502930047609695119891
+[INFO] 2018-04-03 19:28:26,546 ExtentManager sendReq - Response received from Server : IM00;2011XXXXX800005*9060142#3286XXXXXX489632*9060406#5012XXXXXX849862*9060427#5012XXXXXX849860*9060439#5012XXXXXX349283*9060580#5012XXXXXX000000*9060706#5012XXXXXX849822*9060822#5012XXXXXX849800*9060851#2011XXXXX800065*9060880#5012XXXXXX349826*9060980;1;N;03/04/2018 19:29;TXNID:809319247050;BID:C463795
+[INFO] 2018-04-03 19:28:26,548 ExtentManager sendReq - Transaction ID : 809319247050
+[INFO] 2018-04-03 19:28:26,548 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:26,549 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:26,550 ExtentManager sendReq - Request : Cancel MMID All
+[INFO] 2018-04-03 19:28:26,552 ExtentManager sendReq - Hmaced Request : b9ddbdc43e8879154aa6fd702842399617655c3d880701737a4e24ff15153536*!8778602561APRC;Y;190934055003449538762612830180469690629;ALL;463795;123457;4.0;3286478326489632;185918676192502776824922587257596987573
+[INFO] 2018-04-03 19:28:27,928 ExtentManager sendReq - Response received from Server : RC00;IMPS Cancelled successfully;03/04/2018 19:29;TXNID:809319247051;BID:C463795
+[INFO] 2018-04-03 19:28:27,929 ExtentManager sendReq - Transaction ID : 809319247051
+[INFO] 2018-04-03 19:28:27,930 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:27,936 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:27,938 ExtentManager sendReq - Request : Generate MMID
+[INFO] 2018-04-03 19:28:27,941 ExtentManager sendReq - Hmaced Request : 15bb0045618e5c54abbeb39457988dd710bc5f87ac6a12092c4ecb4117c5a568*!8778602561APIM;Y;190934055003449538762612830180469690629;001;463795;123457;4.0;3286478326489632;202845113848118338448282015632589519681
+[INFO] 2018-04-03 19:28:29,515 ExtentManager sendReq - Response received from Server : IM00;3286XXXXXX489632*9060937#5012XXXXXX000000*9060223#5012XXXXXX349283*9060648#5012XXXXXX349826*9060869#2011XXXXX800005*9060390#5012XXXXXX849862*9060788#2011XXXXX800065*9060454#5012XXXXXX849800*9060742#5012XXXXXX849822*9060277#5012XXXXXX849860*9060373;1;N;03/04/2018 19:29;TXNID:809319247052;BID:C463795
+[INFO] 2018-04-03 19:28:29,516 ExtentManager sendReq - Transaction ID : 809319247052
+[INFO] 2018-04-03 19:28:29,517 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:29,517 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:29,518 ExtentManager sendReq - Request : Cancel MMID Single
+[INFO] 2018-04-03 19:28:29,520 ExtentManager sendReq - Hmaced Request : 6bebaa1b4bdbfd855583ce894d8d47b3f1bf9ec2dfbc3108981b1b4ddaa77711*!8778602561APRC;Y;190934055003449538762612830180469690629;3286478326489632;463795;123457;4.0;3286478326489632;29707921166541699482209672368664434172
+[INFO] 2018-04-03 19:28:31,409 ExtentManager sendReq - Response received from Server : RC00;Your MMID 9060937 allotted for the A/C No. XXXXXXXX9632 is cancelled.;03/04/2018 19:29;TXNID:809319247053;BID:C463795
+[INFO] 2018-04-03 19:28:31,409 ExtentManager sendReq - Transaction ID : 809319247053
+[INFO] 2018-04-03 19:28:31,410 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:31,412 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:31,415 ExtentManager sendReq - Request : Email ID fetch
+[INFO] 2018-04-03 19:28:31,416 ExtentManager sendReq - Hmaced Request : a82e045036b611ec88db91a8074298dc0e8a42317bf9575456f5fb6c0441af23*!8778602561APZ6;Y;190934055003449538762612830180469690629;463795;123457;4.0;3286478326489632;148984431070656969865232933079133468881
+[INFO] 2018-04-03 19:28:32,662 ExtentManager sendReq - Response received from Server : Z600;abc@fss.com;03/04/2018 19:29;TXNID:809319247054;BID:C463795
+[INFO] 2018-04-03 19:28:32,663 ExtentManager sendReq - Transaction ID : 809319247054
+[INFO] 2018-04-03 19:28:32,663 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:32,665 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:32,665 ExtentManager sendReq - Request : Email ID Update
+[INFO] 2018-04-03 19:28:32,666 ExtentManager sendReq - Hmaced Request : ef99be9bc68ae946c0fcfef7a678fd92f80d51647f331e53c0b3d686071d71dd*!8778602561APZ3;Y;190934055003449538762612830180469690629;abc@fss.com;463795;123457;4.0;3286478326489632;119669963813692602399398210582861240875
+[INFO] 2018-04-03 19:28:33,721 ExtentManager sendReq - Response received from Server : Z300;Your E-mail ID configured successfully;03/04/2018 19:29;TXNID:809319247055;BID:C463795
+[INFO] 2018-04-03 19:28:33,722 ExtentManager sendReq - Transaction ID : 809319247055
+[INFO] 2018-04-03 19:28:33,723 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:33,729 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:33,729 ExtentManager sendReq - Request : Cheque status
+[INFO] 2018-04-03 19:28:33,731 ExtentManager sendReq - Hmaced Request : 2adc0705ae3f6512fac504e8a9d9977deda93cf19211ef3e7f51f91caeb1424b*!8778602561APLW;Y;190934055003449538762612830180469690629;123456;463795;123457;4.0;3286478326489632;59637685430539557001461914582192577101
+[INFO] 2018-04-03 19:28:36,096 ExtentManager sendReq - Response received from Server : LW00;Your cheque (123456) has been ;03/04/2018 19:29;TXNID:809319247056;BID:C463795
+[INFO] 2018-04-03 19:28:36,096 ExtentManager sendReq - Transaction ID : 809319247056
+[INFO] 2018-04-03 19:28:36,097 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:36,103 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:36,103 ExtentManager sendReq - Request : Account Fetch
+[INFO] 2018-04-03 19:28:36,106 ExtentManager sendReq - Hmaced Request : a166c2e5a0ebcd6057271fbd7eddd0bd093989ce75a2ac4ec8f9040a3c356e70*!8778602561APSY;2;463795;123457;4.0;0;81362444422370950453200512937263464463
+[INFO] 2018-04-03 19:28:41,345 ExtentManager sendReq - Response received from Server : SY00;N;rest;2;6;5012432476849822*10#5012432476849860*10#201150050800005*20#201150050800065*10#5012432472349283*10#5012432476849800*10;Y;TXNID:809319247057;BID:C463795
+[INFO] 2018-04-03 19:28:41,345 ExtentManager sendReq - Transaction ID : 809319247057
+[INFO] 2018-04-03 19:28:41,345 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:41,347 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:41,347 ExtentManager sendReq - Request : Stop Cheque
+[INFO] 2018-04-03 19:28:41,348 ExtentManager sendReq - Hmaced Request : 6aa44ccc45f5932a52a28e731dbe64a96dba7c048f6be67bd2d32770764840a2*!8778602561APL4;Y;190934055003449538762612830180469690629;123456;463795;123457;4.0;3286478326489632;155371177606394253415429785168518948502
+[INFO] 2018-04-03 19:28:43,730 ExtentManager sendReq - Response received from Server : L400;Stop Payment request issued for Cheque no. 123456 (a/c no. XXXXXXXX9632) has been executed successfully.;03/04/2018 19:29;TXNID:809319247058;BID:C463795
+[INFO] 2018-04-03 19:28:43,731 ExtentManager sendReq - Transaction ID : 809319247058
+[INFO] 2018-04-03 19:28:43,732 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:43,737 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:43,738 ExtentManager sendReq - Request : Change Login Password
+[INFO] 2018-04-03 19:28:43,741 ExtentManager sendReq - Hmaced Request : bf8238c4739961c2fc224c31fd920a9958d22fcbabcf9b7c6a1bbdbe6ba81fc8*!8778602561APP5;8609547570776098518502128580812621291;463795;123457;4.0;0;69406278362143978659251745801732918539
+[INFO] 2018-04-03 19:28:44,696 ExtentManager sendReq - Response received from Server : P500;Login password has been changed successfully;1234;03/04/2018 19:29;TXNID:809319247059;BID:C463795
+[INFO] 2018-04-03 19:28:44,697 ExtentManager sendReq - Transaction ID : 809319247059
+[INFO] 2018-04-03 19:28:44,697 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:44,703 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:44,704 ExtentManager sendReq - Request : Balance Enquiry with closed Account
+[INFO] 2018-04-03 19:28:44,706 ExtentManager sendReq - Hmaced Request : 668af3e0f33149c324dc10edf2b13af0b3470b7de29eca43605378c9c5876711*!8778602561APBE;Y;190934055003449538762612830180469690629;463795;123457;4.0;null;61597534215499565066280880347724533186
+[INFO] 2018-04-03 19:28:45,660 ExtentManager sendReq - Response received from Server : BEAF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;03/04/2018 19:29;TXNID:809319247060;BID:C463795
+[INFO] 2018-04-03 19:28:45,661 ExtentManager sendReq - Transaction ID : 809319247060
+[INFO] 2018-04-03 19:28:45,662 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:45,672 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:45,672 ExtentManager sendReq - Request : Balance Enquiry with Inactive Account
+[INFO] 2018-04-03 19:28:45,673 ExtentManager sendReq - Hmaced Request : 7e1aa1555c6d39d6128ed9e9e294ca69dc1a5d54b8111cbefabfaf0275f626a5*!8778602561APBE;Y;190934055003449538762612830180469690629;463795;123457;4.0;null;83118201482845236769992840572149925839
+[INFO] 2018-04-03 19:28:46,540 ExtentManager sendReq - Response received from Server : BEAF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;03/04/2018 19:29;TXNID:809319247061;BID:C463795
+[INFO] 2018-04-03 19:28:46,541 ExtentManager sendReq - Transaction ID : 809319247061
+[INFO] 2018-04-03 19:28:46,545 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:46,553 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:46,554 ExtentManager sendReq - Request : Balance Enquiry with Blocked Account
+[INFO] 2018-04-03 19:28:46,556 ExtentManager sendReq - Hmaced Request : a7c47328ca14a27d66dd0972414fe13bf9dd016c225f902096bbdf48d1f9612b*!8778602561APBE;Y;190934055003449538762612830180469690629;463795;123457;4.0;null;103310191401871356696711246988299053012
+[INFO] 2018-04-03 19:28:47,634 ExtentManager sendReq - Response received from Server : BEAF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;03/04/2018 19:29;TXNID:809319247062;BID:C463795
+[INFO] 2018-04-03 19:28:47,635 ExtentManager sendReq - Transaction ID : 809319247062
+[INFO] 2018-04-03 19:28:47,636 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:47,642 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:47,642 ExtentManager sendReq - Request : Balance Enquiry For Account Having Zero Balance
+[INFO] 2018-04-03 19:28:47,645 ExtentManager sendReq - Hmaced Request : 554f0aa10fc9031f50eb51c194689eac13cf1ec75b0e7c71fb761268713df4a2*!8778602561APBE;Y;190934055003449538762612830180469690629;463795;123457;4.0;null;156221875223047591636430720223002875665
+[INFO] 2018-04-03 19:28:48,594 ExtentManager sendReq - Response received from Server : BEAF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;03/04/2018 19:29;TXNID:809319247063;BID:C463795
+[INFO] 2018-04-03 19:28:48,595 ExtentManager sendReq - Transaction ID : 809319247063
+[INFO] 2018-04-03 19:28:48,595 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:48,597 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:48,597 ExtentManager sendReq - Request : Balance Enquiry For Account Having Negative Balance
+[INFO] 2018-04-03 19:28:48,598 ExtentManager sendReq - Hmaced Request : f6cf1aaf349113372c3ccde9655c46543fcecac0f49d2c9210fa5351b3dee7aa*!8778602561APBE;Y;190934055003449538762612830180469690629;463795;123457;4.0;null;161919115730786668165082987345877191025
+[INFO] 2018-04-03 19:28:49,562 ExtentManager sendReq - Response received from Server : BEAF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;03/04/2018 19:29;TXNID:809319247064;BID:C463795
+[INFO] 2018-04-03 19:28:49,563 ExtentManager sendReq - Transaction ID : 809319247064
+[INFO] 2018-04-03 19:28:49,563 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:49,569 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:49,570 ExtentManager sendReq - Request : Mini statement For Closed Account
+[INFO] 2018-04-03 19:28:49,572 ExtentManager sendReq - Hmaced Request : 9293fe9480ab42f47b310752313efa306d6529a259ce53ff7dc79aaa63b151b3*!8778602561APMS;Y;190934055003449538762612830180469690629;463795;123457;4.0;null;18869028292249165392555632336519758566
+[INFO] 2018-04-03 19:28:52,348 ExtentManager sendReq - Response received from Server : MSAF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;03/04/2018 19:29;TXNID:809319247065;BID:C463795
+[INFO] 2018-04-03 19:28:52,349 ExtentManager sendReq - Transaction ID : 809319247065
+[INFO] 2018-04-03 19:28:52,350 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:52,356 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:52,357 ExtentManager sendReq - Request : Mini statement For Inactive Account
+[INFO] 2018-04-03 19:28:52,359 ExtentManager sendReq - Hmaced Request : a8c163a2cf74217957ffe6958cc48c14d8f2a8cbf36dcd814e3068572c87df45*!8778602561APMS;Y;190934055003449538762612830180469690629;463795;123457;4.0;null;191515588804642568971493034674651285220
+[INFO] 2018-04-03 19:28:53,459 ExtentManager sendReq - Response received from Server : MSAF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;03/04/2018 19:29;TXNID:809319247066;BID:C463795
+[INFO] 2018-04-03 19:28:53,460 ExtentManager sendReq - Transaction ID : 809319247066
+[INFO] 2018-04-03 19:28:53,461 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:53,467 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:53,467 ExtentManager sendReq - Request : Mini Statement For Blocked Account
+[INFO] 2018-04-03 19:28:53,470 ExtentManager sendReq - Hmaced Request : d63aae1aa7beff05f6c79eebb35c96f2413372204292006d4525fe504a35da3e*!8778602561APMS;Y;190934055003449538762612830180469690629;463795;123457;4.0;null;51491745820898830020971724360592293666
+[INFO] 2018-04-03 19:28:54,323 ExtentManager sendReq - Response received from Server : MSAF;Your Mobile Number is not registered for TMB Mconnect. Please contact your branch;03/04/2018 19:29;TXNID:809319247067;BID:C463795
+[INFO] 2018-04-03 19:28:54,324 ExtentManager sendReq - Transaction ID : 809319247067
+[INFO] 2018-04-03 19:28:54,325 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:54,331 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:54,332 ExtentManager sendReq - Request : Cheque Status Check Not Issued To Customer
+[INFO] 2018-04-03 19:28:54,333 ExtentManager sendReq - Hmaced Request : e414d0862c482f8e7d0fe60918c59f1c7866cc2229e0383a9dad7bb38b911e70*!8778602561APLW;Y;190934055003449538762612830180469690629;null;463795;123457;4.0;3286478326489632;137584564058514527940950736260696490604
+[INFO] 2018-04-03 19:28:55,790 ExtentManager sendReq - Response received from Server : LW48;Please enter the valid cheque no;03/04/2018 19:30;TXNID:809319247068;BID:C463795
+[INFO] 2018-04-03 19:28:55,791 ExtentManager sendReq - Transaction ID : 809319247068
+[INFO] 2018-04-03 19:28:55,791 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:55,801 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:55,802 ExtentManager sendReq - Request : Stop Cheque Check Already Stopped
+[INFO] 2018-04-03 19:28:55,804 ExtentManager sendReq - Hmaced Request : 7bdd111b76a55eab40737bb8de4bdbc400f9e115bae950df576a49d8ca264fea*!8778602561APL4;Y;190934055003449538762612830180469690629;null;463795;123457;4.0;3286478326489632;199671352215701470518245965115635222100
+[INFO] 2018-04-03 19:28:56,694 ExtentManager sendReq - Response received from Server : L448;Please enter the valid cheque no;03/04/2018 19:30;TXNID:809319247069;BID:C463795
+[INFO] 2018-04-03 19:28:56,695 ExtentManager sendReq - Transaction ID : 809319247069
+[INFO] 2018-04-03 19:28:56,696 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:56,702 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:56,702 ExtentManager sendReq - Request : Again Cancel All MMIDs
+[INFO] 2018-04-03 19:28:56,704 ExtentManager sendReq - Hmaced Request : d73e02a3a37e136541b87bd280a1c5e887998f5049481f0d424c7d86cbbfae1a*!8778602561APIM;Y;190934055003449538762612830180469690629;001;463795;123457;4.0;3286478326489632;198613329166822779279824337503796611276
+[INFO] 2018-04-03 19:28:58,593 ExtentManager sendReq - Response received from Server : IM00;5012XXXXXX000000*9060223#5012XXXXXX849822*9060277#5012XXXXXX849860*9060373#2011XXXXX800005*9060390#2011XXXXX800065*9060454#5012XXXXXX349283*9060648#5012XXXXXX849800*9060742#5012XXXXXX849862*9060788#5012XXXXXX349826*9060869#3286XXXXXX489632*9060022;1;N;03/04/2018 19:30;TXNID:809319247070;BID:C463795
+[INFO] 2018-04-03 19:28:58,594 ExtentManager sendReq - Transaction ID : 809319247070
+[INFO] 2018-04-03 19:28:58,594 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:58,595 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:58,595 ExtentManager sendReq - Request : Again Cancel All MMIDs
+[INFO] 2018-04-03 19:28:58,597 ExtentManager sendReq - Hmaced Request : 6561cb2f439eb0c222f8990c76900b01c4786173f9b4403d05eeb5ed46f4023f*!8778602561APRC;Y;190934055003449538762612830180469690629;ALL;463795;123457;4.0;3286478326489632;31888763307943755305375175436080717350
+[INFO] 2018-04-03 19:28:59,770 ExtentManager sendReq - Response received from Server : RC00;IMPS Cancelled successfully;03/04/2018 19:30;TXNID:809319247071;BID:C463795
+[INFO] 2018-04-03 19:28:59,771 ExtentManager sendReq - Transaction ID : 809319247071
+[INFO] 2018-04-03 19:28:59,772 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:28:59,775 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:28:59,776 ExtentManager sendReq - Request : Retrieve MMID
+[INFO] 2018-04-03 19:28:59,776 ExtentManager sendReq - Hmaced Request : cdb6f329e4f3d5ebf16fc540ab715d55feffd24179a0631b1c9faf7f2ad7bcf2*!8778602561APS6;Y;190934055003449538762612830180469690629;3286478326489632;463795;123457;4.0;3286478326489632;78459992479682618527040424660517144243
+[INFO] 2018-04-03 19:29:00,848 ExtentManager sendReq - Response received from Server : S609;Please do Generate MMID to proceed with the transaction.;03/04/2018 19:30;TXNID:809319247072;BID:C463795
+[INFO] 2018-04-03 19:29:00,849 ExtentManager sendReq - Transaction ID : 809319247072
+[INFO] 2018-04-03 19:29:00,849 ExtentManager sendReq - ******************************END********************************
+
+[INFO] 2018-04-03 19:29:00,856 ExtentManager sendReq - ******************************START******************************
+[INFO] 2018-04-03 19:29:00,856 ExtentManager sendReq - Request : Generate MMID
+[INFO] 2018-04-03 19:29:00,859 ExtentManager sendReq - Hmaced Request : 913bd4cf93afff63b0789e943e38d44fc7b5bb70c51cb127f6a62d1ded2321c3*!8778602561APS6;Y;190934055003449538762612830180469690629;3286478326489632;463795;123457;4.0;3286478326489632;156965754287655496530188698942041695957
+[INFO] 2018-04-03 19:29:01,897 ExtentManager sendReq - Response received from Server : S609;Please do Generate MMID to proceed with the transaction.;03/04/2018 19:30;TXNID:809319247073;BID:C463795
+[INFO] 2018-04-03 19:29:01,898 ExtentManager sendReq - Transaction ID : 809319247073
+[INFO] 2018-04-03 19:29:01,898 ExtentManager sendReq - ******************************END********************************
+

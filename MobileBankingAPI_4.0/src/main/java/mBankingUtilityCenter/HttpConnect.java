@@ -28,9 +28,9 @@ public class HttpConnect extends ExtentManager {
 	public String Post(String request) throws IOException
 	{
 		//http://10.44.120.60:	8040/ubimpayportal/servlet/MQSender?request=
-		//URL url = new URL(prop.getProperty("GprsURL")+prop.getProperty("servlet")+request);
-		   URL url = new URL("http://10.44.120.60:8040/ubimpayportal/servlet/MQSender?request="+request);
-		   System.out.println("http://10.44.120.60:8040/ubimpayportal/servlet/MQSender?request="+request);
+		URL url = new URL(prop.getProperty("GprsURL")+prop.getProperty("servlet")+request);
+		//URL url = new URL("http://10.44.120.60:8040/ubimpayportal/servlet/MQSender?request="+request);
+		   
 	       StringBuilder postData = new StringBuilder();
 	   
 	        byte[] postDataBytes = postData.toString().getBytes("UTF-8");

@@ -30,21 +30,6 @@ public class NonFinancialTransactions extends ExtentManager{
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-    static{
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
-        System.setProperty("current.date.time", dateFormat.format(new Date()));
-    }
-    
-	
-	@Test(priority=0)
-	public void AppLogin() throws IOException, SQLException {
-		BigInteger uniNum = RandomNumGenerator.generate();
-		request = StaticStore.appLogin();
-		String req2=StaticStore.appLogin2();
-		response =sendReqAppLogin(request, req2, "App Login", uniNum);
-		assertResponse(response);
-	}
-	
 	@Test(priority=1)
 	public void balanceEnqWithValidData() throws IOException, SQLException
 	{
@@ -59,7 +44,7 @@ public class NonFinancialTransactions extends ExtentManager{
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("invalidaccno"));
 		response = sendReq (request, "Balance Enquiry");
-		assertTrue(response.substring(2,4).contains("01"));	
+		assertTrue(response.substring(2,4).contains("AF"));	
 	}
 	
 	@Test(priority=2)
@@ -250,19 +235,14 @@ public class NonFinancialTransactions extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	public static void main(String[] args) {
-		request = StaticStore.balanceEnq();
-		try {
-			response = sendReq (request, "Balance Enquiry");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		assertResponse(response);
+	public static void main(String[] args) {		request = StaticStore.balanceEnq();
+	try {
+		response = sendReq (request, "Balance Enquiry");
+	} catch (IOException | SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
 	}
+	assertResponse(response);}
 	
 }
 

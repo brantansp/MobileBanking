@@ -16,8 +16,168 @@ public class StaticStore extends ExtentManager{
 		System.out.println(prop.getProperty("RemAccountno")+";");
 		
 	}
+	
+	public static String SilentSms (String imei, String randNum)   
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APMN;");
+		sb.append("BVD:");
+		sb.append("4.3.12%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus%23"+imei+"%23"+randNum+";");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	public static String SilentSms2(String imei, String randNum)   //request with #
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APMN;");
+		sb.append("BVD:");
+		sb.append("4.3.12#ANDROID7.1.1#H1920W1080#LENOVO Lenovo K8 Plus#"+imei+"#"+randNum+";");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	/*
+	 * Pre-Login
+	 */
+	
+	public static String buildActivation ()   //request with %23 instead of #
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APNA;");
+		sb.append("BVD:");
+		sb.append("4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus;");
+		sb.append("187130741006119135681847934352771245371;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	public static String buildActivation2 ()   //request with %23 instead of #
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APNA;");
+		sb.append("BVD:");
+		sb.append("4.0.9#ANDROID7.1.1#H1920W1080#LENOVO Lenovo K8 Plus;");
+		sb.append("187130741006119135681847934352771245371;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//9894060407APCG;BVD:4.0.1#ANDROID7.1.1#H1920W1080#LENOVO Lenovo K8 Plus;463795;123457;4.0;0;191490637757208275427826874468706462063
+	public static String GPRSCheckNew ()   //request with %23 instead of #
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APCG;");
+		sb.append("BVD:");
+		sb.append("4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	public static String GPRSCheckNew2 ()   //request with %23 instead of #
+	{
+		StringBuilder sb = new StringBuilder() ;
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APCG;");
+		sb.append("BVD:");
+		sb.append("4.0.9#ANDROID7.1.1#H1920W1080#LENOVO Lenovo K8 Plus;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//Products > Offers > 
+	//9894060407AP2O;N;001;463795;123457;4.0;0;52665709985089953900417908053905542595
+	public static String productOfferLeg1 ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("AP2O;");
+		sb.append("N;");
+		sb.append("001;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+
+	//9894060407AP3O;N;Mobile;001;463795;123457;4.0;0;174913281654798569843261100464854016811
+	public static String productOfferLeg2 ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("AP3O;");
+		sb.append("N;");
+		sb.append("001;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//9894060407AP4O;N;Mobile;Android;001;463795;123457;4.0;0;110222342128744644883790662370907286359
+	public static String productOfferLeg3 (String x, String y)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("AP4O;");
+		sb.append("N;");
+		sb.append(x+";");
+		sb.append(y+";");
+		sb.append("001;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	
+	//9894060407AP5O;N;Mobile;Android;86;463795;123457;4.0;0;42364739127431391956066789844763901389
+	public static String productOfferLeg4 ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("AP5O;");
+		sb.append("N;");
+		sb.append("001;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	/*
+	 * 
+	 */
+	
 	//APGC;BVD:4.0.9#ANDROID7.1.1#H1920W1080#LENOVO Lenovo K8 Plus#10.175.117.48#12.8354858,80.2235916;454545;123457;4.0.5;0;9894060407
-	public static String appLogin ()   //request with %23 instead of #
+	public static String GPRSCheck ()   //request with %23 instead of #
 	{
 		StringBuilder sb = new StringBuilder() ;
 		sb.append(prop.getProperty("RemMobileno"));
@@ -31,7 +191,7 @@ public class StaticStore extends ExtentManager{
 		return sb.toString();
 	}
 	
-	public static String appLogin2()   //request with #
+	public static String GPRSCheck2()   //request with #
 	{
 		StringBuilder sb = new StringBuilder() ;
 		sb.append(prop.getProperty("RemMobileno"));
