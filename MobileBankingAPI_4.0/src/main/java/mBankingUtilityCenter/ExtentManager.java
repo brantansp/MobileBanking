@@ -11,11 +11,15 @@ import java.math.BigInteger;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SignatureException;
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Scanner;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.apache.commons.logging.Log;
@@ -25,6 +29,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -46,12 +51,14 @@ public class ExtentManager{
 	protected static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	public static Properties prop=getProperty();
 	static String reportPath;
+	private static Connection dbConnection = null;
+	private static Statement statement = null;
 	SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyyMMdd"); 
 	SimpleDateFormat timeFormatter = new SimpleDateFormat("HHmmss"); 
 	Date date = new Date();  
 	
 	@BeforeSuite
-	public void setUp()throws FileNotFoundException{
+	public void setUp()throws FileNotFoundException, SQLException{
       	    log.info("Running Mobile banking API Automation testing on mPAY 4.0"+"\r\n"); 
         	File dir = new File(System.getProperty("user.dir")+"\\output\\ExtentReport\\"+dateFormatter.format(date));
         	if (!dir.exists())
@@ -62,6 +69,14 @@ public class ExtentManager{
 			extent = new ExtentReports (reportPath, true);
 			extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 			prop =getProperty();
+			
+			String selectTableSQL = "select modulus from registration where regmobileno = '+91"+ prop.getProperty("RemMobileno")+"'";
+			dbConnection = dbTransactionlog.getDBConnection(prop.getProperty("DB_USER") , prop.getProperty("DB_PASSWORD"));
+			statement = dbConnection.createStatement();
+			ResultSet resultSet= statement.executeQuery(selectTableSQL);
+			resultSet.next();
+			String modulus = resultSet.getString("MODULUS");
+			prop.setProperty("mPIN", RsaEncryption.encrypt(prop.getProperty("mPINPlain"), modulus));
 	}
 	
 	@BeforeMethod
@@ -141,10 +156,26 @@ public class ExtentManager{
 		return prop;
 	}
 	
-	public static void main(String[] args) {
-		launchReport();
+	public static String encPin()
+	{
+		prop =getProperty();
+		String selectTableSQL = "select modulus from registration where regmobileno = '+91"+ prop.getProperty("RemMobileno")+"'";
+		dbConnection = dbTransactionlog.getDBConnection(prop.getProperty("DB_USER") , prop.getProperty("DB_PASSWORD"));
+		String modulus = null;
+		try {
+			statement = dbConnection.createStatement();
+			ResultSet resultSet= statement.executeQuery(selectTableSQL);
+			resultSet.next();
+			modulus = resultSet.getString("MODULUS");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//System.out.println(RsaEncryption.encrypt(prop.getProperty("mPINPlain"), modulus));
+		String encryptedPin = RsaEncryption.encrypt(prop.getProperty("mPINPlain"), modulus);
+        return encryptedPin;
 	}
-	
+		
 	public static void launchReport()
 	{
 		System.out.println("*******************");
@@ -199,11 +230,17 @@ public class ExtentManager{
 					WriteToCSVFile.reportGeneration( txnType, dbResult);
 				}		
 			}
+     	if(response.substring(2,4).contains("IM"))
+     	{
+     		log.info("mPIN is invalid : Please enter a valid mPIN and start the test");
+     		log.info("Program is terminating");
+     		System.exit(1);
+     	}
 	log.info("******************************END********************************\r\n");
 	return response;
 	}
 	
-	public static String sendReqAppLogin (String Request, String req2,String txnType, BigInteger uniNum) throws IOException, SQLException
+	public static String sendReq2 (String Request, String req2,String txnType, BigInteger uniNum) throws IOException, SQLException
 	{
 		log.info("******************************START******************************");
 	    log.info("Request : " + txnType);

@@ -1,43 +1,78 @@
 package mBankingControlCenter;
 
-import org.testng.annotations.Test;
-
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-
+import static org.testng.Assert.assertTrue;
+import java.io.IOException;
+import java.lang.invoke.MethodHandles;
+import java.sql.SQLException;
 import mBankingPageObjectModel.StaticStore;
 import mBankingUtilityCenter.ExtentManager;
-import mBankingUtilityCenter.HttpConnect;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertTrue;
-
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.Properties;
-
-public class IMPSTransactions extends ExtentManager{
+public class IMPS extends ExtentManager{
 	private static String response;
-	private static int index;
 	public static String request;
-	static HttpConnect obj=new HttpConnect();
-	static Properties prop=getProperty();
-	public static ExtentReports extent;
-	public static ExtentTest extentLogger;
-	
-	public static void main(String[] args) {
+	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-		
-		request = StaticStore.m2mbensearch(prop.getProperty("FTBenNickName"));
-		try {
-			response =sendReq(request, "m2m Benificiary Account list");
-		} catch (IOException | SQLException e) {
-			e.printStackTrace();
-		}
+	@Test(priority=4)
+	public void GenerateMMID() throws IOException, SQLException {
+		request = StaticStore.generateMMID();
+		response = sendReq (request, "Generate MMID");
+		assertResponse(response);
+	}
+
+	@Test(priority=5)
+	public void RetrieveMMID() throws IOException, SQLException {
+		request = StaticStore.retrieveMMID();
+		response = sendReq (request, "Retrieve MMID");
+		assertResponse(response);
+	}
+
+	@Test(priority=6)
+	public void CancelMMIDAll() throws IOException, SQLException {
+		sendReq (StaticStore.generateMMID(), "Generate MMID"); // calling generate MMID
+		request = StaticStore.cancelMMIDAll();
+		response = sendReq (request, "Cancel MMID All");
+		assertResponse(response);
+	}
+
+	@Test(priority=7)
+	public void CancelMMIDSingle() throws IOException, SQLException {
+		sendReq (StaticStore.generateMMID(), "Generate MMID"); // calling generate MMID
+		request = StaticStore.cancelMMIDSingle();
+		response = sendReq (request, "Cancel MMID Single");
+		assertResponse(response);
 	}
 	
-	/*
-	 *  IMPS P2P.
-	 */
+	
+	@Test(priority=23)
+	public void AgainCancelAllMMIDs() throws IOException, SQLException {
+		sendReq (StaticStore.generateMMID(), "Again Cancel All MMIDs"); // calling generate MMID
+		request = StaticStore.cancelMMIDAll();
+		request = StaticStore.cancelMMIDAll();
+		response = sendReq (request, "Again Cancel All MMIDs");
+		assertResponse(response);
+	}
+	
+	@Test(priority=24)
+	public void RetrieveMMIDs() throws IOException, SQLException {
+		request = StaticStore.retrieveMMID();
+		response = sendReq (request, "Retrieve MMID");
+		assertResponse(response);
+	}
+	
+	@Test(priority=25)
+	public void GenerateMMIDs() throws IOException, SQLException {
+		request = StaticStore.generateMMID();
+		request = StaticStore.retrieveMMID();
+		response = sendReq (request, "Generate MMID");
+		assertResponse(response);
+	}
+	
+/*
+ *  IMPS P2P
+ */
 	
 	@Test(priority=0)
 	public void IMPSP2PInstantPayment() throws IOException, SQLException {
@@ -1241,19 +1276,4 @@ public void IMPSP2URegBeneficiaryPaymentForM6Decline() throws IOException, SQLEx
 
 }
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

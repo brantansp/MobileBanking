@@ -10,6 +10,7 @@ public class StaticStore extends ExtentManager{
 	
 	static StringBuilder sb = new StringBuilder() ;
 	static Properties prop=getProperty();
+	static String encryptedPin = encPin();
 	
 	public static void main(String[] args) 
 	{
@@ -110,7 +111,7 @@ public class StaticStore extends ExtentManager{
 	
 	//Products > Offers > 
 	//9894060407AP2O;N;001;463795;123457;4.0;0;52665709985089953900417908053905542595
-	public static String productOfferLeg1 ()
+	public static String productOfferLeg2 ()
 	{
 		sb.delete(0, sb.length());
 		sb.append(prop.getProperty("RemMobileno"));
@@ -125,12 +126,13 @@ public class StaticStore extends ExtentManager{
 	}
 
 	//9894060407AP3O;N;Mobile;001;463795;123457;4.0;0;174913281654798569843261100464854016811
-	public static String productOfferLeg2 ()
+	public static String productOfferLeg3 (String x)
 	{
 		sb.delete(0, sb.length());
 		sb.append(prop.getProperty("RemMobileno"));
 		sb.append("AP3O;");
 		sb.append("N;");
+		sb.append(x+";");
 		sb.append("001;");
 		sb.append(prop.getProperty("bankCode")+";");
 		sb.append(prop.getProperty("DUKPT")+";");
@@ -140,7 +142,7 @@ public class StaticStore extends ExtentManager{
 	}
 	
 	//9894060407AP4O;N;Mobile;Android;001;463795;123457;4.0;0;110222342128744644883790662370907286359
-	public static String productOfferLeg3 (String x, String y)
+	public static String productOfferLeg4 (String x, String y)
 	{
 		sb.delete(0, sb.length());
 		sb.append(prop.getProperty("RemMobileno"));
@@ -158,13 +160,263 @@ public class StaticStore extends ExtentManager{
 	
 	
 	//9894060407AP5O;N;Mobile;Android;86;463795;123457;4.0;0;42364739127431391956066789844763901389
-	public static String productOfferLeg4 ()
+	public static String productOfferLeg5 (String x, String y, String z)
 	{
 		sb.delete(0, sb.length());
 		sb.append(prop.getProperty("RemMobileno"));
 		sb.append("AP5O;");
 		sb.append("N;");
+		sb.append(x+";");
+		sb.append(y+";");
+		sb.append(z+";");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//Loan
+	//9894060407APLR;N;100;10;12;2;463795;123457;4.0;0;28396647691290863989616373173741955642
+	public static String Loan (String x, String y, String z, String k)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APLR;");
+		sb.append("N;");
+		sb.append(x+";");
+		sb.append(y+";");
+		sb.append(z+";");
+		sb.append(k+";");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//version update
+	//9894060407APBV;N;4.1.16;ARD;504511;123457;4.0;0;1522735794546
+	public static String versionUpgrade (String currVersion)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APBV;");
+		sb.append("N;");
+		sb.append(currVersion+";");
+		sb.append("ARD;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//ATM loc uusing PIN
+	//	APAL;N;P;635851; ;001;504511;123457;4.0;0;9894060407
+	public static String ATMPinSearch (String pincode, String mpin)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APAL;");
+		sb.append("N;");
+		sb.append("P;");
+		sb.append(pincode+";");
+		sb.append(" ;");
 		sb.append("001;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//9894060407APAL;N;L;ch; ;001;504511;123457;4.0;0;1522736449475
+	public static String ATMLocationSearch (String location)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APAL;");
+		sb.append("N;");
+		sb.append("L;");
+		sb.append(location+";");
+		sb.append(" ;");
+		sb.append("001;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//branch loc
+	//9894060407AP1L;N;P;635851; ;001;504511;123457;4.0;0;1522736556357
+	//9894060407AP1L;N;L;ch; ;001;504511;123457;4.0;0;1522736596103	Y	-	null
+	//9894060407AP1L;N;L;ch; ;21;504511;123457;4.0;0;1522736677425
+	public static String BranchPinSearch (String pincode)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("AP1L;");
+		sb.append("N;");
+		sb.append("P;");
+		sb.append(pincode+";");
+		sb.append(" ;");
+		sb.append("001;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	public static String BranchLocationSearch (String location)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("AP1L;");
+		sb.append("N;");
+		sb.append("L;");
+		sb.append(location+";");
+		sb.append(" ;");
+		sb.append("001;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//refer friend
+	//9894060407APZ5;N;brantan;brantansp3EM*#L9fss.co.in;9047637908;463795;123457;4.0;0;156427595325614052516425771169862832947
+	public static String referFriend (String name, String mailID, String mobNo)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APZ5;");
+		sb.append("N;");
+		sb.append(name+";");
+		sb.append(mailID+";");
+		sb.append(mobNo+";");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//Feedback
+	//9894060407AP1F;N;001;463795;123457;4.0;0;193642678486689309906116376043656160964
+	public static String feedbackleg1 ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("AP1F;");
+		sb.append("N;");
+		sb.append("001;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//9894060407AP2F;N;90*1#91*1#110*1#150*1;test;463795;123457;4.0;0;179037572733429785283578924912205114102
+	public static String feedbackleg2 ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("AP2F;");
+		sb.append("N;");
+		sb.append("90*1%2391*1%23110*1%23150*1;");
+		sb.append("test;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	public static String feedbackleg2_ ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("AP2F;");
+		sb.append("N;");
+		sb.append("90*1#91*1#110*1#150*1;");
+		sb.append("test;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//Forgot password
+	//9894060407APOG;463795;123457;4.0;0;114708343457668991672203685532975502159  
+	public static String OTPGeneration ()
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APOG;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	//9894060407APOV;69349112813202152646087269368538447620;463795;123457;4.0;0;26000064459182838061035821015230919775
+	public static String OTPVerification(String encPin)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APOV;");
+		sb.append(encPin+";");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+		//9894060407APP3;Y;193236764614536154242346493710901391873;463795;123457;4.0;0;41425399265261176686215331752420743641
+	public static String loginmPinCheck(String mPIN)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APP3;");
+		sb.append("Y;");
+		sb.append(mPIN+";");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+		//9894060407APFN;BVD:4.0.1#ANDROID7.1.1#H1920W1080#LENOVO Lenovo K8 Plus#864829030310400#1522737602321;463795;123457;4.0;0;171762895022425228530675880511995212845
+	
+	public static String loginNewPinSet (String imei, String randNum)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APFN;");
+		sb.append("4.3.12%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus%23"+imei+"%23"+randNum+";");
+		sb.append("test;");
+		sb.append(prop.getProperty("bankCode")+";");
+		sb.append(prop.getProperty("DUKPT")+";");
+		sb.append(prop.getProperty("buildVersion")+";");
+		sb.append("0;");
+		return sb.toString();
+	}
+	
+	public static String loginNewPinSet_ (String imei, String randNum)
+	{
+		sb.delete(0, sb.length());
+		sb.append(prop.getProperty("RemMobileno"));
+		sb.append("APFN;");
+		sb.append("4.3.12#ANDROID7.1.1#H1920W1080#LENOVO Lenovo K8 Plus#"+imei+"#"+randNum+";");
+		sb.append("test;");
 		sb.append(prop.getProperty("bankCode")+";");
 		sb.append(prop.getProperty("DUKPT")+";");
 		sb.append(prop.getProperty("buildVersion")+";");
@@ -183,7 +435,7 @@ public class StaticStore extends ExtentManager{
 		sb.append(prop.getProperty("RemMobileno"));
 		sb.append("APGC;");
 		sb.append("BVD:");
-		sb.append("4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO+Lenovo+K8+Plus%2310.175.117.48%2312.8354858%2C80.2235916%3B");
+		sb.append("4.0.9%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus%2310.175.117.48%2312.8354858%2C80.2235916%3B");
 		sb.append(prop.getProperty("bankCode")+";");
 		sb.append(prop.getProperty("DUKPT")+";");
 		sb.append(prop.getProperty("buildVersion")+";");
@@ -214,7 +466,7 @@ public class StaticStore extends ExtentManager{
 			
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -236,7 +488,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -257,7 +509,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -278,7 +530,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -298,7 +550,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -320,7 +572,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -342,7 +594,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -364,7 +616,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -386,7 +638,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -408,7 +660,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -429,7 +681,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -451,7 +703,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -473,7 +725,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -532,7 +784,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -561,7 +813,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -585,7 +837,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -609,7 +861,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -632,7 +884,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -655,7 +907,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -677,7 +929,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -701,7 +953,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -729,7 +981,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -755,7 +1007,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -780,7 +1032,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -805,7 +1057,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -828,7 +1080,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -851,7 +1103,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -874,7 +1126,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -896,7 +1148,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -919,7 +1171,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -947,7 +1199,7 @@ public class StaticStore extends ExtentManager{
 	if(prop.getProperty("mPINRequired").equals("Y"))
 	{
 	sb.append(prop.getProperty("mPINRequired")+";");
-	sb.append(prop.getProperty("mPIN")+";");
+	sb.append(encryptedPin+";");
 	}
 	else
 	{
@@ -972,7 +1224,7 @@ public class StaticStore extends ExtentManager{
 	if(prop.getProperty("mPINRequired").equals("Y"))
 	{
 	sb.append(prop.getProperty("mPINRequired")+";");
-	sb.append(prop.getProperty("mPIN")+";");
+	sb.append(encryptedPin+";");
 	}
 	else
 	{
@@ -996,7 +1248,7 @@ public class StaticStore extends ExtentManager{
 	if(prop.getProperty("mPINRequired").equals("Y"))
 	{
 	sb.append(prop.getProperty("mPINRequired")+";");
-	sb.append(prop.getProperty("mPIN")+";");
+	sb.append(encryptedPin+";");
 	}
 	else
 	{
@@ -1022,7 +1274,7 @@ public class StaticStore extends ExtentManager{
 	if(prop.getProperty("mPINRequired").equals("Y"))
 	{
 	sb.append(prop.getProperty("mPINRequired")+";");
-	sb.append(prop.getProperty("mPIN")+";");
+	sb.append(encryptedPin+";");
 	}
 	else
 	{
@@ -1047,7 +1299,7 @@ public class StaticStore extends ExtentManager{
 	if(prop.getProperty("mPINRequired").equals("Y"))
 	{
 	sb.append(prop.getProperty("mPINRequired")+";");
-	sb.append(prop.getProperty("mPIN")+";");
+	sb.append(encryptedPin+";");
 	}
 	else
 	{
@@ -1073,7 +1325,7 @@ public class StaticStore extends ExtentManager{
 	if(prop.getProperty("mPINRequired").equals("Y"))
 	{
 	sb.append(prop.getProperty("mPINRequired")+";");
-	sb.append(prop.getProperty("mPIN")+";");
+	sb.append(encryptedPin+";");
 	}
 	else
 	{
@@ -1098,7 +1350,7 @@ public class StaticStore extends ExtentManager{
 	if(prop.getProperty("mPINRequired").equals("Y"))
 	{
 	sb.append(prop.getProperty("mPINRequired")+";");
-	sb.append(prop.getProperty("mPIN")+";");
+	sb.append(encryptedPin+";");
 	}
 	else
 	{
@@ -1123,7 +1375,7 @@ public class StaticStore extends ExtentManager{
 	if(prop.getProperty("mPINRequired").equals("Y"))
 	{
 	sb.append(prop.getProperty("mPINRequired")+";");
-	sb.append(prop.getProperty("mPIN")+";");
+	sb.append(encryptedPin+";");
 	}
 	else
 	{
@@ -1177,7 +1429,7 @@ public class StaticStore extends ExtentManager{
 		if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -1199,7 +1451,7 @@ public class StaticStore extends ExtentManager{
 	    if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -1229,7 +1481,7 @@ public class StaticStore extends ExtentManager{
 	    if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -1250,7 +1502,7 @@ public class StaticStore extends ExtentManager{
 	    if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -1272,7 +1524,7 @@ public class StaticStore extends ExtentManager{
 	    if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -1296,7 +1548,7 @@ public class StaticStore extends ExtentManager{
 	    if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -1323,7 +1575,7 @@ public class StaticStore extends ExtentManager{
 	    if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -1344,7 +1596,7 @@ public class StaticStore extends ExtentManager{
 	    if(prop.getProperty("mPINRequired").equals("Y"))
 		{
 		sb.append(prop.getProperty("mPINRequired")+";");
-		sb.append(prop.getProperty("mPIN")+";");
+		sb.append(encryptedPin+";");
 		}
 		else
 		{
@@ -1368,7 +1620,7 @@ public class StaticStore extends ExtentManager{
 		 if(prop.getProperty("mPINRequired").equals("Y"))
 			{
 			sb.append(prop.getProperty("mPINRequired")+";");
-			sb.append(prop.getProperty("mPIN")+";");
+			sb.append(encryptedPin+";");
 			}
 			else
 			{
@@ -1391,7 +1643,7 @@ public class StaticStore extends ExtentManager{
 		 if(prop.getProperty("mPINRequired").equals("Y"))
 			{
 			sb.append(prop.getProperty("mPINRequired")+";");
-			sb.append(prop.getProperty("mPIN")+";");
+			sb.append(encryptedPin+";");
 			}
 			else
 			{
@@ -1414,7 +1666,7 @@ public class StaticStore extends ExtentManager{
 		 if(prop.getProperty("mPINRequired").equals("Y"))
 			{
 			sb.append(prop.getProperty("mPINRequired")+";");
-			sb.append(prop.getProperty("mPIN")+";");
+			sb.append(encryptedPin+";");
 			}
 			else
 			{
@@ -1436,7 +1688,7 @@ public class StaticStore extends ExtentManager{
 		 if(prop.getProperty("mPINRequired").equals("Y"))
 			{
 			sb.append(prop.getProperty("mPINRequired")+";");
-			sb.append(prop.getProperty("mPIN")+";");
+			sb.append(encryptedPin+";");
 			}
 			else
 			{
@@ -1463,7 +1715,7 @@ public class StaticStore extends ExtentManager{
 	    if(prop.getProperty("mPINRequired").equals("Y"))
 	    {
 	    sb.append(prop.getProperty("mPINRequired")+";");
-	    sb.append(prop.getProperty("mPIN")+";");
+	    sb.append(encryptedPin+";");
 	    }
 		else
 		{
@@ -1485,7 +1737,7 @@ public class StaticStore extends ExtentManager{
 		  if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1510,7 +1762,7 @@ public class StaticStore extends ExtentManager{
 		  if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1539,7 +1791,7 @@ public class StaticStore extends ExtentManager{
 		 if(prop.getProperty("mPINRequired").equals("Y"))
 			{
 			sb.append(prop.getProperty("mPINRequired")+";");
-			sb.append(prop.getProperty("mPIN")+";");
+			sb.append(encryptedPin+";");
 			}
 			else
 			{
@@ -1565,7 +1817,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1589,7 +1841,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1614,7 +1866,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1640,7 +1892,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1664,7 +1916,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1688,7 +1940,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1711,7 +1963,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1734,7 +1986,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1756,7 +2008,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1783,7 +2035,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1808,7 +2060,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1833,7 +2085,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1856,7 +2108,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1881,7 +2133,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1904,7 +2156,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1927,7 +2179,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1952,7 +2204,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -1980,7 +2232,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -2005,7 +2257,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -2030,7 +2282,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -2053,7 +2305,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -2077,7 +2329,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -2100,7 +2352,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{
@@ -2124,7 +2376,7 @@ public class StaticStore extends ExtentManager{
 			if(prop.getProperty("mPINRequired").equals("Y"))
 		    {
 		    sb.append(prop.getProperty("mPINRequired")+";");
-		    sb.append(prop.getProperty("mPIN")+";");
+		    sb.append(encryptedPin+";");
 		    }
 			else
 			{

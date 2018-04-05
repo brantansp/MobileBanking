@@ -3,43 +3,21 @@ package mBankingControlCenter;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
 import java.sql.SQLException;
-import java.util.Properties;
 
 import mBankingPageObjectModel.StaticStore;
-import mBankingUtilityCenter.*;
+import mBankingUtilityCenter.ExtentManager;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-
-public class FundTransferTransactions extends ExtentManager {
+public class Transfer extends ExtentManager{
 	private static String response;
-	private static int index;
 	public static String request;
-	static HttpConnect obj=new HttpConnect();
-	static Properties prop=getProperty();
-	public static ExtentReports extent;
-	public static ExtentTest extentLogger;
-	
-	public static void main(String[] args) {
+	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-		
-		request = StaticStore.m2mQuickFT(prop.getProperty("BenMobileNo"), 
- 				prop.getProperty("ExceededAmount"), prop.getProperty("FTRemarks"));
- 		try {
-			response =sendReq(request, "m2m Quick FT");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
- 		
-	}	
-	
 	/*
 	 * M2M
 	 */

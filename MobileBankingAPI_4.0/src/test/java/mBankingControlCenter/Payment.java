@@ -1,23 +1,20 @@
 package mBankingControlCenter;
 
-import org.testng.annotations.Test;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import mBankingPageObjectModel.StaticStore;
-import mBankingUtilityCenter.ExtentManager;
-import mBankingUtilityCenter.HttpConnect;
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
 import java.sql.SQLException;
 
-public class PaymentTransactions extends ExtentManager{
+import mBankingPageObjectModel.StaticStore;
+import mBankingUtilityCenter.ExtentManager;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.testng.annotations.Test;
+
+public class Payment extends ExtentManager{
 	private static String response;
 	public static String request;
-	static HttpConnect obj=new HttpConnect();
-
-	public static ExtentReports extent;
-	public static ExtentTest extentLogger;
-	
+	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
 	@Test(priority=0)
 	public void Billercategorylist() throws IOException, SQLException {
@@ -111,34 +108,6 @@ public class PaymentTransactions extends ExtentManager{
 	public void Adhocpayconfirm() throws IOException, SQLException {
 		request = StaticStore.Adhocpayconfirm("Birla Sunlife,Mumbai","228881554","528885554","100","807415244998");
 		response =sendReq(request, "AdHoc Pay Confirm");
-		assertResponse(response);
-	}
-	
-	@Test(priority=13)
-	public void Rechargelist() throws IOException, SQLException {
-		request = StaticStore.Rechargelist();
-		response =sendReq(request, "Recharge List");
-		assertResponse(response);
-	}
-	
-	@Test(priority=14)
-	public void Operatorsearch() throws IOException, SQLException {
-		request = StaticStore.Operatorsearch("MTP","dgha");
-		response =sendReq(request, "Operator Search");
-		assertResponse(response);
-	}
-	
-	@Test(priority=15)
-	public void Rechargeconfirm() throws IOException, SQLException {
-		request = StaticStore.Rechargeconfirm("","","","","");
-		response =sendReq(request, "Recharge Confirm");
-		assertResponse(response);
-	}
-	
-	@Test(priority=16)
-	public void RechargeStatusEnq() throws IOException, SQLException {
-		request = StaticStore.RechargeStatusEnq("","");
-		response =sendReq(request, "Recharge Status Enquiry");
 		assertResponse(response);
 	}
 }

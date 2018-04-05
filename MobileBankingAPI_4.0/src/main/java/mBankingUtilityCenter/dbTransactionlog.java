@@ -33,7 +33,6 @@ public class dbTransactionlog extends ExtentManager{
 		try {
 			dbConnection = getDBConnection();
 			statement = dbConnection.createStatement();
-			
 			resultSet = statement.executeQuery(selectTableSQL);
 			//ResultSetMetaData rsmd = resultSet.getMetaData();
 			resultSet.next();
