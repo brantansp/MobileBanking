@@ -54,10 +54,11 @@ public class RsaEncryption {
 		 //System.out.println(newEnc.cipherText);
 		 return newEnc.cipherText;
 	}
-	
+	//237096965752540777796868594263570296411
 	public static void main(String[] args) {
 		//RsaEncryption newEnc = new RsaEncryption("1111","203577465141885203944391850079714410739");
 		//RSADecryptionNEW dec=new RSADecryptionNEW();
-		 System.out.println(encrypt("2580"));
+		 System.out.println(encrypt("1234"));
+		 System.out.println(encrypt("1234", "193177127064455446170323219124259467833"));
 }
 }

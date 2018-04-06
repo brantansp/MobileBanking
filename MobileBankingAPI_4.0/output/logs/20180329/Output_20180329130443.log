@@ -1,7 +1,0 @@
-[INFO] 2018-03-29 13:04:43,424 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 13:04:43,426 ExtentManager sendReq - Request : m2m Quick FT
-[INFO] 2018-03-29 13:04:44,065 ExtentManager sendReq - Hmaced Request : 020f6ff847044a2c3bf338e79067a12b2a8ac9458f658a420ffcfd8fecfaae00*!9894060407APQM;Y;15316170605690416310253121025515855714;9894010000;20;rtj;463795;123457;4.0;2478623864983269;122040254625701278445309889210572931348
-[INFO] 2018-03-29 13:04:45,343 ExtentManager sendReq - Response received from Server : QM09;Beneficiary not registered for mobile banking.Kindly transfer funds through mobile to account option;29/03/2018 13:05;TXNID:808813245146;BID:C463795
-[INFO] 2018-03-29 13:04:45,344 ExtentManager sendReq - Transaction ID : 808813245146
-[INFO] 2018-03-29 13:04:45,344 ExtentManager sendReq - ******************************END********************************
-

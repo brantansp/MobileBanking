@@ -18,94 +18,99 @@ public class Accounts extends ExtentManager {
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	@Test(priority=1)
-	public void balanceEnqWithValidData() throws IOException, SQLException
+	public static String testScriptName ()
+	{
+		return MethodHandles.lookup().lookupClass().getSimpleName();
+	}
+	
+	@Test
+	public void balanceEnq() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq();
-		response = sendReq (request, "Balance Enquiry");
+		response = sendReq (request, TCID , "Balance Enquiry");
 		assertResponse(response);
 	}
 	
-	@Test(priority=2)
+	@Test
 	public void MiniStatement() throws IOException, SQLException {
 		request = StaticStore.miniStatement();
-		response = sendReq (request, "Mini statement");
+		response = sendReq (request, TCID , "Mini statement");
 		assertResponse(response);
 	}
 	
-	@Test(priority=3)
+	@Test
 	public void TransactionHistory() throws IOException, SQLException {
 		request = StaticStore.transactionHistory();
-		response = sendReq (request, "Transaction History");
+		response = sendReq (request, TCID , "Transaction History");
 		assertResponse(response);
 	}
 	
-	@Test(priority=1)
+	@Test
 	public void balanceEnqWithInvalidAccNo() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("invalidaccno"));
-		response = sendReq (request, "Balance Enquiry");
+		response = sendReq (request, TCID , "Balance Enquiry");
 		assertTrue(response.substring(2,4).contains("AF"));	
 	}
 	
-	@Test(priority=13)
+	@Test
 	public void balanceEnqWithClosedAccount() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("closedaccountno"));
-		response = sendReq (request, "Balance Enquiry with closed Account");
+		response = sendReq (request, TCID , "Balance Enquiry with closed Account");
 		assertResponse(response);
 	}
 	
-	@Test(priority=14)
+	@Test
 	public void balanceEnqWithInactiveAccount() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("inactiveaccountno"));
-		response = sendReq (request, "Balance Enquiry with Inactive Account");
+		response = sendReq (request, TCID , "Balance Enquiry with Inactive Account");
 		assertResponse(response);
 	}
 	
-	@Test(priority=15)
+	@Test
 	public void balanceEnqWithBlockedAccount() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("blockedaccountno"));
-		response = sendReq (request, "Balance Enquiry with Blocked Account");
+		response = sendReq (request, TCID , "Balance Enquiry with Blocked Account");
 		assertResponse(response);
 	}
 	
-	@Test(priority=16)
+	@Test
 	public void balanceEnqForAccountHavingZeroBalnc() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("Zerobalnacc"));
-		response = sendReq (request, "Balance Enquiry For Account Having Zero Balance");
+		response = sendReq (request, TCID , "Balance Enquiry For Account Having Zero Balance");
 		assertResponse(response);
 	}
 	
-	@Test(priority=17)
+	@Test
 	public void balanceEnqForAccountHavingNegativeBalnc() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("Negbalnacc"));
-		response = sendReq (request, "Balance Enquiry For Account Having Negative Balance");
+		response = sendReq (request, TCID , "Balance Enquiry For Account Having Negative Balance");
 		assertResponse(response);
 	}
 	
-	@Test(priority=18)
+	@Test
 	public void MiniStatementForClosedAccount() throws IOException, SQLException {
 		request = StaticStore.miniStatement(prop.getProperty("closedaccountno"));
-		response = sendReq (request, "Mini statement For Closed Account");
+		response = sendReq (request, TCID , "Mini statement For Closed Account");
 		assertResponse(response);
 	}
 	
-	@Test(priority=19)
+	@Test
 	public void MiniStatementForinactiveAccount() throws IOException, SQLException {
 		request = StaticStore.miniStatement(prop.getProperty("inactiveaccountno"));
-		response = sendReq (request, "Mini statement For Inactive Account");
+		response = sendReq (request, TCID , "Mini statement For Inactive Account");
 		assertResponse(response);
 	}
 	
-	@Test(priority=20)
+	@Test
 	public void MiniStatementForBlockedAccount() throws IOException, SQLException {
 		request = StaticStore.miniStatement(prop.getProperty("blockedaccountno"));
-		response = sendReq (request, "Mini Statement For Blocked Account");
+		response = sendReq (request, TCID , "Mini Statement For Blocked Account");
 		assertResponse(response);
 	}
 

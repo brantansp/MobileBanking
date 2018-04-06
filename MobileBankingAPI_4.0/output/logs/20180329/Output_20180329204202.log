@@ -1,9 +1,0 @@
-[INFO] 2018-03-29 20:42:02,410 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
-
-[INFO] 2018-03-29 20:42:02,554 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 20:42:02,555 ExtentManager sendReq - Request : NEFT benificiary de-registration confirm
-[INFO] 2018-03-29 20:42:03,250 ExtentManager sendReq - Hmaced Request : e5621b239734d58a6ebc9f4ec3961b60d5a6208db19d374f1d75215d50dd599c*!9894060407AP4D;Y;15316170605690416310253121025515855714;NeftBeneficiary;463795;123457;4.0;2478623864983269;93320174971452668445281897754664922943
-[INFO] 2018-03-29 20:42:04,216 ExtentManager sendReq - Response received from Server : 4D00;Beneficiary NeftBeneficiary deleted successfully;29/03/2018 20:43;TXNID:808820245390;BID:C463795
-[INFO] 2018-03-29 20:42:04,216 ExtentManager sendReq - Transaction ID : 808820245390
-[INFO] 2018-03-29 20:42:04,216 ExtentManager sendReq - ******************************END********************************
-

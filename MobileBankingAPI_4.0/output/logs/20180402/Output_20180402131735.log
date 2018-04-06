@@ -1,9 +1,0 @@
-[INFO] 2018-04-02 13:17:35,916 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
-
-[INFO] 2018-04-02 13:17:36,047 ExtentManager sendReqAppLogin - ******************************START******************************
-[INFO] 2018-04-02 13:17:36,047 ExtentManager sendReqAppLogin - Request : App Login
-[INFO] 2018-04-02 13:17:36,691 ExtentManager sendReqAppLogin - Hmaced Request : c229347a9b7b300dcb9155a53f00b3b3ddad9d968f179042d68620b8e1a8b562*!XXXXXXXXXXAPMN;BVD:4.3.12%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus%23864829030310400%231522649949907;504432;123457;4.0.3;0;147960043517551743672230374829743379931
-[INFO] 2018-04-02 13:17:36,720 ExtentManager sendReqAppLogin - Response received from Server : MN00;8778602561;02/04/2018 13:18;TXNID:809213655648
-[INFO] 2018-04-02 13:17:36,721 ExtentManager sendReqAppLogin - Transaction ID : 809213655648
-[INFO] 2018-04-02 13:17:36,721 ExtentManager sendReqAppLogin - ******************************END********************************
-

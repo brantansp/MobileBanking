@@ -1,9 +1,0 @@
-[INFO] 2018-03-29 20:12:24,325 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
-
-[INFO] 2018-03-29 20:12:24,473 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 20:12:24,473 ExtentManager sendReq - Request : NEFT Quick FT
-[INFO] 2018-03-29 20:12:25,155 ExtentManager sendReq - Hmaced Request : cf79d2d1d8a97c4b5c524d564cbe7cdaff6de8d2e6b5d7199cc9cd4d4116b243*!9894060407APQN;Y;15316170605690416310253121025515855714;3286478326489632;10;HDFC0000001;NeftBeneficiary;NeftTest;001;463795;123457;4.0;2478623864983269;40979076286632584437780191906377090632
-[INFO] 2018-03-29 20:12:26,915 ExtentManager sendReq - Response received from Server : QN48;Please enter the valid amount to complete the transaction ;29/03/2018 20:13;TXNID:808820245364;BID:C463795
-[INFO] 2018-03-29 20:12:26,915 ExtentManager sendReq - Transaction ID : 808820245364
-[INFO] 2018-03-29 20:12:26,916 ExtentManager sendReq - ******************************END********************************
-

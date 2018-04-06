@@ -1,9 +1,0 @@
-[INFO] 2018-03-29 20:33:07,802 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
-
-[INFO] 2018-03-29 20:33:07,956 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 20:33:07,956 ExtentManager sendReq - Request : NEFT benificiary detail
-[INFO] 2018-03-29 20:33:08,620 ExtentManager sendReq - Hmaced Request : 97c081f219c75abce7c1e7414c2d058bad4e3fd06660032b09e2e02af9fc0ad0*!9894060407APNL;Y;15316170605690416310253121025515855714;N;NeftBeneficiary;463795;123457;4.0;2478623864983269;133081998970958927885128076381413401880
-[INFO] 2018-03-29 20:33:09,077 ExtentManager sendReq - Response received from Server : NL09;Due to technical problem your last transaction was not processed. Please retry after some time;29/03/2018 20:34;TXNID:808820245382;BID:C463795
-[INFO] 2018-03-29 20:33:09,078 ExtentManager sendReq - Transaction ID : 808820245382
-[INFO] 2018-03-29 20:33:09,079 ExtentManager sendReq - ******************************END********************************
-

@@ -22,141 +22,141 @@ public class Transfer extends ExtentManager{
 	 * M2M
 	 */
 
-   @Test(priority=1)
+   @Test
 	public void m2mQuickFT() throws IOException, SQLException {
 		request = StaticStore.m2mQuickFT(prop.getProperty("BenMobileNo"), 
 				prop.getProperty("WtFTAmount"), prop.getProperty("FTRemarks"));
-		response =sendReq(request, "m2m Quick FT");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m Quick FT");
 		assertResponse(response);
 	}
    
    
-   @Test(priority=2)
+   @Test
 	public void m2mBenRegAcclist() throws IOException, SQLException {
 		request = StaticStore.m2mBenRegAcclist(prop.getProperty("BenMobileNo"), 
 				prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2m Benificiary Account list");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m Benificiary Account list");
 		assertResponse(response);
 	}
 	
-	@Test(priority=3)
+	@Test
 	public void m2mBenReg() throws IOException, SQLException {
 		request = StaticStore.m2mBenReg(prop.getProperty("BenMobileNo"), 
 				prop.getProperty("FTBenNickName"), prop.getProperty("BenAccNo"));
-		response =sendReq(request, "m2m Benificiary Registration");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m Benificiary Registration");
 		assertResponse(response);
 	}
 	
-	@Test(priority=4)
+	@Test
 	public void m2mPaybensearch() throws IOException, SQLException {
 		request = StaticStore.m2mPaybensearch();
-		response =sendReq(request, "m2m Register benificiary search");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m Register benificiary search");
 		assertResponse(response);
 	}
 	
-	@Test(priority=5)
+	@Test
 	public void m2mbenpayment() throws IOException, SQLException {
 		request = StaticStore.m2mbenpayment(prop.getProperty("FTBenNickName"), 
 		prop.getProperty("WtFTAmount"), prop.getProperty("FTRemarks"));
-		response =sendReq(request, "m2m benificiary payment");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m benificiary payment");
 		assertResponse(response);
 	}
 	
 	
-	@Test(priority=6)
+	@Test
 	public void m2mBenSearchWoKw() throws IOException, SQLException {
 		request = StaticStore.m2mbensearch("");
-		response =sendReq(request, "m2m benificiary search");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m benificiary search");
 		assertResponse(response);
 	}
 	
-	@Test(priority=7)
+	@Test
 	public void m2mBenSearchWKw() throws IOException, SQLException {
 		request = StaticStore.m2mbensearch(prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2m benificiary search");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m benificiary search");
 		assertResponse(response);
 	}
 	
 	
-	@Test(priority=8)
+	@Test
 	public void m2mBenDelSearchWoKw() throws IOException, SQLException {
 		request = StaticStore.m2mbendelsearch("");
-		response =sendReq(request, "m2m benificiary delete search");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m benificiary delete search");
 		assertResponse(response);
 	}
 	
-	@Test(priority=9)
+	@Test
 	public void m2mBenDelSearchWKw() throws IOException, SQLException {
 		request = StaticStore.m2mbendelsearch(prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2m benificiary delete search");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m benificiary delete search");
 		assertResponse(response);
 	}
 	
-	@Test(priority=10)
+	@Test
 	public void m2mBenDelete() throws IOException, SQLException {
 		request = StaticStore.m2mbenedelete(prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "M2M benificiary delete");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "M2M benificiary delete");
 		assertResponse(response);
 	}
 	
-	@Test(priority=11)
+	@Test
  	public void m2mQuickFTBenificiaryNotRegForMobileBanking() throws IOException, SQLException {
  		request = StaticStore.m2mQuickFT(prop.getProperty("NotregBenMobileNo"), 
  				prop.getProperty("WtFTAmount"), prop.getProperty("FTRemarks"));
- 		response =sendReq(request, "m2m Quick FT Benificiary Not Registered For Mobile Banking");
+ 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m Quick FT Benificiary Not Registered For Mobile Banking");
 		assertTrue(response.substring(2,4).contains("09"));
 
  	}
    
-   @Test(priority=12)
+   @Test
   	public void m2mQuickFTInsufficientAmount() throws IOException, SQLException {
   		request = StaticStore.m2mQuickFT(prop.getProperty("BenMobileNo"), 
   				prop.getProperty("InsufficientAmount"), prop.getProperty("FTRemarks"));
-  		response =sendReq(request, "m2m Quick FT Insufficient Amount");
+  		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m Quick FT Insufficient Amount");
 		assertTrue(response.substring(2,4).contains("20"));
 
   	}
 	
-   @Test(priority=13)
+   @Test
  	public void m2mQuickFTAmountExceedsLimit() throws IOException, SQLException {
  		request = StaticStore.m2mQuickFT(prop.getProperty("BenMobileNo"), 
  				prop.getProperty("ExceededAmount"), prop.getProperty("FTRemarks"));
- 		response =sendReq(request, "m2m Quick FT Amount Exceeds Limit");
+ 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m Quick FT Amount Exceeds Limit");
 		assertTrue(response.substring(2,4).contains("21"));
 
  	}
 
-   @Test(priority=14)
+   @Test
   	public void m2mBenRegAcclistForRandomMobileNo() throws IOException, SQLException {
   		request = StaticStore.m2mBenRegAcclist(prop.getProperty("NotregBenMobileNo"), 
   				prop.getProperty("FTBenNickName"));
-  		response =sendReq(request, "m2m Ben Reg Acclist For Random Mobile No");
+  		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m Ben Reg Acclist For Random Mobile No");
   		assertResponse(response);
   	}
    
-   @Test(priority=15)
+   @Test
 	public void m2mbenpaymentExceedTransactionAmount() throws IOException, SQLException {
 		request = StaticStore.m2mbenpayment(prop.getProperty("FTBenNickName"), 
 		prop.getProperty("ExceededAmount"), prop.getProperty("FTRemarks"));
-		response =sendReq(request, "m2m ben payment Exceed Transaction Amount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m ben payment Exceed Transaction Amount");
 		assertTrue(response.substring(2,4).contains("20"));
 
 	}
 	
-	@Test(priority=16)
+	@Test
 	public void m2mbenpaymentInsufficientAmount() throws IOException, SQLException {
 		request = StaticStore.m2mbenpayment(prop.getProperty("FTBenNickName"), 
 		prop.getProperty("InsufficientAmount"), prop.getProperty("FTRemarks"));
-		response =sendReq(request, "m2m ben payment Insufficient Amount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m ben payment Insufficient Amount");
 	//	assertResponse(response);
 		assertTrue(response.substring(2,4).contains("21"));
 
 	}
 	
-	@Test(priority=17)
+	@Test
 	public void m2mBenDelSameBenSearchWKw() throws IOException, SQLException {
 		request = StaticStore.m2mbendelsearch(prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2m Ben Del Same Ben SearchWKw");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2m Ben Del Same Ben SearchWKw");
 		assertResponse(response);
 	}
 	
@@ -164,139 +164,139 @@ public class Transfer extends ExtentManager{
 	 * M2A
 	 */
 	
-	@Test(priority=51)
+	@Test
 	public void m2aQuickFT() throws IOException, SQLException {
 		request = StaticStore.m2aQuickFT(prop.getProperty("BenAccNo"), 
 				prop.getProperty("BenAccTypeFT"), prop.getProperty("WtFTAmount"));
-		response =sendReq(request, "P2A Quick FT");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "P2A Quick FT");
 		assertResponse(response);
 	}
 	
-	@Test(priority=52)
+	@Test
 	public void m2aBenRegSearch() throws IOException, SQLException {
 		request = StaticStore.m2aBenRegSearch(prop.getProperty("BenAccNo"), 
 				prop.getProperty("BenAccTypeFT"), prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2a benificary registration search");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a benificary registration search");
 		assertResponse(response);
 	}
 	
-	@Test(priority=53)
+	@Test
 	public void m2aBenReg() throws IOException, SQLException {
 		request = StaticStore.m2abenreg(prop.getProperty("BenAccNo"), 
 				prop.getProperty("BenAccTypeFT"), prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2a benificiary req");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a benificiary req");
 		assertResponse(response);
 	}
 	
-	@Test(priority=54)
+	@Test
 	public void m2aBenPaymentSearch() throws IOException, SQLException {
 		request = StaticStore.m2aBenPaySearch();
-		response =sendReq(request, "m2a benificiary payment search");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a benificiary payment search");
 		assertResponse(response);
 	}
 	
-	@Test(priority=55)
+	@Test
 	public void m2aBenPayment() throws IOException, SQLException {
 		request = StaticStore.m2aBenPay(prop.getProperty("FTBenNickName"), 
 				prop.getProperty("WtFTAmount"), prop.getProperty("FTRemarks"));
-		response =sendReq(request, "m2a benificiary payment");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a benificiary payment");
 		assertResponse(response);
 	}
 	
-	@Test(priority=56)
+	@Test
 	public void m2abendetailsWoKw() throws IOException, SQLException {
 		request = StaticStore.m2abendetails("");
-		response =sendReq(request, "m2a benificiary details Without Keyword");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a benificiary details Without Keyword");
 		assertResponse(response);
 	}
 	
-	@Test(priority=57)
+	@Test
 	public void m2abendetailsWKw() throws IOException, SQLException {
 		request = StaticStore.m2abendetails(prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2a benificiary details With Keyword");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a benificiary details With Keyword");
 		assertResponse(response);
 	}
 	
-	@Test(priority=58)
+	@Test
 	public void m2abenderegsearchWoKw() throws IOException, SQLException {
 		request = StaticStore.m2aBenDeregSearch("");
-		response =sendReq(request, "m2a benificiary deregistration search without keyword");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a benificiary deregistration search without keyword");
 		assertResponse(response);
 	}
 	
-	@Test(priority=59)
+	@Test
 	public void m2abenderegsearchWKw() throws IOException, SQLException {
 		request = StaticStore.m2aBenDeregSearch(prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2a benificiary deregistration search with keyword");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a benificiary deregistration search with keyword");
 		assertResponse(response);
 	}
 	
-	@Test(priority=60)
+	@Test
 	public void m2aBenDereg() throws IOException, SQLException {
 		request = StaticStore.m2aBenDereg(prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2a benificiary deregistration search with keyword");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a benificiary deregistration search with keyword");
 		assertResponse(response);
 	}
 	
-	@Test(priority=61)
+	@Test
 	public void m2aQuickFTRandomBenAccount() throws IOException, SQLException {
 		request = StaticStore.m2aQuickFT(prop.getProperty("InvalidBenAccNo"), 
 				prop.getProperty("BenAccTypeFT"), prop.getProperty("WtFTAmount"));
-		response =sendReq(request, "m2a Quick FT Random Ben Account");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a Quick FT Random Ben Account");
 		assertResponse(response);
 	}
 	
-	@Test(priority=62)
+	@Test
 	public void m2aQuickFTExceedsTransactionAmount() throws IOException, SQLException {
 		request = StaticStore.m2aQuickFT(prop.getProperty("BenAccNo"), 
 				prop.getProperty("BenAccTypeFT"), prop.getProperty("ExceededAmount"));
-		response =sendReq(request, "m2a Quick FT Exceeds Transaction Amount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a Quick FT Exceeds Transaction Amount");
 		assertTrue(response.substring(2,4).contains("21"));
 
 		//assertResponse(response);
 	}
 	
-	@Test(priority=63)
+	@Test
 	public void m2aQuickFTInsufficientAmount() throws IOException, SQLException {
 		request = StaticStore.m2aQuickFT(prop.getProperty("BenAccNo"), 
 				prop.getProperty("BenAccTypeFT"), prop.getProperty("InsufficientAmount"));
-		response =sendReq(request, "m2a QuickFT Insufficient Amount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a QuickFT Insufficient Amount");
 		//assertResponse(response);
 		assertTrue(response.substring(2,4).contains("20"));
 
 	}
 	
-	@Test(priority=64)
+	@Test
 	public void m2aBenRegWithRandomBenAccount() throws IOException, SQLException {
 		request = StaticStore.m2abenreg(prop.getProperty("RandomBenAccNo"), 
 				prop.getProperty("BenAccTypeFT"), prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2a Ben Reg With Random Ben Account");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a Ben Reg With Random Ben Account");
 		assertResponse(response);
 	}
 	
-	@Test(priority=65)
+	@Test
 	public void m2aBenPaymentExceedTransactionAmount() throws IOException, SQLException {
 		request = StaticStore.m2aBenPay(prop.getProperty("FTBenNickName"), 
 				prop.getProperty("ExceededAmount"), prop.getProperty("FTRemarks"));
-		response =sendReq(request, "m2a Ben Payment Exceed Transaction Amount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a Ben Payment Exceed Transaction Amount");
 		//assertResponse(response);
 		assertTrue(response.substring(2,4).contains("21"));
 	}
 	
-	@Test(priority=66)
+	@Test
 	public void m2aBenPaymentInSufficientAmount() throws IOException, SQLException {
 		request = StaticStore.m2aBenPay(prop.getProperty("FTBenNickName"), 
 				prop.getProperty("InsufficientAmount"), prop.getProperty("FTRemarks"));
-		response =sendReq(request, "m2a Ben Payment InSufficient Amount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a Ben Payment InSufficient Amount");
 		//assertResponse(response);
 		assertTrue(response.substring(2,4).contains("20"));
 
 	}
 	
-	@Test(priority=67)
+	@Test
 	public void m2aBenDeregSameBen() throws IOException, SQLException {
 		request = StaticStore.m2aBenDereg(prop.getProperty("FTBenNickName"));
-		response =sendReq(request, "m2a Ben De-register Same Ben");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "m2a Ben De-register Same Ben");
 		assertResponse(response);
 	}
 	
@@ -310,116 +310,116 @@ public class Transfer extends ExtentManager{
 		request = StaticStore.NEFTQuickFT(prop.getProperty("BenAccountno"), prop.getProperty("AccountType"),
 				prop.getProperty("BenIFSCcode"), prop.getProperty("BenNickName"), 
 				prop.getProperty("NeftRemarks"));
-		response =sendReq(request, "NEFT Quick FT");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT Quick FT");
 		assertResponse(response);
 	}
 	
-	@Test(priority=102)
+	@Test
 	public void NEFTbenreg() throws IOException, SQLException {
 		request = StaticStore.NEFTbenreg(prop.getProperty("BenAccountno"), 
 				prop.getProperty("AccountType"), prop.getProperty("BenIFSCcode"), prop.getProperty("BenNickName"));
-		response =sendReq(request, "NEFT benificiary registration");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT benificiary registration");
 		assertResponse(response);
 	}
 	
 	
-	@Test(priority=103)
+	@Test
 	public void NEFTbenregconfirm() throws IOException, SQLException {
 		request = StaticStore.NEFTbenregconfirm(prop.getProperty("BenAccountno"), 
 				prop.getProperty("AccountType"), prop.getProperty("BenIFSCcode"), prop.getProperty("BenNickName"));
-		response =sendReq(request, "NEFT benificiary registration confirm");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT benificiary registration confirm");
 		assertResponse(response);
 	}
 
 	
-	@Test(priority=104)
+	@Test
 	public void NEFTbenlist() throws IOException, SQLException {
 		request = StaticStore.NEFTbenlist();
-		response =sendReq(request, "NEFT benificiary list");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT benificiary list");
 		assertResponse(response);
 	}
 	
-	@Test(priority=105)
+	@Test
 	public void NEFTbenpayment() throws IOException, SQLException {
 		request = StaticStore.NEFTbenpayment(prop.getProperty("NeftAmount"),
 				prop.getProperty("BenNickName") , prop.getProperty("NeftRemarks"));
-		response =sendReq(request, "NEFT benificiary payment");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT benificiary payment");
 		assertResponse(response);
 	}
 	
 	
-	@Test(priority=106)
+	@Test
 	public void NEFTbendetail() throws IOException, SQLException {
 		request = StaticStore.NEFTbendetail(prop.getProperty("BenNickName"));
-		response =sendReq(request, "NEFT benificiary detail");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT benificiary detail");
 		assertResponse(response);
 	}
 	
-	@Test(priority=107)
+	@Test
 	public void NEFTbendereglist() throws IOException, SQLException {
 		request = StaticStore.NEFTbendereglist("");
-		response =sendReq(request, "NEFT benificiary de-registration list");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT benificiary de-registration list");
 		assertResponse(response);
 	}
 	
-	@Test(priority=108)
+	@Test
 	public void NEFTbenderegconfirm() throws IOException, SQLException {
 		request = StaticStore.NEFTbenderegconfirm(prop.getProperty("BenNickName"));
-		response =sendReq(request, "NEFT benificiary de-registration confirm");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT benificiary de-registration confirm");
 		assertResponse(response);
 	}
 	
-	@Test(priority=109)
+	@Test
 	public void NEFTQuickFTWithInvalidIFSCcode() throws IOException, SQLException {
 		request = StaticStore.NEFTQuickFT(prop.getProperty("BenAccountno"), prop.getProperty("AccountType"),
 				prop.getProperty("InvalidBenIFSCcode"), prop.getProperty("BenNickName"), 
 				prop.getProperty("NeftRemarks"));
-		response =sendReq(request, "NEFT Quick FT With Invalid IFSC code");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT Quick FT With Invalid IFSC code");
 		assertResponse(response);
 		
 	}
 	
-	@Test(priority=110)
+	@Test
 	public void NEFTbenregWithInvalidIFSCcode() throws IOException, SQLException {
 		request = StaticStore.NEFTbenreg(prop.getProperty("BenAccountno"), 
 				prop.getProperty("AccountType"), prop.getProperty("InvalidBenIFSCcode"), prop.getProperty("BenNickName"));
-		response =sendReq(request, "NEFT ben reg With Invalid IFSC code");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT ben reg With Invalid IFSC code");
 		assertResponse(response);
 	}
 	
-	@Test(priority=111)
+	@Test
 	public void NEFTbenregconfirmWithInvalidIFSCcode() throws IOException, SQLException {
 		request = StaticStore.NEFTbenregconfirm(prop.getProperty("BenAccountno"), 
 				prop.getProperty("AccountType"), prop.getProperty("InvalidBenIFSCcode"), prop.getProperty("BenNickName"));
-		response =sendReq(request, "NEFT ben reg confirm With Invalid IFSC code");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT ben reg confirm With Invalid IFSC code");
 		assertResponse(response);
 	}
 
-	@Test(priority=112)
+	@Test
 	public void NEFTbenpaymentWithExceededAmount() throws IOException, SQLException {
 		request = StaticStore.NEFTbenpayment(prop.getProperty("ExceededAmount"),
 				prop.getProperty("BenNickName") , prop.getProperty("NeftRemarks"));
-		response =sendReq(request, "NEFT ben payment With Exceeded Amount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT ben payment With Exceeded Amount");
 		//assertResponse(response);
 		assertTrue(response.substring(2,4).contains("21"));
 
 	}
 	
-	@Test(priority=113)
+	@Test
 	public void NEFTbenpaymentWithInsufficientAmount() throws IOException, SQLException {
 		request = StaticStore.NEFTbenpayment(prop.getProperty("InsufficientAmount"),
 				prop.getProperty("BenNickName") , prop.getProperty("NeftRemarks"));
-		response =sendReq(request, "NEFT ben payment With Insufficient Amount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT ben payment With Insufficient Amount");
 		//assertResponse(response);
 		assertTrue(response.substring(2,4).contains("20"));
 
 	}
 	
-	@Test(priority=114)
+	@Test
 	public void NEFTbenpaymentWithRandomNickname() throws IOException, SQLException {
 		request = StaticStore.NEFTbenpayment(prop.getProperty("NeftAmount"),
 				prop.getProperty("RandomNickname") , prop.getProperty("NeftRemarks"));
-		response =sendReq(request, "NEFTbenpaymentWithRandomNickname");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFTbenpaymentWithRandomNickname");
 		assertResponse(response);
 	}
 	

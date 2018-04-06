@@ -56,6 +56,8 @@ public class ExtentManager{
 	SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyyMMdd"); 
 	SimpleDateFormat timeFormatter = new SimpleDateFormat("HHmmss"); 
 	Date date = new Date();  
+	static int TestCaseNum =1;
+	public String TCID;
 	
 	@BeforeSuite
 	public void setUp()throws FileNotFoundException, SQLException{
@@ -86,17 +88,33 @@ public class ExtentManager{
 		extentLogger.assignAuthor("Brantan sp");
 		extentLogger.assignCategory("Automation Testing");
 		extentLogger.log( LogStatus.PASS, "Test started successfully");
+    	TCID = "TC_"+this.getClass().getSimpleName()+"_"+TestCaseNum;
+/*		try {
+			ExcelWriter.writeTestCaseID(TestCaseNum , TCID);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 	}
 	
 	
 	@AfterMethod
 	public void getResult(ITestResult result){
+
 		if(result.getStatus() == ITestResult.FAILURE){
 			extentLogger.log(LogStatus.FAIL, "Test Case Failed is "+result.getName());
 			extentLogger.log(LogStatus.FAIL, "Test Case Failed is "+result.getThrowable());
 		}else if(result.getStatus() == ITestResult.SKIP){
 			extentLogger.log(LogStatus.SKIP, "Test Case Skipped is "+result.getName());
-		}extent.endTest(extentLogger);
+		}
+	try {
+			ExcelWriter.writeTestResult(TestCaseNum , result.getStatus());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		extent.endTest(extentLogger);
+		TestCaseNum++;
 	}
 	
 	@AfterSuite
@@ -150,6 +168,14 @@ public class ExtentManager{
                 sc.close();
   */}
 	
+	
+    public static String testCaseNum(String ModuleName)
+    {
+    	String TCID = "TC_"+ModuleName+"_"+TestCaseNum;
+    	TestCaseNum++;
+    	return TCID;
+    }
+    
 	public static Properties getProperty()
 	{
 		prop=ExcelReader.getPropertyFromExcel("Data","InputData");
@@ -196,10 +222,44 @@ public class ExtentManager{
 		assertTrue(response.substring(2,4).contains("00"));		
 	}
 	
-	public static String sendReq (String Request, String txnType) throws IOException, SQLException
+	public static String sendReq (String Request) throws IOException, SQLException
+	{
+	    BigInteger uniNum = RandomNumGenerator.generate();
+	  	if (prop.getProperty("HMAC").equals("Y"))
+		{
+		  try {
+			Request=Hmac.Hmacing(Request+uniNum, Request, uniNum);
+		        } catch (InvalidKeyException | SignatureException | NoSuchAlgorithmException e) {
+			e.printStackTrace();
+			log.error(e);
+		   }
+		}
+		else {
+			Request = Request +";"+uniNum;
+		}
+			 HttpConnect obj=new HttpConnect();
+			response = obj.Post(Request);
+     	if(response.substring(2,4).contains("IM"))
+     	{
+     		log.info("mPIN is invalid : Please enter a valid mPIN and start the test");
+     		log.info("Program is terminating");
+     		System.exit(1);
+     	}
+	return response;
+	}
+	
+	public static String sendReq (String Request, String TCID, String Description) throws IOException, SQLException
 	{
 		log.info("******************************START******************************");
-	    log.info("Request : " + txnType);
+	    log.info("Test Case ID : " + TCID);
+	    log.info("Test Description : " + Description);
+		try {
+			ExcelWriter.writeTestCaseID(TestCaseNum , TCID);
+			ExcelWriter.writeTestCaseDesc(TestCaseNum , Description);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	    BigInteger uniNum = RandomNumGenerator.generate();
 	  	if (prop.getProperty("HMAC").equals("Y"))
 		{
@@ -227,7 +287,7 @@ public class ExtentManager{
 				if("Y".equals(prop.getProperty("dbReport")))
 				{
 					dbResult = dbTransactionlog.fetchRecord(transactionID);
-					WriteToCSVFile.reportGeneration( txnType, dbResult);
+					WriteToCSVFile.reportGeneration( Description, dbResult);
 				}		
 			}
      	if(response.substring(2,4).contains("IM"))
@@ -240,10 +300,18 @@ public class ExtentManager{
 	return response;
 	}
 	
-	public static String sendReq2 (String Request, String req2,String txnType, BigInteger uniNum) throws IOException, SQLException
+	public static String sendReq2 (String Request, String TCID, String req2,String Description, BigInteger uniNum) throws IOException, SQLException
 	{
 		log.info("******************************START******************************");
-	    log.info("Request : " + txnType);
+	    log.info("Test Case ID : " + TCID);
+	    log.info("Test Description : " + Description);
+		try {
+			ExcelWriter.writeTestCaseID(TestCaseNum , TCID);
+			ExcelWriter.writeTestCaseDesc(TestCaseNum , Description);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	  	if (prop.getProperty("HMAC").equals("Y"))
 		{
 		  try {

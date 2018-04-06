@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import mBankingPageObjectModel.StaticStore;
 import mBankingUtilityCenter.ExtentManager;
+import mBankingUtilityCenter.RsaEncryption;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -16,31 +17,32 @@ public class Settings extends ExtentManager {
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	@Test(priority=8)
+    
+	@Test
 	public void EmailIDFetch() throws IOException, SQLException {
 		request = StaticStore.emailIDFetch();
-		response = sendReq (request, "Email ID fetch");
+		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Email ID fetch");
 		assertResponse(response);
 	}
 
-	@Test(priority=9)
+	@Test
 	public void EmailIDUpdate() throws IOException, SQLException {
 		request = StaticStore.updateEmailID("abc@fss.com");
-		response = sendReq (request, "Email ID Update");
+		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Email ID Update");
 		assertResponse(response);
 	}
 	
-	@Test(priority=11)
+	@Test
 	public void Accountfetch() throws IOException, SQLException {
 		request = StaticStore.Accountfetch();
-		response = sendReq (request, "Account Fetch");
+		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Account Fetch");
 		assertResponse(response);
 	}
 	
-	@Test(priority=12)
+	@Test
 	public void changeloginpwd() throws IOException, SQLException {
-		request = StaticStore.changeloginpwd("8609547570776098518502128580812621291");
-		response = sendReq (request, "Change Login Password");
+		request = StaticStore.changeloginpwd(RsaEncryption.encrypt("9999"));
+		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Change Login Password");
 		assertResponse(response);
 	}
 	

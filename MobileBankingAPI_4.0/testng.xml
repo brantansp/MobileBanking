@@ -3,20 +3,46 @@
 <suite name = "Positive Transaction flow" >
 <listeners>
 <listener class-name="mBankingUtilityCenter.AnotationListner"></listener>
+<listener class-name="mBankingUtilityCenter.PriorityInterceptor" />
 </listeners>
-    <test name = "Non- FInancial transaction">
+<!--     <test name = "Accounts Transaction">
       <classes>
-          <class name = "mBankingControlCenter.NonFinancialTransactions"/>
+          <class name = "mBankingControlCenter.Accounts"/>
+      </classes>        
+    </test> -->
+       <test name = "IMPS Transaction">
+      <classes>
+          <class name = "mBankingControlCenter.IMPS"/>
+      </classes>        
+    </test> 
+<!--         <test name = "Pre-Login Transaction">
+      <classes>
+          <class name = "mBankingControlCenter.PreLogin"/>
       </classes>        
     </test>
-    <test name = "IMPSTransactions">
+        <test name = "Requests Transaction">
+      <classes>
+          <class name = "mBankingControlCenter.Requests"/>
+      </classes>        
+    </test> -->
+<!--     <test name = "Settings Transaction">
+      <classes>
+          <class name = "mBankingControlCenter.Settings"/>
+      </classes>        
+    </test> -->
+<!--             <test name = "Transfer Transaction">
+      <classes>
+          <class name = "mBankingControlCenter.Transfer"/>
+      </classes>        
+    </test> -->
+<!--   <test name = "IMPSTransactions">
       <classes>
           <class name="mBankingControlCenter.IMPSTransactions" />
       </classes>        
-    </test> 
-          <test name = "FundTransferTransactions">
+    </test>  -->
+   <!--          <test name = "FundTransferTransactions">
       <classes>
           <class name="mBankingControlCenter.FundTransferTransactions" />
       </classes>        
-    </test> 
+    </test>  -->
 </suite>

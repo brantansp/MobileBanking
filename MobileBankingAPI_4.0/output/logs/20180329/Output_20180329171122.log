@@ -1,9 +1,0 @@
-[INFO] 2018-03-29 17:11:22,950 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
-
-[INFO] 2018-03-29 17:11:23,098 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 17:11:23,098 ExtentManager sendReq - Request : P2A Quick FT
-[INFO] 2018-03-29 17:11:23,736 ExtentManager sendReq - Hmaced Request : fedafc81b226729f7eca3de2919c9b76572d15bca7e4833b643380e5427f112d*!9894060407APQT;Y;15316170605690416310253121025515855714;3286478326489632;10;10;test   ;001;463795;123457;4.0;2478623864983269;11948655828786768279097962276407534096
-[INFO] 2018-03-29 17:11:27,438 ExtentManager sendReq - Response received from Server : QT00;Fund Transfer to 3286XXX326489632 - successful. Rs. 10.00 debited from 2478XXX864983269;29/03/2018 17:12;TXNID:808817245277;BID:C463795
-[INFO] 2018-03-29 17:11:27,439 ExtentManager sendReq - Transaction ID : 808817245277
-[INFO] 2018-03-29 17:11:27,440 ExtentManager sendReq - ******************************END********************************
-

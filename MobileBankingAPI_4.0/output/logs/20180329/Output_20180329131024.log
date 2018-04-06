@@ -1,7 +1,0 @@
-[INFO] 2018-03-29 13:10:25,075 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 13:10:25,077 ExtentManager sendReq - Request : m2m Benificiary Registration
-[INFO] 2018-03-29 13:10:25,729 ExtentManager sendReq - Hmaced Request : e7fe52d970d2bb94fcd458c4d30c8a713a1564b76ea3b296d313ba180a9d57b9*!9894060407APC1;Y;15316170605690416310253121025515855714;9790954690;m2mBen;9894010000;0001;463795;123457;4.0;2478623864983269;53974278055055350003008113303352133190
-[INFO] 2018-03-29 13:10:26,667 ExtentManager sendReq - Response received from Server : C109;Due to technical problem your last transaction was not processed. Please retry after some time;29/03/2018 13:11;TXNID:808813245151;BID:C463795
-[INFO] 2018-03-29 13:10:26,668 ExtentManager sendReq - Transaction ID : 808813245151
-[INFO] 2018-03-29 13:10:26,668 ExtentManager sendReq - ******************************END********************************
-

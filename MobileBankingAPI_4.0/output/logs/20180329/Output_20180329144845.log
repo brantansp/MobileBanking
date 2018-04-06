@@ -1,7 +1,0 @@
-[INFO] 2018-03-29 14:48:45,884 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 14:48:45,887 ExtentManager sendReq - Request : m2m Benificiary Registration
-[INFO] 2018-03-29 14:48:46,561 ExtentManager sendReq - Hmaced Request : ba1fec673835a566b0bac216302966e5deed1e9d2da026be7d11bb537ba9a9f3*!9894060407APQM;Y;15316170605690416310253121025515855714;8778602561;10;test   ;463795;123457;4.0;2478623864983269;75552850045308621798709500710416753221
-[INFO] 2018-03-29 14:48:57,364 ExtentManager sendReq - Response received from Server : QM00;Fund Transfer to 3286XXX326489632 - +918778602561 successful. Rs. 10.00 debited from 2478XXX864983269;29/03/2018 14:50;TXNID:808814245158;BID:C463795
-[INFO] 2018-03-29 14:48:57,365 ExtentManager sendReq - Transaction ID : 808814245158
-[INFO] 2018-03-29 14:48:57,366 ExtentManager sendReq - ******************************END********************************
-

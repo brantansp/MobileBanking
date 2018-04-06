@@ -1,7 +1,0 @@
-[INFO] 2018-04-02 13:11:54,099 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
-
-[INFO] 2018-04-02 13:11:54,226 ExtentManager sendReqAppLogin - ******************************START******************************
-[INFO] 2018-04-02 13:11:54,227 ExtentManager sendReqAppLogin - Request : App Login
-[INFO] 2018-04-02 13:11:54,891 ExtentManager sendReqAppLogin - Hmaced Request : ef37b897985e6188ae49ce18387746365cbf72ec88be078ffccd7afbf5440b8e*!XXXXXXXXXXAPMN;BVD:4.3.12%23ANDROID7.1.1%23H1920W1080%23LENOVO+Lenovo K8 Plus%23864829030310400%231522649949907;504432;123457;4.0.3;0;177988488683865506168279528678274670415
-[ERROR] 2018-04-02 13:11:54,911 HttpConnect Post - java.io.IOException: Server returned HTTP response code: 401 for URL: http://10.44.120.60:8040/ubimpayportal/servlet/MQSender?request=ef37b897985e6188ae49ce18387746365cbf72ec88be078ffccd7afbf5440b8e*!XXXXXXXXXXAPMN;BVD:4.3.12%23ANDROID7.1.1%23H1920W1080%23LENOVO+Lenovo K8 Plus%23864829030310400%231522649949907;504432;123457;4.0.3;0;177988488683865506168279528678274670415
-[INFO] 2018-04-02 13:11:54,912 ExtentManager sendReqAppLogin - Response received from Server : null

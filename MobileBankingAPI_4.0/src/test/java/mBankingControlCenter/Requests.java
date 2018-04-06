@@ -16,32 +16,31 @@ public class Requests extends ExtentManager {
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-
-	@Test(priority=10)
+	@Test
 	public void ChequeStatus() throws IOException, SQLException {
 		request = StaticStore.chequeStatus("123456");
-		response = sendReq (request, "Cheque status");
+		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Cheque status");
 		assertResponse(response);
 	}
 	
-	@Test(priority=11)
+	@Test
 	public void StopCheque() throws IOException, SQLException {
 		request = StaticStore.stopCheque("123456");
-		response = sendReq (request, "Stop Cheque");
+		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Stop Cheque");
 		assertResponse(response);
 	}
 	
-	@Test(priority=21)
+	@Test
 	public void ChequeStatusCheckNotIssuedToCustomer() throws IOException, SQLException {
 		request = StaticStore.chequeStatus(prop.getProperty("InvalidCheckNo"));
-		response = sendReq (request, "Cheque Status Check Not Issued To Customer");
+		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Cheque Status Check Not Issued To Customer");
 		assertResponse(response);
 	}
 	
-	@Test(priority=22)
+	@Test
 	public void StopChequeCheckAlreadyStopped() throws IOException, SQLException {
 		request = StaticStore.stopCheque(prop.getProperty("CheckNo"));
-		response = sendReq (request, "Stop Cheque Check Already Stopped");
+		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Stop Cheque Check Already Stopped");
 		assertResponse(response);
 	}
 	

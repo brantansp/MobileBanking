@@ -1,6 +1,7 @@
 package mBankingControlCenter;
 
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
 import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -33,7 +34,8 @@ public class PreLogin extends ExtentManager {
 	public static ExtentTest extentLogger;
 	private static Connection dbConnection = null;
 	private static Statement statement = null;
-	
+	static int i =0;
+
     @Test(priority=0)
 	public void ApplicationMobileNumber() throws IOException, SQLException {
 		String imei = prop.getProperty("imei");
@@ -52,14 +54,14 @@ public class PreLogin extends ExtentManager {
 				"\".\"INCOMING_SMS\" (MOBILE_NO, SMS_MSG, SMS_DATE_TIME, APPLICATION_NAME, SMS_STATUS, SMS_FROM, TXN_ID, RECV_DATETIME, DYNAMIC_PORT, MPIN_FLAG, BANKID, IMEI_NO) VALUES "
 				+ "('+91"+prop.getProperty("RemMobileno")+"', '"+req2.substring(10)+uniNum+"', '"+dateFormatter.format(date)+" "+timeFormatter.format(date)+"', 'MPAY', 'Y', 'IMI', '"+2+timeFormatter2.format(date)+"', TO_DATE"
 						+ "('2018-01-29 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), '-', 'Y', '"+prop.getProperty("bankCode")+"', '"+imei+randNum+"')";
-		System.out.println("Query : "+selectTableSQL);
+		log.info("Query : "+selectTableSQL);
 		dbConnection = dbTransactionlog.getDBConnection(prop.getProperty("DB_USER_ADMIN") , prop.getProperty("DB_PASSWORD_ADMIN"));
 		statement = dbConnection.createStatement();
 		statement.executeQuery(selectTableSQL);
 		}
 		
 		request = StaticStore.SilentSms(imei, randNum);
-		response =sendReq2(request, req2, "ApplicationMobileNumber", uniNum);
+		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , req2, "ApplicationMobileNumber", uniNum);
 		assertResponse(response);
 	}
 	
@@ -68,7 +70,7 @@ public class PreLogin extends ExtentManager {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.GPRSCheck();
 		String req2=StaticStore.GPRSCheck2();
-		response =sendReq2(request, req2, "GPRS Check", uniNum);
+		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , req2, "GPRS Check", uniNum);
 		assertResponse(response);
 	}
 	
@@ -77,7 +79,7 @@ public class PreLogin extends ExtentManager {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.buildActivation();
 		String req2=StaticStore.buildActivation2();
-		response =sendReq2(request, req2, "buildActivation", uniNum);
+		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , req2, "buildActivation", uniNum);
 		assertResponse(response);
 	}
 	
@@ -86,7 +88,7 @@ public class PreLogin extends ExtentManager {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.GPRSCheckNew();
 		String req2=StaticStore.GPRSCheckNew2();
-		response =sendReq2(request, req2, "GPRSCheckNew", uniNum);
+		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , req2, "GPRSCheckNew", uniNum);
 		assertResponse(response);
 	}
 	
@@ -94,7 +96,7 @@ public class PreLogin extends ExtentManager {
 	public void productOffer() throws IOException, SQLException {
 
 		request = StaticStore.productOfferLeg2();
-		response =sendReq(request, "productOfferLeg2");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "productOfferLeg2");
 		String [] split =  response.split(";");
 		String x=split[1];
 		split = x.split("\\*");
@@ -102,7 +104,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 		
 		request = StaticStore.productOfferLeg3(x);
-		response =sendReq(request, "productOfferLeg3");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "productOfferLeg3");
 		String [] split2 =  response.split(";");
 	    String y=split2[2];
 		split = y.split("\\*");
@@ -110,7 +112,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 		
 		request = StaticStore.productOfferLeg4(x , y);
-		response =sendReq(request, "productOfferLeg4");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "productOfferLeg4");
 		String [] split3 =  response.split(";");
 	    String z=split3[3];
 		split = z.split("\\*");
@@ -118,7 +120,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 		
 		request = StaticStore.productOfferLeg5(x , y, z);
-		response =sendReq(request, "productOfferLeg5");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "productOfferLeg5");
         split =  response.split(";");
 		assertResponse(response);
 	}
@@ -126,42 +128,42 @@ public class PreLogin extends ExtentManager {
 	@Test(priority=5)
 	public void Loan() throws IOException, SQLException {
 		request = StaticStore.Loan("100","10","12","2");
-		response =sendReq(request, "Loan");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Loan");
 		assertResponse(response);	
 	}
 
 	@Test(priority=6)
 	public void versionUpgrade() throws IOException, SQLException {
 		request = StaticStore.versionUpgrade("4.1.16");
-		response =sendReq(request, "versionUpgrade");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "versionUpgrade");
 		assertResponse(response);	
 	}
 
 	@Test(priority=7)
 	public void ATMPinSearch() throws IOException, SQLException {
 		request = StaticStore.ATMPinSearch("600001", RsaEncryption.encrypt("2580"));
-		response =sendReq(request, "ATMPinSearch");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "ATMPinSearch");
 		assertResponse(response);	
 	}
 	
 	@Test(priority=8)
 	public void ATMLocationSearch() throws IOException, SQLException {
 		request = StaticStore.ATMLocationSearch("che");
-		response =sendReq(request, "ATMLocationSearch");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "ATMLocationSearch");
 		assertResponse(response);	
 	}
 
 	@Test(priority=9)
 	public void BranchPinSearch() throws IOException, SQLException {
 		request = StaticStore.BranchPinSearch("600001");
-		response =sendReq(request, "BranchPinSearch");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "BranchPinSearch");
 		assertResponse(response);	
 	}
 	
 	@Test(priority=10)
 	public void BranchLocationSearch() throws IOException, SQLException {
 		request = StaticStore.BranchLocationSearch("che");
-		response =sendReq(request, "BranchLocationSearch");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "BranchLocationSearch");
 		assertResponse(response);	
 	}
 
@@ -169,27 +171,27 @@ public class PreLogin extends ExtentManager {
 	@Test(priority=11)
 	public void ReferFriend() throws IOException, SQLException {
 		request = StaticStore.referFriend("brantan","brantansp@fss.co.in","9047637908");
-		response =sendReq(request, "ReferFriend");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "ReferFriend");
 		assertResponse(response);	
 	}
 	
 	@Test(priority=12)
 	public void FeedBack() throws IOException, SQLException {
 		request = StaticStore.feedbackleg1();
-		response =sendReq(request, "FeedBack Leg1");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "FeedBack Leg1");
 		assertResponse(response);	
 		
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.feedbackleg2();
 		String request2 = StaticStore.feedbackleg2_();
-		response =sendReq2(request, request2, "FeedBack Leg2", uniNum);
+		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , request2, "FeedBack Leg2", uniNum);
 		assertResponse(response);	
 	}
 	
-	@Test(priority=13)
+	//@Test(priority=13)
 	public void ForgotLoginPin() throws IOException, SQLException {
         request = StaticStore.OTPGeneration();
-		response =sendReq(request, "OTP Generation");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "OTP Generation");
 		transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
 		assertResponse(response);	
 		
@@ -203,11 +205,11 @@ public class PreLogin extends ExtentManager {
 		sms_msg=sms_msg.substring(sms_msg.lastIndexOf("Your OTP is ")+12 , sms_msg.lastIndexOf("Your OTP is ")+18);
 		log.info("OTP : "+sms_msg);
 		request = StaticStore.OTPVerification(RsaEncryption.encrypt(sms_msg));
-		response =sendReq(request, "OTP Verification");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "OTP Verification");
 		assertResponse(response);	
 		
-		request = StaticStore.loginmPinCheck(prop.getProperty("mPINPlain"));
-		response =sendReq(request, "mPIN verification in Forgot login pin");
+		request = StaticStore.loginmPinCheck(RsaEncryption.encrypt(prop.getProperty("mPINPlain")));
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "mPIN verification in Forgot login pin");
 		assertResponse(response);	
 		
 		SimpleDateFormat dateFormatter2 = new SimpleDateFormat("ddMMyy"); 
@@ -218,7 +220,7 @@ public class PreLogin extends ExtentManager {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.loginNewPinSet(prop.getProperty("imei") , randNum);
 		String request2 = StaticStore.loginNewPinSet_(prop.getProperty("imei") , randNum);
-		response =sendReq2(request, request2, "Forgot login pin : New PIN Set_", uniNum);
+		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , request2, "Forgot login pin : New PIN Set", uniNum);
 		assertResponse(response);	
 	}
 

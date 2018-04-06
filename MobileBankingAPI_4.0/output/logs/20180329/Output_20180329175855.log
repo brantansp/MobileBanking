@@ -1,9 +1,0 @@
-[INFO] 2018-03-29 17:58:55,702 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
-
-[INFO] 2018-03-29 17:58:55,847 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 17:58:55,848 ExtentManager sendReq - Request : m2a benificiary details
-[INFO] 2018-03-29 17:58:56,472 ExtentManager sendReq - Hmaced Request : 119341fb65367307580a09f46442bec30d28b5c746a0fe57a6cae4ab25338322*!9894060407APD6;Y;15316170605690416310253121025515855714;;001;463795;123457;4.0;2478623864983269;16303197160557927393853645340019409580
-[INFO] 2018-03-29 17:58:58,091 ExtentManager sendReq - Response received from Server : D600; ;FTBeneficiary*3286478326489632*10;1;N;TXNID:808818245310;BID:C463795
-[INFO] 2018-03-29 17:58:58,091 ExtentManager sendReq - Transaction ID : 808818245310
-[INFO] 2018-03-29 17:58:58,091 ExtentManager sendReq - ******************************END********************************
-

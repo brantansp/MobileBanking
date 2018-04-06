@@ -1,7 +1,0 @@
-[INFO] 2018-03-29 14:41:52,473 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 14:41:52,475 ExtentManager sendReq - Request : m2m Benificiary Registration
-[INFO] 2018-03-29 14:41:53,162 ExtentManager sendReq - Hmaced Request : 0625dfc2fd7664009f9a56392d2dcc77afcc31a8d87a253d5cd45d2aea908a46*!9894060407APQM;Y;15316170605690416310253121025515855714;9894060407;20;Test;463795;123457;4.0;2478623864983269;100284510664708254447825963599283332217
-[INFO] 2018-03-29 14:42:04,330 ExtentManager sendReq - Response received from Server : QM09;Beneficiary and Initiator account number cannot be same;29/03/2018 14:43;TXNID:808814245156;BID:C463795
-[INFO] 2018-03-29 14:42:04,331 ExtentManager sendReq - Transaction ID : 808814245156
-[INFO] 2018-03-29 14:42:04,331 ExtentManager sendReq - ******************************END********************************
-

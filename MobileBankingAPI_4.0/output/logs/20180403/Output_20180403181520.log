@@ -1,7 +1,0 @@
-[INFO] 2018-04-03 18:15:20,861 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-04-03 18:15:20,867 ExtentManager sendReq - Request : Balance Enquiry
-[INFO] 2018-04-03 18:15:21,950 ExtentManager sendReq - Hmaced Request : 2c58e2eb382dc24bb12391f9805f6f9e434f19e19de724b84dfaa89c73c2086c*!8778602561APBE;Y;21987062818686975027261984581254485897;463795;123457;4.0;3286478326489632;154732035394963659239711410734358359111
-[INFO] 2018-04-03 18:15:24,713 ExtentManager sendReq - Response received from Server : BE00;88,836.28;88,820.53; ;03/04/2018 18:16;TXNID:809318246762;BID:C463795
-[INFO] 2018-04-03 18:15:24,714 ExtentManager sendReq - Transaction ID : 809318246762
-[INFO] 2018-04-03 18:15:26,178 ExtentManager sendReq - ******************************END********************************
-

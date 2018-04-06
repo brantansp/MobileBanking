@@ -1,2 +1,0 @@
-Transaction,Status,Txnauthid,TxnDateTime,Txntype,Txnstatus,Error_Type,Errorcode,Error_Msg,Responsecode,Response_Description
-m2m Quick FT,FAIL,809216246112,2018-04-02 16:14:19.0,APQM,F,B,null,null,09,Maximum Amount permitted for this transaction is Rs. 5,000.00. Please enter a lesser amount

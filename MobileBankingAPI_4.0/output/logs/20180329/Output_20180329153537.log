@@ -1,4 +1,0 @@
-[INFO] 2018-03-29 15:35:38,255 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 15:35:38,258 ExtentManager sendReq - Request : m2m Benificiary Account list
-[INFO] 2018-03-29 15:35:38,893 ExtentManager sendReq - Hmaced Request : 14e1ed95a8a779b72abdf7a613e403f3359c5364f6390be64d1616c4a33700dc*!9894060407APRM;Y;15316170605690416310253121025515855714;463795;8778602561;test;0001;463795;123457;4.0;2478623864983269;9894060407;197147277219784214844474077352075608971
-[INFO] 2018-03-29 15:35:38,917 ExtentManager sendReq - Response received from Server : null

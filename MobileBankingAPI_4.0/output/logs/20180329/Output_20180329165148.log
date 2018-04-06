@@ -1,7 +1,0 @@
-[INFO] 2018-03-29 16:51:48,450 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 16:51:48,453 ExtentManager sendReq - Request : m2m Benificiary Account list
-[INFO] 2018-03-29 16:51:50,625 ExtentManager sendReq - Hmaced Request : f8be226a88f2ff7c5b22b30612b7183f3d0f416ff4ae24b3659ac7f06196d5a3*!9894060407APFT;Y;15316170605690416310253121025515855714;10;test   ;FTBeneficiary;463795;123457;4.0;2478623864983269;21482320292465373321102857233244514038
-[INFO] 2018-03-29 16:51:52,969 ExtentManager sendReq - Response received from Server : FT00;Fund Transfer to rest - +918778602561 successful. Rs. 10.00 debited from 2478XXX864983269;29/03/2018 16:52;TXNID:808816245213;BID:C463795
-[INFO] 2018-03-29 16:51:52,969 ExtentManager sendReq - Transaction ID : 808816245213
-[INFO] 2018-03-29 16:51:52,969 ExtentManager sendReq - ******************************END********************************
-

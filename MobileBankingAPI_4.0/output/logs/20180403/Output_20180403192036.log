@@ -1,8 +1,0 @@
-[INFO] 2018-04-03 19:20:36,621 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
-
-[INFO] 2018-04-03 19:20:37,149 ExtentManager sendReqAppLogin - ******************************START******************************
-[INFO] 2018-04-03 19:20:37,149 ExtentManager sendReqAppLogin - Request : ApplicationMobileNumber
-[INFO] 2018-04-03 19:20:37,766 ExtentManager sendReqAppLogin - Hmaced Request : 1d28896bcae28891c7d0debac0e7cd4bb4e42d74f38d89cf86a79eeb786a631b*!8778602561APMN;BVD:4.3.12%23ANDROID7.1.1%23H1920W1080%23LENOVO Lenovo K8 Plus%23864829030310400%231030418192036;463795;123457;4.0;0;124394821071437249419249152295818745660
-[INFO] 2018-04-03 19:20:37,782 ExtentManager sendReqAppLogin - Response received from Server : Unauthorised Access
-[INFO] 2018-04-03 19:20:37,782 ExtentManager sendReqAppLogin - ******************************END********************************
-

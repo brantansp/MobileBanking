@@ -1,9 +1,0 @@
-[INFO] 2018-03-29 20:31:02,484 ExtentManager setUp - Running Mobile banking API Automation testing on mPAY 4.0
-
-[INFO] 2018-03-29 20:31:02,633 ExtentManager sendReq - ******************************START******************************
-[INFO] 2018-03-29 20:31:02,633 ExtentManager sendReq - Request : NEFT benificiary payment
-[INFO] 2018-03-29 20:31:03,296 ExtentManager sendReq - Hmaced Request : 0db73fa7e1de00760416485079bc7dd1121338550e9382a1b8d44487dc9d7f98*!9894060407APQ8;Y;15316170605690416310253121025515855714;30;NeftTest;NeftBeneficiary;463795;123457;4.0;2478623864983269;41778285645623290709503821565415217296
-[INFO] 2018-03-29 20:31:04,289 ExtentManager sendReq - Response received from Server : Q832;Beneficiary not activated yet. Please try after sometime;29/03/2018 20:32;TXNID:808820245377;BID:C463795
-[INFO] 2018-03-29 20:31:04,290 ExtentManager sendReq - Transaction ID : 808820245377
-[INFO] 2018-03-29 20:31:04,290 ExtentManager sendReq - ******************************END********************************
-
