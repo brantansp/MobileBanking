@@ -18,28 +18,29 @@ public class IMPS extends ExtentManager{
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void GenerateMMID() throws IOException, SQLException {
 		request = StaticStore.generateMMID();
 		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Generate MMID");
 		assertResponse(response);
 	}
 
-	@Test
+	@Test( groups = { "nonfinancial", "positive" })
 	public void RetrieveMMID() throws IOException, SQLException {
 		request = StaticStore.retrieveMMID();
 		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Retrieve MMID");
 		assertResponse(response);
 	}
 
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void CancelMMIDAll() throws IOException, SQLException {
+		sendReq (StaticStore.generateMMID());
 		request = StaticStore.cancelMMIDAll();
 		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Cancel MMID All");
 		assertResponse(response);
 	}
 
-	@Test
+	@Test( groups = { "nonfinancial", "positive" })
 	public void CancelMMIDSingle() throws IOException, SQLException {
 		sendReq (StaticStore.generateMMID()); // calling generate MMID
 		request = StaticStore.cancelMMIDSingle();
@@ -48,24 +49,23 @@ public class IMPS extends ExtentManager{
 	}
 	
 	
-	@Test
+	@Test( groups = { "nonfinancial", "positive" })
 	public void AgainCancelAllMMIDs() throws IOException, SQLException {
 		sendReq (StaticStore.generateMMID()); // calling generate MMID
-		request = StaticStore.cancelMMIDAll();
 		request = StaticStore.cancelMMIDAll();
 		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Again Cancel All MMIDs");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test( groups = { "nonfinancial", "positive" })
 	public void RetrieveMMIDs() throws IOException, SQLException {
-		StaticStore.generateMMID();
+		sendReq (StaticStore.generateMMID()); // calling generate MMID
 		request = StaticStore.retrieveMMID();
 		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Retrieve MMID");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test( groups = { "nonfinancial", "positive" })
 	public void GenerateMMIDs() throws IOException, SQLException {
 		request = StaticStore.generateMMID();
 		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Generate MMID");
@@ -76,7 +76,7 @@ public class IMPS extends ExtentManager{
  *  IMPS P2P
  */
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PInstantPayment() throws IOException, SQLException {
 		sendReq (StaticStore.generateMMID());
 		request = StaticStore.impsP2PInstant(prop.getProperty("IMPSBenMobNo"), 
@@ -86,7 +86,7 @@ public class IMPS extends ExtentManager{
 	}
 	
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PAddBeneficiaryPreConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PAddBen(prop.getProperty("IMPSBenMobNo"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSBenNickname"));
@@ -95,7 +95,7 @@ public class IMPS extends ExtentManager{
 	}
 	
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PAddBeneficiaryconfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PConfBen(prop.getProperty("IMPSBenMobNo"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSBenNickname"));
@@ -103,21 +103,21 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PBeneficiaryPaymentListenquiryWKw() throws IOException, SQLException {
 		request = StaticStore.impsP2PPaySearch(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PBeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PBeneficiaryPaymentListenquiryWoKw() throws IOException, SQLException {
 		request = StaticStore.impsP2PPaySearch("");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PBeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PBeneficiaryPaymentConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PPayConf(prop.getProperty("IMPSBenNickname"), 
 				prop.getProperty("IMPSAmount"),  prop.getProperty("IMPSRemarks"));
@@ -126,51 +126,51 @@ public class IMPS extends ExtentManager{
 	}
 	
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PBeneficiarySearchListenquiryWKw() throws IOException, SQLException {
 		request = StaticStore.impsP2PBenSearch(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PBeneficiarySearchListenquiryWKw");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PBeneficiarySearchListenquiryWoKw() throws IOException, SQLException {
 		request = StaticStore.impsP2PBenSearch("");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PBeneficiarySearchListenquiryWoKw");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PDeleteBeneficiaryListenquiryWoKw() throws IOException, SQLException {
 		request = StaticStore.impsP2PDelBenSearch( "");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PDeleteBeneficiaryListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PDeleteBeneficiaryListenquiryWKw() throws IOException, SQLException {
 		request = StaticStore.impsP2PDelBenSearch(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PDeleteBeneficiaryListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PDeleteBeneficiaryConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2PDelBenConf(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PDeleteBeneficiaryConfirmation");
 		assertResponse(response);
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentWithInvalidMMID() throws IOException, SQLException {
 		
-		request = StaticStore.impsP2PInstant(prop.getProperty("IMPSBenMobNo"), 
+		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM1forP2P"), 
 				prop.getProperty("InvalidBenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentWithInvalidMMID");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentWithExceededAmount() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("IMPSBenMobNo"), 
@@ -180,7 +180,7 @@ public class IMPS extends ExtentManager{
 	}
 	
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentWithInsufficientAmount() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("IMPSBenMobNo"), 
@@ -189,7 +189,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("20"));	
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PBeneficiaryPaymentConfirmationwithExceededAmount() throws IOException, SQLException {
 		request = StaticStore.impsP2PPayConf(prop.getProperty("IMPSBenNickname"), 
 				prop.getProperty("ExceededAmount"),  prop.getProperty("IMPSRemarks"));
@@ -198,7 +198,7 @@ public class IMPS extends ExtentManager{
 	}
 	
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PBeneficiaryPaymentConfirmationwithInsufficientAmount() throws IOException, SQLException {
 		request = StaticStore.impsP2PPayConf(prop.getProperty("IMPSBenNickname"), 
 				prop.getProperty("InsufficientAmount"),  prop.getProperty("IMPSRemarks"));
@@ -206,7 +206,7 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentForM0Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM0forP2P"), 
@@ -216,7 +216,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("M0"));
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentForM1Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM1forP2P"), 
@@ -226,7 +226,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("M1"));
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentForM2Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM2forP2P"), 
@@ -236,7 +236,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("M2"));
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentForM3Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM3forP2P"), 
@@ -246,7 +246,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("M3"));
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentForM4Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM4forP2P"), 
@@ -256,7 +256,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("M4"));
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentForM5Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM5forP2P"), 
@@ -266,7 +266,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("M5"));
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentForM6Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM6forP2P"), 
@@ -276,7 +276,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("M6"));
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentfor92Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNofor92forP2P"), 
@@ -286,7 +286,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("92"));
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentfor13Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNofor13forP2P"), 
@@ -296,7 +296,7 @@ public class IMPS extends ExtentManager{
 		assertTrue(response.substring(2,4).contains("13"));
 	}
 
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentfor51Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNofor51forP2P"), 
@@ -307,7 +307,7 @@ public class IMPS extends ExtentManager{
 	}
 
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PAddBeneficiaryWithExistingNickname() throws IOException, SQLException {
 		request = StaticStore.impsP2PAddBen(prop.getProperty("IMPSBenMobNo1"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSBenNickname"));
@@ -315,7 +315,7 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PAddBeneficiaryRegMobileWithOtherNickname() throws IOException, SQLException {
 		request = StaticStore.impsP2PAddBen(prop.getProperty("IMPSBenMobNo"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSBenNickname1"));
@@ -323,14 +323,14 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PBeneficiaryPaymentListenquiryWithRandomNickname() throws IOException, SQLException {
 		request = StaticStore.impsP2PPaySearch(prop.getProperty("RandomNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PBeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PBeneficiaryPaymentConfirmationWithRandomNickname() throws IOException, SQLException {
 		request = StaticStore.impsP2PPayConf(prop.getProperty("RandomNickname"), 
 				prop.getProperty("IMPSAmount"),  prop.getProperty("IMPSRemarks"));
@@ -338,14 +338,14 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PDeleteAlreadydeletedBen() throws IOException, SQLException {
 		request = StaticStore.impsP2PDelBenConf(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PDeleteBeneficiaryConfirmation");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PRegBeneficiaryPaymentForM0Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PAddBen(prop.getProperty("MobileNoforM0forP2P"), 
@@ -364,7 +364,7 @@ public class IMPS extends ExtentManager{
 
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PRegBeneficiaryPaymentForM1Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PAddBen(prop.getProperty("MobileNoforM1forP2P"), 
@@ -383,7 +383,7 @@ public class IMPS extends ExtentManager{
 
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PRegBeneficiaryPaymentForM2Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PAddBen(prop.getProperty("MobileNoforM2forP2P"), 
@@ -402,7 +402,7 @@ public class IMPS extends ExtentManager{
 
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PRegBeneficiaryPaymentForM3Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PAddBen(prop.getProperty("MobileNoforM3forP2P"), 
@@ -421,7 +421,7 @@ public class IMPS extends ExtentManager{
 
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PRegBeneficiaryPaymentForM4Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PAddBen(prop.getProperty("MobileNoforM4forP2P"), 
@@ -440,7 +440,7 @@ public class IMPS extends ExtentManager{
 
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PRegBeneficiaryPaymentForM5Decline() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PAddBen(prop.getProperty("MobileNoforM5forP2P"), 
@@ -458,7 +458,7 @@ public class IMPS extends ExtentManager{
 
 	}
 	
-	@Test
+	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PRegBeneficiaryPaymentForM6Decline() throws IOException, SQLException {
 		request = StaticStore.impsP2PAddBen(prop.getProperty("MobileNoforM6forP2P"), 
 				prop.getProperty("BenMMID"), prop.getProperty("RandomNickname"));
@@ -477,11 +477,11 @@ public class IMPS extends ExtentManager{
 	
 	
 	
-	/*
-	 * IMPS P2A 
-	 */
 	
-	@Test
+	// IMPS P2A 
+	 
+	
+	@Test(groups = { "financial", "positive" , "p2a"})
 	public void IMPSP2AInstantPayment() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2AInstant(prop.getProperty("IMPSBenAcNo"),
@@ -491,7 +491,7 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive","p2a" })
 	public void IMPSP2AAddBeneficiary() throws IOException, SQLException {
 		request = StaticStore.impsP2AAddBen(prop.getProperty("IMPSBenAcNo"),
 				 prop.getProperty("IMPSAccType"), prop.getProperty("IMPSIFSC"), 
@@ -500,7 +500,7 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" ,"p2a"})
 	public void IMPSP2AAddBeneficiaryconfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2AConfBen(prop.getProperty("IMPSBenAcNo"),
 				 prop.getProperty("IMPSAccType"), prop.getProperty("IMPSIFSC"), 
@@ -509,21 +509,21 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive","p2a" })
 	public void IMPSP2ABeneficiaryPaymentListenquiryWkW() throws IOException, SQLException {
 		request = StaticStore.impsP2APaySearch(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2ABeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" ,"p2a"})
 	public void IMPSP2ABeneficiaryPaymentListenquiryWoKw() throws IOException, SQLException {
 		request = StaticStore.impsP2APaySearch("");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2ABeneficiaryPaymentListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive","p2a" })
 	public void IMPSP2ABeneficiaryPaymentConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2APayConf(prop.getProperty("IMPSBenNickname"),
 			prop.getProperty("IMPSAmount") , prop.getProperty("IMPSRemarks"));
@@ -531,21 +531,21 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive","p2a" })
 	public void IMPSP2ABeneficiarySearchListenquiryWoKw() throws IOException, SQLException {
 		request = StaticStore.impsP2ABenDetailSearch("");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2ABeneficiarySearchListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" ,"p2a"})
 	public void IMPSP2ABeneficiarySearchListenquiryWKw() throws IOException, SQLException {
 		request = StaticStore.impsP2ABenDetailSearch(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2ABeneficiarySearchListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" ,"p2a"})
 	public void IMPSP2ADeleteBeneficiaryListenquiry() throws IOException, SQLException {
 		request = StaticStore.impsP2ADelBenSearch(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2ADeleteBeneficiaryListenquiry");
@@ -553,7 +553,7 @@ public class IMPS extends ExtentManager{
 	}
 	
 	
-	@Test
+	@Test(groups = { "financial", "positive","p2a" })
 	public void IMPSP2ADeleteBeneficiaryConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2ADelBenConf(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2ADeleteBeneficiaryConfirmation");
@@ -875,11 +875,11 @@ public class IMPS extends ExtentManager{
 	}
 	
 	
-	/*
-	 * IMPS P2U
-	 */
 	
-	@Test
+	 // IMPS P2U
+	 
+	
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UInstantPayment() throws IOException, SQLException {
 		request = StaticStore.impsP2UInstant(prop.getProperty("IMPSAadharNo"),
 			prop.getProperty("IMPSAccType"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
@@ -887,7 +887,7 @@ public class IMPS extends ExtentManager{
 		assertResponse(response);
 	}
 		
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void impsP2UAddBenPreConf() throws IOException, SQLException {
 		request = StaticStore.impsP2UAddBenPreConf(prop.getProperty("IMPSAadharNo"),
 				prop.getProperty("IMPSAccType"), prop.getProperty("IMPSBenNickname"));
@@ -895,7 +895,7 @@ public class IMPS extends ExtentManager{
 			assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UAddBeneficiaryconfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2UAddBenConf(prop.getProperty("IMPSAadharNo"),
 				prop.getProperty("IMPSAccType"), prop.getProperty("IMPSBenNickname"));
@@ -903,21 +903,21 @@ public class IMPS extends ExtentManager{
 			assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UBeneficiaryPaymentListenquiryWKw() throws IOException, SQLException {
 		request = StaticStore.impsP2UBenPayListEnq(prop.getProperty("IMPSBenNickname"));
 			response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2UBeneficiaryPaymentListenquiryWKw");
 			assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UBeneficiaryPaymentListenquiryWoKw() throws IOException, SQLException {
 		request = StaticStore.impsP2UBenPayListEnq("");
 			response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2UBeneficiaryPaymentListenquiryWoKw");
 			assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UBeneficiaryPaymentConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2UBenPayConf(prop.getProperty("IMPSBenNickname"),
 				prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
@@ -927,35 +927,35 @@ public class IMPS extends ExtentManager{
 	}
 	
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UBeneficiarySearchListenquiryWKw() throws IOException, SQLException {
 		request = StaticStore.impsP2UBenDetailsSearch(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2UBeneficiarySearchListenquiry");
 		assertResponse(response);
    }
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UBeneficiarySearchListenquiryWoKw() throws IOException, SQLException {
 		request = StaticStore.impsP2UBenDetailsSearch("");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2UBeneficiarySearchListenquiryWoKw");
 		assertResponse(response);
    }
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UDeleteBeneficiaryListenquiryWKw() throws IOException, SQLException {
 		request = StaticStore.impsP2UBenDelSearch(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2UDeleteBeneficiaryListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UDeleteBeneficiaryListenquiryWoKw() throws IOException, SQLException {
 		request = StaticStore.impsP2UBenDelSearch("");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2UDeleteBeneficiaryListenquiry");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void IMPSP2UDeleteBeneficiaryConfirmation() throws IOException, SQLException {
 		request = StaticStore.impsP2UBenDelConf(prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2UDeleteBeneficiaryConfirmation");
@@ -1262,6 +1262,22 @@ public void IMPSP2URegBeneficiaryPaymentForM6Decline() throws IOException, SQLEx
 			response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2URegBeneficiaryPaymentForM6Decline");
 	
 			assertTrue(response.substring(2,4).contains("M6"));
+
+}
+
+public static void main(String[] args) {
+
+	request = StaticStore.impsP2PDelBenConf(prop.getProperty("IMPSBenNickname"));
+	try {
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PDeleteBeneficiaryConfirmation");
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	assertResponse(response);
 
 }
 

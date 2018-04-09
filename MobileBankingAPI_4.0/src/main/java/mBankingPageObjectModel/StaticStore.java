@@ -988,7 +988,7 @@ public class StaticStore extends ExtentManager{
 		sb.append(prop.getProperty("mPINRequired")+";");
 		}
 		sb.append(benAcNo+";");
-		sb.append(prop.getProperty("RemAccountType")+";");
+		sb.append(prop.getProperty("IMPSAccType")+";");
 		sb.append(benIFSC+";");
 		sb.append(amount+";");
 		sb.append(remark+";");

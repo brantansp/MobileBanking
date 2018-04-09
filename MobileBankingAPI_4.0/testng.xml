@@ -11,6 +11,12 @@
       </classes>        
     </test> -->
        <test name = "IMPS Transaction">
+            <groups> 
+                <run>
+                    <include name="negative" />
+   
+                 </run>
+              </groups>
       <classes>
           <class name = "mBankingControlCenter.IMPS"/>
       </classes>        

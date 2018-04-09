@@ -114,7 +114,7 @@ public class ExtentManager{
 			e.printStackTrace();
 		}
 		extent.endTest(extentLogger);
-		TestCaseNum++;
+		
 	}
 	
 	@AfterSuite
