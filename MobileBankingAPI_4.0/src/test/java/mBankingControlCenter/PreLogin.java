@@ -36,7 +36,7 @@ public class PreLogin extends ExtentManager {
 	private static Statement statement = null;
 	static int i =0;
 
-    @Test(priority=0)
+    @Test
 	public void ApplicationMobileNumber() throws IOException, SQLException {
 		String imei = prop.getProperty("imei");
 		BigInteger uniNum = RandomNumGenerator.generate();
@@ -65,7 +65,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	@Test(priority=1)
+	@Test
 	public void GPRSCheck() throws IOException, SQLException {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.GPRSCheck();
@@ -74,7 +74,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	@Test(priority=2)
+	@Test
 	public void buildActivation() throws IOException, SQLException {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.buildActivation();
@@ -83,7 +83,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	@Test(priority=3)
+	@Test
 	public void GPRSCheckNew() throws IOException, SQLException {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.GPRSCheckNew();
@@ -92,7 +92,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	@Test(priority=4)
+	@Test
 	public void productOffer() throws IOException, SQLException {
 
 		request = StaticStore.productOfferLeg2();
@@ -125,42 +125,42 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 	}
 
-	@Test(priority=5)
+	@Test
 	public void Loan() throws IOException, SQLException {
 		request = StaticStore.Loan("100","10","12","2");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Loan");
 		assertResponse(response);	
 	}
 
-	@Test(priority=6)
+	@Test
 	public void versionUpgrade() throws IOException, SQLException {
 		request = StaticStore.versionUpgrade("4.1.16");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "versionUpgrade");
 		assertResponse(response);	
 	}
 
-	@Test(priority=7)
+	@Test
 	public void ATMPinSearch() throws IOException, SQLException {
 		request = StaticStore.ATMPinSearch("600001", RsaEncryption.encrypt("2580"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "ATMPinSearch");
 		assertResponse(response);	
 	}
 	
-	@Test(priority=8)
+	@Test
 	public void ATMLocationSearch() throws IOException, SQLException {
 		request = StaticStore.ATMLocationSearch("che");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "ATMLocationSearch");
 		assertResponse(response);	
 	}
 
-	@Test(priority=9)
+	@Test
 	public void BranchPinSearch() throws IOException, SQLException {
 		request = StaticStore.BranchPinSearch("600001");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "BranchPinSearch");
 		assertResponse(response);	
 	}
 	
-	@Test(priority=10)
+	@Test
 	public void BranchLocationSearch() throws IOException, SQLException {
 		request = StaticStore.BranchLocationSearch("che");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "BranchLocationSearch");
@@ -168,14 +168,14 @@ public class PreLogin extends ExtentManager {
 	}
 
 	//3EM*#L9
-	@Test(priority=11)
+	@Test
 	public void ReferFriend() throws IOException, SQLException {
 		request = StaticStore.referFriend("brantan","brantansp@fss.co.in","9047637908");
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "ReferFriend");
 		assertResponse(response);	
 	}
 	
-	@Test(priority=12)
+	@Test
 	public void FeedBack() throws IOException, SQLException {
 		request = StaticStore.feedbackleg1();
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "FeedBack Leg1");
@@ -188,7 +188,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);	
 	}
 	
-	//@Test(priority=13)
+	@Test(priority=13)
 	public void ForgotLoginPin() throws IOException, SQLException {
         request = StaticStore.OTPGeneration();
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "OTP Generation");

@@ -5,32 +5,36 @@
 <listener class-name="mBankingUtilityCenter.AnotationListner"></listener>
 <listener class-name="mBankingUtilityCenter.PriorityInterceptor" />
 </listeners>
+
 <!--     <test name = "Accounts Transaction">
       <classes>
           <class name = "mBankingControlCenter.Accounts"/>
       </classes>        
     </test> -->
-       <test name = "IMPS Transaction">
-            <groups> 
+    
+     <test name = "IMPS Transaction">
+<!--             <groups> 
                 <run>
                     <include name="negative" />
-   
                  </run>
-              </groups>
+              </groups> -->
       <classes>
           <class name = "mBankingControlCenter.IMPS"/>
       </classes>        
     </test> 
-<!--         <test name = "Pre-Login Transaction">
+    
+<!--        <test name = "Pre-Login Transaction">
       <classes>
           <class name = "mBankingControlCenter.PreLogin"/>
       </classes>        
-    </test>
-        <test name = "Requests Transaction">
+    </test> -->
+    
+<!--         <test name = "Requests Transaction">
       <classes>
           <class name = "mBankingControlCenter.Requests"/>
       </classes>        
     </test> -->
+    
 <!--     <test name = "Settings Transaction">
       <classes>
           <class name = "mBankingControlCenter.Settings"/>

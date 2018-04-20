@@ -59,6 +59,6 @@ public class RsaEncryption {
 		//RsaEncryption newEnc = new RsaEncryption("1111","203577465141885203944391850079714410739");
 		//RSADecryptionNEW dec=new RSADecryptionNEW();
 		 System.out.println(encrypt("1234"));
-		 System.out.println(encrypt("1234", "193177127064455446170323219124259467833"));
+		 System.out.println(encrypt("2222", "131309369321510784120473755170419681821"));
 }
 }

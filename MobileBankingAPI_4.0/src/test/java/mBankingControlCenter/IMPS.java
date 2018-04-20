@@ -81,16 +81,19 @@ public class IMPS extends ExtentManager{
 		sendReq (StaticStore.generateMMID());
 		request = StaticStore.impsP2PInstant(prop.getProperty("IMPSBenMobNo"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPayment");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , 
+				"IMPSP2PInstantPayment");
 		assertResponse(response);
 	}
 	
 	
 	@Test(groups = { "financial", "positive" })
 	public void IMPSP2PAddBeneficiaryPreConfirmation() throws IOException, SQLException {
+		sendReq(StaticStore.impsP2PDelBenConf(prop.getProperty("IMPSBenNickname")));
 		request = StaticStore.impsP2PAddBen(prop.getProperty("IMPSBenMobNo"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSBenNickname"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PAddBeneficiaryPreConfirmation");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , 
+				"IMPSP2PAddBeneficiaryPreConfirmation");
 		assertResponse(response);
 	}
 	
@@ -160,50 +163,71 @@ public class IMPS extends ExtentManager{
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PDeleteBeneficiaryConfirmation");
 		assertResponse(response);
 	}
+	
+	/*
+	 * IMPS P2P Negative
+	 */
 
 	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentWithInvalidMMID() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM1forP2P"), 
 				prop.getProperty("InvalidBenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentWithInvalidMMID");
-		assertResponse(response);
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , 
+				"IMPS P2P Instant Payment With Invalid MMID");
+		assertTrue(response.substring(2,4).contains("57"));		
 	}
 	
 	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PInstantPaymentWithExceededAmount() throws IOException, SQLException {
-		
 		request = StaticStore.impsP2PInstant(prop.getProperty("IMPSBenMobNo"), 
 				prop.getProperty("BenMMID"), prop.getProperty("ExceededAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentWithExceededAmount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , 
+				"IMPS P2P Instant Payment With Amount greater than Maximum amount to be transfered");
 		assertTrue(response.substring(2,4).contains("21"));		
 	}
 	
 	
 	@Test(groups = { "financial", "negative" })
-	public void IMPSP2PInstantPaymentWithInsufficientAmount() throws IOException, SQLException {
+	public void IMPSP2PInstantPaymentWithMinimumAmount() throws IOException, SQLException {
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("IMPSBenMobNo"), 
 				prop.getProperty("BenMMID"), prop.getProperty("InsufficientAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentWithInsufficientAmount");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , 
+				"IMPS P2P Instant Payment With Amount lesser than Minimum amount to be transfered");
 		assertTrue(response.substring(2,4).contains("20"));	
 	}
 
 	@Test(groups = { "financial", "negative" })
-	public void IMPSP2PBeneficiaryPaymentConfirmationwithExceededAmount() throws IOException, SQLException {
+	public void IMPSP2PBeneficiaryPaymentWithExceededAmount() throws IOException, SQLException {
+		
+		sendReq(StaticStore.impsP2PConfBen(prop.getProperty("IMPSBenMobNo"), 
+				prop.getProperty("BenMMID"), prop.getProperty("IMPSBenNickname")));   // Registering Beneficiary for payment
+				
 		request = StaticStore.impsP2PPayConf(prop.getProperty("IMPSBenNickname"), 
 				prop.getProperty("ExceededAmount"),  prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PBeneficiaryPaymentConfirmationwithExceededAmount");
-		assertResponse(response);
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , 
+				"IMPS P2P Instant Payment With Amount greater than Maximum amount to be transfered");
+		assertTrue(response.substring(2,4).contains("21"));		
+		
+		sendReq(StaticStore.impsP2PDelBenConf(prop.getProperty("IMPSBenNickname")));  //Deleting benefiicary After Payment
 	}
 	
 	
 	@Test(groups = { "financial", "negative" })
-	public void IMPSP2PBeneficiaryPaymentConfirmationwithInsufficientAmount() throws IOException, SQLException {
+	public void iMPSP2PBeneficiaryPaymentConfirmationwithMinimumAmount() throws IOException, SQLException {
+	
+		sendReq(StaticStore.impsP2PConfBen(prop.getProperty("IMPSBenMobNo"), 
+				prop.getProperty("BenMMID"), prop.getProperty("IMPSBenNickname")));   // Registering Beneficiary for payment
+				
 		request = StaticStore.impsP2PPayConf(prop.getProperty("IMPSBenNickname"), 
 				prop.getProperty("InsufficientAmount"),  prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PBeneficiaryPaymentConfirmationwithInsufficientAmount");
-		assertResponse(response);
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , 
+				"IMPS P2P Instant Payment With Amount lesser than Minimum amount to be transfered");
+		assertTrue(response.substring(2,4).contains("20"));		
+		
+		sendReq(StaticStore.impsP2PDelBenConf(prop.getProperty("IMPSBenNickname")));  //Deleting benefiicary After Payment
+
 	}
 	
 	@Test(groups = { "financial", "negative" })
@@ -211,9 +235,9 @@ public class IMPS extends ExtentManager{
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM0forP2P"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentForM0Decline");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPS P2P Instant Payment Declines with response code  M0");
 		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("M0"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	@Test(groups = { "financial", "negative" })
@@ -221,9 +245,9 @@ public class IMPS extends ExtentManager{
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM1forP2P"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentForM1Decline");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPS P2P Instant Payment Declines with response code  M1");
 		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("M1"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	@Test(groups = { "financial", "negative" })
@@ -231,9 +255,9 @@ public class IMPS extends ExtentManager{
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM2forP2P"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentForM2Decline");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPS P2P Instant Payment Declines with response code  M2");
 		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("M2"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	@Test(groups = { "financial", "negative" })
@@ -241,9 +265,9 @@ public class IMPS extends ExtentManager{
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM3forP2P"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentForM3Decline");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPS P2P Instant Payment Declines with response code  M3");
 		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("M3"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	@Test(groups = { "financial", "negative" })
@@ -251,9 +275,9 @@ public class IMPS extends ExtentManager{
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM4forP2P"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentForM4Decline");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPS P2P Instant Payment Declines with response code  M4");
 		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("M4"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	@Test(groups = { "financial", "negative" })
@@ -261,9 +285,9 @@ public class IMPS extends ExtentManager{
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM5forP2P"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentForM5Decline");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPS P2P Instant Payment Declines with response code  M5");
 		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("M5"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	@Test(groups = { "financial", "negative" })
@@ -271,9 +295,9 @@ public class IMPS extends ExtentManager{
 		
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNoforM6forP2P"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentForM6Decline");
+		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPS P2P Instant Payment Declines with response code  M6");
 		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("M6"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	@Test(groups = { "financial", "negative" })
@@ -283,7 +307,7 @@ public class IMPS extends ExtentManager{
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentfor92Decline");
 		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("92"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	@Test(groups = { "financial", "negative" })
@@ -293,7 +317,7 @@ public class IMPS extends ExtentManager{
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentfor13Decline");
 		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("13"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	@Test(groups = { "financial", "negative" })
@@ -302,17 +326,22 @@ public class IMPS extends ExtentManager{
 		request = StaticStore.impsP2PInstant(prop.getProperty("MobileNofor51forP2P"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSAmount"), prop.getProperty("IMPSRemarks"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PInstantPaymentfor51Decline");
-		//assertResponse(response);
-		assertTrue(response.substring(2,4).contains("51"));
+		assertTrue(response.substring(2,4).contains("57"));
 	}
 
 	
-	@Test(groups = { "financial", "negative" })
+/*	@Test(groups = { "financial", "negative" })
 	public void IMPSP2PAddBeneficiaryWithExistingNickname() throws IOException, SQLException {
-		request = StaticStore.impsP2PAddBen(prop.getProperty("IMPSBenMobNo1"), 
+
+		sendReq(StaticStore.impsP2PConfBen(prop.getProperty("IMPSBenMobNo"), 
+				prop.getProperty("BenMMID"), prop.getProperty("IMPSBenNickname")));   // Registering Beneficiary for payment
+		
+		request = StaticStore.impsP2PAddBen(prop.getProperty("IMPSBenMobNo"), 
 				prop.getProperty("BenMMID"), prop.getProperty("IMPSBenNickname"));
 		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PAddBeneficiaryPreConfirmation");
 		assertResponse(response);
+		
+		sendReq(StaticStore.impsP2PDelBenConf(prop.getProperty("IMPSBenNickname")));  //Deleting benefiicary After Payment
 	}
 	
 	@Test(groups = { "financial", "negative" })
@@ -475,8 +504,7 @@ public class IMPS extends ExtentManager{
 
 	}
 	
-	
-	
+	*/
 	
 	// IMPS P2A 
 	 

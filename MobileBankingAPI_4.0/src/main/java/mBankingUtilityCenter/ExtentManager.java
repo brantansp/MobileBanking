@@ -172,7 +172,7 @@ public class ExtentManager{
     public static String testCaseNum(String ModuleName)
     {
     	String TCID = "TC_"+ModuleName+"_"+TestCaseNum;
-    	TestCaseNum++;
+    
     	return TCID;
     }
     
@@ -296,6 +296,7 @@ public class ExtentManager{
      		log.info("Program is terminating");
      		System.exit(1);
      	}
+     	TestCaseNum++;
 	log.info("******************************END********************************\r\n");
 	return response;
 	}

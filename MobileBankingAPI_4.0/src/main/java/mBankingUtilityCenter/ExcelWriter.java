@@ -56,7 +56,7 @@ public class ExcelWriter {
         HSSFWorkbook wb = new HSSFWorkbook(fsIP); 
         HSSFSheet worksheet = wb.getSheetAt(2); 
         Cell cell = null; 
-        cell = worksheet.getRow(row+8).getCell(4);  
+        cell = worksheet.getRow(row+7).getCell(4);  
         switch (Integer.valueOf(result))
         {
         case 1:
