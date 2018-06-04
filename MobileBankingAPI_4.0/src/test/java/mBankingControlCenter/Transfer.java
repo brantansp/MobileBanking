@@ -423,4 +423,18 @@ public class Transfer extends ExtentManager{
 		assertResponse(response);
 	}
 	
+	public static void main(String[] args) {
+
+		request = StaticStore.NEFTQuickFT(prop.getProperty("BenAccountno"), prop.getProperty("AccountType"),
+				prop.getProperty("BenIFSCcode"), prop.getProperty("BenNickName"), 
+				prop.getProperty("NeftRemarks"));
+		try {
+			response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "NEFT Quick FT");
+		} catch (IOException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		assertResponse(response);
+	
+	}
 }

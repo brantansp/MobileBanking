@@ -61,7 +61,11 @@ public class ExtentManager{
 	
 	@BeforeSuite
 	public void setUp()throws FileNotFoundException, SQLException{
-      	    log.info("Running Mobile banking API Automation testing on mPAY 4.0"+"\r\n"); 
+      	    log.info("Running Mobile banking API Automation testing on mPAY 4.0"); 
+      	    log.info(prop.getProperty("GprsURL")+prop.getProperty("servlet"));
+      	    log.info("Remitter Mobile Number : "+prop.getProperty("RemMobileno")); 
+      	    log.info("Remitter Account Number : "+prop.getProperty("RemAccountno")); 
+      	  log.info("Bank Code : "+prop.getProperty("bankCode")+"\r\n"); 
         	File dir = new File(System.getProperty("user.dir")+"\\output\\ExtentReport\\"+dateFormatter.format(date));
         	if (!dir.exists())
         	{
@@ -72,13 +76,22 @@ public class ExtentManager{
 			extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 			prop =getProperty();
 			
-			String selectTableSQL = "select modulus from registration where regmobileno = '+91"+ prop.getProperty("RemMobileno")+"'";
-			dbConnection = dbTransactionlog.getDBConnection(prop.getProperty("DB_USER") , prop.getProperty("DB_PASSWORD"));
-			statement = dbConnection.createStatement();
-			ResultSet resultSet= statement.executeQuery(selectTableSQL);
-			resultSet.next();
-			String modulus = resultSet.getString("MODULUS");
-			prop.setProperty("mPIN", RsaEncryption.encrypt(prop.getProperty("mPINPlain"), modulus));
+			if ("Y".equals(prop.getProperty("mPINAutoGenerate"))) {
+				String selectTableSQL = "select modulus from registration where regmobileno = '+91"
+						+ prop.getProperty("RemMobileno") + "'";
+				dbConnection = dbTransactionlog.getDBConnection(
+						prop.getProperty("DB_USER"),
+						prop.getProperty("DB_PASSWORD"));
+				statement = dbConnection.createStatement();
+				ResultSet resultSet = statement.executeQuery(selectTableSQL);
+				resultSet.next();
+				String modulus = resultSet.getString("MODULUS");
+				prop.setProperty("mPIN", RsaEncryption.encrypt(
+						prop.getProperty("mPINPlain"), modulus));
+			}else{
+				prop.setProperty("mPIN", prop.getProperty("mPINEnc"));
+			}
+			
 	}
 	
 	@BeforeMethod
@@ -114,7 +127,7 @@ public class ExtentManager{
 			e.printStackTrace();
 		}
 		extent.endTest(extentLogger);
-		
+		TestCaseNum++;
 	}
 	
 	@AfterSuite
@@ -256,6 +269,7 @@ public class ExtentManager{
 		try {
 			ExcelWriter.writeTestCaseID(TestCaseNum , TCID);
 			ExcelWriter.writeTestCaseDesc(TestCaseNum , Description);
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -296,7 +310,6 @@ public class ExtentManager{
      		log.info("Program is terminating");
      		System.exit(1);
      	}
-     	TestCaseNum++;
 	log.info("******************************END********************************\r\n");
 	return response;
 	}

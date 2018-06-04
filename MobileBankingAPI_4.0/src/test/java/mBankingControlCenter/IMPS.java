@@ -1293,19 +1293,16 @@ public void IMPSP2URegBeneficiaryPaymentForM6Decline() throws IOException, SQLEx
 
 }
 
-public static void main(String[] args) {
+public static void main(String[] args) throws IOException, SQLException {
 
-	request = StaticStore.impsP2PDelBenConf(prop.getProperty("IMPSBenNickname"));
-	try {
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2PDeleteBeneficiaryConfirmation");
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+
+	
+	request = StaticStore.impsP2AInstant(prop.getProperty("IMPSBenAcNo"),
+			 prop.getProperty("IMPSIFSC"), prop.getProperty("IMPSAmount"), 
+			 prop.getProperty("IMPSRemarks"));
+	response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "IMPSP2AInstantPayment");
 	assertResponse(response);
+
 
 }
 

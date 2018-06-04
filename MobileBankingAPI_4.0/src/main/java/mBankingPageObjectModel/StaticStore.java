@@ -10,8 +10,8 @@ public class StaticStore extends ExtentManager{
 	
 	static StringBuilder sb = new StringBuilder() ;
 	static Properties prop=getProperty();
-	static String encryptedPin = encPin();
-	
+	//static String encryptedPin = encPin();
+	static String encryptedPin = prop.getProperty("mPINEnc");
 	public static void main(String[] args) 
 	{
 		System.out.println(prop.getProperty("RemAccountno")+";");

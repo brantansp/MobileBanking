@@ -6,53 +6,39 @@
 <listener class-name="mBankingUtilityCenter.PriorityInterceptor" />
 </listeners>
 
-<!--     <test name = "Accounts Transaction">
+    <test name = "Accounts Transaction">
       <classes>
           <class name = "mBankingControlCenter.Accounts"/>
       </classes>        
-    </test> -->
+    </test>
     
      <test name = "IMPS Transaction">
-<!--             <groups> 
-                <run>
-                    <include name="negative" />
-                 </run>
-              </groups> -->
       <classes>
           <class name = "mBankingControlCenter.IMPS"/>
       </classes>        
     </test> 
     
-<!--        <test name = "Pre-Login Transaction">
+       <test name = "Pre-Login Transaction">
       <classes>
           <class name = "mBankingControlCenter.PreLogin"/>
       </classes>        
-    </test> -->
+    </test>
     
-<!--         <test name = "Requests Transaction">
+        <test name = "Requests Transaction">
       <classes>
           <class name = "mBankingControlCenter.Requests"/>
       </classes>        
-    </test> -->
+    </test>
     
-<!--     <test name = "Settings Transaction">
+    <test name = "Settings Transaction">
       <classes>
           <class name = "mBankingControlCenter.Settings"/>
       </classes>        
-    </test> -->
-<!--             <test name = "Transfer Transaction">
+    </test>
+            <test name = "Transfer Transaction">
       <classes>
           <class name = "mBankingControlCenter.Transfer"/>
       </classes>        
-    </test> -->
-<!--   <test name = "IMPSTransactions">
-      <classes>
-          <class name="mBankingControlCenter.IMPSTransactions" />
-      </classes>        
-    </test>  -->
-   <!--          <test name = "FundTransferTransactions">
-      <classes>
-          <class name="mBankingControlCenter.FundTransferTransactions" />
-      </classes>        
-    </test>  -->
+    </test>  
+
 </suite>
