@@ -97,11 +97,13 @@ public class ExtentManager{
 	@BeforeMethod
 	public void beforeMethod(Method method)
 	{
-		extentLogger = extent.startTest(this.getClass().getSimpleName()+ " ::  " +method.getName(), method.getName()); 
+		TCID = "TC_"+this.getClass().getSimpleName()+"_"+TestCaseNum;
+		//extentLogger = extent.startTest(TCID+ " - "+this.getClass().getSimpleName()+ " ::  " +method.getName(), method.getName()); 
+		extentLogger = extent.startTest(TCID+ " :: " +method.getName(), method.getName());
 		extentLogger.assignAuthor("Brantan sp");
 		extentLogger.assignCategory("Automation Testing");
 		extentLogger.log( LogStatus.PASS, "Test started successfully");
-    	TCID = "TC_"+this.getClass().getSimpleName()+"_"+TestCaseNum;
+    	
 /*		try {
 			ExcelWriter.writeTestCaseID(TestCaseNum , TCID);
 		} catch (Exception e) {
@@ -112,13 +114,19 @@ public class ExtentManager{
 	
 	
 	@AfterMethod
-	public void getResult(ITestResult result){
+	public void getResult(ITestResult result, Method method) throws NoSuchFieldException, SecurityException{
 
 		if(result.getStatus() == ITestResult.FAILURE){
-			extentLogger.log(LogStatus.FAIL, "Test Case Failed is "+result.getName());
+			extentLogger.log(LogStatus.FAIL, "Test Case Failed is "+result.getName()+ " RRN : "+transactionID);
 			extentLogger.log(LogStatus.FAIL, "Test Case Failed is "+result.getThrowable());
+			extentLogger.log(LogStatus.FAIL, "Test Case Actual Response is : " + response);
 		}else if(result.getStatus() == ITestResult.SKIP){
 			extentLogger.log(LogStatus.SKIP, "Test Case Skipped is "+result.getName());
+		} 
+		else
+		{
+			extentLogger.log( LogStatus.PASS, "Test started Passed is "+result.getName() + " RRN : "+transactionID);
+			extentLogger.log(LogStatus.PASS, "Test Case Actual Response is : " + response);
 		}
 	try {
 			ExcelWriter.writeTestResult(TestCaseNum , result.getStatus());
@@ -252,6 +260,10 @@ public class ExtentManager{
 		}
 			 HttpConnect obj=new HttpConnect();
 			response = obj.Post(Request);
+			if (response.contains("*!"))
+			{
+				response = response.substring(response.lastIndexOf("*!")+2,  response.length());
+			}
      	if(response.substring(2,4).contains("IM"))
      	{
      		log.info("mPIN is invalid : Please enter a valid mPIN and start the test");
@@ -286,13 +298,17 @@ public class ExtentManager{
 		   }
 		}
 		else {
-			Request = Request +";"+uniNum;
+			Request = Request +uniNum;
 			log.info("Non-Hmac request : "+Request);
-			log.info(" Request");
 		}
 
 			 HttpConnect obj=new HttpConnect();
 			response = obj.Post(Request);
+			if (response.contains("*!"))
+			{
+				response = response.substring(response.lastIndexOf("*!")+2,  response.length());
+			}
+			
 			log.info("Response received from Server : "+response);
      	if (response.contains("TXNID"))
 			{
@@ -337,13 +353,17 @@ public class ExtentManager{
 		   }
 		}
 		else {
-			Request = Request +";"+uniNum;
+			Request = Request +uniNum;
 			log.info("Non-Hmac request : "+Request);
 			log.info(" Request");
 		}
 
 			 HttpConnect obj=new HttpConnect();
 			response = obj.Post(Request);
+					if (response.contains("*!"))
+					{
+						response = response.substring(response.lastIndexOf("*!")+2,  response.length());
+					}
 			log.info("Response received from Server : "+response);
      	if (response.contains("TXNID"))
 			{

@@ -13,8 +13,13 @@ public class CSVReaderInJava {
 	public static final String delimiter = ",";
 
 	public static void main(String[] args) throws IOException {
-
-		String csvFile = "C:/Users/brantansp/Desktop/data.csv";
+		csvReader("");
+	}
+	
+	public static void csvReader(String path)
+	{
+		String csvFile = path ;
+		//csvFile = "C:/Users/brantansp/Desktop/data.csv";
 		String line = "";
 		String cvsSplitBy = ",";
 		Map<String, List<String>> list = new HashMap<String, List<String>>();
@@ -45,9 +50,11 @@ public class CSVReaderInJava {
 				List<String> fruit = list.get(Key);
 				System.out.println("\nKey :" + Key);
 				System.out.println("Value : " + fruit);
+				
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	
 	}
 }

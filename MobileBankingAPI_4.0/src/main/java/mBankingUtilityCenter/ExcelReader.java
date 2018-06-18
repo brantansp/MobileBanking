@@ -152,9 +152,9 @@ public class ExcelReader {
 						try {
 							String cellValue = "";
 							try{
-								if(row.getCell(j+1).getStringCellValue().equals("N") || row.getCell(j+1).getStringCellValue().equals("n") || row.getCell(j+1).getStringCellValue().equals("no") || row.getCell(j+1).getStringCellValue().equals("No") || row.getCell(j+1).getStringCellValue().equals("NO"))
+								if(row.getCell(j+1).getStringCellValue().equalsIgnoreCase("N")  || row.getCell(j+1).getStringCellValue().equalsIgnoreCase("no"))
 								{
-									cellValue = row.getCell(j).getStringCellValue();
+									cellValue = row.getCell(j).getStringCellValue().replaceAll("\\s+","");
 									testsEnabled.add(cellValue);
 									//log.info(cellValue);	
 								}

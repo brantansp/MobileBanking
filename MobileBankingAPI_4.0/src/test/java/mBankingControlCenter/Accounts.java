@@ -23,7 +23,15 @@ public class Accounts extends ExtentManager {
 		return MethodHandles.lookup().lookupClass().getSimpleName();
 	}
 	
-	@Test
+	
+	public static void main(String[] args) throws IOException, SQLException {
+
+		request = StaticStore.balanceEnq(prop.getProperty("RemAccountno"));
+		response = sendReq (request, "001" , "Balance Enquiry with closed Account");
+		assertResponse(response);
+	}
+	
+	@Test(groups = { "nonfinancial", "positive" })
 	public void balanceEnq() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq();
@@ -31,21 +39,21 @@ public class Accounts extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void MiniStatement() throws IOException, SQLException {
 		request = StaticStore.miniStatement();
 		response = sendReq (request, TCID , "Mini statement");
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void TransactionHistory() throws IOException, SQLException {
 		request = StaticStore.transactionHistory();
 		response = sendReq (request, TCID , "Transaction History");
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "negative" })
 	public void balanceEnqWithInvalidAccNo() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("invalidaccno"));
@@ -53,7 +61,7 @@ public class Accounts extends ExtentManager {
 		assertTrue(response.substring(2,4).contains("AF"));	
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "negative" })
 	public void balanceEnqWithClosedAccount() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("closedaccountno"));
@@ -61,7 +69,7 @@ public class Accounts extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "negative" })
 	public void balanceEnqWithInactiveAccount() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("inactiveaccountno"));
@@ -69,7 +77,7 @@ public class Accounts extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "negative" })
 	public void balanceEnqWithBlockedAccount() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("blockedaccountno"));
@@ -77,7 +85,7 @@ public class Accounts extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "negative" })
 	public void balanceEnqForAccountHavingZeroBalnc() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("Zerobalnacc"));
@@ -85,7 +93,7 @@ public class Accounts extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "negative" })
 	public void balanceEnqForAccountHavingNegativeBalnc() throws IOException, SQLException
 	{
 		request = StaticStore.balanceEnq(prop.getProperty("Negbalnacc"));
@@ -93,21 +101,21 @@ public class Accounts extends ExtentManager {
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "negative" })
 	public void MiniStatementForClosedAccount() throws IOException, SQLException {
 		request = StaticStore.miniStatement(prop.getProperty("closedaccountno"));
 		response = sendReq (request, TCID , "Mini statement For Closed Account");
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "negative" })
 	public void MiniStatementForinactiveAccount() throws IOException, SQLException {
 		request = StaticStore.miniStatement(prop.getProperty("inactiveaccountno"));
 		response = sendReq (request, TCID , "Mini statement For Inactive Account");
 		assertResponse(response);
 	}
 	
-	//@Test
+	@Test(groups = { "nonfinancial", "negative" })
 	public void MiniStatementForBlockedAccount() throws IOException, SQLException {
 		request = StaticStore.miniStatement(prop.getProperty("blockedaccountno"));
 		response = sendReq (request, TCID , "Mini Statement For Blocked Account");

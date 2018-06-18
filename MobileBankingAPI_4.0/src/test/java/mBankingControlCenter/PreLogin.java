@@ -36,7 +36,7 @@ public class PreLogin extends ExtentManager {
 	private static Statement statement = null;
 	static int i =0;
 
-    @Test
+    @Test(groups = { "nonfinancial", "positive" })
 	public void ApplicationMobileNumber() throws IOException, SQLException {
 		String imei = prop.getProperty("imei");
 		BigInteger uniNum = RandomNumGenerator.generate();
@@ -61,42 +61,42 @@ public class PreLogin extends ExtentManager {
 		}
 		
 		request = StaticStore.SilentSms(imei, randNum);
-		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , req2, "ApplicationMobileNumber", uniNum);
+		response =sendReq2(request, TCID , req2, "ApplicationMobileNumber", uniNum);
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void GPRSCheck() throws IOException, SQLException {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.GPRSCheck();
 		String req2=StaticStore.GPRSCheck2();
-		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , req2, "GPRS Check", uniNum);
+		response =sendReq2(request, TCID , req2, "GPRS Check", uniNum);
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void buildActivation() throws IOException, SQLException {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.buildActivation();
 		String req2=StaticStore.buildActivation2();
-		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , req2, "buildActivation", uniNum);
+		response =sendReq2(request, TCID , req2, "buildActivation", uniNum);
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void GPRSCheckNew() throws IOException, SQLException {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.GPRSCheckNew();
 		String req2=StaticStore.GPRSCheckNew2();
-		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , req2, "GPRSCheckNew", uniNum);
+		response =sendReq2(request, TCID , req2, "GPRSCheckNew", uniNum);
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void productOffer() throws IOException, SQLException {
 
 		request = StaticStore.productOfferLeg2();
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "productOfferLeg2");
+		response =sendReq(request, TCID , "productOfferLeg2");
 		String [] split =  response.split(";");
 		String x=split[1];
 		split = x.split("\\*");
@@ -104,7 +104,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 		
 		request = StaticStore.productOfferLeg3(x);
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "productOfferLeg3");
+		response =sendReq(request, TCID , "productOfferLeg3");
 		String [] split2 =  response.split(";");
 	    String y=split2[2];
 		split = y.split("\\*");
@@ -112,7 +112,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 		
 		request = StaticStore.productOfferLeg4(x , y);
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "productOfferLeg4");
+		response =sendReq(request, TCID , "productOfferLeg4");
 		String [] split3 =  response.split(";");
 	    String z=split3[3];
 		split = z.split("\\*");
@@ -120,78 +120,78 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);
 		
 		request = StaticStore.productOfferLeg5(x , y, z);
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "productOfferLeg5");
+		response =sendReq(request, TCID , "productOfferLeg5");
         split =  response.split(";");
 		assertResponse(response);
 	}
 
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void Loan() throws IOException, SQLException {
 		request = StaticStore.Loan("100","10","12","2");
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Loan");
+		response =sendReq(request, TCID , "Loan");
 		assertResponse(response);	
 	}
 
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void versionUpgrade() throws IOException, SQLException {
 		request = StaticStore.versionUpgrade("4.1.16");
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "versionUpgrade");
+		response =sendReq(request, TCID , "versionUpgrade");
 		assertResponse(response);	
 	}
 
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void ATMPinSearch() throws IOException, SQLException {
-		request = StaticStore.ATMPinSearch("600001", RsaEncryption.encrypt("2580"));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "ATMPinSearch");
+		request = StaticStore.ATMPinSearch("603103", RsaEncryption.encrypt("2580"));
+		response =sendReq(request, TCID , "ATMPinSearch");
 		assertResponse(response);	
 	}
 	
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void ATMLocationSearch() throws IOException, SQLException {
 		request = StaticStore.ATMLocationSearch("che");
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "ATMLocationSearch");
+		response =sendReq(request, TCID , "ATMLocationSearch");
 		assertResponse(response);	
 	}
 
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void BranchPinSearch() throws IOException, SQLException {
 		request = StaticStore.BranchPinSearch("600001");
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "BranchPinSearch");
+		response =sendReq(request, TCID , "BranchPinSearch");
 		assertResponse(response);	
 	}
 	
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void BranchLocationSearch() throws IOException, SQLException {
 		request = StaticStore.BranchLocationSearch("che");
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "BranchLocationSearch");
+		response =sendReq(request, TCID , "BranchLocationSearch");
 		assertResponse(response);	
 	}
 
 	//3EM*#L9
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void ReferFriend() throws IOException, SQLException {
 		request = StaticStore.referFriend("brantan","brantansp@fss.co.in","9047637908");
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "ReferFriend");
+		response =sendReq(request, TCID , "ReferFriend");
 		assertResponse(response);	
 	}
 	
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void FeedBack() throws IOException, SQLException {
 		request = StaticStore.feedbackleg1();
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "FeedBack Leg1");
+		response =sendReq(request, TCID , "FeedBack Leg1");
 		assertResponse(response);	
 		
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.feedbackleg2();
 		String request2 = StaticStore.feedbackleg2_();
-		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , request2, "FeedBack Leg2", uniNum);
+		response =sendReq2(request, TCID , request2, "FeedBack Leg2", uniNum);
 		assertResponse(response);	
 	}
 	
-	@Test(priority=13)
+	@Test(groups = { "nonfinancial", "positive" })
 	public void ForgotLoginPin() throws IOException, SQLException {
         request = StaticStore.OTPGeneration();
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "OTP Generation");
+		response =sendReq(request, TCID , "OTP Generation");
 		transactionID= response.substring(response.lastIndexOf("TXNID:")+6, response.lastIndexOf("TXNID:")+18);
 		assertResponse(response);	
 		
@@ -205,11 +205,11 @@ public class PreLogin extends ExtentManager {
 		sms_msg=sms_msg.substring(sms_msg.lastIndexOf("Your OTP is ")+12 , sms_msg.lastIndexOf("Your OTP is ")+18);
 		log.info("OTP : "+sms_msg);
 		request = StaticStore.OTPVerification(RsaEncryption.encrypt(sms_msg));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "OTP Verification");
+		response =sendReq(request, TCID , "OTP Verification");
 		assertResponse(response);	
 		
 		request = StaticStore.loginmPinCheck(RsaEncryption.encrypt(prop.getProperty("mPINPlain")));
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "mPIN verification in Forgot login pin");
+		response =sendReq(request, TCID , "mPIN verification in Forgot login pin");
 		assertResponse(response);	
 		
 		SimpleDateFormat dateFormatter2 = new SimpleDateFormat("ddMMyy"); 
@@ -220,7 +220,7 @@ public class PreLogin extends ExtentManager {
 		BigInteger uniNum = RandomNumGenerator.generate();
 		request = StaticStore.loginNewPinSet(prop.getProperty("imei") , randNum);
 		String request2 = StaticStore.loginNewPinSet_(prop.getProperty("imei") , randNum);
-		response =sendReq2(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , request2, "Forgot login pin : New PIN Set", uniNum);
+		response =sendReq2(request, TCID , request2, "Forgot login pin : New PIN Set", uniNum);
 		assertResponse(response);	
 	}
 

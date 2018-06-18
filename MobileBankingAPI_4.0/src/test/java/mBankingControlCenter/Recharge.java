@@ -16,31 +16,31 @@ public class Recharge extends ExtentManager{
 	public static String request;
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void Rechargelist() throws IOException, SQLException {
 		request = StaticStore.Rechargelist();
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Recharge List");
+		response =sendReq(request, TCID , "Recharge List");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void Operatorsearch() throws IOException, SQLException {
 		request = StaticStore.Operatorsearch("MTP","dgha");
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Operator Search");
+		response =sendReq(request, TCID , "Operator Search");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void Rechargeconfirm() throws IOException, SQLException {
 		request = StaticStore.Rechargeconfirm("","","","","");
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Recharge Confirm");
+		response =sendReq(request, TCID , "Recharge Confirm");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "financial", "positive" })
 	public void RechargeStatusEnq() throws IOException, SQLException {
 		request = StaticStore.RechargeStatusEnq("","");
-		response =sendReq(request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Recharge Status Enquiry");
+		response =sendReq(request, TCID , "Recharge Status Enquiry");
 		assertResponse(response);
 	}
 }

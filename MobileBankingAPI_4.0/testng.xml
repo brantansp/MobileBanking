@@ -1,44 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name = "Positive Transaction flow" >
-<listeners>
-<listener class-name="mBankingUtilityCenter.AnotationListner"></listener>
-<listener class-name="mBankingUtilityCenter.PriorityInterceptor" />
-</listeners>
+<suite name="Positive Transaction flow">
+	<listeners>
+		<listener class-name="mBankingUtilityCenter.AnotationListner"/>
+		<listener class-name="mBankingUtilityCenter.PriorityInterceptor"/>
+	</listeners>
 
-    <test name = "Accounts Transaction">
-      <classes>
-          <class name = "mBankingControlCenter.Accounts"/>
-      </classes>        
-    </test>
-    
-     <test name = "IMPS Transaction">
-      <classes>
-          <class name = "mBankingControlCenter.IMPS"/>
-      </classes>        
-    </test> 
-    
-       <test name = "Pre-Login Transaction">
-      <classes>
-          <class name = "mBankingControlCenter.PreLogin"/>
-      </classes>        
-    </test>
-    
-        <test name = "Requests Transaction">
-      <classes>
-          <class name = "mBankingControlCenter.Requests"/>
-      </classes>        
-    </test>
-    
-    <test name = "Settings Transaction">
-      <classes>
-          <class name = "mBankingControlCenter.Settings"/>
-      </classes>        
-    </test>
-            <test name = "Transfer Transaction">
-      <classes>
-          <class name = "mBankingControlCenter.Transfer"/>
-      </classes>        
-    </test>  
+	<test name="Accounts Transaction">
+		<classes>
+			<class name="mBankingControlCenter.Accounts" />
+		</classes>
+	</test>
+
+	<test name="IMPS Transaction">
+		<classes>
+			<class name="mBankingControlCenter.IMPS" />
+		</classes>
+	</test>
+
+		<test name="Payment Transaction">
+		<classes>
+			<class name="mBankingControlCenter.Payment" />
+		</classes>
+	</test>
+	
+	<test name="Pre-Login Transaction">
+		<classes>
+			<class name="mBankingControlCenter.PreLogin" />
+		</classes>
+	</test>
+
+<!-- 		<test name="Recharge Transaction">
+		<classes>
+			<class name="mBankingControlCenter.Recharge" />
+		</classes>
+	</test> -->
+	
+	<test name="Requests Transaction">
+		<classes>
+			<class name="mBankingControlCenter.Requests" />
+		</classes>
+	</test>
+
+	<test name="Settings Transaction">
+		<classes>
+			<class name="mBankingControlCenter.Settings" />
+		</classes>
+	</test>
+
+	<test name="Transfer Transaction">
+		<classes>
+			<class name="mBankingControlCenter.Transfer" />
+		</classes>
+	</test>
 
 </suite>

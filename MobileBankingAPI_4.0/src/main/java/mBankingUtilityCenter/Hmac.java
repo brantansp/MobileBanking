@@ -7,8 +7,11 @@ import java.security.SignatureException;
 import java.util.Formatter;
 import java.util.Map;
 import java.util.Random;
+
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
+
+import org.apache.commons.exec.util.StringUtils;
 //import org.apache.commons.lang.StringUtils;
 //check
 public class Hmac {
@@ -22,22 +25,22 @@ public class Hmac {
 	  private String httpsEnable;
 	  
 	  public static void main (String [] args) throws InvalidKeyException, SignatureException, NoSuchAlgorithmException 
-	  {
-		  /**
+	  {/*
+		  *//**
 		   * Example to Validate the request received with HMAC from mobile
-		   */
+		   *//*
 		  String Request = "7e8c181f621b8b2918216adb266c9ddc7774e1a31830dc88939c8f2cf16ed64b*!9894060407APL1;N;422132;123457;4.0.5;504511000422132;108275514071541287394238077519949769235";
 		//  isValidData(Request);
           
-		  /**
+		  *//**
            * Generating Unique random number(HMAC key) to be append at the end of request
-           */
+           *//*
 		  BigInteger randNum = new BigInteger(45, new Random());
 		  //System.out.println("Random number : " +randNum);
 		
-		  /**
+		  *//**
 		   * Encrypting HMAC key to be sent in request
-		   */
+		   *//*
 		 BigInteger encryptedKey =  randNum.modPow(new BigInteger(publickey, 10) , new BigInteger(modulus, 10));
 		 //System.out.println("Encrypted data : "+encryptedKey);
 		 
@@ -55,6 +58,13 @@ public class Hmac {
 		 System.out.println("Decrypted Key : " + decryptedKey);
 	
 	  
+	  */
+		  
+	  String Request =  "Request : {\"header\":{\"mobNo\":\"+918754599507\",\"mType\":\"req\",\"tType\":\"mid016\",\"bVer\":\"2.1\",\"acc\":\"029\"},\"body\":{\"pChk\":\"AfxK+aN8U+rMtizn6tnaEOrF4e3g0CH1H12q/xSxmZoqymdcfFFZt0YvO1CcJFprzoKOZy/+ryOYpOppfqIoOy3svfJdF9Gl8R169sDcQkUMgJ/K5e+5Hoh3Lc3Oto0/Xg8H2M9DBfF8ymnS1jzUOLbM95JOWQuC8toizWcuK6k=\",\"ePn\":\"hbRnqs60oBShS6+47j8J801uunuFxYhsw3onnqyKjWdvl1MnT/DG946CR1Zl76cGvPZaeXVrUpzAvR5fif2isz6IaLEfAa/WFokL4gDvUux+lkqTUTJ35gHn+d66wtrlrjs16bgTdbAfxpVeLXwc7At1KA6Q7b7b583S8aD2Zlk=\",\"eOtp\":\"l110LIqZavj9a1ozTnnlHLI6OS1yJTiioIErKNmR6N+xamglUXfJII/58WV+wp9ke463nWSU74zhDNAHTPaxn4fuQexWRmsd6u2ijYNHIYu8il1kkD6YnxVfmujFTQ8WFW1GUa66DWdSQytF92dm4Xu979HTQ5On3VEVY2fNkjE=\"},\"footer\":{}}";
+	  String Key = "15282767474861733";
+	  
+	  System.out.println(calculateRFC2104HMAC(Request,Key));
+	  
 	  }
 	  
 	  public static String Hmacing(String fullRequest, String halfRequest, BigInteger uniNum) throws InvalidKeyException, SignatureException, NoSuchAlgorithmException
@@ -71,8 +81,6 @@ public class Hmac {
 		  return FinalRequest;
 	  }
 	  
-
-
 	  public static BigInteger decrypt(BigInteger encrypted, BigInteger privateKey, BigInteger modulus)
 	  {
 	    return encrypted.modPow(privateKey, modulus);
@@ -84,7 +92,7 @@ public class Hmac {
 	  }
 	  
 	  public static boolean isValidData(String request)
-	  {/*
+	  {
 	    try
 	    {
 	      String key = "";
@@ -95,15 +103,7 @@ public class Hmac {
 	      String encryptedKey = messageArray[(messageArray.length - 1)];	      
 		  key = decrypt(new BigInteger(encryptedKey), new BigInteger(getPrivateKey()), new BigInteger(getModulus())).toString();	     
 // KEY LENGTH IMPLEMENTATION REASON NOT KNOWN BUT PRONE TO ERROR IN THIS IMPLEMENTATION
-	      if (key.length() == 14) {
-	        key = StringUtils.leftPad(key, 15, '0');
-	      } 
-	      else if 
-	      
-	      (key.length() != Integer.parseInt(""+key.length())) {
-	        key = StringUtils.leftPad(key, Integer.parseInt(""+key.length()), '0');
-	      }
-  
+
 	      request = request.substring(0, request.lastIndexOf(";")) + ";" + key;
 	      String hashedRequest = calculateRFC2104HMAC(request, key);
 	      if (hashedData.equals(hashedRequest)) {
@@ -124,7 +124,6 @@ public class Hmac {
 	    {
 	      e.printStackTrace();
 	    }
-	    */
 	    return false;
 	  }
 	  

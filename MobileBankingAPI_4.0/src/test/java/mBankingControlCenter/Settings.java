@@ -18,31 +18,31 @@ public class Settings extends ExtentManager {
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
     
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void EmailIDFetch() throws IOException, SQLException {
 		request = StaticStore.emailIDFetch();
-		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Email ID fetch");
+		response = sendReq (request, TCID , "Email ID fetch");
 		assertResponse(response);
 	}
 
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void EmailIDUpdate() throws IOException, SQLException {
 		request = StaticStore.updateEmailID("abc@fss.com");
-		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Email ID Update");
+		response = sendReq (request, TCID , "Email ID Update");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void Accountfetch() throws IOException, SQLException {
 		request = StaticStore.Accountfetch();
-		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Account Fetch");
+		response = sendReq (request, TCID , "Account Fetch");
 		assertResponse(response);
 	}
 	
-	@Test
+	@Test(groups = { "nonfinancial", "positive" })
 	public void changeloginpwd() throws IOException, SQLException {
-		request = StaticStore.changeloginpwd(RsaEncryption.encrypt("9999"));
-		response = sendReq (request, testCaseNum(MethodHandles.lookup().lookupClass().getSimpleName()) , "Change Login Password");
+		request = StaticStore.changeloginpwd(RsaEncryption.encrypt("8541"));
+		response = sendReq (request, TCID , "Change Login Password");
 		assertResponse(response);
 	}
 	
