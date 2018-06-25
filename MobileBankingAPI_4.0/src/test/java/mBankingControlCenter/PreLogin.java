@@ -188,7 +188,7 @@ public class PreLogin extends ExtentManager {
 		assertResponse(response);	
 	}
 	
-	@Test(groups = { "nonfinancial", "positive" })
+	//@Test(groups = { "nonfinancial", "positive" })
 	public void ForgotLoginPin() throws IOException, SQLException {
         request = StaticStore.OTPGeneration();
 		response =sendReq(request, TCID , "OTP Generation");

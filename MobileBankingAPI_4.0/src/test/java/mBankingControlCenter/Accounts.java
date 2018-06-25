@@ -25,10 +25,7 @@ public class Accounts extends ExtentManager {
 	
 	
 	public static void main(String[] args) throws IOException, SQLException {
-
-		request = StaticStore.balanceEnq(prop.getProperty("RemAccountno"));
-		response = sendReq (request, "001" , "Balance Enquiry with closed Account");
-		assertResponse(response);
+		
 	}
 	
 	@Test(groups = { "nonfinancial", "positive" })

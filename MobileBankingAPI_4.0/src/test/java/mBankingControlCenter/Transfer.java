@@ -308,7 +308,7 @@ public class Transfer extends ExtentManager{
 	@Test(groups = { "financial", "positive" })
 	public void NEFTQuickFT() throws IOException, SQLException {
 		request = StaticStore.NEFTQuickFT(prop.getProperty("BenAccountno"), prop.getProperty("AccountType"),
-				prop.getProperty("BenIFSCcode"), prop.getProperty("BenNickName"), 
+				prop.getProperty("BenIFSCcode"), prop.getProperty("BenNickName"), prop.getProperty("NeftAmount"),
 				prop.getProperty("NeftRemarks"));
 		response =sendReq(request, TCID , "NEFT Quick FT");
 		assertResponse(response);
@@ -372,7 +372,7 @@ public class Transfer extends ExtentManager{
 	@Test(groups = { "financial", "negative" })
 	public void NEFTQuickFTWithInvalidIFSCcode() throws IOException, SQLException {
 		request = StaticStore.NEFTQuickFT(prop.getProperty("BenAccountno"), prop.getProperty("AccountType"),
-				prop.getProperty("InvalidBenIFSCcode"), prop.getProperty("BenNickName"), 
+				prop.getProperty("InvalidBenIFSCcode"), prop.getProperty("BenNickName"), prop.getProperty("NeftAmount"), 
 				prop.getProperty("NeftRemarks"));
 		response =sendReq(request, TCID , "NEFT Quick FT With Invalid IFSC code");
 		assertResponse(response);

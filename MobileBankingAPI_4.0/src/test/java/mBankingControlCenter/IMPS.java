@@ -28,6 +28,10 @@ public class IMPS extends ExtentManager {
 	public static Log log = LogFactory.getLog(MethodHandles.lookup()
 			.lookupClass().getSimpleName());
 
+	public static void main(String[] args) {
+		
+	}
+	
 	@Test(groups = { "nonfinancial", "positive" })
 	public void GenerateMMID() throws IOException, SQLException {
 		request = StaticStore.generateMMID();
@@ -433,12 +437,12 @@ public class IMPS extends ExtentManager {
 	public void IMPSP2PAddBeneficiaryWithExistingNickname() throws IOException,
 			SQLException {
 
-		sendReq(StaticStore.impsP2PConfBen(prop.getProperty("IMPSBenMobNo"),
+/*		sendReq(StaticStore.impsP2PConfBen(prop.getProperty("IMPSBenMobNo"),
 				prop.getProperty("BenMMID"),
 				prop.getProperty("IMPSBenNickname"))); // Registering
 														// Beneficiary for
 														// payment
-
+*/
 		request = StaticStore.impsP2PAddBen(prop.getProperty("IMPSBenMobNo"),
 				prop.getProperty("BenMMID"),
 				prop.getProperty("IMPSBenNickname"));
@@ -868,7 +872,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentForM0Decline");
 
-		assertTrue(response.substring(2, 4).contains("M0"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -880,7 +884,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentForM1Decline");
 
-		assertTrue(response.substring(2, 4).contains("M1"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -892,7 +896,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentForM2Decline");
 
-		assertTrue(response.substring(2, 4).contains("M2"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -904,7 +908,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentForM3Decline");
 
-		assertTrue(response.substring(2, 4).contains("M3"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -916,7 +920,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentForM4Decline");
 
-		assertTrue(response.substring(2, 4).contains("M4"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -928,7 +932,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentForM5Decline");
 
-		assertTrue(response.substring(2, 4).contains("M5"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -940,7 +944,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentForM6Decline");
 
-		assertTrue(response.substring(2, 4).contains("M6"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -952,7 +956,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentfor92Decline");
 
-		assertTrue(response.substring(2, 4).contains("92"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -964,7 +968,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentfor13Decline");
 
-		assertTrue(response.substring(2, 4).contains("13"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -976,7 +980,7 @@ public class IMPS extends ExtentManager {
 				prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2AInstantPaymentfor51Decline");
 
-		assertTrue(response.substring(2, 4).contains("51"));
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -1208,7 +1212,7 @@ public class IMPS extends ExtentManager {
 	}
 
 	@Test(groups = { "financial", "positive" })
-	public void impsP2UAddBenPreConf() throws IOException, SQLException {
+	public void IMPSP2UAddBenPreConf() throws IOException, SQLException {
 		request = StaticStore.impsP2UAddBenPreConf(
 				prop.getProperty("IMPSAadharNo"),
 				prop.getProperty("IMPSAccType"),
@@ -1368,7 +1372,7 @@ public class IMPS extends ExtentManager {
 	}
 
 	@Test
-	public void impsP2UAddBenPreConfwithInvalidAadharNo() throws IOException,
+	public void IMPSP2UAddBenPreConfwithInvalidAadharNo() throws IOException,
 			SQLException {
 		request = StaticStore.impsP2UAddBenPreConf(
 				prop.getProperty("InvalidIMPSAadharNo"),
@@ -1387,7 +1391,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentForM0Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 
 	}
 
@@ -1400,7 +1404,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentForM1Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 	}
 
 	@Test
@@ -1412,7 +1416,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentForM2Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 
 	}
 
@@ -1425,7 +1429,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentForM3Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 
 	}
 
@@ -1438,7 +1442,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentForM4Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 
 	}
 
@@ -1451,7 +1455,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentForM5Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 
 	}
 
@@ -1464,7 +1468,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentForM6Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 
 	}
 
@@ -1477,7 +1481,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentFor92Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 
 	}
 
@@ -1490,7 +1494,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentFor13Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 
 	}
 
@@ -1503,7 +1507,7 @@ public class IMPS extends ExtentManager {
 						prop.getProperty("IMPSAmount"),
 						prop.getProperty("IMPSRemarks"));
 		response = sendReq(request, TCID, "IMPSP2UInstantPaymentFor51Decline");
-		assertResponse(response);
+		assertTrue(response.substring(2, 4).contains("57"));
 
 	}
 

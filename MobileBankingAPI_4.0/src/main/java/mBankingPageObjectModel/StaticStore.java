@@ -879,6 +879,7 @@ public class StaticStore extends ExtentManager {
 	 * IMPS P2A
 	 */
 
+	// APK1;N;5363763838858384848;SA;hdfc0000001;10;test;454545;123457;4.0.5;133101011004295;9865928748
 	public static String impsP2AInstant(String benAcNo, String benIFSC,
 			String amount, String remark) {
 		sb.delete(0, sb.length());
@@ -891,7 +892,11 @@ public class StaticStore extends ExtentManager {
 			sb.append(prop.getProperty("mPINRequired") + ";");
 		}
 		sb.append(benAcNo + ";");
-		sb.append(prop.getProperty("IMPSAccType") + ";");
+		if ("454545".equals("bankCode")) {
+			sb.append("SA;");
+		} else {
+			sb.append(prop.getProperty("IMPSAccType") + ";");
+		}
 		sb.append(benIFSC + ";");
 		sb.append(amount + ";");
 		sb.append(remark + ";");
@@ -902,6 +907,7 @@ public class StaticStore extends ExtentManager {
 		return sb.toString();
 	}
 
+	// APK2;N;536338384847744747;SA;hdfc0000001;tesf;454545;123457;4.0.5;133101011004295;9865928748
 	public static String impsP2AAddBen(String accNo, String accType,
 			String ifsccode, String nickname) {
 		sb.delete(0, sb.length());
@@ -914,7 +920,14 @@ public class StaticStore extends ExtentManager {
 			sb.append(prop.getProperty("mPINRequired") + ";");
 		}
 		sb.append(accNo + ";");
-		sb.append(accType + ";");
+		if("454545".equals("bankCode"))
+		{
+			sb.append("SA;");
+		}
+		else
+		{
+			sb.append(accType + ";");
+		}
 		sb.append(ifsccode + ";");
 		sb.append(nickname + ";");
 		sb.append(prop.getProperty("bankCode") + ";");
@@ -924,6 +937,7 @@ public class StaticStore extends ExtentManager {
 		return sb.toString();
 	}
 
+	//APK3;N;536338384847744747;SA;HDFC0000001;tesf;454545;123457;4.0.5;133101011004295;9865928748
 	public static String impsP2AConfBen(String accNo, String accType,
 			String ifsccode, String nickname) {
 		sb.delete(0, sb.length());
@@ -936,7 +950,14 @@ public class StaticStore extends ExtentManager {
 			sb.append(prop.getProperty("mPINRequired") + ";");
 		}
 		sb.append(accNo + ";");
-		sb.append(accType + ";");
+		if("454545".equals("bankCode"))
+		{
+			sb.append("SA;");
+		}
+		else
+		{
+			sb.append(accType + ";");
+		}
 		sb.append(ifsccode + ";");
 		sb.append(nickname + ";");
 		sb.append(prop.getProperty("bankCode") + ";");
@@ -1021,6 +1042,7 @@ public class StaticStore extends ExtentManager {
 		return sb.toString();
 	}
 
+	//APK4;N; ;1;454545;123457;4.0.5;133101011004295;9865928748
 	public static String impsP2APaySearch(String searchText) {
 		sb.delete(0, sb.length());
 		sb.append(prop.getProperty("RemMobileno"));
@@ -1515,8 +1537,9 @@ public class StaticStore extends ExtentManager {
 		return sb.toString();
 	}
 
+	//AP2T;N;MTP;air;MTP:DTH:DTC;0001;606995;123457;4.0;31300100009928;1529562532631
+	//AP2T;N;MTP;air;MTP;DTH;DTC;0001;606995;123457;4.0;313001000099286862328852705854
 	public static String Rechargelist() {
-		// sb.delete(0, sb.length());
 		StringBuilder sb = new StringBuilder();
 		sb.append(prop.getProperty("RemMobileno"));
 		sb.append("AP2T;");
@@ -1525,6 +1548,17 @@ public class StaticStore extends ExtentManager {
 			sb.append(encryptedPin + ";");
 		} else {
 			sb.append(prop.getProperty("mPINRequired") + ";");
+		}
+		if("606995".equals(prop.getProperty("bankCode")))
+		{
+			sb.append("MTP;");		
+			sb.append(prop.getProperty("operator")+";");
+			sb.append("MTP;");	
+			sb.append("DTH;");	
+			sb.append("DTC;");	
+		}
+		else{
+		sb.append(prop.getProperty("operator")+";");
 		}
 		sb.append("0001;");
 		sb.append(prop.getProperty("bankCode") + ";");
@@ -1556,6 +1590,9 @@ public class StaticStore extends ExtentManager {
 		return sb.toString();
 	}
 
+	//AP3T;N;MTP;AIRCELMOB;O;MTP:DTH:DTC;4950000003:10:BRA;817212176082;606995;123457;4.0;31300100009928;7032297581
+	//AP3T;N;MTP;AIRCELMOB;O;MTP:DTH:DTC;4950000003;10;Test;817212176077;606995;123457;4.0;31300100009928;7864725663009973
+	//AP3T;N;MTP;JAIRCEL;O;MTP:DTH:DTC;4950000003:10:BRANTAN;817214138912;504511;123457;4.0;0389010502566;9894060407
 	public static String Rechargeconfirm(String TypeofRecharge,
 			String searchresult, String RechargeMobNo, String RechargeAmount,
 			String TransactionId) {
@@ -1768,6 +1805,7 @@ public class StaticStore extends ExtentManager {
 		return sb.toString();
 	}
 
+	// APQT;N;133101011004295;SA;10;tedt;454545;123457;4.0.5;133101021000596;9629195009
 	public static String m2aQuickFT(String BenAccountno, String AccountType,
 			String Amount) {
 		StringBuilder sb = new StringBuilder();
@@ -1780,7 +1818,8 @@ public class StaticStore extends ExtentManager {
 			sb.append(prop.getProperty("mPINRequired") + ";");
 		}
 		sb.append(BenAccountno + ";");
-		if ("606995".equals(prop.getProperty("bankCode"))) {
+		if ("606995".equals(prop.getProperty("bankCode"))
+				| "454545".equals(prop.getProperty("bankCode"))) {
 			sb.append("SA;");
 		} else {
 			sb.append(AccountType + ";");
@@ -1943,8 +1982,10 @@ public class StaticStore extends ExtentManager {
 	// ** need to add P2Abendereg **//
 
 	// ** Fund Transfer-otherbank NEFT**//
+	// APQN;N;0720010303862;SA;utbi0pbr824;neft;10;test
+	// pay;454545;123457;4.0.5;133101021000596;9629195009
 	public static String NEFTQuickFT(String benaccountno, String accounttype,
-			String benIFSCcode, String benname, String Remarks) {
+			String benIFSCcode, String benname, String amount, String Remarks) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(prop.getProperty("RemMobileno"));
 		sb.append("APQN;");
@@ -1958,8 +1999,11 @@ public class StaticStore extends ExtentManager {
 		sb.append(accounttype + ";");
 		sb.append(benIFSCcode + ";");
 		sb.append(benname + ";");
+		sb.append(amount + ";");
 		sb.append(Remarks + ";");
-		sb.append("001;");
+		if (!"454545".equals(prop.getProperty("bankCode"))) {
+			sb.append("001;");
+		}
 		sb.append(prop.getProperty("bankCode") + ";");
 		sb.append(prop.getProperty("DUKPT") + ";");
 		sb.append(prop.getProperty("buildVersion") + ";");
@@ -2030,6 +2074,7 @@ public class StaticStore extends ExtentManager {
 		return sb.toString();
 	}
 
+	// APQ8;N;10;teys;test;454545;123457;4.0.5;133101021000596;9629195009
 	public static String NEFTbenpayment(String Amount, String Benname,
 			String Remarks) {
 		StringBuilder sb = new StringBuilder();
