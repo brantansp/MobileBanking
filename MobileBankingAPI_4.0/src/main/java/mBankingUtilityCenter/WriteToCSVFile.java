@@ -36,6 +36,12 @@ public class WriteToCSVFile {
     {
     	Transaction = transaction;
     	result = dbResult;
+    	
+/*    	for(int i =0; i< result.length; i++)
+    	{
+    		System.out.println(result[i]);
+    	}
+    	*/
     	File dir = new File(System.getProperty("user.dir")+"\\output\\dbReport\\"+dateFormatter.format(date));
     	if (!dir.exists())
     	{
@@ -75,13 +81,13 @@ public class WriteToCSVFile {
     	}
         sb.append(Transaction); //transaction
         sb.append(',');
-        if (result[3].equals("C"))
+/*        if (result[3].equals("C"))
         {
             sb.append("PASS");  //transaction status
         }else
         {
             sb.append("FAIL");  //transaction status
-        }
+        }*/
         sb.append(',');
         sb.append(result[0]); //txnauthid
         sb.append(',');

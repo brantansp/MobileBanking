@@ -854,6 +854,11 @@ public class IMPS extends ExtentManager {
 	@Test
 	public void IMPSP2ABeneficiaryPaymentConfirmationWithInsufficientAmount()
 			throws IOException, SQLException {
+		request = StaticStore.impsP2PConfBen(prop.getProperty("IMPSBenMobNo"),
+				prop.getProperty("BenMMID"),
+				prop.getProperty("IMPSBenNickname"));
+		response = sendReq(request);
+		
 		request = StaticStore.impsP2APayConf(
 				prop.getProperty("IMPSBenNickname"),
 				prop.getProperty("InsufficientAmount"),

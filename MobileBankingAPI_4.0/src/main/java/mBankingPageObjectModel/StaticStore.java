@@ -2152,4 +2152,26 @@ public class StaticStore extends ExtentManager {
 		return sb.toString();
 	}
 
+	//APX1;Y;136287447565387244632466752622351030832;Oyl4S69ezvwUWpl/sfOpDo7fuNlAgxO5fBkv2g5wPg4BsRZ7kRsLhhQkEsK3HYMp8C90+TeMcO9aARdI8i3UPmAzw0uDYtF3DeEV/U+cOalKah9d94W2viL5WROhMhcWgfTZSpogD4ilZ4gitlyFxTfTXZkshHgqc1QmQdFcp1bPaPNO07nLo08f4mZqsiFDexXPIlHDwHFx3cF9UTS3ugAblP4YLerrIPPUJri+hXIR8U91gZ1BIA+6CbIh9b95MUrJJ71B5sc0Z8bEy3FleMHne2pMtl6ul7VGN+HBuwxu1lCmc65/fVPXcK4TGY73d/Q6u1em27UoiKRoXq0uuA==;2102;504432;123457;4.0.5;566802070000211;9790954696
+	public static String AddDebitCard(String mobNo, String accNo) {
+		StringBuilder sb = new StringBuilder();
+		sb.append(mobNo);
+		sb.append("APX1;");
+		if (prop.getProperty("mPINRequired").equals("Y")) {
+			sb.append(prop.getProperty("mPINRequired") + ";");
+			sb.append(encryptedPin + ";");
+		} else {
+			sb.append(prop.getProperty("mPINRequired") + ";");
+		}
+		sb.append("Oyl4S69ezvwUWpl/sfOpDo7fuNlAgxO5fBkv2g5wPg4BsRZ7kRsLhhQkEsK3HYMp8C90+TeMcO9aARdI8i3UPmAzw0uDYtF3DeEV/U+cOalKah9d94W2viL5WROhMhcWgfTZSpogD4ilZ4gitlyFxTfTXZkshHgqc1QmQdFcp1bPaPNO07nLo08f4mZqsiFDexXPIlHDwHFx3cF9UTS3ugAblP4YLerrIPPUJri+hXIR8U91gZ1BIA+6CbIh9b95MUrJJ71B5sc0Z8bEy3FleMHne2pMtl6ul7VGN+HBuwxu1lCmc65/fVPXcK4TGY73d/Q6u1em27UoiKRoXq0uuA==;");
+		sb.append("2102;");
+		sb.append(prop.getProperty("bankCode") + ";");
+		sb.append(prop.getProperty("DUKPT") + ";");
+		sb.append(prop.getProperty("buildVersion") + ";");
+		sb.append(accNo + ";");
+		return sb.toString();
+	}
+
+
+	
 }
