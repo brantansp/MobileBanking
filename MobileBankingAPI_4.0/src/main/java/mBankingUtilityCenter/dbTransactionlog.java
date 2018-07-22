@@ -15,7 +15,7 @@ public class dbTransactionlog extends ExtentManager{
 	private static Connection dbConnection = null;
 	private static Statement statement = null;
 	private static String transactionID="735418241323";
-	private static String result[]= new String [10];//= "";
+	private static String result[];
 	private static ResultSet resultSet;
 	//check2
 	public static void main(String[] argv) {
@@ -46,6 +46,7 @@ public class dbTransactionlog extends ExtentManager{
 			  resultSet.getString("Response_Description")+"|"+
 			  resultSet.getString("Errorcode");
 			*/
+			result= new String [resultSet.getFetchSize()];
 			result[0] = resultSet.getString("txnauthid") ;
 			result[1] = resultSet.getString("txndatetime") ;
 			result[2] = resultSet.getString("txntype") ;
@@ -66,6 +67,7 @@ public class dbTransactionlog extends ExtentManager{
 				dbConnection.close();
 			}
 		}
+		clear();
 		return result;
 	}
 
@@ -103,7 +105,7 @@ public class dbTransactionlog extends ExtentManager{
 		return dbConnection;
 	}
 	
-	 public void clear() {
+	 public static void clear() {
 	 		if (resultSet != null) {
 	 			try {
 	 				resultSet.close();
