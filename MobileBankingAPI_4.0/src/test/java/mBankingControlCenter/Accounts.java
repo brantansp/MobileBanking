@@ -25,7 +25,9 @@ public class Accounts extends ExtentManager {
 	
 	
 	public static void main(String[] args) throws IOException, SQLException {
-		
+		request = StaticStore.balanceEnq();
+		response = sendReq ("9952033881APSU;Y;85118262095530592846350644903156898169;8609547570776098518502128580812621291;50915897835336758097120764282302435687;9952033881;N;N;N;504433;123457;4.0.3;0;", "" , "SignUp");
+		assertResponse(response);
 	}
 	
 	@Test(groups = { "nonfinancial", "positive" })

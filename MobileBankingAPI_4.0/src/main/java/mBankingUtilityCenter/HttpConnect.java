@@ -6,19 +6,10 @@ import java.io.InputStreamReader;
 import java.lang.invoke.MethodHandles;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.testng.reporters.jq.Main;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.security.cert.Certificate;
 import java.util.Properties;
-import java.io.*;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLPeerUnverifiedException;
 
 public class HttpConnect extends ExtentManager {
 

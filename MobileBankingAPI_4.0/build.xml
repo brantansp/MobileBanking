@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="MobileBankingAPI_4.0">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="D:/LUNAECLIPSE"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="TestNG.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.testng_6.12.0.r201709030044.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.beust.jcommander_1.66.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.yaml.snakeyaml_1.17.0.jar"/>
+    </path>
+    <path id="Maven Dependencies.libraryclasspath"/>
+    <path id="MobileBankingAPI_4.0.classpath">
+        <pathelement location="target/classes"/>
+        <pathelement location="target/test-classes"/>
+        <path refid="TestNG.libraryclasspath"/>
+        <pathelement location="property"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+        <pathelement location="lib/commons-logging-1.0.4.jar"/>
+        <pathelement location="lib/extentreports-2.41.2.jar"/>
+        <pathelement location="lib/freemarker-2.3.23.jar"/>
+        <pathelement location="lib/ojdbc6.jar"/>
+        <pathelement location="lib/apache-log4j-1.2.15.jar"/>
+        <pathelement location="lib/poi-3.17.jar"/>
+        <pathelement location="lib/poi-ooxml-3.17.jar"/>
+        <pathelement location="lib/xmlbeans-xmlpublic-2.4.0.jar"/>
+        <pathelement location="lib/selenium-api-3.7.1.jar"/>
+        <pathelement location="lib/bsh-2.0b4.jar"/>
+        <pathelement location="lib/jcommander-1.48.jar"/>
+        <pathelement location="lib/selenium-remote-driver-3.10.0.jar"/>
+        <pathelement location="lib/testng-6.9.10.jar"/>
+        <pathelement location="lib/commons-collections4-4.1.jar"/>
+        <pathelement location="lib/xmlbeans-5.1.3.jar"/>
+        <pathelement location="lib/ooxml-schemas-1.0.jar"/>
+        <pathelement location="lib/guava-23.0.jar"/>
+        <pathelement location="lib/selenium-chrome-driver-3.8.1.jar"/>
+        <pathelement location="lib/okhttp-3.0.1.jar"/>
+        <pathelement location="lib/commons-exec-1.3.jar"/>
+        <pathelement location="lib/gson-2.6.2.jar"/>
+        <pathelement location="lib/okio-1.8.0.jar"/>
+        <pathelement location="lib/selenium-ie-driver-2.53.1.jar"/>
+        <pathelement location="lib/mail.jar"/>
+        <pathelement location="lib/customfileappender.jar"/>
+        <pathelement location="lib/javassist-3.18.1-GA.jar"/>
+    </path>
+    <path id="run.Accounts (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.BaseObject.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.CSVReaderInJava.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.dbChecklist.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.dbTransactionlog.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Dir.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.EmailNotifier.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Engine (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExcelReader.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExcelWriter.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExtentManager (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExtentReportsClass (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.FundTransferTransactions (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Hmac (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HttpConnect.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.IMPS (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.IMPSTransactions (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.JDBCExample.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.MobileBanking (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.NewTest (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.NonFinancialTransactions (2).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.PinGenerator.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.RandomNumGenerator.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.RequestBuilder.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.RESTBindingAPIExampleHTTPS.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.SendEmail (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.SendEmailOffice365.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.StaticStore.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.test.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Transfer (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.WriteToCSVFile (1).classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.writeToFile.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DebitCardControl.classpath">
+        <path refid="MobileBankingAPI_4.0.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <mkdir dir="target/test-classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+        <delete dir="target/test-classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <classpath refid="MobileBankingAPI_4.0.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <classpath refid="MobileBankingAPI_4.0.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Accounts (1)">
+        <java classname="mBankingControlCenter.Accounts" failonerror="true" fork="yes">
+            <classpath refid="run.Accounts (1).classpath"/>
+        </java>
+    </target>
+    <target name="BaseObject">
+        <java classname="mBankingBasePageObject.BaseObject" failonerror="true" fork="yes">
+            <classpath refid="run.BaseObject.classpath"/>
+        </java>
+    </target>
+    <target name="CSVReaderInJava">
+        <java classname="mBankingUtilityCenter.CSVReaderInJava" failonerror="true" fork="yes">
+            <classpath refid="run.CSVReaderInJava.classpath"/>
+        </java>
+    </target>
+    <target name="dbChecklist">
+        <java classname="mBankingUtilityCenter.dbChecklist" failonerror="true" fork="yes">
+            <classpath refid="run.dbChecklist.classpath"/>
+        </java>
+    </target>
+    <target name="dbTransactionlog">
+        <java classname="mBankingUtilityCenter.dbTransactionlog" failonerror="true" fork="yes">
+            <classpath refid="run.dbTransactionlog.classpath"/>
+        </java>
+    </target>
+    <target name="Dir">
+        <java classname="mBankingUtilityCenter.Dir" failonerror="true" fork="yes">
+            <classpath refid="run.Dir.classpath"/>
+        </java>
+    </target>
+    <target name="EmailNotifier">
+        <java classname="mBankingUtilityCenter.EmailNotifier" failonerror="true" fork="yes">
+            <classpath refid="run.EmailNotifier.classpath"/>
+        </java>
+    </target>
+    <target name="Engine (1)">
+        <java classname="mBankingUtilityCenter.Engine" failonerror="true" fork="yes">
+            <classpath refid="run.Engine (1).classpath"/>
+        </java>
+    </target>
+    <target name="ExcelReader">
+        <java classname="mBankingUtilityCenter.ExcelReader" failonerror="true" fork="yes">
+            <classpath refid="run.ExcelReader.classpath"/>
+        </java>
+    </target>
+    <target name="ExcelWriter">
+        <java classname="mBankingUtilityCenter.ExcelWriter" failonerror="true" fork="yes">
+            <classpath refid="run.ExcelWriter.classpath"/>
+        </java>
+    </target>
+    <target name="ExtentManager (1)">
+        <java classname="mBankingUtilityCenter.ExtentManager" failonerror="true" fork="yes">
+            <classpath refid="run.ExtentManager (1).classpath"/>
+        </java>
+    </target>
+    <target name="ExtentReportsClass (1)">
+        <java classname="mBankingUtilityCenter.ExtentReportsClass" failonerror="true" fork="yes">
+            <classpath refid="run.ExtentReportsClass (1).classpath"/>
+        </java>
+    </target>
+    <target name="FundTransferTransactions (1)">
+        <java classname="mBankingControlCenter.FundTransferTransactions" failonerror="true" fork="yes">
+            <classpath refid="run.FundTransferTransactions (1).classpath"/>
+        </java>
+    </target>
+    <target name="Hmac (1)">
+        <java classname="mBankingUtilityCenter.Hmac" failonerror="true" fork="yes">
+            <classpath refid="run.Hmac (1).classpath"/>
+        </java>
+    </target>
+    <target name="HttpConnect">
+        <java classname="mBankingUtilityCenter.HttpConnect" failonerror="true" fork="yes">
+            <classpath refid="run.HttpConnect.classpath"/>
+        </java>
+    </target>
+    <target name="IMPS (1)">
+        <java classname="mBankingControlCenter.IMPS" failonerror="true" fork="yes">
+            <classpath refid="run.IMPS (1).classpath"/>
+        </java>
+    </target>
+    <target name="IMPSTransactions (1)">
+        <java classname="mBankingControlCenter.IMPSTransactions" failonerror="true" fork="yes">
+            <classpath refid="run.IMPSTransactions (1).classpath"/>
+        </java>
+    </target>
+    <target name="JDBCExample">
+        <java classname="mBankingUtilityCenter.JDBCExample" failonerror="true" fork="yes">
+            <classpath refid="run.JDBCExample.classpath"/>
+        </java>
+    </target>
+    <target name="MobileBanking (1)">
+        <java classname="mBankingControlCenter.MobileBanking" failonerror="true" fork="yes">
+            <classpath refid="run.MobileBanking (1).classpath"/>
+        </java>
+    </target>
+    <target name="NewTest (1)">
+        <java classname="mBankingControlCenter.NewTest" failonerror="true" fork="yes">
+            <classpath refid="run.NewTest (1).classpath"/>
+        </java>
+    </target>
+    <target name="NonFinancialTransactions (2)">
+        <java classname="mBankingControlCenter.NonFinancialTransactions" failonerror="true" fork="yes">
+            <classpath refid="run.NonFinancialTransactions (2).classpath"/>
+        </java>
+    </target>
+    <target name="PinGenerator">
+        <java classname="mBankingUtilityCenter.PinGenerator" failonerror="true" fork="yes">
+            <classpath refid="run.PinGenerator.classpath"/>
+        </java>
+    </target>
+    <target name="RandomNumGenerator">
+        <java classname="mBankingUtilityCenter.RandomNumGenerator" failonerror="true" fork="yes">
+            <classpath refid="run.RandomNumGenerator.classpath"/>
+        </java>
+    </target>
+    <target name="RequestBuilder">
+        <java classname="mBankingBasePageObject.RequestBuilder" failonerror="true" fork="yes">
+            <classpath refid="run.RequestBuilder.classpath"/>
+        </java>
+    </target>
+    <target name="RESTBindingAPIExampleHTTPS">
+        <java classname="mBankingUtilityCenter.RESTBindingAPIExampleHTTPS" failonerror="true" fork="yes">
+            <classpath refid="run.RESTBindingAPIExampleHTTPS.classpath"/>
+        </java>
+    </target>
+    <target name="SendEmail (1)">
+        <java classname="mBankingUtilityCenter.SendEmail" failonerror="true" fork="yes">
+            <classpath refid="run.SendEmail (1).classpath"/>
+        </java>
+    </target>
+    <target name="SendEmailOffice365">
+        <java classname="mBankingUtilityCenter.SendEmailOffice365" failonerror="true" fork="yes">
+            <classpath refid="run.SendEmailOffice365.classpath"/>
+        </java>
+    </target>
+    <target name="StaticStore">
+        <java classname="mBankingPageObjectModel.StaticStore" failonerror="true" fork="yes">
+            <classpath refid="run.StaticStore.classpath"/>
+        </java>
+    </target>
+    <target name="test">
+        <java classname="mBankingControlCenter.Test" failonerror="true" fork="yes">
+            <classpath refid="run.test.classpath"/>
+        </java>
+    </target>
+    <target name="Transfer (1)">
+        <java classname="mBankingControlCenter.Transfer" failonerror="true" fork="yes">
+            <classpath refid="run.Transfer (1).classpath"/>
+        </java>
+    </target>
+    <target name="WriteToCSVFile (1)">
+        <java classname="mBankingUtilityCenter.WriteToCSVFile" failonerror="true" fork="yes">
+            <classpath refid="run.WriteToCSVFile (1).classpath"/>
+        </java>
+    </target>
+    <target name="writeToFile">
+        <java classname="mBankingUtilityCenter.writeToFile" failonerror="true" fork="yes">
+            <classpath refid="run.writeToFile.classpath"/>
+        </java>
+    </target>
+    <target name="DebitCardControl">
+        <java classname="mBankingControlCenter.DebitCardControl" failonerror="true" fork="yes">
+            <classpath refid="run.DebitCardControl.classpath"/>
+        </java>
+    </target>
+</project>
